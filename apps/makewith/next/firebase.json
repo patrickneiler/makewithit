@@ -1,0 +1,15 @@
+{
+  "hosting": {
+    "public": "../../../dist/apps/makewith/next/client/exported"
+  },
+  "functions": {
+    "source": "../../../dist/apps/makewith/next/server",
+    "ignore": [
+      ".firebase/**",
+      ".firebaserc",
+      "firebase.json",
+      "**/node_modules/**",
+      "**/public/**"
+    ]
+  }
+}

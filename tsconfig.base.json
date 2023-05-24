@@ -1,0 +1,33 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "esnext",
+    "lib": ["es2020", "dom"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@the/feature/react/animations": [
+        "libs/feature/react/animations/src/index.ts"
+      ],
+      "@the/feature/react/auth": ["libs/feature/react/auth/src/index.ts"],
+      "@the/makewith/react/data-access": [
+        "libs/makewith/react/data-access/src/index.ts"
+      ],
+      "@the/makewith/react/ui": ["libs/makewith/react/ui/src/index.ts"],
+      "@the/makewith/react/util": ["libs/makewith/react/util/src/index.ts"],
+      "@the/ui/react": ["libs/ui/react/src/index.ts"],
+      "@the/util/react/firebase": ["libs/util/react/firebase/src/index.ts"],
+      "@the/util/react/stripe": ["libs/util/react/stripe/src/index.ts"]
+    }
+  },
+  "exclude": ["node_modules", "tmp"]
+}

@@ -1,0 +1,16 @@
+{
+  "name": "ui-react",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/ui/react/src",
+  "projectType": "library",
+  "tags": ["ui"],
+  "targets": {
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/ui/react/**/*.{ts,tsx,js,jsx}"]
+      }
+    }
+  }
+}

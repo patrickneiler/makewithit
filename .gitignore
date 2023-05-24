@@ -37,4 +37,11 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+.nx
+.nx/cache/*
 .nx/cache/d/daemon.log
+
+# Next.js
+.next
+.nx/cache/d/daemon.log
+*.log

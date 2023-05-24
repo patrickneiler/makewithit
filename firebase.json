@@ -1,0 +1,15 @@
+{
+    "hosting": [ {
+        "target": "makewith",  
+        "public": "dist/apps/makewith/next/client/exported",
+        "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+        "cleanUrls": true,
+        "rewrites": [
+        {
+            "source": "**",
+            "destination": "/index.html"
+        }
+        ]
+      }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+  "projects": {
+    "default": "make-with-it-firebase"
+  },
+  "targets": {
+    "make-with-it-firebase": {
+      "hosting": {
+        "makewith": [
+          "make-with-it-firebase"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}

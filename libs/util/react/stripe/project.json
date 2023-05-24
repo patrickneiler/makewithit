@@ -1,0 +1,16 @@
+{
+  "name": "util-react-stripe",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/util/react/stripe/src",
+  "projectType": "library",
+  "tags": ["util"],
+  "targets": {
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/util/react/stripe/**/*.{ts,tsx,js,jsx}"]
+      }
+    }
+  }
+}

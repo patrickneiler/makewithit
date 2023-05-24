@@ -1,0 +1,55 @@
+{
+  "name": "makewith-next",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/makewith/next/client",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nx/next:build",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "root": "apps/makewith/next/client",
+        "outputPath": "dist/apps/makewith/next/client"
+      },
+      "configurations": {
+        "development": {
+          "outputPath": "apps/makewith/next/client"
+        },
+        "production": {}
+      }
+    },
+    "serve": {
+      "executor": "@nx/next:server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "makewith-next:build",
+        "dev": true
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "makewith-next:build:development",
+          "dev": true
+        },
+        "production": {
+          "buildTarget": "makewith-next:build:production",
+          "dev": false
+        }
+      }
+    },
+    "export": {
+      "executor": "@nx/next:export",
+      "options": {
+        "buildTarget": "makewith-next:build:production"
+      }
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/makewith/next/client/**/*.{ts,tsx,js,jsx}"]
+      }
+    }
+  },
+  "tags": ["app"]
+}

@@ -1,0 +1,16 @@
+{
+  "name": "makewith-react-util",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/makewith/react/util/src",
+  "projectType": "library",
+  "tags": ["util"],
+  "targets": {
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/makewith/react/util/**/*.{ts,tsx,js,jsx}"]
+      }
+    }
+  }
+}
