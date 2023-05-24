@@ -87,6 +87,166 @@
   },
   "nxJsonPlugins": [],
   "nodes": {
+    "makewith-react-data-access": {
+      "name": "makewith-react-data-access",
+      "type": "lib",
+      "data": {
+        "name": "makewith-react-data-access",
+        "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+        "sourceRoot": "libs/makewith/react/data-access/src",
+        "projectType": "library",
+        "tags": [
+          "data-access"
+        ],
+        "targets": {
+          "lint": {
+            "inputs": [
+              "default",
+              "{workspaceRoot}/.eslintrc.json",
+              "{workspaceRoot}/.eslintignore"
+            ],
+            "executor": "@nx/linter:eslint",
+            "outputs": [
+              "{options.outputFile}"
+            ],
+            "options": {
+              "lintFilePatterns": [
+                "libs/makewith/react/data-access/**/*.{ts,tsx,js,jsx}"
+              ]
+            },
+            "configurations": {}
+          }
+        },
+        "root": "libs/makewith/react/data-access",
+        "implicitDependencies": [],
+        "files": [
+          {
+            "file": "libs/makewith/react/data-access/.babelrc",
+            "hash": "2946678488919325452"
+          },
+          {
+            "file": "libs/makewith/react/data-access/.eslintrc.json",
+            "hash": "12678463301772327123"
+          },
+          {
+            "file": "libs/makewith/react/data-access/project.json",
+            "hash": "6618434789523163134"
+          },
+          {
+            "file": "libs/makewith/react/data-access/README.md",
+            "hash": "14500947230057722885"
+          },
+          {
+            "file": "libs/makewith/react/data-access/src/index.ts",
+            "hash": "16638385493267832908"
+          },
+          {
+            "file": "libs/makewith/react/data-access/src/lib/state.tsx",
+            "hash": "9556774309763785858",
+            "dependencies": [
+              {
+                "source": "makewith-react-data-access",
+                "target": "npm:react",
+                "type": "static"
+              },
+              {
+                "source": "makewith-react-data-access",
+                "target": "npm:firebase",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "libs/makewith/react/data-access/tsconfig.json",
+            "hash": "13090035453275662468"
+          },
+          {
+            "file": "libs/makewith/react/data-access/tsconfig.lib.json",
+            "hash": "953912742928436052"
+          }
+        ]
+      }
+    },
+    "feature-react-animations": {
+      "name": "feature-react-animations",
+      "type": "lib",
+      "data": {
+        "name": "feature-react-animations",
+        "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+        "sourceRoot": "libs/feature/react/animations/src",
+        "projectType": "library",
+        "tags": [
+          "feature"
+        ],
+        "targets": {
+          "lint": {
+            "inputs": [
+              "default",
+              "{workspaceRoot}/.eslintrc.json",
+              "{workspaceRoot}/.eslintignore"
+            ],
+            "executor": "@nx/linter:eslint",
+            "outputs": [
+              "{options.outputFile}"
+            ],
+            "options": {
+              "lintFilePatterns": [
+                "libs/feature/react/animations/**/*.{ts,tsx,js,jsx}"
+              ]
+            },
+            "configurations": {}
+          }
+        },
+        "root": "libs/feature/react/animations",
+        "implicitDependencies": [],
+        "files": [
+          {
+            "file": "libs/feature/react/animations/.babelrc",
+            "hash": "2946678488919325452"
+          },
+          {
+            "file": "libs/feature/react/animations/.eslintrc.json",
+            "hash": "12678463301772327123"
+          },
+          {
+            "file": "libs/feature/react/animations/project.json",
+            "hash": "18291319941627030739"
+          },
+          {
+            "file": "libs/feature/react/animations/README.md",
+            "hash": "5517714821281353034"
+          },
+          {
+            "file": "libs/feature/react/animations/src/index.ts",
+            "hash": "14470831778783793020"
+          },
+          {
+            "file": "libs/feature/react/animations/src/lib/line-drawing.tsx",
+            "hash": "3810405877140070944",
+            "dependencies": [
+              {
+                "source": "feature-react-animations",
+                "target": "npm:react",
+                "type": "static"
+              },
+              {
+                "source": "feature-react-animations",
+                "target": "npm:animejs",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "libs/feature/react/animations/tsconfig.json",
+            "hash": "13090035453275662468"
+          },
+          {
+            "file": "libs/feature/react/animations/tsconfig.lib.json",
+            "hash": "953912742928436052"
+          }
+        ]
+      }
+    },
     "makewith-next": {
       "name": "makewith-next",
       "type": "app",
@@ -872,6 +1032,223 @@
         ]
       }
     },
+    "util-react-firebase": {
+      "name": "util-react-firebase",
+      "type": "lib",
+      "data": {
+        "name": "util-react-firebase",
+        "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+        "sourceRoot": "libs/util/react/firebase/src",
+        "projectType": "library",
+        "tags": [
+          "util"
+        ],
+        "targets": {
+          "lint": {
+            "inputs": [
+              "default",
+              "{workspaceRoot}/.eslintrc.json",
+              "{workspaceRoot}/.eslintignore"
+            ],
+            "executor": "@nx/linter:eslint",
+            "outputs": [
+              "{options.outputFile}"
+            ],
+            "options": {
+              "lintFilePatterns": [
+                "libs/util/react/firebase/**/*.{ts,tsx,js,jsx}"
+              ]
+            },
+            "configurations": {}
+          }
+        },
+        "root": "libs/util/react/firebase",
+        "implicitDependencies": [],
+        "files": [
+          {
+            "file": "libs/util/react/firebase/.babelrc",
+            "hash": "2946678488919325452"
+          },
+          {
+            "file": "libs/util/react/firebase/.eslintrc.json",
+            "hash": "12678463301772327123"
+          },
+          {
+            "file": "libs/util/react/firebase/project.json",
+            "hash": "13999639973368888879"
+          },
+          {
+            "file": "libs/util/react/firebase/README.md",
+            "hash": "13266229084659895522"
+          },
+          {
+            "file": "libs/util/react/firebase/src/index.ts",
+            "hash": "11197053520144554736"
+          },
+          {
+            "file": "libs/util/react/firebase/src/lib/firebase-auth-guard.tsx",
+            "hash": "2909893554080079185",
+            "dependencies": [
+              {
+                "source": "util-react-firebase",
+                "target": "npm:firebase",
+                "type": "static"
+              },
+              {
+                "source": "util-react-firebase",
+                "target": "npm:next",
+                "type": "static"
+              },
+              {
+                "source": "util-react-firebase",
+                "target": "npm:react",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "libs/util/react/firebase/src/lib/util-react-firebase.tsx",
+            "hash": "681804773391064250",
+            "dependencies": [
+              {
+                "source": "util-react-firebase",
+                "target": "npm:firebase",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "libs/util/react/firebase/tsconfig.json",
+            "hash": "13090035453275662468"
+          },
+          {
+            "file": "libs/util/react/firebase/tsconfig.lib.json",
+            "hash": "953912742928436052"
+          }
+        ]
+      }
+    },
+    "feature-react-auth": {
+      "name": "feature-react-auth",
+      "type": "lib",
+      "data": {
+        "name": "feature-react-auth",
+        "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+        "sourceRoot": "libs/feature/react/auth/src",
+        "projectType": "library",
+        "tags": [
+          "feature"
+        ],
+        "targets": {
+          "lint": {
+            "inputs": [
+              "default",
+              "{workspaceRoot}/.eslintrc.json",
+              "{workspaceRoot}/.eslintignore"
+            ],
+            "executor": "@nx/linter:eslint",
+            "outputs": [
+              "{options.outputFile}"
+            ],
+            "options": {
+              "lintFilePatterns": [
+                "libs/feature/react/auth/**/*.{ts,tsx,js,jsx}"
+              ]
+            },
+            "configurations": {}
+          }
+        },
+        "root": "libs/feature/react/auth",
+        "implicitDependencies": [],
+        "files": [
+          {
+            "file": "libs/feature/react/auth/.babelrc",
+            "hash": "2946678488919325452"
+          },
+          {
+            "file": "libs/feature/react/auth/.eslintrc.json",
+            "hash": "12678463301772327123"
+          },
+          {
+            "file": "libs/feature/react/auth/project.json",
+            "hash": "4484498502479274173"
+          },
+          {
+            "file": "libs/feature/react/auth/README.md",
+            "hash": "3571071022368056232"
+          },
+          {
+            "file": "libs/feature/react/auth/src/index.ts",
+            "hash": "2373100615960450632"
+          },
+          {
+            "file": "libs/feature/react/auth/src/lib/signin-form.tsx",
+            "hash": "10076469848986407588",
+            "dependencies": [
+              {
+                "source": "feature-react-auth",
+                "target": "npm:react",
+                "type": "static"
+              },
+              {
+                "source": "feature-react-auth",
+                "target": "util-react-firebase",
+                "type": "static"
+              },
+              {
+                "source": "feature-react-auth",
+                "target": "makewith-react-data-access",
+                "type": "static"
+              },
+              {
+                "source": "feature-react-auth",
+                "target": "npm:next",
+                "type": "static"
+              },
+              {
+                "source": "feature-react-auth",
+                "target": "ui-react",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "libs/feature/react/auth/src/lib/user-state.tsx",
+            "hash": "17502560294442257172",
+            "dependencies": [
+              {
+                "source": "feature-react-auth",
+                "target": "npm:firebase",
+                "type": "static"
+              },
+              {
+                "source": "feature-react-auth",
+                "target": "npm:react",
+                "type": "static"
+              },
+              {
+                "source": "feature-react-auth",
+                "target": "util-react-firebase",
+                "type": "static"
+              },
+              {
+                "source": "feature-react-auth",
+                "target": "makewith-react-data-access",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "libs/feature/react/auth/tsconfig.json",
+            "hash": "13090035453275662468"
+          },
+          {
+            "file": "libs/feature/react/auth/tsconfig.lib.json",
+            "hash": "953912742928436052"
+          }
+        ]
+      }
+    },
     "makewith-react-ui": {
       "name": "makewith-react-ui",
       "type": "lib",
@@ -1254,383 +1631,6 @@
         ]
       }
     },
-    "util-react-firebase": {
-      "name": "util-react-firebase",
-      "type": "lib",
-      "data": {
-        "name": "util-react-firebase",
-        "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
-        "sourceRoot": "libs/util/react/firebase/src",
-        "projectType": "library",
-        "tags": [
-          "util"
-        ],
-        "targets": {
-          "lint": {
-            "inputs": [
-              "default",
-              "{workspaceRoot}/.eslintrc.json",
-              "{workspaceRoot}/.eslintignore"
-            ],
-            "executor": "@nx/linter:eslint",
-            "outputs": [
-              "{options.outputFile}"
-            ],
-            "options": {
-              "lintFilePatterns": [
-                "libs/util/react/firebase/**/*.{ts,tsx,js,jsx}"
-              ]
-            },
-            "configurations": {}
-          }
-        },
-        "root": "libs/util/react/firebase",
-        "implicitDependencies": [],
-        "files": [
-          {
-            "file": "libs/util/react/firebase/.babelrc",
-            "hash": "2946678488919325452"
-          },
-          {
-            "file": "libs/util/react/firebase/.eslintrc.json",
-            "hash": "12678463301772327123"
-          },
-          {
-            "file": "libs/util/react/firebase/project.json",
-            "hash": "13999639973368888879"
-          },
-          {
-            "file": "libs/util/react/firebase/README.md",
-            "hash": "13266229084659895522"
-          },
-          {
-            "file": "libs/util/react/firebase/src/index.ts",
-            "hash": "11197053520144554736"
-          },
-          {
-            "file": "libs/util/react/firebase/src/lib/firebase-auth-guard.tsx",
-            "hash": "2909893554080079185",
-            "dependencies": [
-              {
-                "source": "util-react-firebase",
-                "target": "npm:firebase",
-                "type": "static"
-              },
-              {
-                "source": "util-react-firebase",
-                "target": "npm:next",
-                "type": "static"
-              },
-              {
-                "source": "util-react-firebase",
-                "target": "npm:react",
-                "type": "static"
-              }
-            ]
-          },
-          {
-            "file": "libs/util/react/firebase/src/lib/util-react-firebase.tsx",
-            "hash": "681804773391064250",
-            "dependencies": [
-              {
-                "source": "util-react-firebase",
-                "target": "npm:firebase",
-                "type": "static"
-              }
-            ]
-          },
-          {
-            "file": "libs/util/react/firebase/tsconfig.json",
-            "hash": "13090035453275662468"
-          },
-          {
-            "file": "libs/util/react/firebase/tsconfig.lib.json",
-            "hash": "953912742928436052"
-          }
-        ]
-      }
-    },
-    "feature-react-auth": {
-      "name": "feature-react-auth",
-      "type": "lib",
-      "data": {
-        "name": "feature-react-auth",
-        "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
-        "sourceRoot": "libs/feature/react/auth/src",
-        "projectType": "library",
-        "tags": [
-          "feature"
-        ],
-        "targets": {
-          "lint": {
-            "inputs": [
-              "default",
-              "{workspaceRoot}/.eslintrc.json",
-              "{workspaceRoot}/.eslintignore"
-            ],
-            "executor": "@nx/linter:eslint",
-            "outputs": [
-              "{options.outputFile}"
-            ],
-            "options": {
-              "lintFilePatterns": [
-                "libs/feature/react/auth/**/*.{ts,tsx,js,jsx}"
-              ]
-            },
-            "configurations": {}
-          }
-        },
-        "root": "libs/feature/react/auth",
-        "implicitDependencies": [],
-        "files": [
-          {
-            "file": "libs/feature/react/auth/.babelrc",
-            "hash": "2946678488919325452"
-          },
-          {
-            "file": "libs/feature/react/auth/.eslintrc.json",
-            "hash": "12678463301772327123"
-          },
-          {
-            "file": "libs/feature/react/auth/project.json",
-            "hash": "4484498502479274173"
-          },
-          {
-            "file": "libs/feature/react/auth/README.md",
-            "hash": "3571071022368056232"
-          },
-          {
-            "file": "libs/feature/react/auth/src/index.ts",
-            "hash": "2373100615960450632"
-          },
-          {
-            "file": "libs/feature/react/auth/src/lib/signin-form.tsx",
-            "hash": "10076469848986407588",
-            "dependencies": [
-              {
-                "source": "feature-react-auth",
-                "target": "npm:react",
-                "type": "static"
-              },
-              {
-                "source": "feature-react-auth",
-                "target": "util-react-firebase",
-                "type": "static"
-              },
-              {
-                "source": "feature-react-auth",
-                "target": "makewith-react-data-access",
-                "type": "static"
-              },
-              {
-                "source": "feature-react-auth",
-                "target": "npm:next",
-                "type": "static"
-              },
-              {
-                "source": "feature-react-auth",
-                "target": "ui-react",
-                "type": "static"
-              }
-            ]
-          },
-          {
-            "file": "libs/feature/react/auth/src/lib/user-state.tsx",
-            "hash": "17502560294442257172",
-            "dependencies": [
-              {
-                "source": "feature-react-auth",
-                "target": "npm:firebase",
-                "type": "static"
-              },
-              {
-                "source": "feature-react-auth",
-                "target": "npm:react",
-                "type": "static"
-              },
-              {
-                "source": "feature-react-auth",
-                "target": "util-react-firebase",
-                "type": "static"
-              },
-              {
-                "source": "feature-react-auth",
-                "target": "makewith-react-data-access",
-                "type": "static"
-              }
-            ]
-          },
-          {
-            "file": "libs/feature/react/auth/tsconfig.json",
-            "hash": "13090035453275662468"
-          },
-          {
-            "file": "libs/feature/react/auth/tsconfig.lib.json",
-            "hash": "953912742928436052"
-          }
-        ]
-      }
-    },
-    "makewith-react-data-access": {
-      "name": "makewith-react-data-access",
-      "type": "lib",
-      "data": {
-        "name": "makewith-react-data-access",
-        "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
-        "sourceRoot": "libs/makewith/react/data-access/src",
-        "projectType": "library",
-        "tags": [
-          "data-access"
-        ],
-        "targets": {
-          "lint": {
-            "inputs": [
-              "default",
-              "{workspaceRoot}/.eslintrc.json",
-              "{workspaceRoot}/.eslintignore"
-            ],
-            "executor": "@nx/linter:eslint",
-            "outputs": [
-              "{options.outputFile}"
-            ],
-            "options": {
-              "lintFilePatterns": [
-                "libs/makewith/react/data-access/**/*.{ts,tsx,js,jsx}"
-              ]
-            },
-            "configurations": {}
-          }
-        },
-        "root": "libs/makewith/react/data-access",
-        "implicitDependencies": [],
-        "files": [
-          {
-            "file": "libs/makewith/react/data-access/.babelrc",
-            "hash": "2946678488919325452"
-          },
-          {
-            "file": "libs/makewith/react/data-access/.eslintrc.json",
-            "hash": "12678463301772327123"
-          },
-          {
-            "file": "libs/makewith/react/data-access/project.json",
-            "hash": "6618434789523163134"
-          },
-          {
-            "file": "libs/makewith/react/data-access/README.md",
-            "hash": "14500947230057722885"
-          },
-          {
-            "file": "libs/makewith/react/data-access/src/index.ts",
-            "hash": "16638385493267832908"
-          },
-          {
-            "file": "libs/makewith/react/data-access/src/lib/state.tsx",
-            "hash": "9556774309763785858",
-            "dependencies": [
-              {
-                "source": "makewith-react-data-access",
-                "target": "npm:react",
-                "type": "static"
-              },
-              {
-                "source": "makewith-react-data-access",
-                "target": "npm:firebase",
-                "type": "static"
-              }
-            ]
-          },
-          {
-            "file": "libs/makewith/react/data-access/tsconfig.json",
-            "hash": "13090035453275662468"
-          },
-          {
-            "file": "libs/makewith/react/data-access/tsconfig.lib.json",
-            "hash": "953912742928436052"
-          }
-        ]
-      }
-    },
-    "feature-react-animations": {
-      "name": "feature-react-animations",
-      "type": "lib",
-      "data": {
-        "name": "feature-react-animations",
-        "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
-        "sourceRoot": "libs/feature/react/animations/src",
-        "projectType": "library",
-        "tags": [
-          "feature"
-        ],
-        "targets": {
-          "lint": {
-            "inputs": [
-              "default",
-              "{workspaceRoot}/.eslintrc.json",
-              "{workspaceRoot}/.eslintignore"
-            ],
-            "executor": "@nx/linter:eslint",
-            "outputs": [
-              "{options.outputFile}"
-            ],
-            "options": {
-              "lintFilePatterns": [
-                "libs/feature/react/animations/**/*.{ts,tsx,js,jsx}"
-              ]
-            },
-            "configurations": {}
-          }
-        },
-        "root": "libs/feature/react/animations",
-        "implicitDependencies": [],
-        "files": [
-          {
-            "file": "libs/feature/react/animations/.babelrc",
-            "hash": "2946678488919325452"
-          },
-          {
-            "file": "libs/feature/react/animations/.eslintrc.json",
-            "hash": "12678463301772327123"
-          },
-          {
-            "file": "libs/feature/react/animations/project.json",
-            "hash": "18291319941627030739"
-          },
-          {
-            "file": "libs/feature/react/animations/README.md",
-            "hash": "5517714821281353034"
-          },
-          {
-            "file": "libs/feature/react/animations/src/index.ts",
-            "hash": "14470831778783793020"
-          },
-          {
-            "file": "libs/feature/react/animations/src/lib/line-drawing.tsx",
-            "hash": "3810405877140070944",
-            "dependencies": [
-              {
-                "source": "feature-react-animations",
-                "target": "npm:react",
-                "type": "static"
-              },
-              {
-                "source": "feature-react-animations",
-                "target": "npm:animejs",
-                "type": "static"
-              }
-            ]
-          },
-          {
-            "file": "libs/feature/react/animations/tsconfig.json",
-            "hash": "13090035453275662468"
-          },
-          {
-            "file": "libs/feature/react/animations/tsconfig.lib.json",
-            "hash": "953912742928436052"
-          }
-        ]
-      }
-    },
     "ui-react": {
       "name": "ui-react",
       "type": "lib",
@@ -1685,20 +1685,20 @@
             "hash": "5629199008565061209"
           },
           {
-            "file": "libs/ui/react/tsconfig.json",
-            "hash": "9466653708934095578"
-          },
-          {
-            "file": "libs/ui/react/tsconfig.lib.json",
-            "hash": "1261950536210511632"
-          },
-          {
             "file": "libs/ui/react/src/lib/loader.tsx",
             "hash": "4813477567788830486"
           },
           {
             "file": "libs/ui/react/src/lib/painter.tsx",
             "hash": "3244421341483603138"
+          },
+          {
+            "file": "libs/ui/react/tsconfig.json",
+            "hash": "9466653708934095578"
+          },
+          {
+            "file": "libs/ui/react/tsconfig.lib.json",
+            "hash": "1261950536210511632"
           }
         ]
       }
@@ -13407,6 +13407,30 @@
     }
   },
   "dependencies": {
+    "makewith-react-data-access": [
+      {
+        "source": "makewith-react-data-access",
+        "target": "npm:react",
+        "type": "static"
+      },
+      {
+        "source": "makewith-react-data-access",
+        "target": "npm:firebase",
+        "type": "static"
+      }
+    ],
+    "feature-react-animations": [
+      {
+        "source": "feature-react-animations",
+        "target": "npm:react",
+        "type": "static"
+      },
+      {
+        "source": "feature-react-animations",
+        "target": "npm:animejs",
+        "type": "static"
+      }
+    ],
     "makewith-next": [
       {
         "source": "makewith-next",
@@ -13476,6 +13500,55 @@
         "type": "static"
       }
     ],
+    "util-react-firebase": [
+      {
+        "source": "util-react-firebase",
+        "target": "npm:firebase",
+        "type": "static"
+      },
+      {
+        "source": "util-react-firebase",
+        "target": "npm:next",
+        "type": "static"
+      },
+      {
+        "source": "util-react-firebase",
+        "target": "npm:react",
+        "type": "static"
+      }
+    ],
+    "feature-react-auth": [
+      {
+        "source": "feature-react-auth",
+        "target": "npm:react",
+        "type": "static"
+      },
+      {
+        "source": "feature-react-auth",
+        "target": "util-react-firebase",
+        "type": "static"
+      },
+      {
+        "source": "feature-react-auth",
+        "target": "makewith-react-data-access",
+        "type": "static"
+      },
+      {
+        "source": "feature-react-auth",
+        "target": "npm:next",
+        "type": "static"
+      },
+      {
+        "source": "feature-react-auth",
+        "target": "ui-react",
+        "type": "static"
+      },
+      {
+        "source": "feature-react-auth",
+        "target": "npm:firebase",
+        "type": "static"
+      }
+    ],
     "makewith-react-ui": [
       {
         "source": "makewith-react-ui",
@@ -13540,67 +13613,7 @@
         "type": "static"
       }
     ],
-    "util-react-firebase": [
-      {
-        "source": "util-react-firebase",
-        "target": "npm:firebase",
-        "type": "static"
-      },
-      {
-        "source": "util-react-firebase",
-        "target": "npm:next",
-        "type": "static"
-      },
-      {
-        "source": "util-react-firebase",
-        "target": "npm:react",
-        "type": "static"
-      }
-    ],
-    "feature-react-auth": [
-      {
-        "source": "feature-react-auth",
-        "target": "npm:react",
-        "type": "static"
-      },
-      {
-        "source": "feature-react-auth",
-        "target": "util-react-firebase",
-        "type": "static"
-      },
-      {
-        "source": "feature-react-auth",
-        "target": "makewith-react-data-access",
-        "type": "static"
-      },
-      {
-        "source": "feature-react-auth",
-        "target": "npm:next",
-        "type": "static"
-      },
-      {
-        "source": "feature-react-auth",
-        "target": "ui-react",
-        "type": "static"
-      },
-      {
-        "source": "feature-react-auth",
-        "target": "npm:firebase",
-        "type": "static"
-      }
-    ],
-    "makewith-react-data-access": [
-      {
-        "source": "makewith-react-data-access",
-        "target": "npm:react",
-        "type": "static"
-      },
-      {
-        "source": "makewith-react-data-access",
-        "target": "npm:firebase",
-        "type": "static"
-      }
-    ],
+    "ui-react": [],
     "npm:@ampproject/remapping": [
       {
         "source": "npm:@ampproject/remapping",
@@ -29394,19 +29407,6 @@
         "target": "npm:fd-slicer",
         "type": "static"
       }
-    ],
-    "feature-react-animations": [
-      {
-        "source": "feature-react-animations",
-        "target": "npm:react",
-        "type": "static"
-      },
-      {
-        "source": "feature-react-animations",
-        "target": "npm:animejs",
-        "type": "static"
-      }
-    ],
-    "ui-react": []
+    ]
   }
 }
