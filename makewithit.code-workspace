@@ -1,12 +1,12 @@
 {
-	"folders": [
-		{
-			"path": "."
-		}
-	],
-	"settings": {
-		"editor.tabCompletion": "on",
-		"diffEditor.codeLens": true,
-		"editor.formatOnSave": true
-	}
+  "folders": [
+    {
+      "path": "."
+    }
+  ],
+  "settings": {
+    "editor.tabCompletion": "on",
+    "diffEditor.codeLens": true,
+    "editor.formatOnSave": true
+  }
 }

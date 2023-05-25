@@ -1,5 +1,6 @@
 /* eslint-disable no-irregular-whitespace */
 'use client';
+
 import { FormEvent, Fragment, useContext, useState } from "react";
 import { signIn } from "@the/util/react/firebase";
 import { UserContext } from '@the/makewith/react/data-access';
@@ -22,11 +23,10 @@ export const SignInForm = () => {
             if (res.user) {
                 addUser(res.user);
                 router.push('/proposal');
-                setLoading(false);
             }
         } catch (error: any) {
-            setLoading(false);
             seterror(error);
+            setLoading(false);
         }
     }
 
@@ -34,13 +34,8 @@ export const SignInForm = () => {
         <Fragment>
             {error ? <div>{error}</div> : null}
 
+            <form className={loading ? "pointer-events-none opacity-30" : "" + " relative"} onSubmit={handleSubmit}>
 
-            <form className="relative" onSubmit={handleSubmit}>
-                {
-                    loading ? (
-                        <Loader />
-                    ) : (<></>)
-                }
                 <div className="flex flex-wrap -mx-3 mb-4">
                     <div className="w-full px-3">
                         <label

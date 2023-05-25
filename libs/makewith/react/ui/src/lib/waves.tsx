@@ -34,9 +34,9 @@ const Waves: React.FC = () => {
     }, []);
 
     return (
-        <svg className="wave-top w-screen" >
+        <svg className="wave-top w-screen" viewBox='0 0 300 90'>
             <path
-                className="text-current fill-red-500"
+                className="text-current"
                 ref={waveRef}
                 fillRule="evenodd"
                 clipRule="evenodd"

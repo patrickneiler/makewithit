@@ -11,6 +11,7 @@
     "aos": "^3.0.0-beta.6",
     "contentlayer": "^0.3.2",
     "date-fns": "^2.30.0",
+    "encoding": "^0.1.13",
     "firebase": "^9.5.0",
     "fontawesome-free": "^1.0.4",
     "next": "13.3.0",
@@ -60,11 +61,17 @@
     "typescript": "~5.0.2"
   },
   "pathMappings": {
+    "@/*": [
+      "./*"
+    ],
     "@the/feature/react/animations": [
       "libs/feature/react/animations/src/index.ts"
     ],
     "@the/feature/react/auth": [
       "libs/feature/react/auth/src/index.ts"
+    ],
+    "@the/feature/react/blog": [
+      "libs/feature/react/blog/src/index.ts"
     ],
     "@the/makewith/react/data-access": [
       "libs/makewith/react/data-access/src/index.ts"
@@ -83,6 +90,9 @@
     ],
     "@the/util/react/stripe": [
       "libs/util/react/stripe/src/index.ts"
+    ],
+    "contentlayer/generated": [
+      "./.contentlayer/generated"
     ]
   },
   "nxJsonPlugins": [],
@@ -346,11 +356,16 @@
           },
           {
             "file": "apps/makewith/next/client/app/(auth)/layout.tsx",
-            "hash": "2845755509203743550",
+            "hash": "13247513074309632542",
             "dependencies": [
               {
                 "source": "makewith-next",
                 "target": "makewith-react-ui",
+                "type": "static"
+              },
+              {
+                "source": "makewith-next",
+                "target": "feature-react-auth",
                 "type": "static"
               }
             ]
@@ -390,7 +405,7 @@
           },
           {
             "file": "apps/makewith/next/client/app/(default)/layout.tsx",
-            "hash": "13476297645200028380",
+            "hash": "10730151530144098037",
             "dependencies": [
               {
                 "source": "makewith-next",
@@ -406,12 +421,95 @@
                 "source": "makewith-next",
                 "target": "makewith-react-ui",
                 "type": "static"
+              },
+              {
+                "source": "makewith-next",
+                "target": "feature-react-auth",
+                "type": "static"
               }
             ]
           },
           {
             "file": "apps/makewith/next/client/app/(default)/page.tsx",
-            "hash": "14735277266561836466",
+            "hash": "9451022890882515283",
+            "dependencies": [
+              {
+                "source": "makewith-next",
+                "target": "makewith-react-ui",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "apps/makewith/next/client/app/(default)/studies/[slug]/page.tsx",
+            "hash": "7543843115052032471",
+            "dependencies": [
+              {
+                "source": "makewith-next",
+                "target": "npm:next",
+                "type": "static"
+              },
+              {
+                "source": "makewith-next",
+                "target": "feature-react-blog",
+                "type": "static"
+              },
+              {
+                "source": "makewith-next",
+                "target": "makewith-react-ui",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "apps/makewith/next/client/app/(default)/studies/layout.tsx",
+            "hash": "17228036004477765188",
+            "dependencies": [
+              {
+                "source": "makewith-next",
+                "target": "makewith-react-ui",
+                "type": "static"
+              },
+              {
+                "source": "makewith-next",
+                "target": "npm:react",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "apps/makewith/next/client/app/(default)/studies/page.tsx",
+            "hash": "8075447480724707125"
+          },
+          {
+            "file": "apps/makewith/next/client/app/(private)/(organization)/layout.tsx",
+            "hash": "8903777966954450841",
+            "dependencies": [
+              {
+                "source": "makewith-next",
+                "target": "npm:react",
+                "type": "static"
+              },
+              {
+                "source": "makewith-next",
+                "target": "npm:aos",
+                "type": "static"
+              },
+              {
+                "source": "makewith-next",
+                "target": "makewith-react-ui",
+                "type": "static"
+              },
+              {
+                "source": "makewith-next",
+                "target": "feature-react-auth",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "apps/makewith/next/client/app/(private)/(organization)/proposal/page.tsx",
+            "hash": "4672203729159154122",
             "dependencies": [
               {
                 "source": "makewith-next",
@@ -422,7 +520,7 @@
           },
           {
             "file": "apps/makewith/next/client/app/(private)/layout.tsx",
-            "hash": "6375096500495987936",
+            "hash": "3842039286903327124",
             "dependencies": [
               {
                 "source": "makewith-next",
@@ -447,38 +545,16 @@
             ]
           },
           {
-            "file": "apps/makewith/next/client/app/(private)/proposal/page.tsx",
-            "hash": "4672203729159154122",
-            "dependencies": [
-              {
-                "source": "makewith-next",
-                "target": "makewith-react-ui",
-                "type": "static"
-              }
-            ]
-          },
-          {
-            "file": "apps/makewith/next/client/app/(private)/signout/page.tsx",
-            "hash": "2713560077572198800",
-            "dependencies": [
-              {
-                "source": "makewith-next",
-                "target": "makewith-react-ui",
-                "type": "static"
-              }
-            ]
-          },
-          {
             "file": "apps/makewith/next/client/app/api/hello/route.ts",
             "hash": "495073956729887886"
           },
           {
             "file": "apps/makewith/next/client/app/global.css",
-            "hash": "12644198780897411120"
+            "hash": "14491035788638340562"
           },
           {
             "file": "apps/makewith/next/client/app/layout.tsx",
-            "hash": "104709417126731241",
+            "hash": "4514985156987204561",
             "dependencies": [
               {
                 "source": "makewith-next",
@@ -492,7 +568,7 @@
               },
               {
                 "source": "makewith-next",
-                "target": "feature-react-auth",
+                "target": "makewith-react-ui",
                 "type": "static"
               }
             ]
@@ -514,6 +590,50 @@
             "hash": "12232427751041979507"
           },
           {
+            "file": "apps/makewith/next/client/components/mdx/help-mdx.tsx",
+            "hash": "3899821608901607687",
+            "dependencies": [
+              {
+                "source": "makewith-next",
+                "target": "npm:next-contentlayer",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "apps/makewith/next/client/components/mdx/image.tsx",
+            "hash": "3253807078156653406",
+            "dependencies": [
+              {
+                "source": "makewith-next",
+                "target": "npm:next",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "apps/makewith/next/client/components/mdx/link.tsx",
+            "hash": "15028757208205156744",
+            "dependencies": [
+              {
+                "source": "makewith-next",
+                "target": "npm:next",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "apps/makewith/next/client/components/mdx/post-mdx.tsx",
+            "hash": "16385518290787535595",
+            "dependencies": [
+              {
+                "source": "makewith-next",
+                "target": "npm:next-contentlayer",
+                "type": "static"
+              }
+            ]
+          },
+          {
             "file": "apps/makewith/next/client/index.d.ts",
             "hash": "5498222895072842432"
           },
@@ -523,8 +643,13 @@
           },
           {
             "file": "apps/makewith/next/client/next.config.js",
-            "hash": "8583436656537870341",
+            "hash": "16719919391153447754",
             "dependencies": [
+              {
+                "source": "makewith-next",
+                "target": "npm:next-contentlayer",
+                "type": "static"
+              },
               {
                 "source": "makewith-next",
                 "target": "npm:@nx/next",
@@ -740,6 +865,10 @@
             "hash": "12659057850546916413"
           },
           {
+            "file": "apps/makewith/next/client/public/assets/images/portfolio/3E_Old.png",
+            "hash": "8361949047953555336"
+          },
+          {
             "file": "apps/makewith/next/client/public/assets/images/portfolio/4.png",
             "hash": "17419434095566701026"
           },
@@ -750,6 +879,54 @@
           {
             "file": "apps/makewith/next/client/public/assets/images/portfolio/6.png",
             "hash": "18162799420205567080"
+          },
+          {
+            "file": "apps/makewith/next/client/public/assets/images/portfolio/Live-3E-final.gif",
+            "hash": "11140923419666199888"
+          },
+          {
+            "file": "apps/makewith/next/client/public/assets/images/portfolio/nbcspoorts_3.jpg",
+            "hash": "10307908633268022758"
+          },
+          {
+            "file": "apps/makewith/next/client/public/assets/images/portfolio/nbcsports_1.jpg",
+            "hash": "11084496835745106339"
+          },
+          {
+            "file": "apps/makewith/next/client/public/assets/images/portfolio/nbcsports_1.png",
+            "hash": "15555603958687748252"
+          },
+          {
+            "file": "apps/makewith/next/client/public/assets/images/portfolio/nbcsports_2.jpg",
+            "hash": "17774520026024884344"
+          },
+          {
+            "file": "apps/makewith/next/client/public/assets/images/portfolio/nbcsports_3.jpg",
+            "hash": "13755287646955289529"
+          },
+          {
+            "file": "apps/makewith/next/client/public/assets/images/portfolio/nbcsports_hero.png",
+            "hash": "17553412239597767366"
+          },
+          {
+            "file": "apps/makewith/next/client/public/assets/images/portfolio/nbcsports_logo.png",
+            "hash": "2065599602278845443"
+          },
+          {
+            "file": "apps/makewith/next/client/public/assets/images/portfolio/neiler_portfolio (1).pdf",
+            "hash": "4912424169877995521"
+          },
+          {
+            "file": "apps/makewith/next/client/public/assets/images/portfolio/news-10.jpg",
+            "hash": "12186057553717345938"
+          },
+          {
+            "file": "apps/makewith/next/client/public/assets/images/portfolio/news-11.jpg",
+            "hash": "12704753957524563380"
+          },
+          {
+            "file": "apps/makewith/next/client/public/assets/images/portfolio/news-12.jpg",
+            "hash": "11003838364490184416"
           },
           {
             "file": "apps/makewith/next/client/public/assets/images/proposal/approach.svg",
@@ -912,8 +1089,248 @@
             "hash": "12597198614937234126"
           },
           {
+            "file": "apps/makewith/next/client/public/assets/videos/sonar_thumb.jpg",
+            "hash": "11815060966736933719"
+          },
+          {
+            "file": "apps/makewith/next/client/public/assets/videos/sonar_thumb.png",
+            "hash": "5762506064337570970"
+          },
+          {
+            "file": "apps/makewith/next/client/public/assets/videos/sonar.mp4",
+            "hash": "7644263630783547646"
+          },
+          {
             "file": "apps/makewith/next/client/public/favicon.ico",
             "hash": "11206672725452241462"
+          },
+          {
+            "file": "apps/makewith/next/client/public/images/404.jpg",
+            "hash": "8967091667355205679"
+          },
+          {
+            "file": "apps/makewith/next/client/public/images/about-hero.jpg",
+            "hash": "14745739342838510362"
+          },
+          {
+            "file": "apps/makewith/next/client/public/images/blog-post-01.jpg",
+            "hash": "4997462869297107253"
+          },
+          {
+            "file": "apps/makewith/next/client/public/images/favicon.png",
+            "hash": "14635732131927154970"
+          },
+          {
+            "file": "apps/makewith/next/client/public/images/features-02-image.png",
+            "hash": "12518563174394660695"
+          },
+          {
+            "file": "apps/makewith/next/client/public/images/features-03-image-01.png",
+            "hash": "6635110502550094180"
+          },
+          {
+            "file": "apps/makewith/next/client/public/images/features-03-image-02.png",
+            "hash": "2372961889017714237"
+          },
+          {
+            "file": "apps/makewith/next/client/public/images/features-03-image-03.png",
+            "hash": "15752818965224976843"
+          },
+          {
+            "file": "apps/makewith/next/client/public/images/features-avatar.jpg",
+            "hash": "15913683092791538748"
+          },
+          {
+            "file": "apps/makewith/next/client/public/images/features-illustration.png",
+            "hash": "14132737997733138497"
+          },
+          {
+            "file": "apps/makewith/next/client/public/images/hero-image-01.jpg",
+            "hash": "7198705569721873218"
+          },
+          {
+            "file": "apps/makewith/next/client/public/images/hero-image-02.png",
+            "hash": "1148776455421240556"
+          },
+          {
+            "file": "apps/makewith/next/client/public/images/news-01.jpg",
+            "hash": "13779646398085473984"
+          },
+          {
+            "file": "apps/makewith/next/client/public/images/news-02.jpg",
+            "hash": "12006458053854134532"
+          },
+          {
+            "file": "apps/makewith/next/client/public/images/news-03.jpg",
+            "hash": "16301805984874705510"
+          },
+          {
+            "file": "apps/makewith/next/client/public/images/news-04.jpg",
+            "hash": "3930237416307669345"
+          },
+          {
+            "file": "apps/makewith/next/client/public/images/news-05.jpg",
+            "hash": "4657903112066758805"
+          },
+          {
+            "file": "apps/makewith/next/client/public/images/news-06.jpg",
+            "hash": "9064693155510288840"
+          },
+          {
+            "file": "apps/makewith/next/client/public/images/news-07.jpg",
+            "hash": "10466411741514086141"
+          },
+          {
+            "file": "apps/makewith/next/client/public/images/news-08.jpg",
+            "hash": "6113983022234259927"
+          },
+          {
+            "file": "apps/makewith/next/client/public/images/news-09.jpg",
+            "hash": "16100953498601594398"
+          },
+          {
+            "file": "apps/makewith/next/client/public/images/news-10.jpg",
+            "hash": "12186057553717345938"
+          },
+          {
+            "file": "apps/makewith/next/client/public/images/news-11.jpg",
+            "hash": "12704753957524563380"
+          },
+          {
+            "file": "apps/makewith/next/client/public/images/news-12.jpg",
+            "hash": "11003838364490184416"
+          },
+          {
+            "file": "apps/makewith/next/client/public/images/news-author-01.jpg",
+            "hash": "15913683092791538748"
+          },
+          {
+            "file": "apps/makewith/next/client/public/images/news-author-02.jpg",
+            "hash": "14493554508366458104"
+          },
+          {
+            "file": "apps/makewith/next/client/public/images/news-author-03.jpg",
+            "hash": "14937591457777023882"
+          },
+          {
+            "file": "apps/makewith/next/client/public/images/news-author-04.jpg",
+            "hash": "3173578959826526248"
+          },
+          {
+            "file": "apps/makewith/next/client/public/images/news-author-05.jpg",
+            "hash": "1114580156217633806"
+          },
+          {
+            "file": "apps/makewith/next/client/public/images/news-author-06.jpg",
+            "hash": "17995640079727232331"
+          },
+          {
+            "file": "apps/makewith/next/client/public/images/news-inner-image.jpg",
+            "hash": "5834870651238637526"
+          },
+          {
+            "file": "apps/makewith/next/client/public/images/news-single.jpg",
+            "hash": "14795354091218105483"
+          },
+          {
+            "file": "apps/makewith/next/client/public/images/tabs-image-01.jpg",
+            "hash": "4668149453343697290"
+          },
+          {
+            "file": "apps/makewith/next/client/public/images/team-member-01.jpg",
+            "hash": "8342170385466439134"
+          },
+          {
+            "file": "apps/makewith/next/client/public/images/team-member-02.jpg",
+            "hash": "8424892339019537422"
+          },
+          {
+            "file": "apps/makewith/next/client/public/images/team-member-03.jpg",
+            "hash": "13538011233037569435"
+          },
+          {
+            "file": "apps/makewith/next/client/public/images/team-member-04.jpg",
+            "hash": "4587326694057107063"
+          },
+          {
+            "file": "apps/makewith/next/client/public/images/team-member-05.jpg",
+            "hash": "801207152666208244"
+          },
+          {
+            "file": "apps/makewith/next/client/public/images/team-member-06.jpg",
+            "hash": "8418790311914900230"
+          },
+          {
+            "file": "apps/makewith/next/client/public/images/team-member-07.jpg",
+            "hash": "4976675667665208238"
+          },
+          {
+            "file": "apps/makewith/next/client/public/images/team-member-08.jpg",
+            "hash": "6391503225516663835"
+          },
+          {
+            "file": "apps/makewith/next/client/public/images/team-mosaic-01.jpg",
+            "hash": "9621868883712994021"
+          },
+          {
+            "file": "apps/makewith/next/client/public/images/team-mosaic-02.jpg",
+            "hash": "17961719776359068177"
+          },
+          {
+            "file": "apps/makewith/next/client/public/images/team-mosaic-03.jpg",
+            "hash": "15396158363439121106"
+          },
+          {
+            "file": "apps/makewith/next/client/public/images/team-mosaic-04.jpg",
+            "hash": "14685288457155432575"
+          },
+          {
+            "file": "apps/makewith/next/client/public/images/testimonial-01.jpg",
+            "hash": "7227101009768659310"
+          },
+          {
+            "file": "apps/makewith/next/client/public/images/testimonial-02.jpg",
+            "hash": "3214160991605928145"
+          },
+          {
+            "file": "apps/makewith/next/client/public/images/testimonial-03.jpg",
+            "hash": "13093046476144474931"
+          },
+          {
+            "file": "apps/makewith/next/client/public/images/world-user-01.jpg",
+            "hash": "7037478914116905476"
+          },
+          {
+            "file": "apps/makewith/next/client/public/images/world-user-02.jpg",
+            "hash": "7047363301404347849"
+          },
+          {
+            "file": "apps/makewith/next/client/public/images/world-user-03.jpg",
+            "hash": "18064850738478263621"
+          },
+          {
+            "file": "apps/makewith/next/client/public/images/world-user-04.jpg",
+            "hash": "7387719916055499959"
+          },
+          {
+            "file": "apps/makewith/next/client/public/images/world-user-05.jpg",
+            "hash": "4291863599210908480"
+          },
+          {
+            "file": "apps/makewith/next/client/public/images/world-user-06.jpg",
+            "hash": "11280113517526507713"
+          },
+          {
+            "file": "apps/makewith/next/client/public/images/world-user-07.jpg",
+            "hash": "378779553775356052"
+          },
+          {
+            "file": "apps/makewith/next/client/public/images/world-user-08.jpg",
+            "hash": "5279420577096366400"
+          },
+          {
+            "file": "apps/makewith/next/client/public/images/worldmap.png",
+            "hash": "10592324577317606756"
           },
           {
             "file": "apps/makewith/next/client/public/Logo.svg",
@@ -947,7 +1364,7 @@
           },
           {
             "file": "apps/makewith/next/client/tsconfig.json",
-            "hash": "9569625504997473829"
+            "hash": "11756845829874516715"
           }
         ]
       }
@@ -1183,7 +1600,7 @@
           },
           {
             "file": "libs/feature/react/auth/src/lib/signin-form.tsx",
-            "hash": "10076469848986407588",
+            "hash": "3980327357121613806",
             "dependencies": [
               {
                 "source": "feature-react-auth",
@@ -1300,26 +1717,110 @@
           },
           {
             "file": "libs/makewith/react/ui/src/index.ts",
-            "hash": "16821640708395977819"
+            "hash": "13261248028741303045"
+          },
+          {
+            "file": "libs/makewith/react/ui/src/lib/case-studies.tsx",
+            "hash": "2398825728861987037",
+            "dependencies": [
+              {
+                "source": "makewith-react-ui",
+                "target": "npm:next",
+                "type": "static"
+              },
+              {
+                "source": "makewith-react-ui",
+                "target": "npm:@/apps/makewith/next/client/public/assets/videos/sonar_thumb.jpg",
+                "type": "static"
+              },
+              {
+                "source": "makewith-react-ui",
+                "target": "npm:@/apps/makewith/next/client/public/assets/images/portfolio/nbcsports_1.png",
+                "type": "static"
+              },
+              {
+                "source": "makewith-react-ui",
+                "target": "npm:@/apps/makewith/next/client/public/assets/images/portfolio/Live-3E-final.gif",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "libs/makewith/react/ui/src/lib/case-study-provider.tsx",
+            "hash": "15406703219165534080",
+            "dependencies": [
+              {
+                "source": "makewith-react-ui",
+                "target": "npm:react",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "libs/makewith/react/ui/src/lib/case-study.tsx",
+            "hash": "13552852405720278426",
+            "dependencies": [
+              {
+                "source": "makewith-react-ui",
+                "target": "npm:next",
+                "type": "static"
+              },
+              {
+                "source": "makewith-react-ui",
+                "target": "feature-react-blog",
+                "type": "static"
+              },
+              {
+                "source": "makewith-react-ui",
+                "target": "npm:react",
+                "type": "static"
+              }
+            ]
           },
           {
             "file": "libs/makewith/react/ui/src/lib/feature-list.tsx",
             "hash": "2397480062657950859"
           },
           {
-            "file": "libs/makewith/react/ui/src/lib/footer.tsx",
-            "hash": "15937518814911658422",
+            "file": "libs/makewith/react/ui/src/lib/featured-case-study.tsx",
+            "hash": "7450753268824041835",
             "dependencies": [
               {
                 "source": "makewith-react-ui",
                 "target": "npm:next",
+                "type": "static"
+              },
+              {
+                "source": "makewith-react-ui",
+                "target": "feature-react-blog",
+                "type": "static"
+              },
+              {
+                "source": "makewith-react-ui",
+                "target": "npm:react",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "libs/makewith/react/ui/src/lib/footer.tsx",
+            "hash": "7748730206956075988",
+            "dependencies": [
+              {
+                "source": "makewith-react-ui",
+                "target": "npm:next",
+                "type": "static"
+              },
+              {
+                "source": "makewith-react-ui",
+                "target": "ui-react",
                 "type": "static"
               }
             ]
           },
           {
             "file": "libs/makewith/react/ui/src/lib/header.tsx",
-            "hash": "5944227720322790492",
+            "hash": "16240445140775250336",
             "dependencies": [
               {
                 "source": "makewith-react-ui",
@@ -1345,17 +1846,12 @@
                 "source": "makewith-react-ui",
                 "target": "util-react-firebase",
                 "type": "static"
-              },
-              {
-                "source": "makewith-react-ui",
-                "target": "npm:firebase",
-                "type": "static"
               }
             ]
           },
           {
             "file": "libs/makewith/react/ui/src/lib/hero.tsx",
-            "hash": "6125957846242814305",
+            "hash": "9298658073161365960",
             "dependencies": [
               {
                 "source": "makewith-react-ui",
@@ -1411,6 +1907,43 @@
               {
                 "source": "makewith-react-ui",
                 "target": "util-react-firebase",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "libs/makewith/react/ui/src/lib/modal-video.tsx",
+            "hash": "15709522559063902891",
+            "dependencies": [
+              {
+                "source": "makewith-react-ui",
+                "target": "npm:react",
+                "type": "static"
+              },
+              {
+                "source": "makewith-react-ui",
+                "target": "npm:next",
+                "type": "static"
+              },
+              {
+                "source": "makewith-react-ui",
+                "target": "npm:@headlessui/react",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "libs/makewith/react/ui/src/lib/morph.tsx",
+            "hash": "12256660432218932670",
+            "dependencies": [
+              {
+                "source": "makewith-react-ui",
+                "target": "npm:react",
+                "type": "static"
+              },
+              {
+                "source": "makewith-react-ui",
+                "target": "npm:animejs",
                 "type": "static"
               }
             ]
@@ -1487,7 +2020,7 @@
           },
           {
             "file": "libs/makewith/react/ui/src/lib/waves.tsx",
-            "hash": "16017736548781692026",
+            "hash": "9349713366513056015",
             "dependencies": [
               {
                 "source": "makewith-react-ui",
@@ -1686,7 +2219,14 @@
           },
           {
             "file": "libs/ui/react/src/lib/loader.tsx",
-            "hash": "4813477567788830486"
+            "hash": "1661626222426649844",
+            "dependencies": [
+              {
+                "source": "ui-react",
+                "target": "npm:react",
+                "type": "static"
+              }
+            ]
           },
           {
             "file": "libs/ui/react/src/lib/painter.tsx",
@@ -1699,6 +2239,103 @@
           {
             "file": "libs/ui/react/tsconfig.lib.json",
             "hash": "1261950536210511632"
+          }
+        ]
+      }
+    },
+    "feature-react-blog": {
+      "name": "feature-react-blog",
+      "type": "lib",
+      "data": {
+        "name": "feature-react-blog",
+        "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+        "sourceRoot": "libs/feature/react/blog/src",
+        "projectType": "library",
+        "tags": [
+          "feature"
+        ],
+        "targets": {
+          "lint": {
+            "inputs": [
+              "default",
+              "{workspaceRoot}/.eslintrc.json",
+              "{workspaceRoot}/.eslintignore"
+            ],
+            "executor": "@nx/linter:eslint",
+            "outputs": [
+              "{options.outputFile}"
+            ],
+            "options": {
+              "lintFilePatterns": [
+                "libs/feature/react/blog/**/*.{ts,tsx,js,jsx}"
+              ]
+            },
+            "configurations": {}
+          }
+        },
+        "root": "libs/feature/react/blog",
+        "implicitDependencies": [],
+        "files": [
+          {
+            "file": "libs/feature/react/blog/.babelrc",
+            "hash": "2946678488919325452"
+          },
+          {
+            "file": "libs/feature/react/blog/.eslintrc.json",
+            "hash": "12678463301772327123"
+          },
+          {
+            "file": "libs/feature/react/blog/project.json",
+            "hash": "3795718737833738542"
+          },
+          {
+            "file": "libs/feature/react/blog/README.md",
+            "hash": "13462936144811381366"
+          },
+          {
+            "file": "libs/feature/react/blog/src/index.ts",
+            "hash": "17925753277556272694"
+          },
+          {
+            "file": "libs/feature/react/blog/src/lib/post-date.tsx",
+            "hash": "16060351574540938848",
+            "dependencies": [
+              {
+                "source": "feature-react-blog",
+                "target": "npm:date-fns",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "libs/feature/react/blog/src/lib/post-item.tsx",
+            "hash": "2384080489831294154",
+            "dependencies": [
+              {
+                "source": "feature-react-blog",
+                "target": "npm:next",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "libs/feature/react/blog/src/lib/post-tags.tsx",
+            "hash": "12287100286006734509",
+            "dependencies": [
+              {
+                "source": "feature-react-blog",
+                "target": "npm:next",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "libs/feature/react/blog/tsconfig.json",
+            "hash": "13090035453275662468"
+          },
+          {
+            "file": "libs/feature/react/blog/tsconfig.lib.json",
+            "hash": "953912742928436052"
           }
         ]
       }
@@ -8140,6 +8777,33 @@
         "hash": "sha512-TPJXq8JqFaVYm2CWmPvnP2Iyo4ZSM7/QKcSmuMLDObfpH5fi7RUGmd/rTDf+rut/saiDiQEeVTNgAmJEdAOx0w=="
       }
     },
+    "npm:encoding": {
+      "type": "npm",
+      "name": "npm:encoding",
+      "data": {
+        "version": "0.1.13",
+        "packageName": "encoding",
+        "hash": "sha512-ETBauow1T35Y/WZMkio9jiM0Z5xjHHmJ4XmjZOq1l/dXz3lr2sRn87nJy20RupqSh1F2m3HHPSp8ShIPQJrJ3A=="
+      }
+    },
+    "npm:iconv-lite@0.6.3": {
+      "type": "npm",
+      "name": "npm:iconv-lite@0.6.3",
+      "data": {
+        "version": "0.6.3",
+        "packageName": "iconv-lite",
+        "hash": "sha512-4fCk79wshMdzMp2rH06qWrJE4iolqLhCUH+OiuIgU++RB0+94NlDL81atO7GX55uUKueo0txHNtvEyI6D7WdMw=="
+      }
+    },
+    "npm:iconv-lite": {
+      "type": "npm",
+      "name": "npm:iconv-lite",
+      "data": {
+        "version": "0.4.24",
+        "packageName": "iconv-lite",
+        "hash": "sha512-v3MXnZAcvnywkTUEZomIActle7RXXeedOR31wwl7VlyoXO4Qi9arvSenNQWne1TcRwhCL1HwLI21bEqdpj8/rA=="
+      }
+    },
     "npm:end-of-stream": {
       "type": "npm",
       "name": "npm:end-of-stream",
@@ -9497,24 +10161,6 @@
         "version": "1.0.3",
         "packageName": "http2-wrapper",
         "hash": "sha512-V+23sDMr12Wnz7iTcDeJr3O6AIxlnvT/bmaAAAP/Xda35C90p9599p0F1eHR/N1KILWSoWVAiOMFjBBXaXSMxg=="
-      }
-    },
-    "npm:iconv-lite": {
-      "type": "npm",
-      "name": "npm:iconv-lite",
-      "data": {
-        "version": "0.4.24",
-        "packageName": "iconv-lite",
-        "hash": "sha512-v3MXnZAcvnywkTUEZomIActle7RXXeedOR31wwl7VlyoXO4Qi9arvSenNQWne1TcRwhCL1HwLI21bEqdpj8/rA=="
-      }
-    },
-    "npm:iconv-lite@0.6.3": {
-      "type": "npm",
-      "name": "npm:iconv-lite@0.6.3",
-      "data": {
-        "version": "0.6.3",
-        "packageName": "iconv-lite",
-        "hash": "sha512-4fCk79wshMdzMp2rH06qWrJE4iolqLhCUH+OiuIgU++RB0+94NlDL81atO7GX55uUKueo0txHNtvEyI6D7WdMw=="
       }
     },
     "npm:ieee754": {
@@ -13439,12 +14085,12 @@
       },
       {
         "source": "makewith-next",
-        "target": "npm:next",
+        "target": "feature-react-auth",
         "type": "static"
       },
       {
         "source": "makewith-next",
-        "target": "feature-react-auth",
+        "target": "npm:next",
         "type": "static"
       },
       {
@@ -13459,12 +14105,22 @@
       },
       {
         "source": "makewith-next",
+        "target": "feature-react-blog",
+        "type": "static"
+      },
+      {
+        "source": "makewith-next",
         "target": "util-react-firebase",
         "type": "static"
       },
       {
         "source": "makewith-next",
         "target": "makewith-react-data-access",
+        "type": "static"
+      },
+      {
+        "source": "makewith-next",
+        "target": "npm:next-contentlayer",
         "type": "static"
       },
       {
@@ -13557,12 +14213,22 @@
       },
       {
         "source": "makewith-react-ui",
-        "target": "makewith-react-util",
+        "target": "npm:react",
         "type": "static"
       },
       {
         "source": "makewith-react-ui",
-        "target": "npm:react",
+        "target": "feature-react-blog",
+        "type": "static"
+      },
+      {
+        "source": "makewith-react-ui",
+        "target": "ui-react",
+        "type": "static"
+      },
+      {
+        "source": "makewith-react-ui",
+        "target": "makewith-react-util",
         "type": "static"
       },
       {
@@ -13577,12 +14243,12 @@
       },
       {
         "source": "makewith-react-ui",
-        "target": "npm:firebase",
+        "target": "npm:animejs",
         "type": "static"
       },
       {
         "source": "makewith-react-ui",
-        "target": "npm:animejs",
+        "target": "npm:@headlessui/react",
         "type": "static"
       },
       {
@@ -13613,7 +14279,25 @@
         "type": "static"
       }
     ],
-    "ui-react": [],
+    "ui-react": [
+      {
+        "source": "ui-react",
+        "target": "npm:react",
+        "type": "static"
+      }
+    ],
+    "feature-react-blog": [
+      {
+        "source": "feature-react-blog",
+        "target": "npm:date-fns",
+        "type": "static"
+      },
+      {
+        "source": "feature-react-blog",
+        "target": "npm:next",
+        "type": "static"
+      }
+    ],
     "npm:@ampproject/remapping": [
       {
         "source": "npm:@ampproject/remapping",
@@ -16929,6 +17613,11 @@
       }
     ],
     "npm:node-fetch@2.6.7": [
+      {
+        "source": "npm:node-fetch@2.6.7",
+        "target": "npm:encoding",
+        "type": "static"
+      },
       {
         "source": "npm:node-fetch@2.6.7",
         "target": "npm:whatwg-url",
@@ -22048,6 +22737,20 @@
       {
         "source": "npm:ejs",
         "target": "npm:jake",
+        "type": "static"
+      }
+    ],
+    "npm:encoding": [
+      {
+        "source": "npm:encoding",
+        "target": "npm:iconv-lite@0.6.3",
+        "type": "static"
+      }
+    ],
+    "npm:iconv-lite@0.6.3": [
+      {
+        "source": "npm:iconv-lite@0.6.3",
+        "target": "npm:safer-buffer",
         "type": "static"
       }
     ],
@@ -29215,13 +29918,6 @@
       {
         "source": "npm:whatwg-encoding",
         "target": "npm:iconv-lite@0.6.3",
-        "type": "static"
-      }
-    ],
-    "npm:iconv-lite@0.6.3": [
-      {
-        "source": "npm:iconv-lite@0.6.3",
-        "target": "npm:safer-buffer",
         "type": "static"
       }
     ],
