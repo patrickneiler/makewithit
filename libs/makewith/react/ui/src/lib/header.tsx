@@ -1,12 +1,12 @@
 'use client';
 import Link from 'next/link'
-import { Dropdown } from '@the/makewith/react/util'
+import { Dropdown } from '@the/makewith/react/util';
+import Waves from './waves';
 import MobileMenu from './mobile-menu';
 import Logo from './logo';
 import { useContext } from 'react';
 import { UserContext } from '@the/makewith/react/data-access';
 import { logout } from '@the/util/react/firebase';
-import { User } from 'firebase/auth';
 import { useRouter } from 'next/navigation';
 type HeaderProps = {
   hideLinks?: boolean;
@@ -27,7 +27,10 @@ export function Header({
   };
   return (
     <header className="absolute w-full z-30">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6">
+      {/* <div className="absolute fill-gray-900 left-0 bottom-0 w-screen flex align-center justify-start pointer-events-none z-10 overflow-visible">
+        <Waves />
+      </div> */}
+      <div className="max-w-6xl  mx-auto px-4 sm:px-6">
         <div className="flex items-center justify-between h-20">
           {/* Site branding */}
           <div className="shrink-0 mr-4">

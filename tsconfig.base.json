@@ -15,10 +15,12 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@/*": ["./*"],
       "@the/feature/react/animations": [
         "libs/feature/react/animations/src/index.ts"
       ],
       "@the/feature/react/auth": ["libs/feature/react/auth/src/index.ts"],
+      "@the/feature/react/blog": ["libs/feature/react/blog/src/index.ts"],
       "@the/makewith/react/data-access": [
         "libs/makewith/react/data-access/src/index.ts"
       ],
@@ -26,7 +28,8 @@
       "@the/makewith/react/util": ["libs/makewith/react/util/src/index.ts"],
       "@the/ui/react": ["libs/ui/react/src/index.ts"],
       "@the/util/react/firebase": ["libs/util/react/firebase/src/index.ts"],
-      "@the/util/react/stripe": ["libs/util/react/stripe/src/index.ts"]
+      "@the/util/react/stripe": ["libs/util/react/stripe/src/index.ts"],
+      "contentlayer/generated": ["./.contentlayer/generated"]
     }
   },
   "exclude": ["node_modules", "tmp"]

@@ -1,7 +1,7 @@
 import { UserProvider } from '@the/makewith/react/data-access';
 import './global.css';
 import { Inter, Architects_Daughter } from 'next/font/google';
-import { UserState } from '@the/feature/react/auth';
+import { CaseStudiesProvider } from '@the/makewith/react/ui';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -28,7 +28,7 @@ export default function RootLayout({
 }) {
   return (
     <UserProvider>
-      <UserState>
+      <CaseStudiesProvider>
         <html lang="en">
           <body
             className={`${inter.variable} ${architects_daughter.variable} font-inter antialiased bg-gray-900 text-gray-200 tracking-tight`}
@@ -38,8 +38,7 @@ export default function RootLayout({
             </div>
           </body>
         </html>
-      </UserState>
-
+      </CaseStudiesProvider>
     </UserProvider>
 
   );

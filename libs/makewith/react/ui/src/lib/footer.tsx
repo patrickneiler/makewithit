@@ -1,20 +1,21 @@
 'use client';
 import Link from 'next/link'
 import Waves from './waves';
+import { Loader } from '@/libs/ui/react/src';
 
 export function Footer(): JSX.Element {
   return (
-    <footer className='relative bg-gray-900 overflow-visible pt-32'>
+    <footer className='relative  overflow-visible pt-32'>
       {/* Illustration behind hero content */}
-      <div className="absolute rotate-180 left-0 bottom-0 w-screen flex align-center justify-start pointer-events-none z-20 overflow-visible">
+      <div className="absolute fill-red-500 rotate-180 left-0 bottom-0 w-screen flex align-center justify-start pointer-events-none z-10 overflow-visible">
         <Waves />
       </div>
-      <div className="pb-10 relative z-10 pt-10 bg-red-500">
+      <div className="bg-red-500 relative z-20 pb-10">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
 
           {/* Bottom area */}
-          <div className="md:flex md:items-center md:justify-between">
-            <Link href="/" className="inline-block scale-150 origin-bottom-left" aria-label="Cruip">
+          <div className="flex items-center justify-between">
+            <Link href="/" className="inline-block scale-150 origin-top-center" aria-label="Cruip">
               <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect width="2" height="2" fill="#151719" />
                 <rect x="2" width="2" height="2" fill="#151719" />
@@ -274,6 +275,10 @@ export function Footer(): JSX.Element {
                 <rect x="30" y="30" width="2" height="2" fill="#151719" />
               </svg>
             </Link>
+            <div className='relative w-12 h-12'>
+              <Loader />
+            </div>
+
             {/* Copyrights note */}
             {/* <div className="text-gray-900 text-sm mr-4">&copy; Make With It.</div> */}
 

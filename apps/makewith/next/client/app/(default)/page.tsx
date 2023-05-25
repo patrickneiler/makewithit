@@ -3,7 +3,7 @@ export const metadata = {
   description: '',
 };
 
-import { Hero } from '@the/makewith/react/ui';
+import { FeaturedCaseStudy, Hero } from '@the/makewith/react/ui';
 
 export default function Home() {
   return (
@@ -59,7 +59,7 @@ export default function Home() {
                   <path d="M35.268 21.4011C35.0688 21.2304 34.8124 21.1412 34.5503 21.1514C34.2881 21.1615 34.0394 21.2702 33.8539 21.4557C33.6684 21.6412 33.5597 21.8899 33.5496 22.152C33.5395 22.4142 33.6286 22.6705 33.7993 22.8698L40.091 29.1667L33.7993 35.4635C33.6902 35.5569 33.6017 35.6718 33.5392 35.8011C33.4766 35.9303 33.4415 36.0711 33.436 36.2145C33.4304 36.358 33.4546 36.501 33.507 36.6347C33.5593 36.7684 33.6388 36.8898 33.7403 36.9913C33.8418 37.0928 33.9632 37.1723 34.0969 37.2246C34.2305 37.277 34.3736 37.3012 34.5171 37.2956C34.6605 37.2901 34.8013 37.255 34.9305 37.1924C35.0597 37.1299 35.1747 37.0413 35.268 36.9323L42.2993 29.9011C42.4933 29.7059 42.6022 29.4419 42.6022 29.1667C42.6022 28.8915 42.4933 28.6275 42.2993 28.4323L35.268 21.4011Z" />
                   <path d="M29.3619 17.75C29.2305 17.7108 29.0928 17.6979 28.9565 17.712C28.8202 17.7262 28.688 17.7671 28.5675 17.8324C28.447 17.8977 28.3406 17.9862 28.2544 18.0927C28.1682 18.1992 28.1038 18.3217 28.065 18.4531L21.815 39.2864C21.7758 39.4178 21.7629 39.5555 21.777 39.6918C21.7912 39.8281 21.8321 39.9603 21.8974 40.0808C21.9627 40.2013 22.0512 40.3077 22.1577 40.3939C22.2642 40.4801 22.3867 40.5445 22.5181 40.5833C22.6149 40.6099 22.7146 40.6239 22.815 40.625C23.0397 40.6253 23.2585 40.553 23.4387 40.4187C23.6189 40.2845 23.7509 40.0956 23.815 39.8802L30.065 19.0469C30.1042 18.9155 30.1171 18.7778 30.1029 18.6415C30.0888 18.5052 30.0479 18.373 29.9825 18.2525C29.9172 18.132 29.8288 18.0256 29.7223 17.9394C29.6158 17.8532 29.4933 17.7888 29.3619 17.75Z" />
                 </svg>
-                <h4 className="h4 mb-2">App Development</h4>
+                <h4 className="h4 mb-2 text-center">App Development</h4>
                 <p className="text-lg text-gray-400 text-center">
                   {' '}
                   Our software solutions are built using the latest technologies
@@ -110,7 +110,7 @@ export default function Home() {
                     </clipPath>
                   </defs>
                 </svg>
-                <h4 className="h4 mb-2">Intimate Comprehension</h4>
+                <h4 className="h4 mb-2 text-center">Intimate Comprehension</h4>
                 <p className="text-lg text-gray-400 text-center">
                   {' '}
                   We work closely with you to gain an intimate understanding of
@@ -147,7 +147,7 @@ export default function Home() {
                     </clipPath>
                   </defs>
                 </svg>
-                <h4 className="h4 mb-2">User Friendly UX</h4>
+                <h4 className="h4 mb-2 text-center">User Friendly UX</h4>
                 <p className="text-lg text-gray-400 text-center">
                   We design our software solutions with the end-user in mind,
                   ensuring that they are intuitive and easy to use.
@@ -157,6 +157,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <FeaturedCaseStudy />
     </>
   );
 }

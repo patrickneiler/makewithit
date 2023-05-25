@@ -5,8 +5,11 @@
   "targets": {
     "make-with-it-firebase": {
       "hosting": {
-        "makewith": [
+        "prod": [
           "make-with-it-firebase"
+        ],
+        "dev": [
+          "makewith"
         ]
       }
     }

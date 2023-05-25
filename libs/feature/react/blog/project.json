@@ -1,0 +1,16 @@
+{
+  "name": "feature-react-blog",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/feature/react/blog/src",
+  "projectType": "library",
+  "tags": ["feature"],
+  "targets": {
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/feature/react/blog/**/*.{ts,tsx,js,jsx}"]
+      }
+    }
+  }
+}
