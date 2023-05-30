@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-export function PostTags({ tags }: {
+export function Tags({ tags }: {
   tags: string[]
 }) {
 
@@ -31,4 +31,4 @@ export function PostTags({ tags }: {
     </ul>
   )
 }
-export default PostTags;
+export default Tags;

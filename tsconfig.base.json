@@ -15,12 +15,14 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./*"],
       "@the/feature/react/animations": [
         "libs/feature/react/animations/src/index.ts"
       ],
       "@the/feature/react/auth": ["libs/feature/react/auth/src/index.ts"],
-      "@the/feature/react/blog": ["libs/feature/react/blog/src/index.ts"],
+      "@the/feature/react/organization": [
+        "libs/feature/react/organization/src/index.ts"
+      ],
+      "@the/feature/react/user": ["libs/feature/react/user/src/index.ts"],
       "@the/makewith/react/data-access": [
         "libs/makewith/react/data-access/src/index.ts"
       ],

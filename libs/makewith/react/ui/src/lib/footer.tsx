@@ -1,7 +1,7 @@
 'use client';
 import Link from 'next/link'
 import Waves from './waves';
-import { Loader } from '@/libs/ui/react/src';
+import { Loader } from '@the/ui/react';
 
 export function Footer(): JSX.Element {
   return (

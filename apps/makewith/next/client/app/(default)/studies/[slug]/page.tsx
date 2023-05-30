@@ -1,8 +1,4 @@
-import { notFound } from 'next/navigation'
-import Link from 'next/link'
-import Image from 'next/image'
-import { PostDate, PostTags } from '@the/feature/react/blog';
-import { CaseStudy, useCaseStudies } from '@the/makewith/react/ui';
+import { CaseStudy } from '@the/makewith/react/ui';
 
 const slugs = [
   {

@@ -1,9 +1,9 @@
 import { parseISO, format } from 'date-fns'
 
-export function PostDate({ dateString }: {
+export function Date({ dateString }: {
   dateString: string
 }) {
   const date = parseISO(dateString)
   return <time dateTime={dateString}>{format(date, 'MMM d, yyyy')}</time>
 }
-export default PostDate;
+export default Date;

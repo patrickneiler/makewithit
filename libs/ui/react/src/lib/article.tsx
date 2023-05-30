@@ -1,9 +1,9 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import PostDate from './post-date'
-import PostTags from './post-tags'
+import Date from './date'
+import Tags from './tags'
 
-export function PostItem({ ...props }) {
+export function Article({ ...props }) {
   return (
     <article className="flex flex-col h-full" data-aos="fade-up">
       <header>
@@ -16,11 +16,11 @@ export function PostItem({ ...props }) {
         }
         {props.tags &&
           <div className="mb-3">
-            <PostTags tags={props.tags} />
+            <Tags tags={props.tags} />
           </div>
         }
         <h3 className="h4 mb-2">
-          <Link href={`/blog/${props.slug}`} className="hover:text-gray-100 transition duration-150 ease-in-out">{props.title}</Link>
+          <Link href={`${props.slug}`} className="hover:text-gray-100 transition duration-150 ease-in-out">{props.title}</Link>
         </h3>
       </header>
       <p className="text-lg text-gray-400 grow">{props.summary}</p>
@@ -31,10 +31,10 @@ export function PostItem({ ...props }) {
         <div className="font-medium">
           <Link href="#" className="text-gray-200 hover:text-gray-100 transition duration-150 ease-in-out">{props.author}</Link>
           <span className="text-gray-700"> - </span>
-          <span className="text-gray-500"><PostDate dateString={props.publishedAt} /></span>
+          <span className="text-gray-500"><Date dateString={props.publishedAt} /></span>
         </div>
       </footer>
     </article>
   )
 }
-export default PostItem;
+export default Article;

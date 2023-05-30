@@ -6,7 +6,6 @@ import 'aos/dist/aos.css';
 
 // import PageIllustration from '@/components/page-illustration'
 import { Footer, Header, PageIllustration, CaseStudiesProvider, useCaseStudies, CaseStudy } from '@the/makewith/react/ui';
-import { UserState } from '@the/feature/react/auth';
 
 export default function DefaultLayout({
   children,
@@ -23,7 +22,7 @@ export default function DefaultLayout({
   });
 
   return (
-    <UserState>
+    <>
 
       <Header />
       <main className="grow">
@@ -34,6 +33,6 @@ export default function DefaultLayout({
 
       <Footer />
 
-    </UserState>
+    </>
   );
 }

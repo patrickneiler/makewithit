@@ -1,2 +1,2 @@
-export {SignInForm} from './lib/signin-form';
-export {UserState} from './lib/user-state';
+export { SignInForm } from './lib/signin-form';
+export { AuthProvider } from './lib/+state/provider';

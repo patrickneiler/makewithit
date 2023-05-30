@@ -1,11 +1,9 @@
 /* eslint-disable no-irregular-whitespace */
 'use client';
 
-import { FormEvent, Fragment, useContext, useState } from "react";
+import { FormEvent, Fragment, useState } from "react";
 import { signIn } from "@the/util/react/firebase";
-import { UserContext } from '@the/makewith/react/data-access';
 import { useRouter } from "next/navigation";
-import { Loader } from '@the/ui/react';
 
 export const SignInForm = () => {
     const router = useRouter();
@@ -13,7 +11,7 @@ export const SignInForm = () => {
     const [loading, setLoading] = useState(false);
     const [password, setPassword] = useState("");
     const [error, seterror] = useState("");
-    const { addUser } = useContext(UserContext);
+
 
     const handleSubmit = async (e: FormEvent) => {
         e.preventDefault();
@@ -21,7 +19,6 @@ export const SignInForm = () => {
         try {
             const res = await signIn(email, password);
             if (res.user) {
-                addUser(res.user);
                 router.push('/proposal');
             }
         } catch (error: any) {

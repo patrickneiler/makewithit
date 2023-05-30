@@ -15,3 +15,4 @@ export * from './lib/case-study-provider';
 export {FeaturedCaseStudy} from './lib/featured-case-study';
 export {CaseStudy} from './lib/case-study';
 export {Morph} from './lib/morph';
+export {Loading} from './lib/loading';

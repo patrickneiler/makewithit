@@ -1,6 +1,9 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
 'use client'
 import React, { createContext, useState, useContext } from 'react';
+import { useDispatch } from 'react-redux';
+import { AppDispatch } from '@the/makewith/react/data-access';
+import { fetchOrganizations } from '@the/feature/react/organization';
 
 // Define the type for an individual case study
 export type ICaseStudy = {
@@ -41,6 +44,7 @@ const CaseStudiesContext = createContext<CaseStudiesContextValue>({
 // Define the provider component
 const CaseStudiesProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [caseStudies, setCaseStudies] = useState<ICaseStudy[]>([]);
+
 
   // Add a new case study to the state
   const addCaseStudy = (caseStudy: ICaseStudy) => {

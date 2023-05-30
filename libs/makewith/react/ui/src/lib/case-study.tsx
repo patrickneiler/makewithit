@@ -2,9 +2,8 @@
 import Link from 'next/link'
 
 import { ICaseStudy, useCaseStudies } from './case-study-provider';
-import { PostTags, PostDate } from '@the/feature/react/blog';
+import { Tags, Date } from '@the/ui/react';
 import { useEffect, useState } from 'react';
-import { notFound } from 'next/navigation';
 
 export function CaseStudy({ params }: {
     params: { slug: string }
@@ -40,13 +39,13 @@ export function CaseStudy({ params }: {
                                             <div>
                                                 <Link href="#" className="font-medium text-gray-200 hover:text-gray-100 transition duration-150 ease-in-out">{study.client}</Link>
                                                 <span className="text-gray-700"> - </span>
-                                                <span className="text-gray-500"><PostDate dateString={study.publishedAt} /></span>
+                                                <span className="text-gray-500"><Date dateString={study.publishedAt} /></span>
                                             </div>
                                         </div>
                                         {/* Article tags */}
                                         {study.tags &&
                                             <div className="flex justify-center mt-4 md:mt-0" data-aos="fade-up" data-aos-delay="600">
-                                                <PostTags tags={study.tags} />
+                                                <Tags tags={study.tags} />
                                             </div>
                                         }
                                     </div>

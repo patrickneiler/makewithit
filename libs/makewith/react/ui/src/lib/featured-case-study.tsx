@@ -2,7 +2,7 @@
 import Link from 'next/link'
 
 import { ICaseStudy, useCaseStudies } from './case-study-provider';
-import { PostTags, PostDate } from '@the/feature/react/blog';
+import { Tags, Date } from '@the/ui/react';
 import { useEffect } from 'react';
 
 export function FeaturedCaseStudy() {
@@ -60,7 +60,7 @@ export function FeaturedCaseStudy() {
                                         <div className="mb-3">
                                             {featured.tags &&
                                                 <div className="mb-3">
-                                                    <PostTags tags={featured.tags} />
+                                                    <Tags tags={featured.tags} />
                                                 </div>
                                             }
                                         </div>
@@ -76,7 +76,7 @@ export function FeaturedCaseStudy() {
                                         <div>
                                             <Link href="#" className="font-medium text-gray-200 hover:text-gray-100 transition duration-150 ease-in-out">{featured.client}</Link>
                                             <span className="text-gray-700"> - </span>
-                                            <span className="text-gray-500"><PostDate dateString={featured.publishedAt} /></span>
+                                            <span className="text-gray-500"><Date dateString={featured.publishedAt} /></span>
                                         </div>
                                     </footer>
                                 </div>

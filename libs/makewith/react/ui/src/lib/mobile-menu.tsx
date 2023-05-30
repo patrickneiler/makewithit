@@ -1,9 +1,10 @@
 'use client'
 
-import { useState, useRef, useEffect, useContext } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import Link from 'next/link'
-import { UserContext } from '@the/makewith/react/data-access';
 import { logout } from '@the/util/react/firebase';
+import { useSelector } from 'react-redux';
+import { selectAllUser, userActions } from '@the/feature/react/user';
 type MobileMenuProps = {
   hideLinks?: boolean;
 }
@@ -11,10 +12,10 @@ export function MobileMenu({
   hideLinks
 }: MobileMenuProps): JSX.Element {
   const [mobileNavOpen, setMobileNavOpen] = useState<boolean>(false)
-  const { user, removeUser } = useContext(UserContext);
+  const user = useSelector(selectAllUser)[0];
   const handleLogout = async () => {
     await logout();
-    removeUser();
+    dispatch(userActions.remove(user.id));
     setMobileNavOpen(false);
   };
   const trigger = useRef<HTMLButtonElement>(null)
@@ -117,3 +118,7 @@ export function MobileMenu({
   )
 }
 export default MobileMenu;
+
+function dispatch(arg0: any) {
+  throw new Error('Function not implemented.');
+}

@@ -1,11 +1,5 @@
-import Link from 'next/link'
 import Image from 'next/image'
 import { ModalVideo } from './modal-video';
-
-import SonarVideoThumb from '@/apps/makewith/next/client/public/assets/videos/sonar_thumb.jpg';
-
-import NBCSports1 from '@/apps/makewith/next/client/public/assets/images/portfolio/nbcsports_1.png'
-import TR3E from '@/apps/makewith/next/client/public/assets/images/portfolio/Live-3E-final.gif'
 
 export function CaseStudies() {
   const SonarVideo = '/assets/videos/sonar.mp4';
@@ -28,7 +22,7 @@ export function CaseStudies() {
             <article className="flex flex-col h-full" data-aos="fade-up">
               <a className="block" href="#0">
                 <figure className="relative h-0 pb-9/16 overflow-hidden">
-                  <Image className="absolute inset-0 w-full h-full object-cover transform hover:scale-105 transition duration-700 ease-out" src={NBCSports1} width={352} height={198} alt="News 10" />
+                  <Image className="absolute inset-0 w-full h-full object-cover transform hover:scale-105 transition duration-700 ease-out" src='assets/images/portfolio/nbcsports_1.png' width={352} height={198} alt="News 10" />
 
                   <figcaption className="absolute top-0 right-0 mt-4 mr-4 text-xs font-medium inline-flex text-center text-gray-100 py-1 px-3 rounded-full bg-gray-900 bg-opacity-75 pointer-events-none">Case study</figcaption>
                 </figure>
@@ -53,7 +47,7 @@ export function CaseStudies() {
             {/* 2nd article */}
             <article className="flex flex-col h-full" data-aos="fade-up" data-aos-delay="200">
               <ModalVideo
-                thumb={SonarVideoThumb}
+                thumb='assets/images/portfolio/sonar_thumb.png'
                 thumbWidth={352}
                 thumbHeight={198}
                 thumbAlt="Sonar video thumbnail"
@@ -80,7 +74,7 @@ export function CaseStudies() {
             <article className="flex flex-col h-full" data-aos="fade-up" data-aos-delay="400">
               <a className="block" href="#0">
                 <figure className="relative h-0 pb-9/16 overflow-hidden">
-                  <Image className="absolute inset-0 w-full h-full object-cover transform hover:scale-105 transition duration-700 ease-out" src={TR3E} width={352} height={198} alt="News 12" />
+                  <Image className="absolute inset-0 w-full h-full object-cover transform hover:scale-105 transition duration-700 ease-out" src='assets/images/portfolio/3e.gif' width={352} height={198} alt="News 12" />
                   <figcaption className="absolute top-0 right-0 mt-4 mr-4 text-xs font-medium inline-flex text-center text-gray-100 py-1 px-3 rounded-full bg-gray-900 bg-opacity-75 pointer-events-none">Case study</figcaption>
                 </figure>
               </a>
