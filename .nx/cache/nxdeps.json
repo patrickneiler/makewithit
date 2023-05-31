@@ -64,6 +64,15 @@
     "typescript": "~5.0.2"
   },
   "pathMappings": {
+    "@the/data-access/organization": [
+      "libs/data-access/organization/src/index.ts"
+    ],
+    "@the/data-access/study": [
+      "libs/data-access/study/src/index.ts"
+    ],
+    "@the/data-access/user": [
+      "libs/data-access/user/src/index.ts"
+    ],
     "@the/feature/react/animations": [
       "libs/feature/react/animations/src/index.ts"
     ],
@@ -72,6 +81,9 @@
     ],
     "@the/feature/react/organization": [
       "libs/feature/react/organization/src/index.ts"
+    ],
+    "@the/feature/react/study": [
+      "libs/feature/react/study/src/index.ts"
     ],
     "@the/feature/react/user": [
       "libs/feature/react/user/src/index.ts"
@@ -100,6 +112,70 @@
   },
   "nxJsonPlugins": [],
   "nodes": {
+    "feature-react-organization": {
+      "name": "feature-react-organization",
+      "type": "lib",
+      "data": {
+        "name": "feature-react-organization",
+        "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+        "sourceRoot": "libs/feature/react/organization/src",
+        "projectType": "library",
+        "tags": [
+          "feature"
+        ],
+        "targets": {
+          "lint": {
+            "inputs": [
+              "default",
+              "{workspaceRoot}/.eslintrc.json",
+              "{workspaceRoot}/.eslintignore"
+            ],
+            "executor": "@nx/linter:eslint",
+            "outputs": [
+              "{options.outputFile}"
+            ],
+            "options": {
+              "lintFilePatterns": [
+                "libs/feature/react/organization/**/*.{ts,tsx,js,jsx}"
+              ]
+            },
+            "configurations": {}
+          }
+        },
+        "root": "libs/feature/react/organization",
+        "implicitDependencies": [],
+        "files": [
+          {
+            "file": "libs/feature/react/organization/.babelrc",
+            "hash": "2946678488919325452"
+          },
+          {
+            "file": "libs/feature/react/organization/.eslintrc.json",
+            "hash": "12678463301772327123"
+          },
+          {
+            "file": "libs/feature/react/organization/project.json",
+            "hash": "10423376372288867039"
+          },
+          {
+            "file": "libs/feature/react/organization/README.md",
+            "hash": "1739130191943812748"
+          },
+          {
+            "file": "libs/feature/react/organization/src/index.ts",
+            "hash": "3244421341483603138"
+          },
+          {
+            "file": "libs/feature/react/organization/tsconfig.json",
+            "hash": "13090035453275662468"
+          },
+          {
+            "file": "libs/feature/react/organization/tsconfig.lib.json",
+            "hash": "953912742928436052"
+          }
+        ]
+      }
+    },
     "makewith-react-data-access": {
       "name": "makewith-react-data-access",
       "type": "lib",
@@ -171,7 +247,7 @@
           },
           {
             "file": "libs/makewith/react/data-access/src/lib/+state/store.tsx",
-            "hash": "95309208754982643",
+            "hash": "14918301862401894809",
             "dependencies": [
               {
                 "source": "makewith-react-data-access",
@@ -180,12 +256,17 @@
               },
               {
                 "source": "makewith-react-data-access",
-                "target": "feature-react-user",
+                "target": "data-access-user",
                 "type": "static"
               },
               {
                 "source": "makewith-react-data-access",
-                "target": "feature-react-organization",
+                "target": "data-access-organization",
+                "type": "static"
+              },
+              {
+                "source": "makewith-react-data-access",
+                "target": "data-access-study",
                 "type": "static"
               }
             ]
@@ -197,6 +278,95 @@
           {
             "file": "libs/makewith/react/data-access/tsconfig.lib.json",
             "hash": "953912742928436052"
+          }
+        ]
+      }
+    },
+    "data-access-organization": {
+      "name": "data-access-organization",
+      "type": "lib",
+      "data": {
+        "name": "data-access-organization",
+        "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+        "sourceRoot": "libs/data-access/organization/src",
+        "projectType": "library",
+        "tags": [
+          "data-access"
+        ],
+        "targets": {
+          "lint": {
+            "inputs": [
+              "default",
+              "{workspaceRoot}/.eslintrc.json",
+              "{workspaceRoot}/.eslintignore"
+            ],
+            "executor": "@nx/linter:eslint",
+            "outputs": [
+              "{options.outputFile}"
+            ],
+            "options": {
+              "lintFilePatterns": [
+                "libs/data-access/organization/**/*.{ts,tsx,js,jsx}"
+              ]
+            },
+            "configurations": {}
+          }
+        },
+        "root": "libs/data-access/organization",
+        "implicitDependencies": [],
+        "files": [
+          {
+            "file": "libs/data-access/organization/.babelrc",
+            "hash": "2946678488919325452"
+          },
+          {
+            "file": "libs/data-access/organization/.eslintrc.json",
+            "hash": "15946965712701950674"
+          },
+          {
+            "file": "libs/data-access/organization/project.json",
+            "hash": "8819381416177627253"
+          },
+          {
+            "file": "libs/data-access/organization/README.md",
+            "hash": "942008903810497561"
+          },
+          {
+            "file": "libs/data-access/organization/src/index.ts",
+            "hash": "10232235020991679335"
+          },
+          {
+            "file": "libs/data-access/organization/src/lib/+state/organization.slice.spec.ts",
+            "hash": "12775548280580387947"
+          },
+          {
+            "file": "libs/data-access/organization/src/lib/+state/organization.slice.ts",
+            "hash": "17995015160316037938",
+            "dependencies": [
+              {
+                "source": "data-access-organization",
+                "target": "util-react-firebase",
+                "type": "static"
+              },
+              {
+                "source": "data-access-organization",
+                "target": "npm:@reduxjs/toolkit",
+                "type": "static"
+              },
+              {
+                "source": "data-access-organization",
+                "target": "npm:firebase",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "libs/data-access/organization/tsconfig.json",
+            "hash": "9466653708934095578"
+          },
+          {
+            "file": "libs/data-access/organization/tsconfig.lib.json",
+            "hash": "1261950536210511632"
           }
         ]
       }
@@ -424,7 +594,7 @@
           },
           {
             "file": "apps/makewith/next/client/app/(default)/layout.tsx",
-            "hash": "140814339334524666",
+            "hash": "10921597000414707729",
             "dependencies": [
               {
                 "source": "makewith-next",
@@ -445,29 +615,7 @@
           },
           {
             "file": "apps/makewith/next/client/app/(default)/page.tsx",
-            "hash": "9451022890882515283",
-            "dependencies": [
-              {
-                "source": "makewith-next",
-                "target": "makewith-react-ui",
-                "type": "static"
-              }
-            ]
-          },
-          {
-            "file": "apps/makewith/next/client/app/(default)/studies/[slug]/page.tsx",
-            "hash": "13461003715166329391",
-            "dependencies": [
-              {
-                "source": "makewith-next",
-                "target": "makewith-react-ui",
-                "type": "static"
-              }
-            ]
-          },
-          {
-            "file": "apps/makewith/next/client/app/(default)/studies/layout.tsx",
-            "hash": "17228036004477765188",
+            "hash": "2941287009357799414",
             "dependencies": [
               {
                 "source": "makewith-next",
@@ -476,10 +624,25 @@
               },
               {
                 "source": "makewith-next",
-                "target": "npm:react",
+                "target": "feature-react-study",
                 "type": "static"
               }
             ]
+          },
+          {
+            "file": "apps/makewith/next/client/app/(default)/studies/[slug]/page.tsx",
+            "hash": "16452856947412819218",
+            "dependencies": [
+              {
+                "source": "makewith-next",
+                "target": "feature-react-study",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "apps/makewith/next/client/app/(default)/studies/layout.tsx",
+            "hash": "9005579649940466347"
           },
           {
             "file": "apps/makewith/next/client/app/(default)/studies/page.tsx",
@@ -487,18 +650,8 @@
           },
           {
             "file": "apps/makewith/next/client/app/(private)/(organization)/layout.tsx",
-            "hash": "13976043532265033265",
+            "hash": "5842761418844371838",
             "dependencies": [
-              {
-                "source": "makewith-next",
-                "target": "npm:react",
-                "type": "static"
-              },
-              {
-                "source": "makewith-next",
-                "target": "npm:aos",
-                "type": "static"
-              },
               {
                 "source": "makewith-next",
                 "target": "makewith-react-ui",
@@ -519,7 +672,7 @@
           },
           {
             "file": "apps/makewith/next/client/app/(private)/layout.tsx",
-            "hash": "3842039286903327124",
+            "hash": "3281577916358437464",
             "dependencies": [
               {
                 "source": "makewith-next",
@@ -529,11 +682,6 @@
               {
                 "source": "makewith-next",
                 "target": "npm:aos",
-                "type": "static"
-              },
-              {
-                "source": "makewith-next",
-                "target": "makewith-react-ui",
                 "type": "static"
               },
               {
@@ -569,7 +717,7 @@
           },
           {
             "file": "apps/makewith/next/client/app/providers.tsx",
-            "hash": "9066326244049376727",
+            "hash": "16985497877244509613",
             "dependencies": [
               {
                 "source": "makewith-next",
@@ -585,11 +733,6 @@
                 "source": "makewith-next",
                 "target": "feature-react-auth",
                 "type": "static"
-              },
-              {
-                "source": "makewith-next",
-                "target": "makewith-react-ui",
-                "type": "static"
               }
             ]
           },
@@ -599,7 +742,7 @@
           },
           {
             "file": "apps/makewith/next/client/app/styles/theme.css",
-            "hash": "1945934815451914012"
+            "hash": "2667166293345554250"
           },
           {
             "file": "apps/makewith/next/client/app/styles/toggle-switch.css",
@@ -1349,6 +1492,153 @@
         ]
       }
     },
+    "feature-react-study": {
+      "name": "feature-react-study",
+      "type": "lib",
+      "data": {
+        "name": "feature-react-study",
+        "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+        "sourceRoot": "libs/feature/react/study/src",
+        "projectType": "library",
+        "tags": [
+          "feature"
+        ],
+        "targets": {
+          "lint": {
+            "inputs": [
+              "default",
+              "{workspaceRoot}/.eslintrc.json",
+              "{workspaceRoot}/.eslintignore"
+            ],
+            "executor": "@nx/linter:eslint",
+            "outputs": [
+              "{options.outputFile}"
+            ],
+            "options": {
+              "lintFilePatterns": [
+                "libs/feature/react/study/**/*.{ts,tsx,js,jsx}"
+              ]
+            },
+            "configurations": {}
+          }
+        },
+        "root": "libs/feature/react/study",
+        "implicitDependencies": [],
+        "files": [
+          {
+            "file": "libs/feature/react/study/.babelrc",
+            "hash": "2946678488919325452"
+          },
+          {
+            "file": "libs/feature/react/study/.eslintrc.json",
+            "hash": "12678463301772327123"
+          },
+          {
+            "file": "libs/feature/react/study/project.json",
+            "hash": "10100847255242697977"
+          },
+          {
+            "file": "libs/feature/react/study/README.md",
+            "hash": "14595656105205789997"
+          },
+          {
+            "file": "libs/feature/react/study/src/index.ts",
+            "hash": "5496107543490762079"
+          },
+          {
+            "file": "libs/feature/react/study/src/lib/case-studies.tsx",
+            "hash": "4065900153543843151",
+            "dependencies": [
+              {
+                "source": "feature-react-study",
+                "target": "npm:next",
+                "type": "static"
+              },
+              {
+                "source": "feature-react-study",
+                "target": "makewith-react-ui",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "libs/feature/react/study/src/lib/case-study.tsx",
+            "hash": "2975112857655845512",
+            "dependencies": [
+              {
+                "source": "feature-react-study",
+                "target": "npm:next",
+                "type": "static"
+              },
+              {
+                "source": "feature-react-study",
+                "target": "ui-react",
+                "type": "static"
+              },
+              {
+                "source": "feature-react-study",
+                "target": "npm:react",
+                "type": "static"
+              },
+              {
+                "source": "feature-react-study",
+                "target": "data-access-organization",
+                "type": "static"
+              },
+              {
+                "source": "feature-react-study",
+                "target": "npm:react-redux",
+                "type": "static"
+              },
+              {
+                "source": "feature-react-study",
+                "target": "data-access-study",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "libs/feature/react/study/src/lib/featured-case-study.tsx",
+            "hash": "7969179444268148283",
+            "dependencies": [
+              {
+                "source": "feature-react-study",
+                "target": "npm:next",
+                "type": "static"
+              },
+              {
+                "source": "feature-react-study",
+                "target": "ui-react",
+                "type": "static"
+              },
+              {
+                "source": "feature-react-study",
+                "target": "npm:react-redux",
+                "type": "static"
+              },
+              {
+                "source": "feature-react-study",
+                "target": "data-access-study",
+                "type": "static"
+              },
+              {
+                "source": "feature-react-study",
+                "target": "data-access-organization",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "libs/feature/react/study/tsconfig.json",
+            "hash": "13090035453275662468"
+          },
+          {
+            "file": "libs/feature/react/study/tsconfig.lib.json",
+            "hash": "953912742928436052"
+          }
+        ]
+      }
+    },
     "makewith-react-util": {
       "name": "makewith-react-util",
       "type": "lib",
@@ -1580,7 +1870,7 @@
           },
           {
             "file": "libs/feature/react/auth/src/lib/+state/provider.tsx",
-            "hash": "6007740936206018202",
+            "hash": "4873345267180086900",
             "dependencies": [
               {
                 "source": "feature-react-auth",
@@ -1609,19 +1899,24 @@
               },
               {
                 "source": "feature-react-auth",
-                "target": "feature-react-user",
+                "target": "data-access-user",
                 "type": "static"
               },
               {
                 "source": "feature-react-auth",
-                "target": "feature-react-organization",
+                "target": "data-access-organization",
+                "type": "static"
+              },
+              {
+                "source": "feature-react-auth",
+                "target": "data-access-study",
                 "type": "static"
               }
             ]
           },
           {
             "file": "libs/feature/react/auth/src/lib/signin-form.tsx",
-            "hash": "17844996161796093563",
+            "hash": "4995154098659089160",
             "dependencies": [
               {
                 "source": "feature-react-auth",
@@ -1702,32 +1997,7 @@
           },
           {
             "file": "libs/feature/react/user/src/index.ts",
-            "hash": "1397235202267333872"
-          },
-          {
-            "file": "libs/feature/react/user/src/lib/+state/user.slice.spec.ts",
-            "hash": "903960702926535648"
-          },
-          {
-            "file": "libs/feature/react/user/src/lib/+state/user.slice.ts",
-            "hash": "15890847279987709962",
-            "dependencies": [
-              {
-                "source": "feature-react-user",
-                "target": "util-react-firebase",
-                "type": "static"
-              },
-              {
-                "source": "feature-react-user",
-                "target": "npm:@reduxjs/toolkit",
-                "type": "static"
-              },
-              {
-                "source": "feature-react-user",
-                "target": "npm:firebase",
-                "type": "static"
-              }
-            ]
+            "hash": "3244421341483603138"
           },
           {
             "file": "libs/feature/react/user/tsconfig.json",
@@ -1736,6 +2006,91 @@
           {
             "file": "libs/feature/react/user/tsconfig.lib.json",
             "hash": "953912742928436052"
+          }
+        ]
+      }
+    },
+    "data-access-study": {
+      "name": "data-access-study",
+      "type": "lib",
+      "data": {
+        "name": "data-access-study",
+        "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+        "sourceRoot": "libs/data-access/study/src",
+        "projectType": "library",
+        "tags": [
+          "data-access"
+        ],
+        "targets": {
+          "lint": {
+            "inputs": [
+              "default",
+              "{workspaceRoot}/.eslintrc.json",
+              "{workspaceRoot}/.eslintignore"
+            ],
+            "executor": "@nx/linter:eslint",
+            "outputs": [
+              "{options.outputFile}"
+            ],
+            "options": {
+              "lintFilePatterns": [
+                "libs/data-access/study/**/*.{ts,tsx,js,jsx}"
+              ]
+            },
+            "configurations": {}
+          }
+        },
+        "root": "libs/data-access/study",
+        "implicitDependencies": [],
+        "files": [
+          {
+            "file": "libs/data-access/study/.babelrc",
+            "hash": "2946678488919325452"
+          },
+          {
+            "file": "libs/data-access/study/.eslintrc.json",
+            "hash": "15946965712701950674"
+          },
+          {
+            "file": "libs/data-access/study/project.json",
+            "hash": "15840511692543545394"
+          },
+          {
+            "file": "libs/data-access/study/README.md",
+            "hash": "6948944741073501294"
+          },
+          {
+            "file": "libs/data-access/study/src/index.ts",
+            "hash": "7791506297212165292"
+          },
+          {
+            "file": "libs/data-access/study/src/lib/+state/study.slice.ts",
+            "hash": "1754494722671519176",
+            "dependencies": [
+              {
+                "source": "data-access-study",
+                "target": "util-react-firebase",
+                "type": "static"
+              },
+              {
+                "source": "data-access-study",
+                "target": "npm:@reduxjs/toolkit",
+                "type": "static"
+              },
+              {
+                "source": "data-access-study",
+                "target": "npm:firebase",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "libs/data-access/study/tsconfig.json",
+            "hash": "9466653708934095578"
+          },
+          {
+            "file": "libs/data-access/study/tsconfig.lib.json",
+            "hash": "1261950536210511632"
           }
         ]
       }
@@ -1791,90 +2146,11 @@
           },
           {
             "file": "libs/makewith/react/ui/src/index.ts",
-            "hash": "13937942804793659509"
-          },
-          {
-            "file": "libs/makewith/react/ui/src/lib/case-studies.tsx",
-            "hash": "3085674466004406118",
-            "dependencies": [
-              {
-                "source": "makewith-react-ui",
-                "target": "npm:next",
-                "type": "static"
-              }
-            ]
-          },
-          {
-            "file": "libs/makewith/react/ui/src/lib/case-study-provider.tsx",
-            "hash": "12709238939152221687",
-            "dependencies": [
-              {
-                "source": "makewith-react-ui",
-                "target": "npm:react",
-                "type": "static"
-              },
-              {
-                "source": "makewith-react-ui",
-                "target": "npm:react-redux",
-                "type": "static"
-              },
-              {
-                "source": "makewith-react-ui",
-                "target": "makewith-react-data-access",
-                "type": "static"
-              },
-              {
-                "source": "makewith-react-ui",
-                "target": "feature-react-organization",
-                "type": "static"
-              }
-            ]
-          },
-          {
-            "file": "libs/makewith/react/ui/src/lib/case-study.tsx",
-            "hash": "2989253615166535314",
-            "dependencies": [
-              {
-                "source": "makewith-react-ui",
-                "target": "npm:next",
-                "type": "static"
-              },
-              {
-                "source": "makewith-react-ui",
-                "target": "ui-react",
-                "type": "static"
-              },
-              {
-                "source": "makewith-react-ui",
-                "target": "npm:react",
-                "type": "static"
-              }
-            ]
+            "hash": "9640445697607428959"
           },
           {
             "file": "libs/makewith/react/ui/src/lib/feature-list.tsx",
             "hash": "2397480062657950859"
-          },
-          {
-            "file": "libs/makewith/react/ui/src/lib/featured-case-study.tsx",
-            "hash": "10741496936113594189",
-            "dependencies": [
-              {
-                "source": "makewith-react-ui",
-                "target": "npm:next",
-                "type": "static"
-              },
-              {
-                "source": "makewith-react-ui",
-                "target": "ui-react",
-                "type": "static"
-              },
-              {
-                "source": "makewith-react-ui",
-                "target": "npm:react",
-                "type": "static"
-              }
-            ]
           },
           {
             "file": "libs/makewith/react/ui/src/lib/footer.tsx",
@@ -1894,7 +2170,7 @@
           },
           {
             "file": "libs/makewith/react/ui/src/lib/header.tsx",
-            "hash": "5729574979684281776",
+            "hash": "9713018995979125004",
             "dependencies": [
               {
                 "source": "makewith-react-ui",
@@ -1918,19 +2194,19 @@
               },
               {
                 "source": "makewith-react-ui",
-                "target": "feature-react-user",
+                "target": "data-access-user",
                 "type": "static"
               },
               {
                 "source": "makewith-react-ui",
-                "target": "feature-react-organization",
+                "target": "data-access-organization",
                 "type": "static"
               }
             ]
           },
           {
             "file": "libs/makewith/react/ui/src/lib/hero.tsx",
-            "hash": "6717954224179339112",
+            "hash": "9166839532427515726",
             "dependencies": [
               {
                 "source": "makewith-react-ui",
@@ -1939,14 +2215,14 @@
               },
               {
                 "source": "makewith-react-ui",
-                "target": "feature-react-user",
+                "target": "data-access-user",
                 "type": "static"
               }
             ]
           },
           {
             "file": "libs/makewith/react/ui/src/lib/loading.tsx",
-            "hash": "8490472660813176860",
+            "hash": "16264975660671609327",
             "dependencies": [
               {
                 "source": "makewith-react-ui",
@@ -1965,18 +2241,18 @@
               },
               {
                 "source": "makewith-react-ui",
-                "target": "feature-react-user",
+                "target": "data-access-user",
                 "type": "static"
               }
             ]
           },
           {
             "file": "libs/makewith/react/ui/src/lib/logo.module.scss",
-            "hash": "4638015209295168849"
+            "hash": "15676039249476334258"
           },
           {
             "file": "libs/makewith/react/ui/src/lib/logo.tsx",
-            "hash": "9362922805424022486",
+            "hash": "5372998444223898263",
             "dependencies": [
               {
                 "source": "makewith-react-ui",
@@ -1992,7 +2268,7 @@
           },
           {
             "file": "libs/makewith/react/ui/src/lib/mobile-menu.tsx",
-            "hash": "9174614760021141903",
+            "hash": "4876302976552333508",
             "dependencies": [
               {
                 "source": "makewith-react-ui",
@@ -2016,7 +2292,7 @@
               },
               {
                 "source": "makewith-react-ui",
-                "target": "feature-react-user",
+                "target": "data-access-user",
                 "type": "static"
               }
             ]
@@ -2274,6 +2550,95 @@
         ]
       }
     },
+    "data-access-user": {
+      "name": "data-access-user",
+      "type": "lib",
+      "data": {
+        "name": "data-access-user",
+        "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+        "sourceRoot": "libs/data-access/user/src",
+        "projectType": "library",
+        "tags": [
+          "data-access"
+        ],
+        "targets": {
+          "lint": {
+            "inputs": [
+              "default",
+              "{workspaceRoot}/.eslintrc.json",
+              "{workspaceRoot}/.eslintignore"
+            ],
+            "executor": "@nx/linter:eslint",
+            "outputs": [
+              "{options.outputFile}"
+            ],
+            "options": {
+              "lintFilePatterns": [
+                "libs/data-access/user/**/*.{ts,tsx,js,jsx}"
+              ]
+            },
+            "configurations": {}
+          }
+        },
+        "root": "libs/data-access/user",
+        "implicitDependencies": [],
+        "files": [
+          {
+            "file": "libs/data-access/user/.babelrc",
+            "hash": "2946678488919325452"
+          },
+          {
+            "file": "libs/data-access/user/.eslintrc.json",
+            "hash": "15946965712701950674"
+          },
+          {
+            "file": "libs/data-access/user/project.json",
+            "hash": "2275827694216047172"
+          },
+          {
+            "file": "libs/data-access/user/README.md",
+            "hash": "9579235969186755435"
+          },
+          {
+            "file": "libs/data-access/user/src/index.ts",
+            "hash": "1397235202267333872"
+          },
+          {
+            "file": "libs/data-access/user/src/lib/+state/user.slice.spec.ts",
+            "hash": "903960702926535648"
+          },
+          {
+            "file": "libs/data-access/user/src/lib/+state/user.slice.ts",
+            "hash": "15890847279987709962",
+            "dependencies": [
+              {
+                "source": "data-access-user",
+                "target": "util-react-firebase",
+                "type": "static"
+              },
+              {
+                "source": "data-access-user",
+                "target": "npm:@reduxjs/toolkit",
+                "type": "static"
+              },
+              {
+                "source": "data-access-user",
+                "target": "npm:firebase",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "libs/data-access/user/tsconfig.json",
+            "hash": "9466653708934095578"
+          },
+          {
+            "file": "libs/data-access/user/tsconfig.lib.json",
+            "hash": "1261950536210511632"
+          }
+        ]
+      }
+    },
     "ui-react": {
       "name": "ui-react",
       "type": "lib",
@@ -2382,95 +2747,6 @@
           {
             "file": "libs/ui/react/tsconfig.lib.json",
             "hash": "1261950536210511632"
-          }
-        ]
-      }
-    },
-    "feature-react-organization": {
-      "name": "feature-react-organization",
-      "type": "lib",
-      "data": {
-        "name": "feature-react-organization",
-        "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
-        "sourceRoot": "libs/feature/react/organization/src",
-        "projectType": "library",
-        "tags": [
-          "feature"
-        ],
-        "targets": {
-          "lint": {
-            "inputs": [
-              "default",
-              "{workspaceRoot}/.eslintrc.json",
-              "{workspaceRoot}/.eslintignore"
-            ],
-            "executor": "@nx/linter:eslint",
-            "outputs": [
-              "{options.outputFile}"
-            ],
-            "options": {
-              "lintFilePatterns": [
-                "libs/feature/react/organization/**/*.{ts,tsx,js,jsx}"
-              ]
-            },
-            "configurations": {}
-          }
-        },
-        "root": "libs/feature/react/organization",
-        "implicitDependencies": [],
-        "files": [
-          {
-            "file": "libs/feature/react/organization/.babelrc",
-            "hash": "2946678488919325452"
-          },
-          {
-            "file": "libs/feature/react/organization/.eslintrc.json",
-            "hash": "12678463301772327123"
-          },
-          {
-            "file": "libs/feature/react/organization/project.json",
-            "hash": "10423376372288867039"
-          },
-          {
-            "file": "libs/feature/react/organization/README.md",
-            "hash": "1739130191943812748"
-          },
-          {
-            "file": "libs/feature/react/organization/src/index.ts",
-            "hash": "10232235020991679335"
-          },
-          {
-            "file": "libs/feature/react/organization/tsconfig.json",
-            "hash": "13090035453275662468"
-          },
-          {
-            "file": "libs/feature/react/organization/tsconfig.lib.json",
-            "hash": "953912742928436052"
-          },
-          {
-            "file": "libs/feature/react/organization/src/lib/+state/organization.slice.spec.ts",
-            "hash": "12775548280580387947"
-          },
-          {
-            "file": "libs/feature/react/organization/src/lib/+state/organization.slice.ts",
-            "hash": "17995015160316037938",
-            "dependencies": [
-              {
-                "source": "feature-react-organization",
-                "target": "util-react-firebase",
-                "type": "static"
-              },
-              {
-                "source": "feature-react-organization",
-                "target": "npm:@reduxjs/toolkit",
-                "type": "static"
-              },
-              {
-                "source": "feature-react-organization",
-                "target": "npm:firebase",
-                "type": "static"
-              }
-            ]
           }
         ]
       }
@@ -3019,6 +3295,7 @@
     }
   },
   "dependencies": {
+    "feature-react-organization": [],
     "makewith-react-data-access": [
       {
         "source": "makewith-react-data-access",
@@ -3037,12 +3314,34 @@
       },
       {
         "source": "makewith-react-data-access",
-        "target": "feature-react-user",
+        "target": "data-access-user",
         "type": "static"
       },
       {
         "source": "makewith-react-data-access",
-        "target": "feature-react-organization",
+        "target": "data-access-organization",
+        "type": "static"
+      },
+      {
+        "source": "makewith-react-data-access",
+        "target": "data-access-study",
+        "type": "static"
+      }
+    ],
+    "data-access-organization": [
+      {
+        "source": "data-access-organization",
+        "target": "util-react-firebase",
+        "type": "static"
+      },
+      {
+        "source": "data-access-organization",
+        "target": "npm:@reduxjs/toolkit",
+        "type": "static"
+      },
+      {
+        "source": "data-access-organization",
+        "target": "npm:firebase",
         "type": "static"
       }
     ],
@@ -3086,6 +3385,11 @@
       },
       {
         "source": "makewith-next",
+        "target": "feature-react-study",
+        "type": "static"
+      },
+      {
+        "source": "makewith-next",
         "target": "util-react-firebase",
         "type": "static"
       },
@@ -3117,6 +3421,43 @@
       {
         "source": "makewith-next",
         "target": "npm:@tailwindcss/typography",
+        "type": "static"
+      }
+    ],
+    "feature-react-study": [
+      {
+        "source": "feature-react-study",
+        "target": "npm:next",
+        "type": "static"
+      },
+      {
+        "source": "feature-react-study",
+        "target": "makewith-react-ui",
+        "type": "static"
+      },
+      {
+        "source": "feature-react-study",
+        "target": "ui-react",
+        "type": "static"
+      },
+      {
+        "source": "feature-react-study",
+        "target": "npm:react",
+        "type": "static"
+      },
+      {
+        "source": "feature-react-study",
+        "target": "data-access-organization",
+        "type": "static"
+      },
+      {
+        "source": "feature-react-study",
+        "target": "npm:react-redux",
+        "type": "static"
+      },
+      {
+        "source": "feature-react-study",
+        "target": "data-access-study",
         "type": "static"
       }
     ],
@@ -3177,12 +3518,17 @@
       },
       {
         "source": "feature-react-auth",
-        "target": "feature-react-user",
+        "target": "data-access-user",
         "type": "static"
       },
       {
         "source": "feature-react-auth",
-        "target": "feature-react-organization",
+        "target": "data-access-organization",
+        "type": "static"
+      },
+      {
+        "source": "feature-react-auth",
+        "target": "data-access-study",
         "type": "static"
       },
       {
@@ -3191,19 +3537,20 @@
         "type": "static"
       }
     ],
-    "feature-react-user": [
+    "feature-react-user": [],
+    "data-access-study": [
       {
-        "source": "feature-react-user",
+        "source": "data-access-study",
         "target": "util-react-firebase",
         "type": "static"
       },
       {
-        "source": "feature-react-user",
+        "source": "data-access-study",
         "target": "npm:@reduxjs/toolkit",
         "type": "static"
       },
       {
-        "source": "feature-react-user",
+        "source": "data-access-study",
         "target": "npm:firebase",
         "type": "static"
       }
@@ -3212,26 +3559,6 @@
       {
         "source": "makewith-react-ui",
         "target": "npm:next",
-        "type": "static"
-      },
-      {
-        "source": "makewith-react-ui",
-        "target": "npm:react",
-        "type": "static"
-      },
-      {
-        "source": "makewith-react-ui",
-        "target": "npm:react-redux",
-        "type": "static"
-      },
-      {
-        "source": "makewith-react-ui",
-        "target": "makewith-react-data-access",
-        "type": "static"
-      },
-      {
-        "source": "makewith-react-ui",
-        "target": "feature-react-organization",
         "type": "static"
       },
       {
@@ -3251,7 +3578,22 @@
       },
       {
         "source": "makewith-react-ui",
-        "target": "feature-react-user",
+        "target": "npm:react-redux",
+        "type": "static"
+      },
+      {
+        "source": "makewith-react-ui",
+        "target": "data-access-user",
+        "type": "static"
+      },
+      {
+        "source": "makewith-react-ui",
+        "target": "data-access-organization",
+        "type": "static"
+      },
+      {
+        "source": "makewith-react-ui",
+        "target": "npm:react",
         "type": "static"
       },
       {
@@ -3292,6 +3634,23 @@
         "type": "static"
       }
     ],
+    "data-access-user": [
+      {
+        "source": "data-access-user",
+        "target": "util-react-firebase",
+        "type": "static"
+      },
+      {
+        "source": "data-access-user",
+        "target": "npm:@reduxjs/toolkit",
+        "type": "static"
+      },
+      {
+        "source": "data-access-user",
+        "target": "npm:firebase",
+        "type": "static"
+      }
+    ],
     "ui-react": [
       {
         "source": "ui-react",
@@ -3306,23 +3665,6 @@
       {
         "source": "ui-react",
         "target": "npm:react",
-        "type": "static"
-      }
-    ],
-    "feature-react-organization": [
-      {
-        "source": "feature-react-organization",
-        "target": "util-react-firebase",
-        "type": "static"
-      },
-      {
-        "source": "feature-react-organization",
-        "target": "npm:@reduxjs/toolkit",
-        "type": "static"
-      },
-      {
-        "source": "feature-react-organization",
-        "target": "npm:firebase",
         "type": "static"
       }
     ]

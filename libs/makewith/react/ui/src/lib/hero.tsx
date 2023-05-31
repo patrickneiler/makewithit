@@ -2,7 +2,7 @@
 
 
 import { useSelector } from "react-redux";
-import { getUserState, selectAllUser } from "@the/feature/react/user";
+import { getUserState, selectAllUser } from "@the/data-access/user";
 
 type HeroProps = {
   title: string,

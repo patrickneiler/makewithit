@@ -1,9 +1,10 @@
+import { Hero } from "@the/makewith/react/ui";
+import { FeaturedCaseStudy } from '@the/feature/react/study';
+
 export const metadata = {
   title: 'Software Solutions Tailored Just for You',
   description: '',
 };
-
-import { FeaturedCaseStudy, Hero } from '@the/makewith/react/ui';
 
 export default function Home() {
   return (
@@ -16,20 +17,6 @@ export default function Home() {
       <section>
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="pt-10 pb-12 md:pt-16 md:pb-20">
-            {/* Section header */}
-            <div className="hidden max-w-3xl mx-auto text-center pb-12 md:pb-20">
-              <h2 className="h2 mb-4" data-aos="fade-up">
-                Built exclusively for you
-              </h2>
-              <p
-                className="text-xl text-gray-400"
-                data-aos="fade-up"
-                data-aos-delay="200"
-              >
-                Excepteur sint occaecat cupidatat non proident, sunt in culpa
-                qui officia deserunt mollit laborum — semper quis lectus nulla.
-              </p>
-            </div>
 
             {/* Items */}
             <div className="max-w-sm mx-auto grid gap-8 md:grid-cols-3 lg:gap-16 items-start md:max-w-none">
@@ -37,6 +24,7 @@ export default function Home() {
               <div
                 className="relative flex flex-col items-center"
                 data-aos="fade-up"
+                data-aos-delay="200"
               >
                 <div
                   aria-hidden="true"
@@ -46,8 +34,6 @@ export default function Home() {
                     left: 'calc(50% + 48px)',
                     top: '32px',
                   }}
-                  data-aos="fade-in"
-                  data-aos-delay="200"
                 ></div>
                 <svg
                   className="w-16 h-16 mb-4  fill-current text-red-500"
@@ -124,7 +110,7 @@ export default function Home() {
               <div
                 className="relative flex flex-col items-center"
                 data-aos="fade-up"
-                data-aos-delay="400"
+                data-aos-delay="200"
               >
                 <svg
                   className="w-16 h-16 mb-4  fill-current text-red-500"
@@ -157,7 +143,12 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <FeaturedCaseStudy />
+      <section>
+        <div className="max-w-3xl mx-auto text-center px-4 pb-4 md:pb-20">
+          <h2 className="h2 mb-4">Project Success Stories</h2>
+        </div>
+        <FeaturedCaseStudy />
+      </section>
     </>
   );
 }

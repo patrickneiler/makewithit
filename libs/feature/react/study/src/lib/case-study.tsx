@@ -1,19 +1,26 @@
 'use client'
 import Link from 'next/link'
 
-import { ICaseStudy, useCaseStudies } from './case-study-provider';
 import { Tags, Date } from '@the/ui/react';
 import { useEffect, useState } from 'react';
+import { OrganizationEntity, selectOrganizationEntities } from '@the/data-access/organization';
+import { useSelector } from 'react-redux';
+import { selectAllStudy, StudyEntity } from '@the/data-access/study';
 
 export function CaseStudy({ params }: {
     params: { slug: string }
 }) {
-    const { caseStudies } = useCaseStudies();
-    const [study, setStudy] = useState<ICaseStudy>();
+    const [study, setStudy] = useState<StudyEntity>();
+    const [organization, setOrganization] = useState<OrganizationEntity>();
+    const studies = useSelector(selectAllStudy);
+    const organizations = useSelector(selectOrganizationEntities);
     useEffect(() => {
-        const _study: ICaseStudy | undefined = caseStudies.find((study) => study.slug === params.slug)
+        const _study: StudyEntity | undefined = studies.find((study) => study.slug === params.slug)
         _study && setStudy(_study);
-    }, [caseStudies, params])
+        if (study && study.organizationId) {
+            setOrganization(organizations[study.organizationId])
+        }
+    }, [params, studies, organizations, study])
     return (
         <section className="relative">
             {study &&
@@ -32,16 +39,22 @@ export function CaseStudy({ params }: {
                                     {/* Article meta */}
                                     <div className="md:flex md:items-center md:justify-between mt-3">
                                         {/* Author meta */}
-                                        <div className="flex items-center justify-center" data-aos="fade-up" data-aos-delay="400">
-                                            <Link href="#">
-                                                <img className="rounded-full shrink-0 mr-4" src={'../' + study.clientImg} width={40} height={40} alt={study.client} />
-                                            </Link>
-                                            <div>
-                                                <Link href="#" className="font-medium text-gray-200 hover:text-gray-100 transition duration-150 ease-in-out">{study.client}</Link>
-                                                <span className="text-gray-700"> - </span>
-                                                <span className="text-gray-500"><Date dateString={study.publishedAt} /></span>
-                                            </div>
-                                        </div>
+                                        {
+                                            organization && (
+                                                <div className="flex items-center justify-center" data-aos="fade-up" data-aos-delay="400">
+                                                    <Link href="#">
+                                                        <img className="rounded-full shrink-0 mr-4" src={'../' + organization.logo} width={40} height={40} alt={organization.name} />
+                                                    </Link>
+                                                    <div>
+                                                        <Link href="#" className="font-medium text-gray-200 hover:text-gray-100 transition duration-150 ease-in-out">{organization.name}</Link>
+                                                        <span className="text-gray-700"> - </span>
+                                                        <span className="text-gray-500"><Date dateString={study.publishedAt} /></span>
+                                                    </div>
+                                                </div>
+
+                                            )
+                                        }
+
                                         {/* Article tags */}
                                         {study.tags &&
                                             <div className="flex justify-center mt-4 md:mt-0" data-aos="fade-up" data-aos-delay="600">
@@ -69,7 +82,7 @@ export function CaseStudy({ params }: {
                                     <div className="md:grid md:grid-cols-12 md:gap-6 items-center py-16 d:py-24 pb-0 text-center">
                                         {/* Image */}
                                         <div className="max-w-xl md:max-w-none md:w-full mx-auto md:col-span-5 lg:col-span-6 mb-8 md:mb-0 md:order-1" data-aos="fade-up">
-                                            <img className="w-full" src={'../' + study.body.problem.img} width={1024} height={576} alt={study.title} />
+                                            <img className="w-full" src={'../' + study.body.problem.image} width={1024} height={576} alt={study.title} />
                                         </div>
                                         <div className="max-w-xl md:max-w-none md:w-full mx-auto md:col-span-7 lg:col-span-6  md:pr-16" data-aos="fade-right">
                                             <h2 className="h2 mb-4">The Problem</h2>
@@ -79,7 +92,7 @@ export function CaseStudy({ params }: {
                                     <div className="md:grid md:grid-cols-12 md:gap-6 items-center py-16 md:py-24 mb-16 md:mb-24 text-center border-b border-gray-800">
                                         {/* Image */}
                                         <div className="max-w-xl md:max-w-none md:w-full mx-auto md:col-span-5 lg:col-span-6 mb-8 md:mb-0 rtl" data-aos="fade-up">
-                                            <img className="w-full" src={'../' + study.body.solution.img} width={1024} height={576} alt={study.title} />
+                                            <img className="w-full" src={'../' + study.body.solution.image} width={1024} height={576} alt={study.title} />
                                         </div>
                                         <div className="max-w-xl md:max-w-none md:w-full mx-auto md:col-span-7 lg:col-span-6 md:pl-16" data-aos="fade-right">
                                             <h2 className="h2 mb-4">The Solution</h2>

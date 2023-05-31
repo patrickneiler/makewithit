@@ -1,0 +1,16 @@
+{
+  "name": "data-access-study",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/data-access/study/src",
+  "projectType": "library",
+  "tags": ["data-access"],
+  "targets": {
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/data-access/study/**/*.{ts,tsx,js,jsx}"]
+      }
+    }
+  }
+}

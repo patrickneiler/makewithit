@@ -6,7 +6,10 @@
 .form-radio:focus {
   @apply ring-0;
 }
-
+.hamburger svg {
+  max-width: 24px;
+  max-height: 24px;
+}
 /* Hamburger button */
 .hamburger svg > *:nth-child(1),
 .hamburger svg > *:nth-child(2),
@@ -45,8 +48,8 @@
 }
 
 .hamburger.active svg > *:nth-child(3) {
-  y: 11;
-  transform: rotate(135deg);
+
+  transform: translateY(5px) translateX(5px) rotate(135deg);
   transition: y 0.1s ease-out,
     transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1),
     width 0.1s ease-out;

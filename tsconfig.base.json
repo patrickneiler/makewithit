@@ -15,6 +15,11 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@the/data-access/organization": [
+        "libs/data-access/organization/src/index.ts"
+      ],
+      "@the/data-access/study": ["libs/data-access/study/src/index.ts"],
+      "@the/data-access/user": ["libs/data-access/user/src/index.ts"],
       "@the/feature/react/animations": [
         "libs/feature/react/animations/src/index.ts"
       ],
@@ -22,6 +27,7 @@
       "@the/feature/react/organization": [
         "libs/feature/react/organization/src/index.ts"
       ],
+      "@the/feature/react/study": ["libs/feature/react/study/src/index.ts"],
       "@the/feature/react/user": ["libs/feature/react/user/src/index.ts"],
       "@the/makewith/react/data-access": [
         "libs/makewith/react/data-access/src/index.ts"

@@ -6,17 +6,15 @@ import Logo from './logo';
 import { logout } from '@the/util/react/firebase';
 import { useRouter } from 'next/navigation';
 import { useDispatch, useSelector } from 'react-redux';
-import { getUserState, selectAllUser, userActions } from '@the/feature/react/user';
-import { selectOrganizationEntities } from '@the/feature/react/organization';
+import { getUserState, selectAllUser, userActions } from '@the/data-access/user';
+import { selectOrganizationEntities } from '@the/data-access/organization';
 type HeaderProps = {
   hideLinks?: boolean;
-  priv?: boolean
 }
 
 
 export function Header({
-  hideLinks,
-  priv
+  hideLinks
 }: HeaderProps): JSX.Element {
   const router = useRouter();
   const user = useSelector(selectAllUser)[0];
@@ -34,16 +32,16 @@ export function Header({
     router.push('/')
   };
   return (
-    <header className="absolute w-full z-30">
+    <header className="absolute w-full z-30" >
       {/* <div className="absolute fill-gray-900 left-0 bottom-0 w-screen flex align-center justify-start pointer-events-none z-10 overflow-visible">
         <Waves />
       </div> */}
       <div className="max-w-6xl  mx-auto px-4 sm:px-6">
         <div className="flex items-center justify-between h-20">
           {/* Site branding */}
-          <div className="shrink-0 mr-4">
+          <div className="shrink-0 mr-4" data-aos="fade-left">
             {/* Logo */}
-            <Link href="/" className="block" aria-label="Cruip">
+            <Link href="/" className="block" aria-label="Make With It">
               <Logo />
             </Link>
           </div>
@@ -53,7 +51,8 @@ export function Header({
             hideLinks ? (<></>) :
               (
                 <>
-                  <nav className="hidden md:flex md:grow">
+                  <nav className="hidden md:flex md:grow" data-aos="fade-down"
+                    data-aos-delay="1000">
                     {/* Desktop menu links */}
                     <ul className={'flex grow justify-end flex-wrap items-center'}>
                       {

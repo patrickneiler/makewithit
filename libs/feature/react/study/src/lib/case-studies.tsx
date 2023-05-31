@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { ModalVideo } from './modal-video';
+import { ModalVideo } from '@the/makewith/react/ui';
 
 export function CaseStudies() {
   const SonarVideo = '/assets/videos/sonar.mp4';

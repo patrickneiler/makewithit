@@ -2,7 +2,7 @@
 import React, { useEffect, useRef } from 'react';
 import anime from 'animejs';
 import { useSelector } from 'react-redux';
-import { getUserState } from '@the/feature/react/user';
+import { getUserState } from '@the/data-access/user';
 
 export const Loading: React.FC = () => {
     const waveRef = useRef<SVGPathElement>(null);

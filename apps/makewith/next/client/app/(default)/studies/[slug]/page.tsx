@@ -1,4 +1,4 @@
-import { CaseStudy } from '@the/makewith/react/ui';
+import { CaseStudy } from '@the/feature/react/study';
 
 const slugs = [
   {

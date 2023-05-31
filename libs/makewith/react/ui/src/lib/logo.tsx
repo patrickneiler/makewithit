@@ -24,10 +24,11 @@ export function Logo() {
             autoplay: false,
         })
             .add({
-                translateX: () => anime.random(50, -50),
-                delay: anime.stagger(1, { from: 'last' }),
-                easing: 'easeOutElastic(10, .6)',
+                translateX: () => anime.random(300, 0),
+                translateZ: -150,
                 opacity: 1,
+                delay: anime.stagger(1, { from: 'center' }),
+                easing: 'easeOutBack',
             })
             .add({
                 duration: 1000,

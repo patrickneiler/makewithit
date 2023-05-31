@@ -5,7 +5,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 // import PageIllustration from '@/components/page-illustration'
-import { Footer, Header, PageIllustration, CaseStudiesProvider, useCaseStudies, CaseStudy } from '@the/makewith/react/ui';
+import { Footer, Header, PageIllustration } from '@the/makewith/react/ui';
 
 export default function DefaultLayout({
   children,

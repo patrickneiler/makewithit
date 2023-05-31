@@ -21,15 +21,19 @@ export const SignInForm = () => {
             if (res.user) {
                 router.push('/proposal');
             }
+            if (res.error) {
+                seterror('Oops, looks like you used the wrong password.');
+                setLoading(false);
+            }
         } catch (error: any) {
-            seterror(error);
+            seterror('Oops, looks like you used the wrong password.');
             setLoading(false);
         }
     }
 
     return (
         <Fragment>
-            {error ? <div>{error}</div> : null}
+            {error ? <div className="bg-red-500 p-4 text-white mb-8"><p>{error}</p></div> : null}
 
             <form className={loading ? "pointer-events-none opacity-30" : "" + " relative"} onSubmit={handleSubmit}>
 

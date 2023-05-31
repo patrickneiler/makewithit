@@ -4,8 +4,9 @@ import { useEffect } from 'react';
 import { auth } from '@the/util/react/firebase';
 import { AppDispatch } from '@the/makewith/react/data-access';
 import { useDispatch } from 'react-redux';
-import { fetchUser, userActions } from '@the/feature/react/user';
-import { fetchOrganizations } from '@the/feature/react/organization';
+import { fetchUser, userActions } from '@the/data-access/user';
+import { fetchOrganizations } from '@the/data-access/organization';
+import { fetchStudies } from '@the/data-access/study';
 
 export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
     const dispatch = useDispatch<AppDispatch>();
@@ -15,6 +16,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
                 const uid = _user.uid;
                 dispatch(fetchUser(uid));
                 dispatch(fetchOrganizations());
+                dispatch(fetchStudies());
             } else {
                 dispatch(userActions.clear(null))
             }
