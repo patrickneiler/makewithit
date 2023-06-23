@@ -33,7 +33,9 @@ npm-debug.log
 yarn-error.log
 testem.log
 /typings
-
+/templates
+/icons
+*.cache
 # System Files
 .DS_Store
 Thumbs.db
@@ -45,3 +47,5 @@ Thumbs.db
 .next
 .nx/cache/d/daemon.log
 *.log
+*.cache
+.firebase/hosting.ZGlzdC9hcHBzL21ha2V3aXRoL25leHQvY2xpZW50L2V4cG9ydGVk.cache
