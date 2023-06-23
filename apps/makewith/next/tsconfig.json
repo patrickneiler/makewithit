@@ -1,5 +1,5 @@
 {
-  "extends": "../../../../tsconfig.base.json",
+  "extends": "../../../tsconfig.base.json",
   "compilerOptions": {
     "jsx": "preserve",
     "allowJs": true,
@@ -23,10 +23,8 @@
     "**/*.js",
     "**/*.jsx",
     "next-env.d.ts",
-    "../../../../dist/apps/makewith/next/client/.next/types/**/*.ts",
-    "../../../../apps/makewith/next/client/.next/types/**/*.ts",
-    "../../../../contentlayer.config.js",
-    "../../../../.contentlayer/generated",
+    "../../../dist/apps/makewith/next/.next/types/**/*.ts",
+    "../../../apps/makewith/next/.next/types/**/*.ts",
   ],
   "exclude": [
     "node_modules",
