@@ -1,0 +1,55 @@
+{
+  "name": "makewith-vercel",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/makewith/vercel",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nx/next:build",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "root": "apps/makewith/vercel",
+        "outputPath": "dist/apps/makewith/vercel"
+      },
+      "configurations": {
+        "development": {
+          "outputPath": "apps/makewith/vercel"
+        },
+        "production": {}
+      }
+    },
+    "serve": {
+      "executor": "@nx/next:server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "makewith-vercel:build",
+        "dev": true
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "makewith-vercel:build:development",
+          "dev": true
+        },
+        "production": {
+          "buildTarget": "makewith-vercel:build:production",
+          "dev": false
+        }
+      }
+    },
+    "export": {
+      "executor": "@nx/next:export",
+      "options": {
+        "buildTarget": "makewith-vercel:build:production"
+      }
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/makewith/vercel/**/*.{ts,tsx,js,jsx}"]
+      }
+    }
+  },
+  "tags": ["app"]
+}

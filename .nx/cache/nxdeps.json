@@ -1771,22 +1771,6 @@
             "hash": "1148776455421240556"
           },
           {
-            "file": "apps/makewith/next/public/images/home/1.svg",
-            "hash": "12359614963706068665"
-          },
-          {
-            "file": "apps/makewith/next/public/images/home/2.svg",
-            "hash": "3453329552212712147"
-          },
-          {
-            "file": "apps/makewith/next/public/images/home/3.svg",
-            "hash": "12662755089189815312"
-          },
-          {
-            "file": "apps/makewith/next/public/images/home/app.png",
-            "hash": "23763876834459310"
-          },
-          {
             "file": "apps/makewith/next/public/images/news-01.jpg",
             "hash": "13779646398085473984"
           },
@@ -5445,7 +5429,7 @@
           },
           {
             "file": ".gitignore",
-            "hash": "2158620975162555783"
+            "hash": "17232895755982892802"
           },
           {
             "file": ".prettierignore",
@@ -5582,7 +5566,7 @@
           },
           {
             "file": "nx.json",
-            "hash": "16941507025231016102"
+            "hash": "18410464707817383498"
           },
           {
             "file": "package-lock.json",
@@ -6031,6 +6015,156 @@
           {
             "file": "tsconfig.base.json",
             "hash": "4070564650525749854"
+          }
+        ]
+      }
+    },
+    "makewith-vercel": {
+      "name": "makewith-vercel",
+      "type": "app",
+      "data": {
+        "name": "makewith-vercel",
+        "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+        "sourceRoot": "apps/makewith/vercel",
+        "projectType": "application",
+        "targets": {
+          "build": {
+            "dependsOn": [
+              "^build"
+            ],
+            "inputs": [
+              "production",
+              "^production"
+            ],
+            "executor": "@nx/next:build",
+            "outputs": [
+              "{options.outputPath}"
+            ],
+            "defaultConfiguration": "production",
+            "options": {
+              "root": "apps/makewith/vercel",
+              "outputPath": "dist/apps/makewith/vercel"
+            },
+            "configurations": {
+              "development": {
+                "outputPath": "apps/makewith/vercel"
+              },
+              "production": {}
+            }
+          },
+          "serve": {
+            "executor": "@nx/next:server",
+            "defaultConfiguration": "development",
+            "options": {
+              "buildTarget": "makewith-vercel:build",
+              "dev": true
+            },
+            "configurations": {
+              "development": {
+                "buildTarget": "makewith-vercel:build:development",
+                "dev": true
+              },
+              "production": {
+                "buildTarget": "makewith-vercel:build:production",
+                "dev": false
+              }
+            }
+          },
+          "export": {
+            "executor": "@nx/next:export",
+            "options": {
+              "buildTarget": "makewith-vercel:build:production"
+            }
+          },
+          "lint": {
+            "inputs": [
+              "default",
+              "{workspaceRoot}/.eslintrc.json",
+              "{workspaceRoot}/.eslintignore"
+            ],
+            "executor": "@nx/linter:eslint",
+            "outputs": [
+              "{options.outputFile}"
+            ],
+            "options": {
+              "lintFilePatterns": [
+                "apps/makewith/vercel/**/*.{ts,tsx,js,jsx}"
+              ]
+            },
+            "configurations": {}
+          }
+        },
+        "tags": [
+          "app"
+        ],
+        "root": "apps/makewith/vercel",
+        "implicitDependencies": [],
+        "files": [
+          {
+            "file": "apps/makewith/vercel/.eslintrc.json",
+            "hash": "639666264172705796"
+          },
+          {
+            "file": "apps/makewith/vercel/app/api/hello/route.ts",
+            "hash": "495073956729887886"
+          },
+          {
+            "file": "apps/makewith/vercel/app/global.css",
+            "hash": "10943017421299445298"
+          },
+          {
+            "file": "apps/makewith/vercel/app/layout.tsx",
+            "hash": "16005404153063619547",
+            "dependencies": [
+              {
+                "source": "makewith-vercel",
+                "target": "npm:next",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "apps/makewith/vercel/app/page.module.scss",
+            "hash": "4786619528779355986"
+          },
+          {
+            "file": "apps/makewith/vercel/app/page.tsx",
+            "hash": "1333977262892310151"
+          },
+          {
+            "file": "apps/makewith/vercel/index.d.ts",
+            "hash": "5498222895072842432"
+          },
+          {
+            "file": "apps/makewith/vercel/next-env.d.ts",
+            "hash": "5909181270615354023"
+          },
+          {
+            "file": "apps/makewith/vercel/next.config.js",
+            "hash": "15137204670124286560",
+            "dependencies": [
+              {
+                "source": "makewith-vercel",
+                "target": "npm:@nx/next",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "apps/makewith/vercel/project.json",
+            "hash": "1868929376925716101"
+          },
+          {
+            "file": "apps/makewith/vercel/public/.gitkeep",
+            "hash": "3244421341483603138"
+          },
+          {
+            "file": "apps/makewith/vercel/public/favicon.ico",
+            "hash": "9303420814833116677"
+          },
+          {
+            "file": "apps/makewith/vercel/tsconfig.json",
+            "hash": "4279061734017002964"
           }
         ]
       }
@@ -7607,6 +7741,18 @@
       {
         "source": "the",
         "target": "npm:typescript",
+        "type": "static"
+      }
+    ],
+    "makewith-vercel": [
+      {
+        "source": "makewith-vercel",
+        "target": "npm:next",
+        "type": "static"
+      },
+      {
+        "source": "makewith-vercel",
+        "target": "npm:@nx/next",
         "type": "static"
       }
     ]
