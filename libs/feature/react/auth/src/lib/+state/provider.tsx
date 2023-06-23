@@ -1,3 +1,8 @@
+/* eslint-disable react/prop-types */
+/* eslint-disable react/react-in-jsx-scope */
+/* eslint-disable react/jsx-filename-extension */
+/* eslint-disable react/jsx-no-useless-fragment */
+/* eslint-disable react/function-component-definition */
 'use client';
 import { onAuthStateChanged } from 'firebase/auth';
 import { useEffect } from 'react';
@@ -15,11 +20,11 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
             if (_user) {
                 const uid = _user.uid;
                 dispatch(fetchUser(uid));
-                dispatch(fetchOrganizations());
-                dispatch(fetchStudies());
             } else {
                 dispatch(userActions.clear(null))
             }
+            dispatch(fetchOrganizations());
+            dispatch(fetchStudies());
         });
 
         return () => {

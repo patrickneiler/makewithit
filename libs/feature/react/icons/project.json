@@ -1,0 +1,41 @@
+{
+  "name": "feature-react-icons",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/feature/react/icons/src",
+  "projectType": "library",
+  "tags": ["feature"],
+  "targets": {
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/feature/react/icons/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "build": {
+      "executor": "@nx/rollup:rollup",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/feature/react/icons",
+        "tsConfig": "libs/feature/react/icons/tsconfig.lib.json",
+        "project": "libs/feature/react/icons/package.json",
+        "entryFile": "libs/feature/react/icons/src/index.ts",
+        "external": ["react", "react-dom", "react/jsx-runtime"],
+        "rollupConfig": "@nx/react/plugins/bundle-rollup",
+        "compiler": "babel",
+        "assets": [
+          {
+            "glob": "libs/feature/react/icons/README.md",
+            "input": ".",
+            "output": "."
+          },
+          {
+            "glob": "libs/feature/react/icons/public/**/*",
+            "input": ".",
+            "output": "./public"
+          }
+        ]
+      }
+    }
+  }
+}

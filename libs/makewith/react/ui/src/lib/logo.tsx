@@ -24,20 +24,22 @@ export function Logo() {
             autoplay: false,
         })
             .add({
-                translateX: () => anime.random(300, 0),
-                translateZ: -150,
-                opacity: 1,
-                delay: anime.stagger(1, { from: 'center' }),
-                easing: 'easeOutBack',
+                duration: 1,
+                opacity: 0,
+                translateX: -200,
+                translateY: 0,
+                translateZ: 50,
+                scale: 2,
             })
             .add({
-                duration: 1000,
-                translateX: 0,
-                translateY: 0,
+                duration: 200,
+                opacity: 1,
                 translateZ: -150,
-                easing: 'easeInBack',
-                delay: anime.stagger(5, { grid: [16, 16], from: 'center' })
-            }, '-=500');
+                scale: 1,
+                translateX: () => 0,
+                easing: 'spring(2, 100, 30, 20)',
+                delay: anime.stagger(50, { grid: [16, 16], from: 'last' })
+            });
         if (!played.current) {
             timeline.current.play();
             played.current = true;

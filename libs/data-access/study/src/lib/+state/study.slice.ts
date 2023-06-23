@@ -214,7 +214,7 @@ export const studyActions = studySlice.actions;
  */
 const { selectAll, selectEntities } = studyAdapter.getSelectors();
 
-export const getStudyState = (rootState: any): StudyState =>
+export const getStudyState = (rootState: { [x: string]: StudyState; }): StudyState =>
   rootState[STUDY_FEATURE_KEY];
 
 export const selectAllStudy = createSelector(

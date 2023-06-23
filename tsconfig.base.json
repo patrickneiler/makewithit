@@ -7,6 +7,7 @@
     "moduleResolution": "node",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
+    "allowArbitraryExtensions": true,
     "importHelpers": true,
     "target": "es2015",
     "module": "esnext",
@@ -24,6 +25,7 @@
         "libs/feature/react/animations/src/index.ts"
       ],
       "@the/feature/react/auth": ["libs/feature/react/auth/src/index.ts"],
+      "@the/feature/react/icons": ["libs/feature/react/icons/src/index.ts"],
       "@the/feature/react/organization": [
         "libs/feature/react/organization/src/index.ts"
       ],
@@ -34,9 +36,18 @@
       ],
       "@the/makewith/react/ui": ["libs/makewith/react/ui/src/index.ts"],
       "@the/makewith/react/util": ["libs/makewith/react/util/src/index.ts"],
+      "@the/plugin/icons": ["libs/plugin/icons/src/index.ts"],
       "@the/ui/react": ["libs/ui/react/src/index.ts"],
+      "@the/util/react/copy-to-clipboard": [
+        "libs/util/react/copy-to-clipboard/src/index.ts"
+      ],
+      "@the/util/react/file-loader": [
+        "libs/util/react/file-loader/src/index.ts"
+      ],
       "@the/util/react/firebase": ["libs/util/react/firebase/src/index.ts"],
+      "@the/util/react/redux": ["libs/util/react/redux/src/index.ts"],
       "@the/util/react/stripe": ["libs/util/react/stripe/src/index.ts"],
+      "@the/util/react/visibility": ["libs/util/react/visibility/src/index.ts"],
       "contentlayer/generated": ["./.contentlayer/generated"]
     }
   },

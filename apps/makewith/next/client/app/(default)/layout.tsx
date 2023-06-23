@@ -1,5 +1,7 @@
 'use client'
-import { useEffect } from 'react';
+import { useContext, useEffect } from 'react';
+import { Banner } from '@the/makewith/react/ui';
+
 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -19,11 +21,11 @@ export default function DefaultLayout({
       duration: 600,
       easing: 'ease-out-sine',
     });
+
   });
 
   return (
     <>
-
       <Header />
       <main className="grow">
         <PageIllustration />

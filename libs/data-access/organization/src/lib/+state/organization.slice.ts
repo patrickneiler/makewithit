@@ -7,8 +7,7 @@ import {
   EntityState,
   PayloadAction,
 } from '@reduxjs/toolkit';
-import { User } from 'firebase/auth';
-import { collection, doc, getDoc, getDocs, onSnapshot } from 'firebase/firestore';
+import { collection, doc, getDoc, getDocs } from 'firebase/firestore';
 
 export const ORGANIZATION_FEATURE_KEY = 'organization';
 
@@ -194,7 +193,7 @@ export const organizationActions = organizationSlice.actions;
  */
 const { selectAll, selectEntities } = organizationAdapter.getSelectors();
 
-export const getOrganizationState = (rootState: any): OrganizationState =>
+export const getOrganizationState = (rootState: { [x: string]: OrganizationState; }): OrganizationState =>
   rootState[ORGANIZATION_FEATURE_KEY];
 
 export const selectAllOrganization = createSelector(

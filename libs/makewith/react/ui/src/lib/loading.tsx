@@ -16,8 +16,9 @@ export const Loading: React.FC = () => {
             'M0 250L50 238.095C100 226.19 200 202.381 300 166.667C400 130.952 500 83.3333 600 101.19C700 119.048 800 202.381 900 214.286C1000 226.19 1100 166.667 1150 136.905L1200 107.143V0H1150C1100 0 1000 0 900 0C800 0 700 0 600 0C500 0 400 0 300 0C200 0 100 0 50 0H0V250Z';
         const wave4 =
             'M0 125L50 111.111C100 97.2222 200 69.4444 300 97.2222C400 125 500 208.333 600 236.111C700 263.889 800 236.111 900 229.167C1000 222.222 1100 236.111 1150 243.056L1200 250V0H1150C1100 0 1000 0 900 0C800 0 700 0 600 0C500 0 400 0 300 0C200 0 100 0 50 0H0V125Z';
-        const animation = anime.timeline({
-            targets: '.wave-top > path',
+
+        const animation = anime({
+            targets: '.wave-bottom > path',
             easing: 'linear',
             duration: 24000,
             loop: true,
@@ -28,29 +29,32 @@ export const Loading: React.FC = () => {
                 { value: wave1 },
             ],
         });
-        switch (status) {
-            case 'loaded':
-                animation.add({
-                    targets: '.wave-top',
-                    duration: 10000,
-                    loop: false,
-                    translateY: {
-                        value: '100vh'
-                    }
-                }).pause()
-                break;
-            default:
-                break;
+
+        const container = anime.timeline({
+            targets: '.wave-bottom',
+            easing: 'easeInSine',
+            loop: false,
+        })
+
+        if (status === 'loaded') {
+            container.add({
+                duration: 2000,
+                loop: false,
+                translateY: 1000,
+                delay: 1000,
+            })
+            container.play();
         }
 
         return () => {
             animation.pause();
+            container.pause();
         };
     }, [status]);
 
     return (
-        <div className="fixed fill-red-500 left-0 top-0 bottom-0 w-screen h-screen flex align-center justify-start pointer-events-none z-10 overflow-visible">
-            <svg className="wave-top w-screen" viewBox='0 0 300 90'>
+        <div className="fixed wave-container fill-red-500 left-0 w-screen h-auto flex align-end justify-end flex-col overflow-visible pointer-events-none z-10 overflow-visible">
+            <svg className="wave-bottom w-screen rotate-180 h-auto overflow-visible" viewBox='0 0 300 90'>
                 <path
                     className="text-current"
                     ref={waveRef}

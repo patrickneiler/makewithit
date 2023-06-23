@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "GenerateIconsOptions",
+  "type": "object",
+  "properties": {
+    "category": {
+      "type": "string",
+      "description": "",
+      "$default": {
+        "$source": "argv",
+        "index": 0
+      },
+      "x-prompt": "Which category would you like to generate?"
+    },
+    "addToIndex": {
+      "type": "boolean",
+      "description": "Add the category to main indexs?",
+      "$default": {
+        "$source": "argv",
+        "index": 1
+      },
+      "x-prompt": "Which category would you like to generate?"
+    }
+  },
+  "required": [
+    "category"
+  ]
+}

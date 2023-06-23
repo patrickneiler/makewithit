@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { logout } from '@the/util/react/firebase';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectAllUser, userActions } from '@the/data-access/user';
+import { OrganizationEntity, selectOrganizationEntities } from '@the/data-access/organization';
 type MobileMenuProps = {
   hideLinks?: boolean;
 }
@@ -13,6 +14,13 @@ export function MobileMenu({
 }: MobileMenuProps): JSX.Element {
   const [mobileNavOpen, setMobileNavOpen] = useState<boolean>(false)
   const user = useSelector(selectAllUser)[0];
+  const [organization, setOrganization] = useState<OrganizationEntity>();
+  const organizations = useSelector(selectOrganizationEntities);
+  useEffect(() => {
+    if (user && user.organizationId) {
+      setOrganization(organizations[user.organizationId]);
+    }
+  }, [organizations, user, organization])
   const dispatch = useDispatch();
   const handleLogout = async () => {
     await logout();
@@ -82,7 +90,7 @@ export function MobileMenu({
                     (
                       <>
                         <li className="py-2 my-2 border-b border-gray-700">
-                          <span className="flex text-gray-100 py-2">{user.organization ? user.organization : ''}</span>
+                          <span className="flex text-gray-100 py-2">{organization?.name}</span>
                           <ul >
                             <li>
                               <Link href="/proposal" className="text-sm flex font-medium text-teal-400 hover:text-gray-200 py-2" onClick={() => setMobileNavOpen(false)}>
@@ -99,11 +107,22 @@ export function MobileMenu({
                       </>
                     ) :
                     (
-                      <li className="py-2 my-2">
-                        <Link href="/signin" className="flex font-medium w-full bg-teal-500 text-gray-900 hover:bg-teal-600 py-2 justify-center">
-                          Sign in
-                        </Link>
-                      </li>
+                      <>
+                        <li className="my-2">
+                          <Link className="btn-lg text-gray-300 hover:text-white transition duration-150 ease-in-out w-full group [background:linear-gradient(theme(colors.gray.900),_theme(colors.gray.900))_padding-box,_conic-gradient(theme(colors.gray.400),_theme(colors.gray.700)_25%,_theme(colors.gray.700)_75%,_theme(colors.gray.400)_100%)_border-box] relative before:absolute before:inset-0 before:bg-gray-800/30 before:rounded-full before:pointer-events-none" href="/icons">
+                            <span className="relative inline-flex items-center">
+                              React Animated Icons
+                              {/* <span className="tracking-normal text-teal-500 group-hover:trangray-x-0.5 transition-transform duration-150 ease-in-out ml-1">-&gt;</span> */}
+                            </span>
+                          </Link>
+                        </li>
+                        <li className="py-2 my-2">
+                          <Link href="/signin" className="flex font-medium w-full bg-teal-500 text-gray-900 hover:bg-teal-600 py-2 justify-center">
+                            Sign in
+                          </Link>
+                        </li>
+                      </>
+
                     )
                 }
               </ul>

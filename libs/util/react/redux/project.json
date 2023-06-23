@@ -1,0 +1,16 @@
+{
+  "name": "util-react-redux",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/util/react/redux/src",
+  "projectType": "library",
+  "tags": ["util"],
+  "targets": {
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/util/react/redux/**/*.{ts,tsx,js,jsx}"]
+      }
+    }
+  }
+}

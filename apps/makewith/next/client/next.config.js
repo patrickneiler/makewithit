@@ -1,5 +1,4 @@
 //@ts-check
-const { withContentlayer } = require('next-contentlayer')
 
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const { composePlugins, withNx } = require('@nx/next');
@@ -15,6 +14,7 @@ const nextConfig = {
   },
   experimental: {
     appDir: true,
+    esmExternals: false,
   },
 };
 

@@ -1,0 +1,30 @@
+/*
+ * Replace this with your own classes
+ *
+ * e.g.
+ * .container {
+ * }
+*/
+
+.icon {
+    max-height: 100%;
+    max-width: 100%;
+    svg {
+        max-width: inherit;
+        max-height: inherit;
+        g {
+            filter: none !important;
+        }
+        path {
+            stroke: currentColor !important;
+            
+        }
+    }
+   &.small {
+    svg {
+        path {
+            stroke-width: 64rem;
+        }
+    }
+   }
+}

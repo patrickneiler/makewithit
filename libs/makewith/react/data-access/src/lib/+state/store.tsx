@@ -11,7 +11,7 @@ export const store = configureStore({
         [organizationSlice.name]: organizationSlice.reducer,
         [studySlice.name]: studySlice.reducer,
     },
-    devTools: true
+    devTools: false
 });
 
 export type AppDispatch = typeof store.dispatch;

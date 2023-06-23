@@ -1,1 +1,2 @@
-export {LineDrawing, LineDrawingProps} from './lib/line-drawing'
+export {HomeAnimation} from './lib/home';
+export {getAnimationData} from './lib/getAnimationData';

@@ -5,7 +5,7 @@ import { Loader } from '@the/ui/react';
 
 export function Footer(): JSX.Element {
   return (
-    <footer className='relative  overflow-visible pt-32'>
+    <footer className='relative max-w-full overflow-hidden pt-32'>
       {/* Illustration behind hero content */}
       <div className="absolute fill-red-500 rotate-180 left-0 bottom-0 w-screen flex align-center justify-start pointer-events-none z-10 overflow-visible">
         <Waves />

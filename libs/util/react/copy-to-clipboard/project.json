@@ -1,0 +1,38 @@
+{
+  "name": "util-react-copy-to-clipboard",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/util/react/copy-to-clipboard/src",
+  "projectType": "library",
+  "tags": ["util"],
+  "targets": {
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/util/react/copy-to-clipboard/**/*.{ts,tsx,js,jsx}"
+        ]
+      }
+    },
+    "build": {
+      "executor": "@nx/rollup:rollup",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/util/react/copy-to-clipboard",
+        "tsConfig": "libs/util/react/copy-to-clipboard/tsconfig.lib.json",
+        "project": "libs/util/react/copy-to-clipboard/package.json",
+        "entryFile": "libs/util/react/copy-to-clipboard/src/index.ts",
+        "external": ["react", "react-dom", "react/jsx-runtime"],
+        "rollupConfig": "@nx/react/plugins/bundle-rollup",
+        "compiler": "babel",
+        "assets": [
+          {
+            "glob": "libs/util/react/copy-to-clipboard/README.md",
+            "input": ".",
+            "output": "."
+          }
+        ]
+      }
+    }
+  }
+}

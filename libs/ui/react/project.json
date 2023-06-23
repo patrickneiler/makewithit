@@ -11,6 +11,26 @@
       "options": {
         "lintFilePatterns": ["libs/ui/react/**/*.{ts,tsx,js,jsx}"]
       }
+    },
+    "build": {
+      "executor": "@nx/rollup:rollup",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/ui/react",
+        "tsConfig": "libs/ui/react/tsconfig.lib.json",
+        "project": "libs/ui/react/package.json",
+        "entryFile": "libs/ui/react/src/index.ts",
+        "external": ["react", "react-dom", "react/jsx-runtime"],
+        "rollupConfig": "@nx/react/plugins/bundle-rollup",
+        "compiler": "babel",
+        "assets": [
+          {
+            "glob": "libs/ui/react/README.md",
+            "input": ".",
+            "output": "."
+          }
+        ]
+      }
     }
   }
 }
