@@ -2,7 +2,7 @@
 import styles from './logo.module.scss';
 import { useEffect, useRef } from "react";
 import anime, { AnimeTimelineInstance } from "animejs";
-export function Logo() {
+export function Logo(): JSX.Element {
     const played = useRef(false);
     const timeline = useRef<AnimeTimelineInstance>();
     const createGrid = (grid: number[]) => {

@@ -77,14 +77,11 @@ function generateAnimatedIconFiles(tree: Tree, sourceRoot: string, animatedIcons
 }
 
 function trimIconName(name: string): string | null {
-  console.log(name);
   const animationDelimiter = ' Ani';
   const animationDelimiterIndex = name.indexOf(animationDelimiter);
   let newName = name;
   if (animationDelimiterIndex > -1) {
     newName = name.slice(0, animationDelimiterIndex);
-    console.log(newName);
-
   }
   let delimiter = '- ';
   let delimiterIndex = newName.indexOf(delimiter);
@@ -93,7 +90,8 @@ function trimIconName(name: string): string | null {
     delimiterIndex = newName.indexOf(delimiter);
   }
   newName = delimiterIndex > -1 && newName.slice(delimiterIndex + delimiter.length)
-  return newName.trim();
+  console.log(newName);
+  return newName ? newName.trim() : name.trim();
 }
 
 function createCategoryIndexFile(tree, root, categoryNames: Names, animations: AnimatedIconType[]) {

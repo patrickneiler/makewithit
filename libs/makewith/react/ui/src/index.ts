@@ -18,4 +18,4 @@ export {Hamburger} from './lib/hamburger';
 export {TopicTitle} from './lib/topic-title';
 export {Banner} from './lib/banner';
 export {IconCrawler} from './lib/icon-crawler';
-export{Card} from './lib/card';
+export {Card} from './lib/card';
