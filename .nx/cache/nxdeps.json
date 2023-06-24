@@ -4101,7 +4101,24 @@
             "defaultConfiguration": "production",
             "options": {
               "root": "apps/makewith/vercel",
-              "outputPath": "dist/apps/makewith/vercel"
+              "outputPath": "dist/apps/makewith/vercel",
+              "assets": [
+                {
+                  "glob": "libs/feature/react/icons/README.md",
+                  "input": ".",
+                  "output": "."
+                },
+                {
+                  "glob": "apps/makewith/vercel/public/**/*",
+                  "input": ".",
+                  "output": "./public"
+                },
+                {
+                  "glob": "apps/makewith/vercel/assets/**/*",
+                  "input": ".",
+                  "output": "./assets"
+                }
+              ]
             },
             "configurations": {
               "development": {
@@ -5322,7 +5339,7 @@
           },
           {
             "file": "apps/makewith/vercel/project.json",
-            "hash": "1868929376925716101"
+            "hash": "1902399572596377416"
           },
           {
             "file": "apps/makewith/vercel/public/apple-touch-icon.png",
@@ -8122,14 +8139,6 @@
             ]
           },
           {
-            "file": "libs/makewith/react/feature/footer/tsconfig.json",
-            "hash": "17511317464832693795"
-          },
-          {
-            "file": "libs/makewith/react/feature/footer/tsconfig.lib.json",
-            "hash": "5580110007630344394"
-          },
-          {
             "file": "libs/makewith/react/feature/footer/src/lib/waves.tsx",
             "hash": "9349713366513056015",
             "dependencies": [
@@ -8144,6 +8153,14 @@
                 "type": "static"
               }
             ]
+          },
+          {
+            "file": "libs/makewith/react/feature/footer/tsconfig.json",
+            "hash": "17511317464832693795"
+          },
+          {
+            "file": "libs/makewith/react/feature/footer/tsconfig.lib.json",
+            "hash": "5580110007630344394"
           }
         ]
       }

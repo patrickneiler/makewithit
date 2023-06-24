@@ -6,11 +6,30 @@
   "targets": {
     "build": {
       "executor": "@nx/next:build",
-      "outputs": ["{options.outputPath}"],
+      "outputs": [
+        "{options.outputPath}"
+      ],
       "defaultConfiguration": "production",
       "options": {
         "root": "apps/makewith/vercel",
-        "outputPath": "dist/apps/makewith/vercel"
+        "outputPath": "dist/apps/makewith/vercel",
+        "assets": [
+          {
+            "glob": "libs/feature/react/icons/README.md",
+            "input": ".",
+            "output": "."
+          },
+          {
+            "glob": "apps/makewith/vercel/public/**/*",
+            "input": ".",
+            "output": "./public"
+          },
+          {
+            "glob": "apps/makewith/vercel/assets/**/*",
+            "input": ".",
+            "output": "./assets"
+          }
+        ]
       },
       "configurations": {
         "development": {
@@ -45,11 +64,17 @@
     },
     "lint": {
       "executor": "@nx/linter:eslint",
-      "outputs": ["{options.outputFile}"],
+      "outputs": [
+        "{options.outputFile}"
+      ],
       "options": {
-        "lintFilePatterns": ["apps/makewith/vercel/**/*.{ts,tsx,js,jsx}"]
+        "lintFilePatterns": [
+          "apps/makewith/vercel/**/*.{ts,tsx,js,jsx}"
+        ]
       }
     }
   },
-  "tags": ["app"]
+  "tags": [
+    "app"
+  ]
 }
