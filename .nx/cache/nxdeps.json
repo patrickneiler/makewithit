@@ -352,6 +352,10 @@
           {
             "file": "libs/feature/react/organization/tsconfig.lib.json",
             "hash": "953912742928436052"
+          },
+          {
+            "file": "libs/feature/react/organization/package.json",
+            "hash": "1155023982978781920"
           }
         ]
       }
@@ -503,6 +507,10 @@
           {
             "file": "libs/makewith/react/data-access/tsconfig.lib.json",
             "hash": "953912742928436052"
+          },
+          {
+            "file": "libs/makewith/react/data-access/package.json",
+            "hash": "1155023982978781920"
           }
         ]
       }
@@ -789,6 +797,10 @@
           {
             "file": "libs/feature/react/animations/tsconfig.lib.json",
             "hash": "953912742928436052"
+          },
+          {
+            "file": "libs/feature/react/animations/package.json",
+            "hash": "1155023982978781920"
           }
         ]
       }
@@ -2881,6 +2893,10 @@
           {
             "file": "libs/feature/react/study/tsconfig.lib.json",
             "hash": "953912742928436052"
+          },
+          {
+            "file": "libs/feature/react/study/package.json",
+            "hash": "1155023982978781920"
           }
         ]
       }
@@ -2995,6 +3011,10 @@
           {
             "file": "libs/makewith/react/util/tsconfig.lib.json",
             "hash": "953912742928436052"
+          },
+          {
+            "file": "libs/makewith/react/util/package.json",
+            "hash": "1155023982978781920"
           }
         ]
       }
@@ -3125,6 +3145,10 @@
           {
             "file": "libs/util/react/firebase/tsconfig.lib.json",
             "hash": "953912742928436052"
+          },
+          {
+            "file": "libs/util/react/firebase/package.json",
+            "hash": "1155023982978781920"
           }
         ]
       }
@@ -3320,6 +3344,10 @@
           {
             "file": "libs/feature/react/user/tsconfig.lib.json",
             "hash": "953912742928436052"
+          },
+          {
+            "file": "libs/feature/react/user/package.json",
+            "hash": "13232962848823678104"
           }
         ]
       }
@@ -3941,6 +3969,10 @@
           {
             "file": "libs/makewith/react/ui/tsconfig.lib.json",
             "hash": "953912742928436052"
+          },
+          {
+            "file": "libs/makewith/react/ui/package.json",
+            "hash": "1155023982978781920"
           }
         ]
       }
@@ -4086,6 +4118,10 @@
           {
             "file": "libs/util/react/stripe/tsconfig.lib.json",
             "hash": "953912742928436052"
+          },
+          {
+            "file": "libs/util/react/stripe/package.json",
+            "hash": "1155023982978781920"
           }
         ]
       }
@@ -4280,6 +4316,10 @@
           {
             "file": "libs/util/react/redux/tsconfig.lib.json",
             "hash": "953912742928436052"
+          },
+          {
+            "file": "libs/util/react/redux/package.json",
+            "hash": "1155023982978781920"
           }
         ]
       }
