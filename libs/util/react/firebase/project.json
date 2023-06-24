@@ -24,10 +24,10 @@
         "{options.outputPath}"
       ],
       "options": {
-        "outputPath": "dist/libs/feature/react/animations",
-        "tsConfig": "libs/feature/react/animations/tsconfig.lib.json",
-        "project": "libs/feature/react/animations/package.json",
-        "entryFile": "libs/feature/react/animations/src/index.ts",
+        "outputPath": "dist/libs/util/react/firebase",
+        "tsConfig": "libs/util/react/firebase/tsconfig.lib.json",
+        "project": "libs/util/react/firebase/package.json",
+        "entryFile": "libs/util/react/firebase/src/index.ts",
         "external": [
           "react",
           "react-dom",
@@ -37,7 +37,7 @@
         "compiler": "babel",
         "assets": [
           {
-            "glob": "libs/feature/react/animations/README.md",
+            "glob": "libs/util/react/firebase/README.md",
             "input": ".",
             "output": "."
           }

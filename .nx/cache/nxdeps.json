@@ -398,10 +398,10 @@
               "{options.outputPath}"
             ],
             "options": {
-              "outputPath": "dist/libs/feature/react/animations",
-              "tsConfig": "libs/feature/react/animations/tsconfig.lib.json",
-              "project": "libs/feature/react/animations/package.json",
-              "entryFile": "libs/feature/react/animations/src/index.ts",
+              "outputPath": "dist/libs/makewith/react/data-access",
+              "tsConfig": "libs/makewith/react/data-access/tsconfig.lib.json",
+              "project": "libs/makewith/react/data-access/package.json",
+              "entryFile": "libs/makewith/react/data-access/src/index.ts",
               "external": [
                 "react",
                 "react-dom",
@@ -411,7 +411,7 @@
               "compiler": "babel",
               "assets": [
                 {
-                  "glob": "libs/feature/react/animations/README.md",
+                  "glob": "libs/makewith/react/data-access/README.md",
                   "input": ".",
                   "output": "."
                 }
@@ -433,7 +433,7 @@
           },
           {
             "file": "libs/makewith/react/data-access/project.json",
-            "hash": "9055125118823088689"
+            "hash": "17373759199017468337"
           },
           {
             "file": "libs/makewith/react/data-access/README.md",
@@ -562,10 +562,10 @@
               "{options.outputPath}"
             ],
             "options": {
-              "outputPath": "dist/libs/feature/react/animations",
-              "tsConfig": "libs/feature/react/animations/tsconfig.lib.json",
-              "project": "libs/feature/react/animations/package.json",
-              "entryFile": "libs/feature/react/animations/src/index.ts",
+              "outputPath": "dist/libs/data-access/organization",
+              "tsConfig": "libs/data-access/organization/tsconfig.lib.json",
+              "project": "libs/data-access/organization/package.json",
+              "entryFile": "libs/data-access/organization/src/index.ts",
               "external": [
                 "react",
                 "react-dom",
@@ -575,7 +575,7 @@
               "compiler": "babel",
               "assets": [
                 {
-                  "glob": "libs/feature/react/animations/README.md",
+                  "glob": "libs/data-access/organization/README.md",
                   "input": ".",
                   "output": "."
                 }
@@ -597,7 +597,7 @@
           },
           {
             "file": "libs/data-access/organization/project.json",
-            "hash": "13151824282531535537"
+            "hash": "15910231443945112026"
           },
           {
             "file": "libs/data-access/organization/README.md",
@@ -763,12 +763,8 @@
             "hash": "12343969857357044621"
           },
           {
-            "file": "libs/feature/react/animations/tsconfig.json",
-            "hash": "12447407919180570976"
-          },
-          {
-            "file": "libs/feature/react/animations/tsconfig.lib.json",
-            "hash": "953912742928436052"
+            "file": "libs/feature/react/animations/src/lib/hypercube/hypercube.module.scss",
+            "hash": "17179408507874074661"
           },
           {
             "file": "libs/feature/react/animations/src/lib/hypercube/index.tsx",
@@ -787,8 +783,12 @@
             ]
           },
           {
-            "file": "libs/feature/react/animations/src/lib/hypercube/hypercube.module.scss",
-            "hash": "17179408507874074661"
+            "file": "libs/feature/react/animations/tsconfig.json",
+            "hash": "12447407919180570976"
+          },
+          {
+            "file": "libs/feature/react/animations/tsconfig.lib.json",
+            "hash": "953912742928436052"
           }
         ]
       }
@@ -1429,6 +1429,50 @@
             "hash": "4270452577281734299"
           },
           {
+            "file": "libs/feature/react/icons/src/lib/animated/categories/cyberpunk-frames/frame-01.ts",
+            "hash": "4074938845381682794"
+          },
+          {
+            "file": "libs/feature/react/icons/src/lib/animated/categories/cyberpunk-frames/frame-02.ts",
+            "hash": "9478772540321919529"
+          },
+          {
+            "file": "libs/feature/react/icons/src/lib/animated/categories/cyberpunk-frames/frame-03.ts",
+            "hash": "2137203832965219245"
+          },
+          {
+            "file": "libs/feature/react/icons/src/lib/animated/categories/cyberpunk-frames/frame-04.ts",
+            "hash": "5170622849924805445"
+          },
+          {
+            "file": "libs/feature/react/icons/src/lib/animated/categories/cyberpunk-frames/frame-05.ts",
+            "hash": "8923051442801321963"
+          },
+          {
+            "file": "libs/feature/react/icons/src/lib/animated/categories/cyberpunk-frames/frame-06.ts",
+            "hash": "18304923221603690824"
+          },
+          {
+            "file": "libs/feature/react/icons/src/lib/animated/categories/cyberpunk-frames/frame-07.ts",
+            "hash": "3944932089100788152"
+          },
+          {
+            "file": "libs/feature/react/icons/src/lib/animated/categories/cyberpunk-frames/frame-08.ts",
+            "hash": "14561836233547195718"
+          },
+          {
+            "file": "libs/feature/react/icons/src/lib/animated/categories/cyberpunk-frames/frame-09.ts",
+            "hash": "11607956518131277503"
+          },
+          {
+            "file": "libs/feature/react/icons/src/lib/animated/categories/cyberpunk-frames/frame-10.ts",
+            "hash": "10724711948527955998"
+          },
+          {
+            "file": "libs/feature/react/icons/src/lib/animated/categories/cyberpunk-frames/index.ts",
+            "hash": "17537013661017084381"
+          },
+          {
             "file": "libs/feature/react/icons/src/lib/animated/categories/digital-marketing/advertiesment.ts",
             "hash": "645182360178600061"
           },
@@ -1755,6 +1799,238 @@
           {
             "file": "libs/feature/react/icons/src/lib/animated/categories/food-and-drink/wine.ts",
             "hash": "2793355091864987963"
+          },
+          {
+            "file": "libs/feature/react/icons/src/lib/animated/categories/hexagon/circle-elements-01.ts",
+            "hash": "9168350147424771257"
+          },
+          {
+            "file": "libs/feature/react/icons/src/lib/animated/categories/hexagon/circle-elements-02.ts",
+            "hash": "17197130962668482365"
+          },
+          {
+            "file": "libs/feature/react/icons/src/lib/animated/categories/hexagon/circle-elements-03.ts",
+            "hash": "16277250104901774942"
+          },
+          {
+            "file": "libs/feature/react/icons/src/lib/animated/categories/hexagon/circle-elements-04.ts",
+            "hash": "772794895063800722"
+          },
+          {
+            "file": "libs/feature/react/icons/src/lib/animated/categories/hexagon/circle-elements-05.ts",
+            "hash": "11821048791222181072"
+          },
+          {
+            "file": "libs/feature/react/icons/src/lib/animated/categories/hexagon/circle-elements-06.ts",
+            "hash": "7987886467378321941"
+          },
+          {
+            "file": "libs/feature/react/icons/src/lib/animated/categories/hexagon/circle-elements-07.ts",
+            "hash": "10793544365659028200"
+          },
+          {
+            "file": "libs/feature/react/icons/src/lib/animated/categories/hexagon/circle-elements-08.ts",
+            "hash": "17752623957764104293"
+          },
+          {
+            "file": "libs/feature/react/icons/src/lib/animated/categories/hexagon/circle-elements-09.ts",
+            "hash": "10135973080635608171"
+          },
+          {
+            "file": "libs/feature/react/icons/src/lib/animated/categories/hexagon/circle-elements-10.ts",
+            "hash": "8456519674661123209"
+          },
+          {
+            "file": "libs/feature/react/icons/src/lib/animated/categories/hexagon/circle-elements-11.ts",
+            "hash": "11370162385303205209"
+          },
+          {
+            "file": "libs/feature/react/icons/src/lib/animated/categories/hexagon/circle-elements-12.ts",
+            "hash": "10169795537231431816"
+          },
+          {
+            "file": "libs/feature/react/icons/src/lib/animated/categories/hexagon/circle-elements-13.ts",
+            "hash": "12046917381087728969"
+          },
+          {
+            "file": "libs/feature/react/icons/src/lib/animated/categories/hexagon/circle-elements-14.ts",
+            "hash": "10848300025477839027"
+          },
+          {
+            "file": "libs/feature/react/icons/src/lib/animated/categories/hexagon/circle-elements-15.ts",
+            "hash": "15401301496563774610"
+          },
+          {
+            "file": "libs/feature/react/icons/src/lib/animated/categories/hexagon/circle-elements-16.ts",
+            "hash": "16761769270964805911"
+          },
+          {
+            "file": "libs/feature/react/icons/src/lib/animated/categories/hexagon/circle-elements-17.ts",
+            "hash": "1330055279564133346"
+          },
+          {
+            "file": "libs/feature/react/icons/src/lib/animated/categories/hexagon/index.ts",
+            "hash": "16418696865905570375"
+          },
+          {
+            "file": "libs/feature/react/icons/src/lib/animated/categories/hexagon/pointer-10.ts",
+            "hash": "11316561832432153493"
+          },
+          {
+            "file": "libs/feature/react/icons/src/lib/animated/categories/hexagon/pointer-11.ts",
+            "hash": "7053366314179656574"
+          },
+          {
+            "file": "libs/feature/react/icons/src/lib/animated/categories/hexagon/pointer-12.ts",
+            "hash": "7644894069148001780"
+          },
+          {
+            "file": "libs/feature/react/icons/src/lib/animated/categories/hexagon/pointer-13.ts",
+            "hash": "5255438028549607875"
+          },
+          {
+            "file": "libs/feature/react/icons/src/lib/animated/categories/hexagon/pointer-14.ts",
+            "hash": "6548996916854038054"
+          },
+          {
+            "file": "libs/feature/react/icons/src/lib/animated/categories/hexagon/polygon-01.ts",
+            "hash": "5606696044771079964"
+          },
+          {
+            "file": "libs/feature/react/icons/src/lib/animated/categories/hexagon/polygon-02.ts",
+            "hash": "870127488682399161"
+          },
+          {
+            "file": "libs/feature/react/icons/src/lib/animated/categories/hexagon/polygon-03.ts",
+            "hash": "10626512067784459996"
+          },
+          {
+            "file": "libs/feature/react/icons/src/lib/animated/categories/hexagon/polygon-04.ts",
+            "hash": "5901538080149957223"
+          },
+          {
+            "file": "libs/feature/react/icons/src/lib/animated/categories/hexagon/polygon-05.ts",
+            "hash": "17833614238173454006"
+          },
+          {
+            "file": "libs/feature/react/icons/src/lib/animated/categories/hexagon/polygon-06.ts",
+            "hash": "11838317118862067156"
+          },
+          {
+            "file": "libs/feature/react/icons/src/lib/animated/categories/hexagon/polygon-07.ts",
+            "hash": "15504121019391156380"
+          },
+          {
+            "file": "libs/feature/react/icons/src/lib/animated/categories/hexagon/polygon-08.ts",
+            "hash": "9023568866466612174"
+          },
+          {
+            "file": "libs/feature/react/icons/src/lib/animated/categories/hexagon/polygon-09.ts",
+            "hash": "18086846606908615972"
+          },
+          {
+            "file": "libs/feature/react/icons/src/lib/animated/categories/hexagon/polygon-10.ts",
+            "hash": "13811510628618956865"
+          },
+          {
+            "file": "libs/feature/react/icons/src/lib/animated/categories/hexagon/polygon-11.ts",
+            "hash": "8826420104086972371"
+          },
+          {
+            "file": "libs/feature/react/icons/src/lib/animated/categories/hexagon/polygon-12.ts",
+            "hash": "18173373306524478905"
+          },
+          {
+            "file": "libs/feature/react/icons/src/lib/animated/categories/hexagon/polygon-13.ts",
+            "hash": "16860575735032655121"
+          },
+          {
+            "file": "libs/feature/react/icons/src/lib/animated/categories/hexagon/polygon-14.ts",
+            "hash": "11706013749705674400"
+          },
+          {
+            "file": "libs/feature/react/icons/src/lib/animated/categories/hexagon/shapes-soft-01.ts",
+            "hash": "15648710869334198606"
+          },
+          {
+            "file": "libs/feature/react/icons/src/lib/animated/categories/hexagon/shapes-soft-02.ts",
+            "hash": "1371481159812291831"
+          },
+          {
+            "file": "libs/feature/react/icons/src/lib/animated/categories/hexagon/shapes-soft-03.ts",
+            "hash": "3307072400687873499"
+          },
+          {
+            "file": "libs/feature/react/icons/src/lib/animated/categories/hexagon/shapes-soft-04.ts",
+            "hash": "9879758465473485859"
+          },
+          {
+            "file": "libs/feature/react/icons/src/lib/animated/categories/hexagon/shapes-soft-05.ts",
+            "hash": "6241668354742879806"
+          },
+          {
+            "file": "libs/feature/react/icons/src/lib/animated/categories/hexagon/shapes-soft-06.ts",
+            "hash": "12485859191379291574"
+          },
+          {
+            "file": "libs/feature/react/icons/src/lib/animated/categories/hexagon/shapes-soft-07.ts",
+            "hash": "13688476583062880815"
+          },
+          {
+            "file": "libs/feature/react/icons/src/lib/animated/categories/hexagon/shapes-soft-08.ts",
+            "hash": "5900656809949804952"
+          },
+          {
+            "file": "libs/feature/react/icons/src/lib/animated/categories/hexagon/shapes-soft-09.ts",
+            "hash": "17243360914051001742"
+          },
+          {
+            "file": "libs/feature/react/icons/src/lib/animated/categories/hexagon/shapes-soft-10.ts",
+            "hash": "10653080160020282431"
+          },
+          {
+            "file": "libs/feature/react/icons/src/lib/animated/categories/hexagon/target-01.ts",
+            "hash": "14061618740415009761"
+          },
+          {
+            "file": "libs/feature/react/icons/src/lib/animated/categories/hexagon/target-02.ts",
+            "hash": "13870812058363310629"
+          },
+          {
+            "file": "libs/feature/react/icons/src/lib/animated/categories/hexagon/target-03.ts",
+            "hash": "11190233502324393138"
+          },
+          {
+            "file": "libs/feature/react/icons/src/lib/animated/categories/hexagon/tech-lines-full-01.ts",
+            "hash": "3802629619680161951"
+          },
+          {
+            "file": "libs/feature/react/icons/src/lib/animated/categories/hexagon/tech-lines-full-02.ts",
+            "hash": "13952550182103484135"
+          },
+          {
+            "file": "libs/feature/react/icons/src/lib/animated/categories/hexagon/tech-lines-full-03.ts",
+            "hash": "13344399448229814246"
+          },
+          {
+            "file": "libs/feature/react/icons/src/lib/animated/categories/hexagon/tech-lines-straight-01.ts",
+            "hash": "1802530831877567309"
+          },
+          {
+            "file": "libs/feature/react/icons/src/lib/animated/categories/hexagon/tech-lines-straight-02.ts",
+            "hash": "8524493473360825134"
+          },
+          {
+            "file": "libs/feature/react/icons/src/lib/animated/categories/hexagon/tech-lines-straight-03.ts",
+            "hash": "12169532477011504724"
+          },
+          {
+            "file": "libs/feature/react/icons/src/lib/animated/categories/hexagon/tech-lines-straight-04.ts",
+            "hash": "11620529808466797459"
+          },
+          {
+            "file": "libs/feature/react/icons/src/lib/animated/categories/hexagon/tech-lines-straight-05.ts",
+            "hash": "11365050947607311856"
           },
           {
             "file": "libs/feature/react/icons/src/lib/animated/categories/index.ts",
@@ -2152,6 +2428,10 @@
             "hash": "18003351240512834474"
           },
           {
+            "file": "libs/feature/react/icons/src/raw/cyberpunk-frames.json",
+            "hash": "11366847815835584228"
+          },
+          {
             "file": "libs/feature/react/icons/src/raw/database-and-security.json",
             "hash": "11022806769094007620"
           },
@@ -2166,6 +2446,10 @@
           {
             "file": "libs/feature/react/icons/src/raw/food-and-drink.json",
             "hash": "11427347683089780237"
+          },
+          {
+            "file": "libs/feature/react/icons/src/raw/hexagon.json",
+            "hash": "1360088051049164089"
           },
           {
             "file": "libs/feature/react/icons/src/raw/user-interface.json",
@@ -2445,290 +2729,6 @@
           {
             "file": "libs/feature/react/icons/tsconfig.lib.json",
             "hash": "953912742928436052"
-          },
-          {
-            "file": "libs/feature/react/icons/src/raw/hexagon.json",
-            "hash": "1360088051049164089"
-          },
-          {
-            "file": "libs/feature/react/icons/src/lib/animated/categories/hexagon/index.ts",
-            "hash": "16418696865905570375"
-          },
-          {
-            "file": "libs/feature/react/icons/src/lib/animated/categories/hexagon/polygon-11.ts",
-            "hash": "8826420104086972371"
-          },
-          {
-            "file": "libs/feature/react/icons/src/lib/animated/categories/hexagon/pointer-10.ts",
-            "hash": "11316561832432153493"
-          },
-          {
-            "file": "libs/feature/react/icons/src/lib/animated/categories/hexagon/pointer-11.ts",
-            "hash": "7053366314179656574"
-          },
-          {
-            "file": "libs/feature/react/icons/src/lib/animated/categories/hexagon/pointer-12.ts",
-            "hash": "7644894069148001780"
-          },
-          {
-            "file": "libs/feature/react/icons/src/lib/animated/categories/hexagon/pointer-13.ts",
-            "hash": "5255438028549607875"
-          },
-          {
-            "file": "libs/feature/react/icons/src/lib/animated/categories/hexagon/pointer-14.ts",
-            "hash": "6548996916854038054"
-          },
-          {
-            "file": "libs/feature/react/icons/src/lib/animated/categories/hexagon/polygon-01.ts",
-            "hash": "5606696044771079964"
-          },
-          {
-            "file": "libs/feature/react/icons/src/lib/animated/categories/hexagon/polygon-02.ts",
-            "hash": "870127488682399161"
-          },
-          {
-            "file": "libs/feature/react/icons/src/lib/animated/categories/hexagon/polygon-03.ts",
-            "hash": "10626512067784459996"
-          },
-          {
-            "file": "libs/feature/react/icons/src/lib/animated/categories/hexagon/polygon-04.ts",
-            "hash": "5901538080149957223"
-          },
-          {
-            "file": "libs/feature/react/icons/src/lib/animated/categories/hexagon/polygon-05.ts",
-            "hash": "17833614238173454006"
-          },
-          {
-            "file": "libs/feature/react/icons/src/lib/animated/categories/hexagon/polygon-06.ts",
-            "hash": "11838317118862067156"
-          },
-          {
-            "file": "libs/feature/react/icons/src/lib/animated/categories/hexagon/polygon-07.ts",
-            "hash": "15504121019391156380"
-          },
-          {
-            "file": "libs/feature/react/icons/src/lib/animated/categories/hexagon/polygon-08.ts",
-            "hash": "9023568866466612174"
-          },
-          {
-            "file": "libs/feature/react/icons/src/lib/animated/categories/hexagon/polygon-09.ts",
-            "hash": "18086846606908615972"
-          },
-          {
-            "file": "libs/feature/react/icons/src/lib/animated/categories/hexagon/polygon-10.ts",
-            "hash": "13811510628618956865"
-          },
-          {
-            "file": "libs/feature/react/icons/src/lib/animated/categories/hexagon/polygon-12.ts",
-            "hash": "18173373306524478905"
-          },
-          {
-            "file": "libs/feature/react/icons/src/lib/animated/categories/hexagon/polygon-13.ts",
-            "hash": "16860575735032655121"
-          },
-          {
-            "file": "libs/feature/react/icons/src/lib/animated/categories/hexagon/polygon-14.ts",
-            "hash": "11706013749705674400"
-          },
-          {
-            "file": "libs/feature/react/icons/src/lib/animated/categories/hexagon/shapes-soft-04.ts",
-            "hash": "9879758465473485859"
-          },
-          {
-            "file": "libs/feature/react/icons/src/lib/animated/categories/hexagon/shapes-soft-06.ts",
-            "hash": "12485859191379291574"
-          },
-          {
-            "file": "libs/feature/react/icons/src/lib/animated/categories/hexagon/shapes-soft-07.ts",
-            "hash": "13688476583062880815"
-          },
-          {
-            "file": "libs/feature/react/icons/src/lib/animated/categories/hexagon/shapes-soft-08.ts",
-            "hash": "5900656809949804952"
-          },
-          {
-            "file": "libs/feature/react/icons/src/lib/animated/categories/hexagon/shapes-soft-09.ts",
-            "hash": "17243360914051001742"
-          },
-          {
-            "file": "libs/feature/react/icons/src/lib/animated/categories/hexagon/shapes-soft-10.ts",
-            "hash": "10653080160020282431"
-          },
-          {
-            "file": "libs/feature/react/icons/src/lib/animated/categories/hexagon/circle-elements-01.ts",
-            "hash": "9168350147424771257"
-          },
-          {
-            "file": "libs/feature/react/icons/src/lib/animated/categories/hexagon/circle-elements-02.ts",
-            "hash": "17197130962668482365"
-          },
-          {
-            "file": "libs/feature/react/icons/src/lib/animated/categories/hexagon/circle-elements-03.ts",
-            "hash": "16277250104901774942"
-          },
-          {
-            "file": "libs/feature/react/icons/src/lib/animated/categories/hexagon/circle-elements-04.ts",
-            "hash": "772794895063800722"
-          },
-          {
-            "file": "libs/feature/react/icons/src/lib/animated/categories/hexagon/circle-elements-05.ts",
-            "hash": "11821048791222181072"
-          },
-          {
-            "file": "libs/feature/react/icons/src/lib/animated/categories/hexagon/circle-elements-06.ts",
-            "hash": "7987886467378321941"
-          },
-          {
-            "file": "libs/feature/react/icons/src/lib/animated/categories/hexagon/circle-elements-07.ts",
-            "hash": "10793544365659028200"
-          },
-          {
-            "file": "libs/feature/react/icons/src/lib/animated/categories/hexagon/circle-elements-08.ts",
-            "hash": "17752623957764104293"
-          },
-          {
-            "file": "libs/feature/react/icons/src/lib/animated/categories/hexagon/circle-elements-09.ts",
-            "hash": "10135973080635608171"
-          },
-          {
-            "file": "libs/feature/react/icons/src/lib/animated/categories/hexagon/circle-elements-10.ts",
-            "hash": "8456519674661123209"
-          },
-          {
-            "file": "libs/feature/react/icons/src/lib/animated/categories/hexagon/circle-elements-11.ts",
-            "hash": "11370162385303205209"
-          },
-          {
-            "file": "libs/feature/react/icons/src/lib/animated/categories/hexagon/circle-elements-12.ts",
-            "hash": "10169795537231431816"
-          },
-          {
-            "file": "libs/feature/react/icons/src/lib/animated/categories/hexagon/circle-elements-13.ts",
-            "hash": "12046917381087728969"
-          },
-          {
-            "file": "libs/feature/react/icons/src/lib/animated/categories/hexagon/circle-elements-14.ts",
-            "hash": "10848300025477839027"
-          },
-          {
-            "file": "libs/feature/react/icons/src/lib/animated/categories/hexagon/circle-elements-15.ts",
-            "hash": "15401301496563774610"
-          },
-          {
-            "file": "libs/feature/react/icons/src/lib/animated/categories/hexagon/circle-elements-16.ts",
-            "hash": "16761769270964805911"
-          },
-          {
-            "file": "libs/feature/react/icons/src/lib/animated/categories/hexagon/circle-elements-17.ts",
-            "hash": "1330055279564133346"
-          },
-          {
-            "file": "libs/feature/react/icons/src/lib/animated/categories/hexagon/shapes-soft-01.ts",
-            "hash": "15648710869334198606"
-          },
-          {
-            "file": "libs/feature/react/icons/src/lib/animated/categories/hexagon/shapes-soft-02.ts",
-            "hash": "1371481159812291831"
-          },
-          {
-            "file": "libs/feature/react/icons/src/lib/animated/categories/hexagon/shapes-soft-03.ts",
-            "hash": "3307072400687873499"
-          },
-          {
-            "file": "libs/feature/react/icons/src/lib/animated/categories/hexagon/shapes-soft-05.ts",
-            "hash": "6241668354742879806"
-          },
-          {
-            "file": "libs/feature/react/icons/src/lib/animated/categories/hexagon/target-01.ts",
-            "hash": "14061618740415009761"
-          },
-          {
-            "file": "libs/feature/react/icons/src/lib/animated/categories/hexagon/target-02.ts",
-            "hash": "13870812058363310629"
-          },
-          {
-            "file": "libs/feature/react/icons/src/lib/animated/categories/hexagon/target-03.ts",
-            "hash": "11190233502324393138"
-          },
-          {
-            "file": "libs/feature/react/icons/src/lib/animated/categories/hexagon/tech-lines-full-01.ts",
-            "hash": "3802629619680161951"
-          },
-          {
-            "file": "libs/feature/react/icons/src/lib/animated/categories/hexagon/tech-lines-full-02.ts",
-            "hash": "13952550182103484135"
-          },
-          {
-            "file": "libs/feature/react/icons/src/lib/animated/categories/hexagon/tech-lines-full-03.ts",
-            "hash": "13344399448229814246"
-          },
-          {
-            "file": "libs/feature/react/icons/src/lib/animated/categories/hexagon/tech-lines-straight-01.ts",
-            "hash": "1802530831877567309"
-          },
-          {
-            "file": "libs/feature/react/icons/src/lib/animated/categories/hexagon/tech-lines-straight-02.ts",
-            "hash": "8524493473360825134"
-          },
-          {
-            "file": "libs/feature/react/icons/src/lib/animated/categories/hexagon/tech-lines-straight-03.ts",
-            "hash": "12169532477011504724"
-          },
-          {
-            "file": "libs/feature/react/icons/src/lib/animated/categories/hexagon/tech-lines-straight-04.ts",
-            "hash": "11620529808466797459"
-          },
-          {
-            "file": "libs/feature/react/icons/src/lib/animated/categories/hexagon/tech-lines-straight-05.ts",
-            "hash": "11365050947607311856"
-          },
-          {
-            "file": "libs/feature/react/icons/src/raw/cyberpunk-frames.json",
-            "hash": "11366847815835584228"
-          },
-          {
-            "file": "libs/feature/react/icons/src/lib/animated/categories/cyberpunk-frames/frame-01.ts",
-            "hash": "4074938845381682794"
-          },
-          {
-            "file": "libs/feature/react/icons/src/lib/animated/categories/cyberpunk-frames/frame-02.ts",
-            "hash": "9478772540321919529"
-          },
-          {
-            "file": "libs/feature/react/icons/src/lib/animated/categories/cyberpunk-frames/frame-03.ts",
-            "hash": "2137203832965219245"
-          },
-          {
-            "file": "libs/feature/react/icons/src/lib/animated/categories/cyberpunk-frames/frame-04.ts",
-            "hash": "5170622849924805445"
-          },
-          {
-            "file": "libs/feature/react/icons/src/lib/animated/categories/cyberpunk-frames/frame-05.ts",
-            "hash": "8923051442801321963"
-          },
-          {
-            "file": "libs/feature/react/icons/src/lib/animated/categories/cyberpunk-frames/frame-06.ts",
-            "hash": "18304923221603690824"
-          },
-          {
-            "file": "libs/feature/react/icons/src/lib/animated/categories/cyberpunk-frames/frame-07.ts",
-            "hash": "3944932089100788152"
-          },
-          {
-            "file": "libs/feature/react/icons/src/lib/animated/categories/cyberpunk-frames/frame-08.ts",
-            "hash": "14561836233547195718"
-          },
-          {
-            "file": "libs/feature/react/icons/src/lib/animated/categories/cyberpunk-frames/frame-09.ts",
-            "hash": "11607956518131277503"
-          },
-          {
-            "file": "libs/feature/react/icons/src/lib/animated/categories/cyberpunk-frames/frame-10.ts",
-            "hash": "10724711948527955998"
-          },
-          {
-            "file": "libs/feature/react/icons/src/lib/animated/categories/cyberpunk-frames/index.ts",
-            "hash": "17537013661017084381"
           }
         ]
       }
@@ -2927,10 +2927,10 @@
               "{options.outputPath}"
             ],
             "options": {
-              "outputPath": "dist/libs/feature/react/animations",
-              "tsConfig": "libs/feature/react/animations/tsconfig.lib.json",
-              "project": "libs/feature/react/animations/package.json",
-              "entryFile": "libs/feature/react/animations/src/index.ts",
+              "outputPath": "dist/libs/makewith/react/util",
+              "tsConfig": "libs/makewith/react/util/tsconfig.lib.json",
+              "project": "libs/makewith/react/util/package.json",
+              "entryFile": "libs/makewith/react/util/src/index.ts",
               "external": [
                 "react",
                 "react-dom",
@@ -2940,7 +2940,7 @@
               "compiler": "babel",
               "assets": [
                 {
-                  "glob": "libs/feature/react/animations/README.md",
+                  "glob": "libs/makewith/react/util/README.md",
                   "input": ".",
                   "output": "."
                 }
@@ -2962,7 +2962,7 @@
           },
           {
             "file": "libs/makewith/react/util/project.json",
-            "hash": "7324042093438285767"
+            "hash": "14008823277961033313"
           },
           {
             "file": "libs/makewith/react/util/README.md",
@@ -3041,10 +3041,10 @@
               "{options.outputPath}"
             ],
             "options": {
-              "outputPath": "dist/libs/feature/react/animations",
-              "tsConfig": "libs/feature/react/animations/tsconfig.lib.json",
-              "project": "libs/feature/react/animations/package.json",
-              "entryFile": "libs/feature/react/animations/src/index.ts",
+              "outputPath": "dist/libs/util/react/firebase",
+              "tsConfig": "libs/util/react/firebase/tsconfig.lib.json",
+              "project": "libs/util/react/firebase/package.json",
+              "entryFile": "libs/util/react/firebase/src/index.ts",
               "external": [
                 "react",
                 "react-dom",
@@ -3054,7 +3054,7 @@
               "compiler": "babel",
               "assets": [
                 {
-                  "glob": "libs/feature/react/animations/README.md",
+                  "glob": "libs/util/react/firebase/README.md",
                   "input": ".",
                   "output": "."
                 }
@@ -3076,7 +3076,7 @@
           },
           {
             "file": "libs/util/react/firebase/project.json",
-            "hash": "9550136778730686886"
+            "hash": "10759405238642239123"
           },
           {
             "file": "libs/util/react/firebase/README.md",
@@ -3638,6 +3638,10 @@
             ]
           },
           {
+            "file": "libs/makewith/react/ui/src/lib/hypercube.tsx",
+            "hash": "3244421341483603138"
+          },
+          {
             "file": "libs/makewith/react/ui/src/lib/icon-crawler.tsx",
             "hash": "14053939772104035485",
             "dependencies": [
@@ -3937,10 +3941,6 @@
           {
             "file": "libs/makewith/react/ui/tsconfig.lib.json",
             "hash": "953912742928436052"
-          },
-          {
-            "file": "libs/makewith/react/ui/src/lib/hypercube.tsx",
-            "hash": "3244421341483603138"
           }
         ]
       }
@@ -3987,10 +3987,10 @@
               "{options.outputPath}"
             ],
             "options": {
-              "outputPath": "dist/libs/feature/react/animations",
-              "tsConfig": "libs/feature/react/animations/tsconfig.lib.json",
-              "project": "libs/feature/react/animations/package.json",
-              "entryFile": "libs/feature/react/animations/src/index.ts",
+              "outputPath": "dist/libs/util/react/stripe",
+              "tsConfig": "libs/util/react/stripe/tsconfig.lib.json",
+              "project": "libs/util/react/stripe/package.json",
+              "entryFile": "libs/util/react/stripe/src/index.ts",
               "external": [
                 "react",
                 "react-dom",
@@ -4000,7 +4000,7 @@
               "compiler": "babel",
               "assets": [
                 {
-                  "glob": "libs/feature/react/animations/README.md",
+                  "glob": "libs/util/react/stripe/README.md",
                   "input": ".",
                   "output": "."
                 }
@@ -4022,7 +4022,7 @@
           },
           {
             "file": "libs/util/react/stripe/project.json",
-            "hash": "17414591356287450938"
+            "hash": "8076545463083356312"
           },
           {
             "file": "libs/util/react/stripe/README.md",
@@ -4132,10 +4132,10 @@
               "{options.outputPath}"
             ],
             "options": {
-              "outputPath": "dist/libs/feature/react/animations",
-              "tsConfig": "libs/feature/react/animations/tsconfig.lib.json",
-              "project": "libs/feature/react/animations/package.json",
-              "entryFile": "libs/feature/react/animations/src/index.ts",
+              "outputPath": "dist/libs/data-access/user",
+              "tsConfig": "libs/data-access/user/tsconfig.lib.json",
+              "project": "libs/data-access/user/package.json",
+              "entryFile": "libs/data-access/user/src/index.ts",
               "external": [
                 "react",
                 "react-dom",
@@ -4145,7 +4145,7 @@
               "compiler": "babel",
               "assets": [
                 {
-                  "glob": "libs/feature/react/animations/README.md",
+                  "glob": "libs/data-access/user/README.md",
                   "input": ".",
                   "output": "."
                 }
@@ -4167,7 +4167,7 @@
           },
           {
             "file": "libs/data-access/user/project.json",
-            "hash": "12254579750487715926"
+            "hash": "1199107669522345936"
           },
           {
             "file": "libs/data-access/user/README.md",

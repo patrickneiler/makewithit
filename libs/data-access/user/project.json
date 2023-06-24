@@ -24,10 +24,10 @@
         "{options.outputPath}"
       ],
       "options": {
-        "outputPath": "dist/libs/feature/react/animations",
-        "tsConfig": "libs/feature/react/animations/tsconfig.lib.json",
-        "project": "libs/feature/react/animations/package.json",
-        "entryFile": "libs/feature/react/animations/src/index.ts",
+        "outputPath": "dist/libs/data-access/user",
+        "tsConfig": "libs/data-access/user/tsconfig.lib.json",
+        "project": "libs/data-access/user/package.json",
+        "entryFile": "libs/data-access/user/src/index.ts",
         "external": [
           "react",
           "react-dom",
@@ -37,7 +37,7 @@
         "compiler": "babel",
         "assets": [
           {
-            "glob": "libs/feature/react/animations/README.md",
+            "glob": "libs/data-access/user/README.md",
             "input": ".",
             "output": "."
           }
