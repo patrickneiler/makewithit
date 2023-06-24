@@ -621,13 +621,8 @@
           },
           {
             "file": "libs/data-access/organization/src/lib/+state/organization.slice.ts",
-            "hash": "1522992722202319408",
+            "hash": "4042539011859061178",
             "dependencies": [
-              {
-                "source": "data-access-organization",
-                "target": "util-react-firebase",
-                "type": "static"
-              },
               {
                 "source": "data-access-organization",
                 "target": "npm:@reduxjs/toolkit",
@@ -651,6 +646,17 @@
           {
             "file": "libs/data-access/organization/package.json",
             "hash": "13232962848823678104"
+          },
+          {
+            "file": "libs/data-access/organization/src/lib/+state/util-react-firebase.tsx",
+            "hash": "14379697530425067220",
+            "dependencies": [
+              {
+                "source": "data-access-organization",
+                "target": "npm:firebase",
+                "type": "static"
+              }
+            ]
           }
         ]
       }
@@ -4227,13 +4233,8 @@
           },
           {
             "file": "libs/data-access/user/src/lib/+state/user.slice.ts",
-            "hash": "1009431753522539299",
+            "hash": "11774823740416351928",
             "dependencies": [
-              {
-                "source": "data-access-user",
-                "target": "util-react-firebase",
-                "type": "static"
-              },
               {
                 "source": "data-access-user",
                 "target": "npm:@reduxjs/toolkit",
@@ -4257,6 +4258,17 @@
           {
             "file": "libs/data-access/user/package.json",
             "hash": "1155023982978781920"
+          },
+          {
+            "file": "libs/data-access/user/src/lib/+state/util-react-firebase.tsx",
+            "hash": "14379697530425067220",
+            "dependencies": [
+              {
+                "source": "data-access-user",
+                "target": "npm:firebase",
+                "type": "static"
+              }
+            ]
           }
         ]
       }
@@ -9217,11 +9229,6 @@
     "data-access-organization": [
       {
         "source": "data-access-organization",
-        "target": "util-react-firebase",
-        "type": "static"
-      },
-      {
-        "source": "data-access-organization",
         "target": "npm:@reduxjs/toolkit",
         "type": "static"
       },
@@ -9506,11 +9513,6 @@
       }
     ],
     "data-access-user": [
-      {
-        "source": "data-access-user",
-        "target": "util-react-firebase",
-        "type": "static"
-      },
       {
         "source": "data-access-user",
         "target": "npm:@reduxjs/toolkit",

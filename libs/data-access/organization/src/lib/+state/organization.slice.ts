@@ -1,4 +1,4 @@
-import { firestore } from '@the/util/react/firebase';
+import { firestore } from './util-react-firebase';
 import {
   createAsyncThunk,
   createEntityAdapter,
