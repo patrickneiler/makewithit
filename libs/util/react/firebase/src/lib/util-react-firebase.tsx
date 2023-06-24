@@ -42,6 +42,3 @@ export const logout = async () => {
     return { error: error.message }
   }
 };
-
-
-export default { app, firestore, auth, signIn, logout }
