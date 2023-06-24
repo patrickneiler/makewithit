@@ -647,6 +647,10 @@
           {
             "file": "libs/data-access/organization/tsconfig.lib.json",
             "hash": "1261950536210511632"
+          },
+          {
+            "file": "libs/data-access/organization/package.json",
+            "hash": "13232962848823678104"
           }
         ]
       }
@@ -3433,6 +3437,10 @@
           {
             "file": "libs/data-access/study/tsconfig.lib.json",
             "hash": "1261950536210511632"
+          },
+          {
+            "file": "libs/data-access/study/package.json",
+            "hash": "1155023982978781920"
           }
         ]
       }
@@ -4245,6 +4253,10 @@
           {
             "file": "libs/data-access/user/tsconfig.lib.json",
             "hash": "1261950536210511632"
+          },
+          {
+            "file": "libs/data-access/user/package.json",
+            "hash": "1155023982978781920"
           }
         ]
       }
