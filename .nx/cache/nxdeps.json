@@ -131,17 +131,20 @@
     "@the/feature/react/icons": [
       "libs/feature/react/icons/src/index.ts"
     ],
-    "@the/feature/react/organization": [
-      "libs/feature/react/organization/src/index.ts"
-    ],
     "@the/feature/react/study": [
       "libs/feature/react/study/src/index.ts"
     ],
-    "@the/feature/react/user": [
-      "libs/feature/react/user/src/index.ts"
-    ],
     "@the/makewith/react/data-access": [
       "libs/makewith/react/data-access/src/index.ts"
+    ],
+    "@the/makewith/react/feature/footer": [
+      "libs/makewith/react/feature/footer/src/index.ts"
+    ],
+    "@the/makewith/react/feature/header": [
+      "libs/makewith/react/feature/header/src/index.ts"
+    ],
+    "@the/makewith/react/feature/logo": [
+      "libs/makewith/react/feature/logo/src/index.ts"
     ],
     "@the/makewith/react/ui": [
       "libs/makewith/react/ui/src/index.ts"
@@ -292,70 +295,103 @@
         ]
       }
     },
-    "feature-react-organization": {
-      "name": "feature-react-organization",
+    "makewith-react-feature-logo": {
+      "name": "makewith-react-feature-logo",
       "type": "lib",
       "data": {
-        "name": "feature-react-organization",
-        "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
-        "sourceRoot": "libs/feature/react/organization/src",
+        "name": "makewith-react-feature-logo",
+        "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
+        "sourceRoot": "libs/makewith/react/feature/logo/src",
         "projectType": "library",
         "tags": [
           "feature"
         ],
         "targets": {
-          "lint": {
-            "inputs": [
-              "default",
-              "{workspaceRoot}/.eslintrc.json",
-              "{workspaceRoot}/.eslintignore"
+          "build": {
+            "dependsOn": [
+              "^build"
             ],
-            "executor": "@nx/linter:eslint",
+            "inputs": [
+              "production",
+              "^production"
+            ],
+            "executor": "@nx/rollup:rollup",
             "outputs": [
-              "{options.outputFile}"
+              "{options.outputPath}"
             ],
             "options": {
-              "lintFilePatterns": [
-                "libs/feature/react/organization/**/*.{ts,tsx,js,jsx}"
+              "outputPath": "dist/libs/makewith/react/feature/logo",
+              "tsConfig": "libs/makewith/react/feature/logo/tsconfig.lib.json",
+              "project": "libs/makewith/react/feature/logo/package.json",
+              "entryFile": "libs/makewith/react/feature/logo/src/index.ts",
+              "external": [
+                "react",
+                "react-dom",
+                "react/jsx-runtime"
+              ],
+              "rollupConfig": "@nx/react/plugins/bundle-rollup",
+              "compiler": "babel",
+              "assets": [
+                {
+                  "glob": "libs/makewith/react/feature/logo/README.md",
+                  "input": ".",
+                  "output": "."
+                }
               ]
             },
             "configurations": {}
           }
         },
-        "root": "libs/feature/react/organization",
+        "root": "libs/makewith/react/feature/logo",
         "implicitDependencies": [],
         "files": [
           {
-            "file": "libs/feature/react/organization/.babelrc",
+            "file": "libs/makewith/react/feature/logo/.babelrc",
             "hash": "2946678488919325452"
           },
           {
-            "file": "libs/feature/react/organization/.eslintrc.json",
-            "hash": "12678463301772327123"
+            "file": "libs/makewith/react/feature/logo/package.json",
+            "hash": "15224619100649387972"
           },
           {
-            "file": "libs/feature/react/organization/project.json",
-            "hash": "10423376372288867039"
+            "file": "libs/makewith/react/feature/logo/project.json",
+            "hash": "14567832922714487161"
           },
           {
-            "file": "libs/feature/react/organization/README.md",
-            "hash": "1739130191943812748"
+            "file": "libs/makewith/react/feature/logo/README.md",
+            "hash": "8627181346542854380"
           },
           {
-            "file": "libs/feature/react/organization/src/index.ts",
-            "hash": "3244421341483603138"
+            "file": "libs/makewith/react/feature/logo/src/index.ts",
+            "hash": "12456361352192159845"
           },
           {
-            "file": "libs/feature/react/organization/tsconfig.json",
-            "hash": "13090035453275662468"
+            "file": "libs/makewith/react/feature/logo/src/lib/logo.module.scss",
+            "hash": "6893236077865642138"
           },
           {
-            "file": "libs/feature/react/organization/tsconfig.lib.json",
-            "hash": "953912742928436052"
+            "file": "libs/makewith/react/feature/logo/src/lib/logo.tsx",
+            "hash": "3755222315508965913",
+            "dependencies": [
+              {
+                "source": "makewith-react-feature-logo",
+                "target": "npm:react",
+                "type": "static"
+              },
+              {
+                "source": "makewith-react-feature-logo",
+                "target": "npm:animejs",
+                "type": "static"
+              }
+            ]
           },
           {
-            "file": "libs/feature/react/organization/package.json",
-            "hash": "1155023982978781920"
+            "file": "libs/makewith/react/feature/logo/tsconfig.json",
+            "hash": "17511317464832693795"
+          },
+          {
+            "file": "libs/makewith/react/feature/logo/tsconfig.lib.json",
+            "hash": "5580110007630344394"
           }
         ]
       }
@@ -388,40 +424,6 @@
               ]
             },
             "configurations": {}
-          },
-          "build": {
-            "dependsOn": [
-              "^build"
-            ],
-            "inputs": [
-              "production",
-              "^production"
-            ],
-            "executor": "@nx/rollup:rollup",
-            "outputs": [
-              "{options.outputPath}"
-            ],
-            "options": {
-              "outputPath": "dist/libs/makewith/react/data-access",
-              "tsConfig": "libs/makewith/react/data-access/tsconfig.lib.json",
-              "project": "libs/makewith/react/data-access/package.json",
-              "entryFile": "libs/makewith/react/data-access/src/index.ts",
-              "external": [
-                "react",
-                "react-dom",
-                "react/jsx-runtime"
-              ],
-              "rollupConfig": "@nx/react/plugins/bundle-rollup",
-              "compiler": "babel",
-              "assets": [
-                {
-                  "glob": "libs/makewith/react/data-access/README.md",
-                  "input": ".",
-                  "output": "."
-                }
-              ]
-            },
-            "configurations": {}
           }
         },
         "root": "libs/makewith/react/data-access",
@@ -437,7 +439,7 @@
           },
           {
             "file": "libs/makewith/react/data-access/project.json",
-            "hash": "17373759199017468337"
+            "hash": "15558140410641977070"
           },
           {
             "file": "libs/makewith/react/data-access/README.md",
@@ -507,10 +509,6 @@
           {
             "file": "libs/makewith/react/data-access/tsconfig.lib.json",
             "hash": "953912742928436052"
-          },
-          {
-            "file": "libs/makewith/react/data-access/package.json",
-            "hash": "1155023982978781920"
           }
         ]
       }
@@ -556,40 +554,6 @@
               ]
             },
             "configurations": {}
-          },
-          "build": {
-            "dependsOn": [
-              "^build"
-            ],
-            "inputs": [
-              "production",
-              "^production"
-            ],
-            "executor": "@nx/rollup:rollup",
-            "outputs": [
-              "{options.outputPath}"
-            ],
-            "options": {
-              "outputPath": "dist/libs/data-access/organization",
-              "tsConfig": "libs/data-access/organization/tsconfig.lib.json",
-              "project": "libs/data-access/organization/package.json",
-              "entryFile": "libs/data-access/organization/src/index.ts",
-              "external": [
-                "react",
-                "react-dom",
-                "react/jsx-runtime"
-              ],
-              "rollupConfig": "@nx/react/plugins/bundle-rollup",
-              "compiler": "babel",
-              "assets": [
-                {
-                  "glob": "libs/data-access/organization/README.md",
-                  "input": ".",
-                  "output": "."
-                }
-              ]
-            },
-            "configurations": {}
           }
         },
         "root": "libs/data-access/organization",
@@ -605,7 +569,7 @@
           },
           {
             "file": "libs/data-access/organization/project.json",
-            "hash": "15910231443945112026"
+            "hash": "10564446959913179681"
           },
           {
             "file": "libs/data-access/organization/README.md",
@@ -636,18 +600,6 @@
             ]
           },
           {
-            "file": "libs/data-access/organization/tsconfig.json",
-            "hash": "9466653708934095578"
-          },
-          {
-            "file": "libs/data-access/organization/tsconfig.lib.json",
-            "hash": "1261950536210511632"
-          },
-          {
-            "file": "libs/data-access/organization/package.json",
-            "hash": "13232962848823678104"
-          },
-          {
             "file": "libs/data-access/organization/src/lib/+state/util-react-firebase.tsx",
             "hash": "14379697530425067220",
             "dependencies": [
@@ -657,6 +609,14 @@
                 "type": "static"
               }
             ]
+          },
+          {
+            "file": "libs/data-access/organization/tsconfig.json",
+            "hash": "9466653708934095578"
+          },
+          {
+            "file": "libs/data-access/organization/tsconfig.lib.json",
+            "hash": "1261950536210511632"
           }
         ]
       }
@@ -737,6 +697,10 @@
             "hash": "12678463301772327123"
           },
           {
+            "file": "libs/feature/react/animations/package.json",
+            "hash": "1155023982978781920"
+          },
+          {
             "file": "libs/feature/react/animations/project.json",
             "hash": "4483942229098686624"
           },
@@ -807,10 +771,6 @@
           {
             "file": "libs/feature/react/animations/tsconfig.lib.json",
             "hash": "953912742928436052"
-          },
-          {
-            "file": "libs/feature/react/animations/package.json",
-            "hash": "1155023982978781920"
           }
         ]
       }
@@ -2797,6 +2757,10 @@
             "hash": "12678463301772327123"
           },
           {
+            "file": "libs/feature/react/study/package.json",
+            "hash": "1155023982978781920"
+          },
+          {
             "file": "libs/feature/react/study/project.json",
             "hash": "10100847255242697977"
           },
@@ -2903,10 +2867,6 @@
           {
             "file": "libs/feature/react/study/tsconfig.lib.json",
             "hash": "953912742928436052"
-          },
-          {
-            "file": "libs/feature/react/study/package.json",
-            "hash": "1155023982978781920"
           }
         ]
       }
@@ -2987,6 +2947,10 @@
             "hash": "12678463301772327123"
           },
           {
+            "file": "libs/makewith/react/util/package.json",
+            "hash": "1155023982978781920"
+          },
+          {
             "file": "libs/makewith/react/util/project.json",
             "hash": "14008823277961033313"
           },
@@ -3021,10 +2985,6 @@
           {
             "file": "libs/makewith/react/util/tsconfig.lib.json",
             "hash": "953912742928436052"
-          },
-          {
-            "file": "libs/makewith/react/util/package.json",
-            "hash": "1155023982978781920"
           }
         ]
       }
@@ -3105,6 +3065,10 @@
             "hash": "12678463301772327123"
           },
           {
+            "file": "libs/util/react/firebase/package.json",
+            "hash": "1155023982978781920"
+          },
+          {
             "file": "libs/util/react/firebase/project.json",
             "hash": "10759405238642239123"
           },
@@ -3155,10 +3119,6 @@
           {
             "file": "libs/util/react/firebase/tsconfig.lib.json",
             "hash": "953912742928436052"
-          },
-          {
-            "file": "libs/util/react/firebase/package.json",
-            "hash": "1155023982978781920"
           }
         ]
       }
@@ -3294,74 +3254,6 @@
         ]
       }
     },
-    "feature-react-user": {
-      "name": "feature-react-user",
-      "type": "lib",
-      "data": {
-        "name": "feature-react-user",
-        "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
-        "sourceRoot": "libs/feature/react/user/src",
-        "projectType": "library",
-        "tags": [
-          "feature"
-        ],
-        "targets": {
-          "lint": {
-            "inputs": [
-              "default",
-              "{workspaceRoot}/.eslintrc.json",
-              "{workspaceRoot}/.eslintignore"
-            ],
-            "executor": "@nx/linter:eslint",
-            "outputs": [
-              "{options.outputFile}"
-            ],
-            "options": {
-              "lintFilePatterns": [
-                "libs/feature/react/user/**/*.{ts,tsx,js,jsx}"
-              ]
-            },
-            "configurations": {}
-          }
-        },
-        "root": "libs/feature/react/user",
-        "implicitDependencies": [],
-        "files": [
-          {
-            "file": "libs/feature/react/user/.babelrc",
-            "hash": "2946678488919325452"
-          },
-          {
-            "file": "libs/feature/react/user/.eslintrc.json",
-            "hash": "12678463301772327123"
-          },
-          {
-            "file": "libs/feature/react/user/project.json",
-            "hash": "3434034735329836772"
-          },
-          {
-            "file": "libs/feature/react/user/README.md",
-            "hash": "7605493401792138378"
-          },
-          {
-            "file": "libs/feature/react/user/src/index.ts",
-            "hash": "3244421341483603138"
-          },
-          {
-            "file": "libs/feature/react/user/tsconfig.json",
-            "hash": "13090035453275662468"
-          },
-          {
-            "file": "libs/feature/react/user/tsconfig.lib.json",
-            "hash": "953912742928436052"
-          },
-          {
-            "file": "libs/feature/react/user/package.json",
-            "hash": "13232962848823678104"
-          }
-        ]
-      }
-    },
     "data-access-study": {
       "name": "data-access-study",
       "type": "lib",
@@ -3404,6 +3296,10 @@
             "hash": "15946965712701950674"
           },
           {
+            "file": "libs/data-access/study/package.json",
+            "hash": "1155023982978781920"
+          },
+          {
             "file": "libs/data-access/study/project.json",
             "hash": "15840511692543545394"
           },
@@ -3443,10 +3339,6 @@
           {
             "file": "libs/data-access/study/tsconfig.lib.json",
             "hash": "1261950536210511632"
-          },
-          {
-            "file": "libs/data-access/study/package.json",
-            "hash": "1155023982978781920"
           }
         ]
       }
@@ -3479,40 +3371,6 @@
               ]
             },
             "configurations": {}
-          },
-          "build": {
-            "dependsOn": [
-              "^build"
-            ],
-            "inputs": [
-              "production",
-              "^production"
-            ],
-            "executor": "@nx/rollup:rollup",
-            "outputs": [
-              "{options.outputPath}"
-            ],
-            "options": {
-              "outputPath": "dist/libs/makewith/react/ui",
-              "tsConfig": "libs/makewith/react/ui/tsconfig.lib.json",
-              "project": "libs/makewith/react/ui/package.json",
-              "entryFile": "libs/makewith/react/ui/src/index.ts",
-              "external": [
-                "react",
-                "react-dom",
-                "react/jsx-runtime"
-              ],
-              "rollupConfig": "@nx/react/plugins/bundle-rollup",
-              "compiler": "babel",
-              "assets": [
-                {
-                  "glob": "libs/makewith/react/ui/README.md",
-                  "input": ".",
-                  "output": "."
-                }
-              ]
-            },
-            "configurations": {}
           }
         },
         "root": "libs/makewith/react/ui",
@@ -3528,7 +3386,7 @@
           },
           {
             "file": "libs/makewith/react/ui/project.json",
-            "hash": "5730666111577438727"
+            "hash": "12681287785763622184"
           },
           {
             "file": "libs/makewith/react/ui/README.md",
@@ -3536,7 +3394,7 @@
           },
           {
             "file": "libs/makewith/react/ui/src/index.ts",
-            "hash": "15951810504750746454"
+            "hash": "16891327616445351727"
           },
           {
             "file": "libs/makewith/react/ui/src/lib/banner.tsx",
@@ -3575,69 +3433,12 @@
             "hash": "2397480062657950859"
           },
           {
-            "file": "libs/makewith/react/ui/src/lib/footer.tsx",
-            "hash": "1928370491701629501",
-            "dependencies": [
-              {
-                "source": "makewith-react-ui",
-                "target": "npm:next",
-                "type": "static"
-              },
-              {
-                "source": "makewith-react-ui",
-                "target": "ui-react",
-                "type": "static"
-              }
-            ]
-          },
-          {
             "file": "libs/makewith/react/ui/src/lib/hamburger.tsx",
             "hash": "17543669766014196787",
             "dependencies": [
               {
                 "source": "makewith-react-ui",
                 "target": "makewith-react-data-access",
-                "type": "static"
-              },
-              {
-                "source": "makewith-react-ui",
-                "target": "npm:react",
-                "type": "static"
-              }
-            ]
-          },
-          {
-            "file": "libs/makewith/react/ui/src/lib/header.tsx",
-            "hash": "14718560622258108113",
-            "dependencies": [
-              {
-                "source": "makewith-react-ui",
-                "target": "npm:next",
-                "type": "static"
-              },
-              {
-                "source": "makewith-react-ui",
-                "target": "makewith-react-util",
-                "type": "static"
-              },
-              {
-                "source": "makewith-react-ui",
-                "target": "util-react-firebase",
-                "type": "static"
-              },
-              {
-                "source": "makewith-react-ui",
-                "target": "npm:react-redux",
-                "type": "static"
-              },
-              {
-                "source": "makewith-react-ui",
-                "target": "data-access-user",
-                "type": "static"
-              },
-              {
-                "source": "makewith-react-ui",
-                "target": "data-access-organization",
                 "type": "static"
               },
               {
@@ -3721,26 +3522,6 @@
               {
                 "source": "makewith-react-ui",
                 "target": "data-access-user",
-                "type": "static"
-              }
-            ]
-          },
-          {
-            "file": "libs/makewith/react/ui/src/lib/logo.module.scss",
-            "hash": "6893236077865642138"
-          },
-          {
-            "file": "libs/makewith/react/ui/src/lib/logo.tsx",
-            "hash": "3755222315508965913",
-            "dependencies": [
-              {
-                "source": "makewith-react-ui",
-                "target": "npm:react",
-                "type": "static"
-              },
-              {
-                "source": "makewith-react-ui",
-                "target": "npm:animejs",
                 "type": "static"
               }
             ]
@@ -3941,22 +3722,6 @@
             "hash": "15233797992237574941"
           },
           {
-            "file": "libs/makewith/react/ui/src/lib/waves.tsx",
-            "hash": "9349713366513056015",
-            "dependencies": [
-              {
-                "source": "makewith-react-ui",
-                "target": "npm:react",
-                "type": "static"
-              },
-              {
-                "source": "makewith-react-ui",
-                "target": "npm:animejs",
-                "type": "static"
-              }
-            ]
-          },
-          {
             "file": "libs/makewith/react/ui/src/lib/zigzag.tsx",
             "hash": "12617743593386312797",
             "dependencies": [
@@ -3982,11 +3747,7 @@
           },
           {
             "file": "libs/makewith/react/ui/tsconfig.lib.json",
-            "hash": "953912742928436052"
-          },
-          {
-            "file": "libs/makewith/react/ui/package.json",
-            "hash": "1155023982978781920"
+            "hash": "10998844038312268409"
           }
         ]
       }
@@ -4067,6 +3828,10 @@
             "hash": "12678463301772327123"
           },
           {
+            "file": "libs/util/react/stripe/package.json",
+            "hash": "1155023982978781920"
+          },
+          {
             "file": "libs/util/react/stripe/project.json",
             "hash": "8076545463083356312"
           },
@@ -4132,10 +3897,6 @@
           {
             "file": "libs/util/react/stripe/tsconfig.lib.json",
             "hash": "953912742928436052"
-          },
-          {
-            "file": "libs/util/react/stripe/package.json",
-            "hash": "1155023982978781920"
           }
         ]
       }
@@ -4168,40 +3929,6 @@
               ]
             },
             "configurations": {}
-          },
-          "build": {
-            "dependsOn": [
-              "^build"
-            ],
-            "inputs": [
-              "production",
-              "^production"
-            ],
-            "executor": "@nx/rollup:rollup",
-            "outputs": [
-              "{options.outputPath}"
-            ],
-            "options": {
-              "outputPath": "dist/libs/data-access/user",
-              "tsConfig": "libs/data-access/user/tsconfig.lib.json",
-              "project": "libs/data-access/user/package.json",
-              "entryFile": "libs/data-access/user/src/index.ts",
-              "external": [
-                "react",
-                "react-dom",
-                "react/jsx-runtime"
-              ],
-              "rollupConfig": "@nx/react/plugins/bundle-rollup",
-              "compiler": "babel",
-              "assets": [
-                {
-                  "glob": "libs/data-access/user/README.md",
-                  "input": ".",
-                  "output": "."
-                }
-              ]
-            },
-            "configurations": {}
           }
         },
         "root": "libs/data-access/user",
@@ -4217,7 +3944,7 @@
           },
           {
             "file": "libs/data-access/user/project.json",
-            "hash": "1199107669522345936"
+            "hash": "6523671892450002471"
           },
           {
             "file": "libs/data-access/user/README.md",
@@ -4248,18 +3975,6 @@
             ]
           },
           {
-            "file": "libs/data-access/user/tsconfig.json",
-            "hash": "9466653708934095578"
-          },
-          {
-            "file": "libs/data-access/user/tsconfig.lib.json",
-            "hash": "1261950536210511632"
-          },
-          {
-            "file": "libs/data-access/user/package.json",
-            "hash": "1155023982978781920"
-          },
-          {
             "file": "libs/data-access/user/src/lib/+state/util-react-firebase.tsx",
             "hash": "14379697530425067220",
             "dependencies": [
@@ -4269,6 +3984,14 @@
                 "type": "static"
               }
             ]
+          },
+          {
+            "file": "libs/data-access/user/tsconfig.json",
+            "hash": "9466653708934095578"
+          },
+          {
+            "file": "libs/data-access/user/tsconfig.lib.json",
+            "hash": "1261950536210511632"
           }
         ]
       }
@@ -4315,6 +4038,10 @@
             "hash": "12678463301772327123"
           },
           {
+            "file": "libs/util/react/redux/package.json",
+            "hash": "1155023982978781920"
+          },
+          {
             "file": "libs/util/react/redux/project.json",
             "hash": "677156922066485155"
           },
@@ -4340,10 +4067,6 @@
           {
             "file": "libs/util/react/redux/tsconfig.lib.json",
             "hash": "953912742928436052"
-          },
-          {
-            "file": "libs/util/react/redux/package.json",
-            "hash": "1155023982978781920"
           }
         ]
       }
@@ -4537,7 +4260,7 @@
           },
           {
             "file": "apps/makewith/vercel/app/layout.tsx",
-            "hash": "7488433865026621056",
+            "hash": "15221944858011510588",
             "dependencies": [
               {
                 "source": "makewith-vercel",
@@ -4551,7 +4274,7 @@
               },
               {
                 "source": "makewith-vercel",
-                "target": "makewith-react-ui",
+                "target": "makewith-react-feature-footer",
                 "type": "static"
               }
             ]
@@ -4611,7 +4334,7 @@
           },
           {
             "file": "apps/makewith/vercel/auth.ts",
-            "hash": "10266559128196895066",
+            "hash": "14852902290605259075",
             "dependencies": [
               {
                 "source": "makewith-vercel",
@@ -4676,16 +4399,11 @@
           },
           {
             "file": "apps/makewith/vercel/components/chat-panel.tsx",
-            "hash": "15593900760797118569",
+            "hash": "2924120330720550094",
             "dependencies": [
               {
                 "source": "makewith-vercel",
                 "target": "npm:ai",
-                "type": "static"
-              },
-              {
-                "source": "makewith-vercel",
-                "target": "makewith-react-ui",
                 "type": "static"
               },
               {
@@ -4739,7 +4457,7 @@
           },
           {
             "file": "apps/makewith/vercel/components/clear-history.tsx",
-            "hash": "15687479950409377820",
+            "hash": "262694437587262521",
             "dependencies": [
               {
                 "source": "makewith-vercel",
@@ -4786,7 +4504,7 @@
           },
           {
             "file": "apps/makewith/vercel/components/header.tsx",
-            "hash": "10052355276898394235",
+            "hash": "2113032127559573668",
             "dependencies": [
               {
                 "source": "makewith-vercel",
@@ -4800,7 +4518,7 @@
               },
               {
                 "source": "makewith-vercel",
-                "target": "makewith-react-ui",
+                "target": "makewith-react-feature-logo",
                 "type": "static"
               }
             ]
@@ -4870,7 +4588,7 @@
           },
           {
             "file": "apps/makewith/vercel/components/providers.tsx",
-            "hash": "1494694744069196396",
+            "hash": "1342090257460792014",
             "dependencies": [
               {
                 "source": "makewith-vercel",
@@ -4881,22 +4599,12 @@
                 "source": "makewith-vercel",
                 "target": "npm:next-themes",
                 "type": "static"
-              },
-              {
-                "source": "makewith-vercel",
-                "target": "makewith-react-data-access",
-                "type": "static"
-              },
-              {
-                "source": "makewith-vercel",
-                "target": "feature-react-auth",
-                "type": "static"
               }
             ]
           },
           {
             "file": "apps/makewith/vercel/components/sidebar-actions.tsx",
-            "hash": "2088011018978518789",
+            "hash": "1990423197088402434",
             "dependencies": [
               {
                 "source": "makewith-vercel",
@@ -4936,16 +4644,11 @@
           },
           {
             "file": "apps/makewith/vercel/components/sidebar.tsx",
-            "hash": "9204553419724073407",
+            "hash": "15537458027053492967",
             "dependencies": [
               {
                 "source": "makewith-vercel",
                 "target": "npm:react",
-                "type": "static"
-              },
-              {
-                "source": "makewith-vercel",
-                "target": "makewith-react-ui",
                 "type": "static"
               }
             ]
@@ -5678,7 +5381,7 @@
           },
           {
             "file": "apps/makewith/vercel/tsconfig.json",
-            "hash": "13872142603951278401"
+            "hash": "1165473930389076534"
           }
         ]
       }
@@ -8195,7 +7898,252 @@
           },
           {
             "file": "tsconfig.base.json",
-            "hash": "4070564650525749854"
+            "hash": "185008002397022791"
+          }
+        ]
+      }
+    },
+    "makewith-react-feature-header": {
+      "name": "makewith-react-feature-header",
+      "type": "lib",
+      "data": {
+        "name": "makewith-react-feature-header",
+        "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
+        "sourceRoot": "libs/makewith/react/feature/header/src",
+        "projectType": "library",
+        "tags": [
+          "feature"
+        ],
+        "targets": {
+          "build": {
+            "dependsOn": [
+              "^build"
+            ],
+            "inputs": [
+              "production",
+              "^production"
+            ],
+            "executor": "@nx/rollup:rollup",
+            "outputs": [
+              "{options.outputPath}"
+            ],
+            "options": {
+              "outputPath": "dist/libs/makewith/react/feature/header",
+              "tsConfig": "libs/makewith/react/feature/header/tsconfig.lib.json",
+              "project": "libs/makewith/react/feature/header/package.json",
+              "entryFile": "libs/makewith/react/feature/header/src/index.ts",
+              "external": [
+                "react",
+                "react-dom",
+                "react/jsx-runtime"
+              ],
+              "rollupConfig": "@nx/react/plugins/bundle-rollup",
+              "compiler": "babel",
+              "assets": [
+                {
+                  "glob": "libs/makewith/react/feature/header/README.md",
+                  "input": ".",
+                  "output": "."
+                }
+              ]
+            },
+            "configurations": {}
+          }
+        },
+        "root": "libs/makewith/react/feature/header",
+        "implicitDependencies": [],
+        "files": [
+          {
+            "file": "libs/makewith/react/feature/header/.babelrc",
+            "hash": "2946678488919325452"
+          },
+          {
+            "file": "libs/makewith/react/feature/header/package.json",
+            "hash": "16732053571544838595"
+          },
+          {
+            "file": "libs/makewith/react/feature/header/project.json",
+            "hash": "10584672169116821453"
+          },
+          {
+            "file": "libs/makewith/react/feature/header/README.md",
+            "hash": "6406810320770058519"
+          },
+          {
+            "file": "libs/makewith/react/feature/header/src/index.ts",
+            "hash": "12591132908956789215"
+          },
+          {
+            "file": "libs/makewith/react/feature/header/src/lib/header.tsx",
+            "hash": "8540207149695191707",
+            "dependencies": [
+              {
+                "source": "makewith-react-feature-header",
+                "target": "npm:next",
+                "type": "static"
+              },
+              {
+                "source": "makewith-react-feature-header",
+                "target": "makewith-react-util",
+                "type": "static"
+              },
+              {
+                "source": "makewith-react-feature-header",
+                "target": "makewith-react-ui",
+                "type": "static"
+              },
+              {
+                "source": "makewith-react-feature-header",
+                "target": "makewith-react-feature-logo",
+                "type": "static"
+              },
+              {
+                "source": "makewith-react-feature-header",
+                "target": "util-react-firebase",
+                "type": "static"
+              },
+              {
+                "source": "makewith-react-feature-header",
+                "target": "npm:react-redux",
+                "type": "static"
+              },
+              {
+                "source": "makewith-react-feature-header",
+                "target": "data-access-user",
+                "type": "static"
+              },
+              {
+                "source": "makewith-react-feature-header",
+                "target": "data-access-organization",
+                "type": "static"
+              },
+              {
+                "source": "makewith-react-feature-header",
+                "target": "npm:react",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "libs/makewith/react/feature/header/tsconfig.json",
+            "hash": "17511317464832693795"
+          },
+          {
+            "file": "libs/makewith/react/feature/header/tsconfig.lib.json",
+            "hash": "5580110007630344394"
+          }
+        ]
+      }
+    },
+    "makewith-react-feature-footer": {
+      "name": "makewith-react-feature-footer",
+      "type": "lib",
+      "data": {
+        "name": "makewith-react-feature-footer",
+        "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
+        "sourceRoot": "libs/makewith/react/feature/footer/src",
+        "projectType": "library",
+        "tags": [
+          "feature"
+        ],
+        "targets": {
+          "build": {
+            "dependsOn": [
+              "^build"
+            ],
+            "inputs": [
+              "production",
+              "^production"
+            ],
+            "executor": "@nx/rollup:rollup",
+            "outputs": [
+              "{options.outputPath}"
+            ],
+            "options": {
+              "outputPath": "dist/libs/makewith/react/feature/footer",
+              "tsConfig": "libs/makewith/react/feature/footer/tsconfig.lib.json",
+              "project": "libs/makewith/react/feature/footer/package.json",
+              "entryFile": "libs/makewith/react/feature/footer/src/index.ts",
+              "external": [
+                "react",
+                "react-dom",
+                "react/jsx-runtime"
+              ],
+              "rollupConfig": "@nx/react/plugins/bundle-rollup",
+              "compiler": "babel",
+              "assets": [
+                {
+                  "glob": "libs/makewith/react/feature/footer/README.md",
+                  "input": ".",
+                  "output": "."
+                }
+              ]
+            },
+            "configurations": {}
+          }
+        },
+        "root": "libs/makewith/react/feature/footer",
+        "implicitDependencies": [],
+        "files": [
+          {
+            "file": "libs/makewith/react/feature/footer/.babelrc",
+            "hash": "2946678488919325452"
+          },
+          {
+            "file": "libs/makewith/react/feature/footer/package.json",
+            "hash": "15066738551159626819"
+          },
+          {
+            "file": "libs/makewith/react/feature/footer/project.json",
+            "hash": "8207225373724792582"
+          },
+          {
+            "file": "libs/makewith/react/feature/footer/README.md",
+            "hash": "11740739254436390721"
+          },
+          {
+            "file": "libs/makewith/react/feature/footer/src/index.ts",
+            "hash": "7544080054877308154"
+          },
+          {
+            "file": "libs/makewith/react/feature/footer/src/lib/footer.tsx",
+            "hash": "1928370491701629501",
+            "dependencies": [
+              {
+                "source": "makewith-react-feature-footer",
+                "target": "npm:next",
+                "type": "static"
+              },
+              {
+                "source": "makewith-react-feature-footer",
+                "target": "ui-react",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "libs/makewith/react/feature/footer/tsconfig.json",
+            "hash": "17511317464832693795"
+          },
+          {
+            "file": "libs/makewith/react/feature/footer/tsconfig.lib.json",
+            "hash": "5580110007630344394"
+          },
+          {
+            "file": "libs/makewith/react/feature/footer/src/lib/waves.tsx",
+            "hash": "9349713366513056015",
+            "dependencies": [
+              {
+                "source": "makewith-react-feature-footer",
+                "target": "npm:react",
+                "type": "static"
+              },
+              {
+                "source": "makewith-react-feature-footer",
+                "target": "npm:animejs",
+                "type": "static"
+              }
+            ]
           }
         ]
       }
@@ -9192,7 +9140,18 @@
         "type": "static"
       }
     ],
-    "feature-react-organization": [],
+    "makewith-react-feature-logo": [
+      {
+        "source": "makewith-react-feature-logo",
+        "target": "npm:react",
+        "type": "static"
+      },
+      {
+        "source": "makewith-react-feature-logo",
+        "target": "npm:animejs",
+        "type": "static"
+      }
+    ],
     "makewith-react-data-access": [
       {
         "source": "makewith-react-data-access",
@@ -9405,7 +9364,6 @@
         "type": "static"
       }
     ],
-    "feature-react-user": [],
     "data-access-study": [
       {
         "source": "data-access-study",
@@ -9441,22 +9399,7 @@
       },
       {
         "source": "makewith-react-ui",
-        "target": "ui-react",
-        "type": "static"
-      },
-      {
-        "source": "makewith-react-ui",
         "target": "makewith-react-data-access",
-        "type": "static"
-      },
-      {
-        "source": "makewith-react-ui",
-        "target": "makewith-react-util",
-        "type": "static"
-      },
-      {
-        "source": "makewith-react-ui",
-        "target": "util-react-firebase",
         "type": "static"
       },
       {
@@ -9471,12 +9414,22 @@
       },
       {
         "source": "makewith-react-ui",
-        "target": "data-access-organization",
+        "target": "ui-react",
         "type": "static"
       },
       {
         "source": "makewith-react-ui",
         "target": "npm:animejs",
+        "type": "static"
+      },
+      {
+        "source": "makewith-react-ui",
+        "target": "util-react-firebase",
+        "type": "static"
+      },
+      {
+        "source": "makewith-react-ui",
+        "target": "data-access-organization",
         "type": "static"
       },
       {
@@ -9559,7 +9512,7 @@
       },
       {
         "source": "makewith-vercel",
-        "target": "makewith-react-ui",
+        "target": "makewith-react-feature-footer",
         "type": "static"
       },
       {
@@ -9589,6 +9542,11 @@
       },
       {
         "source": "makewith-vercel",
+        "target": "makewith-react-feature-logo",
+        "type": "static"
+      },
+      {
+        "source": "makewith-vercel",
         "target": "npm:react-markdown",
         "type": "static"
       },
@@ -9600,16 +9558,6 @@
       {
         "source": "makewith-vercel",
         "target": "npm:next-themes",
-        "type": "static"
-      },
-      {
-        "source": "makewith-vercel",
-        "target": "makewith-react-data-access",
-        "type": "static"
-      },
-      {
-        "source": "makewith-vercel",
-        "target": "feature-react-auth",
         "type": "static"
       },
       {
@@ -10448,6 +10396,75 @@
       {
         "source": "the",
         "target": "npm:typescript",
+        "type": "static"
+      }
+    ],
+    "makewith-react-feature-header": [
+      {
+        "source": "makewith-react-feature-header",
+        "target": "npm:next",
+        "type": "static"
+      },
+      {
+        "source": "makewith-react-feature-header",
+        "target": "makewith-react-util",
+        "type": "static"
+      },
+      {
+        "source": "makewith-react-feature-header",
+        "target": "makewith-react-ui",
+        "type": "static"
+      },
+      {
+        "source": "makewith-react-feature-header",
+        "target": "makewith-react-feature-logo",
+        "type": "static"
+      },
+      {
+        "source": "makewith-react-feature-header",
+        "target": "util-react-firebase",
+        "type": "static"
+      },
+      {
+        "source": "makewith-react-feature-header",
+        "target": "npm:react-redux",
+        "type": "static"
+      },
+      {
+        "source": "makewith-react-feature-header",
+        "target": "data-access-user",
+        "type": "static"
+      },
+      {
+        "source": "makewith-react-feature-header",
+        "target": "data-access-organization",
+        "type": "static"
+      },
+      {
+        "source": "makewith-react-feature-header",
+        "target": "npm:react",
+        "type": "static"
+      }
+    ],
+    "makewith-react-feature-footer": [
+      {
+        "source": "makewith-react-feature-footer",
+        "target": "npm:next",
+        "type": "static"
+      },
+      {
+        "source": "makewith-react-feature-footer",
+        "target": "ui-react",
+        "type": "static"
+      },
+      {
+        "source": "makewith-react-feature-footer",
+        "target": "npm:react",
+        "type": "static"
+      },
+      {
+        "source": "makewith-react-feature-footer",
+        "target": "npm:animejs",
         "type": "static"
       }
     ]

@@ -17,32 +17,6 @@
           "libs/data-access/organization/**/*.{ts,tsx,js,jsx}"
         ]
       }
-    },
-    "build": {
-      "executor": "@nx/rollup:rollup",
-      "outputs": [
-        "{options.outputPath}"
-      ],
-      "options": {
-        "outputPath": "dist/libs/data-access/organization",
-        "tsConfig": "libs/data-access/organization/tsconfig.lib.json",
-        "project": "libs/data-access/organization/package.json",
-        "entryFile": "libs/data-access/organization/src/index.ts",
-        "external": [
-          "react",
-          "react-dom",
-          "react/jsx-runtime"
-        ],
-        "rollupConfig": "@nx/react/plugins/bundle-rollup",
-        "compiler": "babel",
-        "assets": [
-          {
-            "glob": "libs/data-access/organization/README.md",
-            "input": ".",
-            "output": "."
-          }
-        ]
-      }
     }
   }
 }

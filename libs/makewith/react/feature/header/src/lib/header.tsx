@@ -1,8 +1,8 @@
 'use client';
 import Link from 'next/link'
 import { Dropdown } from '@the/makewith/react/util';
-import MobileMenu from './mobile-menu';
-import Logo from './logo';
+import MobileMenu from '../../../../ui/src/lib/mobile-menu';
+import { Logo } from '@the/makewith/react/feature/logo';
 import { logout } from '@the/util/react/firebase';
 import { useRouter } from 'next/navigation';
 import { useDispatch, useSelector } from 'react-redux';

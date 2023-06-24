@@ -49,7 +49,8 @@ export function ClearHistory({ clearChats }: ClearHistoryProps) {
           <AlertDialogAction
             disabled={isPending}
             onClick={event => {
-              event.preventDefault()
+              event.preventDefault();
+              // @ts-ignore
               startTransition(async () => {
                 const result = await clearChats()
 

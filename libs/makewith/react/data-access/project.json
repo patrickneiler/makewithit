@@ -17,32 +17,6 @@
           "libs/makewith/react/data-access/**/*.{ts,tsx,js,jsx}"
         ]
       }
-    },
-    "build": {
-      "executor": "@nx/rollup:rollup",
-      "outputs": [
-        "{options.outputPath}"
-      ],
-      "options": {
-        "outputPath": "dist/libs/makewith/react/data-access",
-        "tsConfig": "libs/makewith/react/data-access/tsconfig.lib.json",
-        "project": "libs/makewith/react/data-access/package.json",
-        "entryFile": "libs/makewith/react/data-access/src/index.ts",
-        "external": [
-          "react",
-          "react-dom",
-          "react/jsx-runtime"
-        ],
-        "rollupConfig": "@nx/react/plugins/bundle-rollup",
-        "compiler": "babel",
-        "assets": [
-          {
-            "glob": "libs/makewith/react/data-access/README.md",
-            "input": ".",
-            "output": "."
-          }
-        ]
-      }
     }
   }
 }

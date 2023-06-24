@@ -11,7 +11,6 @@ import {
   SheetTrigger
 } from './ui/sheet'
 import { IconSidebar } from '../components/ui/icons';
-import { Logo } from "@the/makewith/react/ui";
 
 export interface SidebarProps {
   children?: React.ReactNode

@@ -5,7 +5,6 @@ import { PromptForm } from './prompt-form'
 import { ButtonScrollToBottom } from './button-scroll-to-bottom'
 import { IconRefresh, IconStop } from './ui/icons'
 import { FooterText } from './footer'
-import { Footer } from '@the/makewith/react/ui'
 import { Session } from 'next-auth'
 
 export interface ChatPanelProps

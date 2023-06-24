@@ -17,32 +17,6 @@
           "libs/makewith/react/ui/**/*.{ts,tsx,js,jsx}"
         ]
       }
-    },
-    "build": {
-      "executor": "@nx/rollup:rollup",
-      "outputs": [
-        "{options.outputPath}"
-      ],
-      "options": {
-        "outputPath": "dist/libs/makewith/react/ui",
-        "tsConfig": "libs/makewith/react/ui/tsconfig.lib.json",
-        "project": "libs/makewith/react/ui/package.json",
-        "entryFile": "libs/makewith/react/ui/src/index.ts",
-        "external": [
-          "react",
-          "react-dom",
-          "react/jsx-runtime"
-        ],
-        "rollupConfig": "@nx/react/plugins/bundle-rollup",
-        "compiler": "babel",
-        "assets": [
-          {
-            "glob": "libs/makewith/react/ui/README.md",
-            "input": ".",
-            "output": "."
-          }
-        ]
-      }
     }
   }
 }

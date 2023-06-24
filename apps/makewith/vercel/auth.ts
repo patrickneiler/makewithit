@@ -52,6 +52,7 @@ export const {
     authorized({ auth }) {
       return !!auth?.user
     },
+    // @ts-ignore
     trustHost: true
   },
   ...(process.env.VERCEL_ENV === 'preview'
