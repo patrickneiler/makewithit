@@ -4896,10 +4896,6 @@
             ]
           },
           {
-            "file": "apps/makewith/vercel/credentials/firebase.json",
-            "hash": "10032499013238837177"
-          },
-          {
             "file": "apps/makewith/vercel/firebase.ts",
             "hash": "16384836404528824393",
             "dependencies": [
@@ -5069,11 +5065,11 @@
           },
           {
             "file": "apps/makewith/vercel/public/apple-touch-icon.png",
-            "hash": "9639957701849084945"
+            "hash": "2561369737445305170"
           },
           {
             "file": "apps/makewith/vercel/public/favicon-16x16.png",
-            "hash": "15184772363103839809"
+            "hash": "8357915347361563927"
           },
           {
             "file": "apps/makewith/vercel/public/favicon.ico",
@@ -6903,7 +6899,7 @@
           },
           {
             "file": ".gitignore",
-            "hash": "17232895755982892802"
+            "hash": "15171185709744215394"
           },
           {
             "file": ".prettierignore",
@@ -7652,6 +7648,10 @@
           {
             "file": "tsconfig.base.json",
             "hash": "185008002397022791"
+          },
+          {
+            "file": "dep-graph.json",
+            "hash": "12226658630908516305"
           }
         ]
       }
