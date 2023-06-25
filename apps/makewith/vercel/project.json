@@ -15,14 +15,14 @@
         "outputPath": "dist/apps/makewith/vercel",
         "assets": [
           {
-            "glob": "public/**/*",
+            "glob": "{projectRoot}/public/**/*",
             "input": ".",
-            "output": "apps/makewith/vercel/"
+            "output": "."
           },
           {
-            "glob": "assets/**/*",
+            "glob": "{projectRoot}/assets/**/*",
             "input": ".",
-            "output": "apps/makewith/vercel/"
+            "output": "."
           }
         ]
       },

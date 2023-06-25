@@ -4098,14 +4098,14 @@
               "outputPath": "dist/apps/makewith/vercel",
               "assets": [
                 {
-                  "glob": "public/**/*",
+                  "glob": "{projectRoot}/public/**/*",
                   "input": ".",
-                  "output": "apps/makewith/vercel/"
+                  "output": "."
                 },
                 {
-                  "glob": "assets/**/*",
+                  "glob": "{projectRoot}/assets/**/*",
                   "input": ".",
-                  "output": "apps/makewith/vercel/"
+                  "output": "."
                 }
               ]
             },
@@ -5055,7 +5055,7 @@
           },
           {
             "file": "apps/makewith/vercel/project.json",
-            "hash": "13596496163888974228"
+            "hash": "2591265082702550356"
           },
           {
             "file": "apps/makewith/vercel/public/apple-touch-icon.png",
