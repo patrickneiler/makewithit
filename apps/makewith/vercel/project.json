@@ -12,19 +12,7 @@
       "defaultConfiguration": "production",
       "options": {
         "root": "apps/makewith/vercel",
-        "outputPath": "dist/apps/makewith/vercel",
-        "assets": [
-          {
-            "glob": "{projectRoot}/public/**/*",
-            "input": ".",
-            "output": "."
-          },
-          {
-            "glob": "{projectRoot}/assets/**/*",
-            "input": ".",
-            "output": "."
-          }
-        ]
+        "outputPath": "dist/apps/makewith/vercel"
       },
       "configurations": {
         "development": {
