@@ -4357,7 +4357,7 @@
           },
           {
             "file": "apps/makewith/vercel/components/chat-panel.tsx",
-            "hash": "2924120330720550094",
+            "hash": "10105333527088317959",
             "dependencies": [
               {
                 "source": "makewith-vercel",
@@ -4389,7 +4389,7 @@
           },
           {
             "file": "apps/makewith/vercel/components/chat.tsx",
-            "hash": "17081675458730181713",
+            "hash": "16350472759841412175",
             "dependencies": [
               {
                 "source": "makewith-vercel",
@@ -4398,7 +4398,7 @@
               },
               {
                 "source": "makewith-vercel",
-                "target": "npm:@auth/core/types",
+                "target": "npm:@auth/core",
                 "type": "static"
               },
               {
@@ -4515,7 +4515,7 @@
           },
           {
             "file": "apps/makewith/vercel/components/prompt-form.tsx",
-            "hash": "6802227708146808374",
+            "hash": "9400523019645399720",
             "dependencies": [
               {
                 "source": "makewith-vercel",
@@ -4894,6 +4894,10 @@
             ]
           },
           {
+            "file": "apps/makewith/vercel/credentials/firebase.json",
+            "hash": "10032499013238837177"
+          },
+          {
             "file": "apps/makewith/vercel/index.d.ts",
             "hash": "5498222895072842432"
           },
@@ -5047,11 +5051,11 @@
           },
           {
             "file": "apps/makewith/vercel/public/apple-touch-icon.png",
-            "hash": "9639957701849084945"
+            "hash": "2561369737445305170"
           },
           {
             "file": "apps/makewith/vercel/public/favicon-16x16.png",
-            "hash": "15184772363103839809"
+            "hash": "8357915347361563927"
           },
           {
             "file": "apps/makewith/vercel/public/favicon.ico",
@@ -24636,6 +24640,11 @@
       {
         "source": "makewith-vercel",
         "target": "npm:react-intersection-observer",
+        "type": "static"
+      },
+      {
+        "source": "makewith-vercel",
+        "target": "npm:@auth/core",
         "type": "static"
       },
       {

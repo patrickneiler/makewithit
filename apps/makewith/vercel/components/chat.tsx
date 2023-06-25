@@ -26,7 +26,7 @@ const IS_PREVIEW = process.env.VERCEL_ENV === 'preview'
 export interface ChatProps extends React.ComponentProps<'div'> {
   initialMessages?: Message[]
   id?: string;
-  session: Session;
+  session?: Session;
 }
 
 export function Chat({ id, initialMessages, className, session }: ChatProps) {
@@ -50,7 +50,7 @@ export function Chat({ id, initialMessages, className, session }: ChatProps) {
         }
       }
     });
-  const name = session.user.name;
+  const name = session?.user?.name;
   const mods = {
     prefix: `You are the most powerful sorceror in the universe, and quite a generous one as well. You have decided to share your infinite knowledge with ${name}, who is asking the following question:`,
     suffix: `Please answer ${name}, oh wise and powerful overlord. Don't be afraid to remind us of your great power.`
