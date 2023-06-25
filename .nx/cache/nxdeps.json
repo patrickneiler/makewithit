@@ -4104,17 +4104,12 @@
               "outputPath": "dist/apps/makewith/vercel",
               "assets": [
                 {
-                  "glob": "libs/feature/react/icons/README.md",
+                  "glob": "public/**/*",
                   "input": ".",
                   "output": "."
                 },
                 {
-                  "glob": "apps/makewith/vercel/public/**/*",
-                  "input": ".",
-                  "output": "."
-                },
-                {
-                  "glob": "apps/makewith/vercel/assets/**/*",
+                  "glob": "assets/**/*",
                   "input": ".",
                   "output": "."
                 }
@@ -5339,7 +5334,7 @@
           },
           {
             "file": "apps/makewith/vercel/project.json",
-            "hash": "2260707604649138297"
+            "hash": "14364693473873205313"
           },
           {
             "file": "apps/makewith/vercel/public/apple-touch-icon.png",

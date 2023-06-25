@@ -15,17 +15,12 @@
         "outputPath": "dist/apps/makewith/vercel",
         "assets": [
           {
-            "glob": "libs/feature/react/icons/README.md",
+            "glob": "public/**/*",
             "input": ".",
             "output": "."
           },
           {
-            "glob": "apps/makewith/vercel/public/**/*",
-            "input": ".",
-            "output": "."
-          },
-          {
-            "glob": "apps/makewith/vercel/assets/**/*",
+            "glob": "assets/**/*",
             "input": ".",
             "output": "."
           }
