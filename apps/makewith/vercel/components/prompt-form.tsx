@@ -18,7 +18,7 @@ export interface PromptProps
   extends Pick<UseChatHelpers, 'input' | 'setInput'> {
   onSubmit: (value: string) => Promise<void>
   isLoading: boolean,
-  session: Session
+  session?: Session
 }
 
 export function PromptForm({
@@ -45,7 +45,7 @@ export function PromptForm({
           return
         }
         let _input = input;
-        const name = session.user.name;
+        const name = session?.user.name;
         const prefix = `You are the most powerful sorceror in the universe, and quite a generous one as well. You have decided to share your infinite knowledge with ${name}, who is asking the following question:`
         const suffix = `Please answer ${name}, oh wise and powerful overlord. Don't be afraid to remind us of your great power.`
         _input = `${prefix} ${input} ${suffix}`

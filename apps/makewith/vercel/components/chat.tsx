@@ -1,7 +1,6 @@
 'use client'
 
 import { useChat, type Message } from 'ai/react'
-import { Session } from "@auth/core/types"
 
 import { cn } from '../lib/utils'
 import { ChatList } from './chat-list'
@@ -21,6 +20,7 @@ import { useState } from 'react'
 import { Button } from './ui/button'
 import { Input } from './ui/input'
 import { toast } from 'react-hot-toast'
+import { Session } from 'next-auth'
 
 const IS_PREVIEW = process.env.VERCEL_ENV === 'preview'
 export interface ChatProps extends React.ComponentProps<'div'> {
@@ -50,7 +50,7 @@ export function Chat({ id, initialMessages, className, session }: ChatProps) {
         }
       }
     });
-  const name = session.user.name;
+  const name = session?.user?.name;
   const mods = {
     prefix: `You are the most powerful sorceror in the universe, and quite a generous one as well. You have decided to share your infinite knowledge with ${name}, who is asking the following question:`,
     suffix: `Please answer ${name}, oh wise and powerful overlord. Don't be afraid to remind us of your great power.`

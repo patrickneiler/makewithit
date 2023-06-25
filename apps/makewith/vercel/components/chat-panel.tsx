@@ -19,7 +19,7 @@ export interface ChatPanelProps
     | 'setInput'
   > {
   id?: string,
-  session: Session
+  session?: Session
 }
 
 export function ChatPanel({
