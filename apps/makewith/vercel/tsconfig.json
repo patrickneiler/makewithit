@@ -34,8 +34,7 @@
     "next-auth.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    "public/*",
-    "../../../apps/makewith/vercel/.next/types/**/*.ts"
+    "public/*"
   ],
   "exclude": [
     "node_modules",
