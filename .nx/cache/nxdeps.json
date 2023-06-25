@@ -4080,12 +4080,6 @@
         "sourceRoot": "apps/makewith/vercel",
         "projectType": "application",
         "targets": {
-          "dev": {
-            "executor": "nx:run-script",
-            "options": {
-              "script": "dev"
-            }
-          },
           "build": {
             "dependsOn": [
               "^build"
@@ -4122,59 +4116,6 @@
               "production": {}
             }
           },
-          "start": {
-            "executor": "nx:run-script",
-            "options": {
-              "script": "start"
-            }
-          },
-          "lint": {
-            "inputs": [
-              "default",
-              "{workspaceRoot}/.eslintrc.json",
-              "{workspaceRoot}/.eslintignore"
-            ],
-            "executor": "@nx/linter:eslint",
-            "outputs": [
-              "{options.outputFile}"
-            ],
-            "options": {
-              "lintFilePatterns": [
-                "apps/makewith/vercel/**/*.{ts,tsx,js,jsx}"
-              ]
-            },
-            "configurations": {}
-          },
-          "lint:fix": {
-            "executor": "nx:run-script",
-            "options": {
-              "script": "lint:fix"
-            }
-          },
-          "preview": {
-            "executor": "nx:run-script",
-            "options": {
-              "script": "preview"
-            }
-          },
-          "type-check": {
-            "executor": "nx:run-script",
-            "options": {
-              "script": "type-check"
-            }
-          },
-          "format:write": {
-            "executor": "nx:run-script",
-            "options": {
-              "script": "format:write"
-            }
-          },
-          "format:check": {
-            "executor": "nx:run-script",
-            "options": {
-              "script": "format:check"
-            }
-          },
           "serve": {
             "executor": "@nx/next:server",
             "defaultConfiguration": "development",
@@ -4198,6 +4139,23 @@
             "options": {
               "buildTarget": "makewith-vercel:build:production"
             }
+          },
+          "lint": {
+            "inputs": [
+              "default",
+              "{workspaceRoot}/.eslintrc.json",
+              "{workspaceRoot}/.eslintignore"
+            ],
+            "executor": "@nx/linter:eslint",
+            "outputs": [
+              "{options.outputFile}"
+            ],
+            "options": {
+              "lintFilePatterns": [
+                "apps/makewith/vercel/**/*.{ts,tsx,js,jsx}"
+              ]
+            },
+            "configurations": {}
           }
         },
         "tags": [
@@ -5079,247 +5037,6 @@
               {
                 "source": "makewith-vercel",
                 "target": "npm:@nx/next",
-                "type": "static"
-              }
-            ]
-          },
-          {
-            "file": "apps/makewith/vercel/package.json",
-            "hash": "484078176963354898",
-            "dependencies": [
-              {
-                "source": "makewith-vercel",
-                "target": "npm:@radix-ui/react-alert-dialog",
-                "type": "static"
-              },
-              {
-                "source": "makewith-vercel",
-                "target": "npm:@radix-ui/react-dialog",
-                "type": "static"
-              },
-              {
-                "source": "makewith-vercel",
-                "target": "npm:@radix-ui/react-dropdown-menu",
-                "type": "static"
-              },
-              {
-                "source": "makewith-vercel",
-                "target": "npm:@radix-ui/react-label",
-                "type": "static"
-              },
-              {
-                "source": "makewith-vercel",
-                "target": "npm:@radix-ui/react-select",
-                "type": "static"
-              },
-              {
-                "source": "makewith-vercel",
-                "target": "npm:@radix-ui/react-separator",
-                "type": "static"
-              },
-              {
-                "source": "makewith-vercel",
-                "target": "npm:@radix-ui/react-slot",
-                "type": "static"
-              },
-              {
-                "source": "makewith-vercel",
-                "target": "npm:@radix-ui/react-switch",
-                "type": "static"
-              },
-              {
-                "source": "makewith-vercel",
-                "target": "npm:@radix-ui/react-tooltip",
-                "type": "static"
-              },
-              {
-                "source": "makewith-vercel",
-                "target": "npm:@vercel/analytics",
-                "type": "static"
-              },
-              {
-                "source": "makewith-vercel",
-                "target": "npm:@vercel/kv",
-                "type": "static"
-              },
-              {
-                "source": "makewith-vercel",
-                "target": "npm:@vercel/og",
-                "type": "static"
-              },
-              {
-                "source": "makewith-vercel",
-                "target": "npm:ai",
-                "type": "static"
-              },
-              {
-                "source": "makewith-vercel",
-                "target": "npm:class-variance-authority",
-                "type": "static"
-              },
-              {
-                "source": "makewith-vercel",
-                "target": "npm:clsx",
-                "type": "static"
-              },
-              {
-                "source": "makewith-vercel",
-                "target": "npm:focus-trap-react",
-                "type": "static"
-              },
-              {
-                "source": "makewith-vercel",
-                "target": "npm:nanoid",
-                "type": "static"
-              },
-              {
-                "source": "makewith-vercel",
-                "target": "npm:next",
-                "type": "static"
-              },
-              {
-                "source": "makewith-vercel",
-                "target": "npm:next-auth",
-                "type": "static"
-              },
-              {
-                "source": "makewith-vercel",
-                "target": "npm:next-themes",
-                "type": "static"
-              },
-              {
-                "source": "makewith-vercel",
-                "target": "npm:openai-edge",
-                "type": "static"
-              },
-              {
-                "source": "makewith-vercel",
-                "target": "npm:react",
-                "type": "static"
-              },
-              {
-                "source": "makewith-vercel",
-                "target": "npm:react-dom",
-                "type": "static"
-              },
-              {
-                "source": "makewith-vercel",
-                "target": "npm:react-hot-toast",
-                "type": "static"
-              },
-              {
-                "source": "makewith-vercel",
-                "target": "npm:react-intersection-observer",
-                "type": "static"
-              },
-              {
-                "source": "makewith-vercel",
-                "target": "npm:react-markdown",
-                "type": "static"
-              },
-              {
-                "source": "makewith-vercel",
-                "target": "npm:react-syntax-highlighter",
-                "type": "static"
-              },
-              {
-                "source": "makewith-vercel",
-                "target": "npm:react-textarea-autosize",
-                "type": "static"
-              },
-              {
-                "source": "makewith-vercel",
-                "target": "npm:remark-gfm",
-                "type": "static"
-              },
-              {
-                "source": "makewith-vercel",
-                "target": "npm:remark-math",
-                "type": "static"
-              },
-              {
-                "source": "makewith-vercel",
-                "target": "npm:@tailwindcss/typography",
-                "type": "static"
-              },
-              {
-                "source": "makewith-vercel",
-                "target": "npm:@types/node",
-                "type": "static"
-              },
-              {
-                "source": "makewith-vercel",
-                "target": "npm:@types/react",
-                "type": "static"
-              },
-              {
-                "source": "makewith-vercel",
-                "target": "npm:@types/react-dom",
-                "type": "static"
-              },
-              {
-                "source": "makewith-vercel",
-                "target": "npm:@types/react-syntax-highlighter",
-                "type": "static"
-              },
-              {
-                "source": "makewith-vercel",
-                "target": "npm:@typescript-eslint/parser",
-                "type": "static"
-              },
-              {
-                "source": "makewith-vercel",
-                "target": "npm:autoprefixer",
-                "type": "static"
-              },
-              {
-                "source": "makewith-vercel",
-                "target": "npm:eslint",
-                "type": "static"
-              },
-              {
-                "source": "makewith-vercel",
-                "target": "npm:eslint-config-next",
-                "type": "static"
-              },
-              {
-                "source": "makewith-vercel",
-                "target": "npm:eslint-config-prettier",
-                "type": "static"
-              },
-              {
-                "source": "makewith-vercel",
-                "target": "npm:eslint-plugin-tailwindcss",
-                "type": "static"
-              },
-              {
-                "source": "makewith-vercel",
-                "target": "npm:postcss",
-                "type": "static"
-              },
-              {
-                "source": "makewith-vercel",
-                "target": "npm:prettier",
-                "type": "static"
-              },
-              {
-                "source": "makewith-vercel",
-                "target": "npm:tailwind-merge",
-                "type": "static"
-              },
-              {
-                "source": "makewith-vercel",
-                "target": "npm:tailwindcss",
-                "type": "static"
-              },
-              {
-                "source": "makewith-vercel",
-                "target": "npm:tailwindcss-animate",
-                "type": "static"
-              },
-              {
-                "source": "makewith-vercel",
-                "target": "npm:typescript",
                 "type": "static"
               }
             ]
@@ -9649,92 +9366,12 @@
       },
       {
         "source": "makewith-vercel",
-        "target": "npm:@vercel/analytics",
-        "type": "static"
-      },
-      {
-        "source": "makewith-vercel",
-        "target": "npm:@vercel/og",
-        "type": "static"
-      },
-      {
-        "source": "makewith-vercel",
-        "target": "npm:focus-trap-react",
-        "type": "static"
-      },
-      {
-        "source": "makewith-vercel",
-        "target": "npm:react-dom",
-        "type": "static"
-      },
-      {
-        "source": "makewith-vercel",
-        "target": "npm:@tailwindcss/typography",
-        "type": "static"
-      },
-      {
-        "source": "makewith-vercel",
-        "target": "npm:@types/node",
-        "type": "static"
-      },
-      {
-        "source": "makewith-vercel",
-        "target": "npm:@types/react",
-        "type": "static"
-      },
-      {
-        "source": "makewith-vercel",
-        "target": "npm:@types/react-dom",
-        "type": "static"
-      },
-      {
-        "source": "makewith-vercel",
-        "target": "npm:@types/react-syntax-highlighter",
-        "type": "static"
-      },
-      {
-        "source": "makewith-vercel",
-        "target": "npm:@typescript-eslint/parser",
-        "type": "static"
-      },
-      {
-        "source": "makewith-vercel",
-        "target": "npm:autoprefixer",
-        "type": "static"
-      },
-      {
-        "source": "makewith-vercel",
-        "target": "npm:eslint",
-        "type": "static"
-      },
-      {
-        "source": "makewith-vercel",
-        "target": "npm:eslint-config-next",
-        "type": "static"
-      },
-      {
-        "source": "makewith-vercel",
-        "target": "npm:eslint-config-prettier",
-        "type": "static"
-      },
-      {
-        "source": "makewith-vercel",
-        "target": "npm:eslint-plugin-tailwindcss",
-        "type": "static"
-      },
-      {
-        "source": "makewith-vercel",
-        "target": "npm:postcss",
-        "type": "static"
-      },
-      {
-        "source": "makewith-vercel",
-        "target": "npm:prettier",
-        "type": "static"
-      },
-      {
-        "source": "makewith-vercel",
         "target": "npm:tailwindcss",
+        "type": "static"
+      },
+      {
+        "source": "makewith-vercel",
+        "target": "npm:@nx/react",
         "type": "static"
       },
       {
@@ -9744,12 +9381,7 @@
       },
       {
         "source": "makewith-vercel",
-        "target": "npm:typescript",
-        "type": "static"
-      },
-      {
-        "source": "makewith-vercel",
-        "target": "npm:@nx/react",
+        "target": "npm:@tailwindcss/typography",
         "type": "static"
       }
     ],
