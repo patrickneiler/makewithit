@@ -17,12 +17,12 @@
           {
             "glob": "public/**/*",
             "input": ".",
-            "output": "."
+            "output": "apps/makewith/vercel/"
           },
           {
             "glob": "assets/**/*",
             "input": ".",
-            "output": "."
+            "output": "apps/makewith/vercel/"
           }
         ]
       },
