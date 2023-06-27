@@ -45,5 +45,5 @@ export function formatDate(input: string | number | Date): string {
 export function handleMods(prefix: string, suffix: string, message: string): string {
   let modded = message.slice(0, message.indexOf(suffix));
   modded = modded.slice(prefix.length, message.length);
-  return modded.trim();
+  return modded;
 }
