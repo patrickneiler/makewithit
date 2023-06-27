@@ -1,13 +1,13 @@
 'use client'
-import { useContext, useEffect } from 'react';
-import { Banner } from '@the/makewith/react/ui';
+import { useEffect } from 'react';
 
 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 // import PageIllustration from '@/components/page-illustration'
-import { Footer, Header, PageIllustration } from '@the/makewith/react/ui';
+import { Header } from '@the/makewith/react/feature/header';
+import { Footer } from '@the/makewith/react/feature/footer';
 
 export default function DefaultLayout({
   children,
@@ -28,8 +28,6 @@ export default function DefaultLayout({
     <>
       <Header />
       <main className="grow">
-        <PageIllustration />
-
         {children}
       </main>
 

@@ -1,6 +1,4 @@
 'use client'
-import { AnimatedIconCategoryNames } from "@the/feature/react/icons";
-import { Sidebar } from "@the/makewith/react/ui";
 
 export default function IconsLayout({
     children,

@@ -1,4 +1,4 @@
-import { Header } from '@the/makewith/react/ui';
+import { Header } from '@the/makewith/react/feature/header';
 
 export default function AuthLayout({
   children,

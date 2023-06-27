@@ -2019,7 +2019,7 @@
           },
           {
             "file": "libs/feature/react/icons/src/lib/animated/categories/index.ts",
-            "hash": "14835163932008724947"
+            "hash": "4228676142902433567"
           },
           {
             "file": "libs/feature/react/icons/src/lib/animated/categories/jarvis/index.ts",
@@ -5293,11 +5293,11 @@
           },
           {
             "file": "apps/makewith/next/app/(auth)/layout.tsx",
-            "hash": "2845755509203743550",
+            "hash": "8610292996740765183",
             "dependencies": [
               {
                 "source": "makewith-next",
-                "target": "makewith-react-ui",
+                "target": "makewith-react-feature-header",
                 "type": "static"
               }
             ]
@@ -5337,7 +5337,7 @@
           },
           {
             "file": "apps/makewith/next/app/(default)/layout.tsx",
-            "hash": "10632878137937634312",
+            "hash": "17742887794704830770",
             "dependencies": [
               {
                 "source": "makewith-next",
@@ -5346,12 +5346,17 @@
               },
               {
                 "source": "makewith-next",
-                "target": "makewith-react-ui",
+                "target": "npm:aos",
                 "type": "static"
               },
               {
                 "source": "makewith-next",
-                "target": "npm:aos",
+                "target": "makewith-react-feature-header",
+                "type": "static"
+              },
+              {
+                "source": "makewith-next",
+                "target": "makewith-react-feature-footer",
                 "type": "static"
               }
             ]
@@ -5415,19 +5420,7 @@
           },
           {
             "file": "apps/makewith/next/app/(feature)/icons/layout.tsx",
-            "hash": "13633189647510213295",
-            "dependencies": [
-              {
-                "source": "makewith-next",
-                "target": "feature-react-icons",
-                "type": "static"
-              },
-              {
-                "source": "makewith-next",
-                "target": "makewith-react-ui",
-                "type": "static"
-              }
-            ]
+            "hash": "2940751736831707143"
           },
           {
             "file": "apps/makewith/next/app/(feature)/icons/page.tsx",
@@ -5447,7 +5440,7 @@
           },
           {
             "file": "apps/makewith/next/app/(feature)/layout.tsx",
-            "hash": "10926498664624975610",
+            "hash": "16499773546454887801",
             "dependencies": [
               {
                 "source": "makewith-next",
@@ -5461,7 +5454,12 @@
               },
               {
                 "source": "makewith-next",
-                "target": "makewith-react-ui",
+                "target": "makewith-react-feature-header",
+                "type": "static"
+              },
+              {
+                "source": "makewith-next",
+                "target": "makewith-react-feature-footer",
                 "type": "static"
               }
             ]
@@ -5515,7 +5513,7 @@
           },
           {
             "file": "apps/makewith/next/app/global.css",
-            "hash": "8761822198950427464"
+            "hash": "7130048385502061717"
           },
           {
             "file": "apps/makewith/next/app/layout.tsx",
@@ -6665,7 +6663,7 @@
           },
           {
             "file": "libs/ui/react/src/lib/loader.tsx",
-            "hash": "1661626222426649844",
+            "hash": "173792063336367768",
             "dependencies": [
               {
                 "source": "ui-react",
@@ -7907,7 +7905,7 @@
           },
           {
             "file": "libs/makewith/react/feature/footer/src/lib/footer.tsx",
-            "hash": "1928370491701629501",
+            "hash": "336281385838191806",
             "dependencies": [
               {
                 "source": "makewith-react-feature-footer",
@@ -24968,7 +24966,7 @@
     "makewith-next": [
       {
         "source": "makewith-next",
-        "target": "makewith-react-ui",
+        "target": "makewith-react-feature-header",
         "type": "static"
       },
       {
@@ -24989,6 +24987,16 @@
       {
         "source": "makewith-next",
         "target": "npm:aos",
+        "type": "static"
+      },
+      {
+        "source": "makewith-next",
+        "target": "makewith-react-feature-footer",
+        "type": "static"
+      },
+      {
+        "source": "makewith-next",
+        "target": "makewith-react-ui",
         "type": "static"
       },
       {

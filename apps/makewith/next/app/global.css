@@ -178,7 +178,7 @@
 
 .wave-top {
   overflow: visible;
-    transform: translateY(80px) scaleX(1) scaleY(0.2) translateX(0%);
+    transform: translateY(96px) scaleX(1) scaleY(0.2) translateX(0%);
     position: relative;
     transform-origin: top;
 }
@@ -197,7 +197,7 @@ header .wave-top {
 
 @media only screen and (min-width: 768px) {
   .wave-top {
-    transform: translateY(80px) scaleX(1) scaleY(0.08) translateX(0%);
+    transform: translateY(96px) scaleX(1) scaleY(0.08) translateX(0%);
   }
 }
 

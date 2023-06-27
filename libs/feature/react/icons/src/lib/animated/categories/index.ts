@@ -67,27 +67,7 @@ const AnimatedIconCategories = [
       constantName: 'FOOD_AND_DRINK',
       fileName: 'food-and-drink',
     },
-  },
-  {
-    category: HexagonCategory,
-    names: {
-      name: 'Hexagon',
-      className: 'Hexagon',
-      propertyName: 'hexagon',
-      constantName: 'HEXAGON',
-      fileName: 'hexagon',
-    },
-  },
-  {
-    category: CyberpunkFramesCategory,
-    names: {
-      name: 'Cyberpunk Frames',
-      className: 'CyberpunkFrames',
-      propertyName: 'cyberpunkFrames',
-      constantName: 'CYBERPUNK_FRAMES',
-      fileName: 'cyberpunk-frames',
-    },
-  } /* Categories */,
+  } /* Categories */
 ];
 export const AnimatedIconCategoryNames: Names[] = [
   {
@@ -131,21 +111,7 @@ export const AnimatedIconCategoryNames: Names[] = [
     propertyName: 'foodAndDrink',
     constantName: 'FOOD_AND_DRINK',
     fileName: 'food-and-drink',
-  },
-  {
-    name: 'Hexagon',
-    className: 'Hexagon',
-    propertyName: 'hexagon',
-    constantName: 'HEXAGON',
-    fileName: 'hexagon',
-  },
-  {
-    name: 'Cyberpunk Frames',
-    className: 'CyberpunkFrames',
-    propertyName: 'cyberpunkFrames',
-    constantName: 'CYBERPUNK_FRAMES',
-    fileName: 'cyberpunk-frames',
-  } /* CategoryNames */,
+  } /* CategoryNames */
 ];
 export const AnimatedIconCategorySlugs = AnimatedIconCategoryNames.map(
   (categoryNames) => ({

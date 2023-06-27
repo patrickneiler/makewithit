@@ -13,7 +13,7 @@ export function Loader({
 
     return (
 
-        <div className='absolute h-full w-full z-50 bg-red-500 flex align-center justify-center'>
+        <div className='absolute h-24 w-24 z-50 bg-red-500 flex items-center justify-center'>
             <div onClick={() => setActive(!active)} className={(active ? 'active' : '') + " loader"}>
                 <div className="panel bg-red-500"></div>
                 <div className="gears"></div>
