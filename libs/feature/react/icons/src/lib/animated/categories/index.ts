@@ -4,7 +4,9 @@ import { DigitalMarketingCategory } from './digital-marketing';
 import { ArtificialIntelligenceCategory } from './artificial-intelligence';
 import { WebDevelopmentCategory } from './web-development';
 import { BusinessAndStartupsCategory } from './business-and-startups';
-import { FoodAndDrinkCategory } from './food-and-drink'; /* CategoryImport */
+import { FoodAndDrinkCategory } from './food-and-drink';
+import { HexagonCategory } from './hexagon';
+import { CyberpunkFramesCategory } from './cyberpunk-frames'; /* CategoryImport */
 const AnimatedIconCategories = [
   {
     category: UserInterfaceCategory,
@@ -65,6 +67,26 @@ const AnimatedIconCategories = [
       constantName: 'FOOD_AND_DRINK',
       fileName: 'food-and-drink',
     },
+  },
+  {
+    category: HexagonCategory,
+    names: {
+      name: 'Hexagon',
+      className: 'Hexagon',
+      propertyName: 'hexagon',
+      constantName: 'HEXAGON',
+      fileName: 'hexagon',
+    },
+  },
+  {
+    category: CyberpunkFramesCategory,
+    names: {
+      name: 'Cyberpunk Frames',
+      className: 'CyberpunkFrames',
+      propertyName: 'cyberpunkFrames',
+      constantName: 'CYBERPUNK_FRAMES',
+      fileName: 'cyberpunk-frames',
+    },
   } /* Categories */,
 ];
 export const AnimatedIconCategoryNames: Names[] = [
@@ -109,6 +131,20 @@ export const AnimatedIconCategoryNames: Names[] = [
     propertyName: 'foodAndDrink',
     constantName: 'FOOD_AND_DRINK',
     fileName: 'food-and-drink',
+  },
+  {
+    name: 'Hexagon',
+    className: 'Hexagon',
+    propertyName: 'hexagon',
+    constantName: 'HEXAGON',
+    fileName: 'hexagon',
+  },
+  {
+    name: 'Cyberpunk Frames',
+    className: 'CyberpunkFrames',
+    propertyName: 'cyberpunkFrames',
+    constantName: 'CYBERPUNK_FRAMES',
+    fileName: 'cyberpunk-frames',
   } /* CategoryNames */,
 ];
 export const AnimatedIconCategorySlugs = AnimatedIconCategoryNames.map(

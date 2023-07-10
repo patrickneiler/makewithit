@@ -1,8 +1,5 @@
-export {Header} from './lib/header';
-export {Footer} from './lib/footer';
 export {MobileMenu} from './lib/mobile-menu';
 export {Hero} from './lib/hero';
-export {Logo} from './lib/logo';
 export {Zigzag} from './lib/zigzag';
 export {FeatureList} from './lib/feature-list';
 export {PricingTables} from './lib/pricing-tables';
@@ -18,4 +15,4 @@ export {Hamburger} from './lib/hamburger';
 export {TopicTitle} from './lib/topic-title';
 export {Banner} from './lib/banner';
 export {IconCrawler} from './lib/icon-crawler';
-export{Card} from './lib/card';
+export {Card} from './lib/card';

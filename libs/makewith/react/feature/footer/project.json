@@ -1,0 +1,29 @@
+{
+  "name": "makewith-react-feature-footer",
+  "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/makewith/react/feature/footer/src",
+  "projectType": "library",
+  "tags": ["feature"],
+  "targets": {
+    "build": {
+      "executor": "@nx/rollup:rollup",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/makewith/react/feature/footer",
+        "tsConfig": "libs/makewith/react/feature/footer/tsconfig.lib.json",
+        "project": "libs/makewith/react/feature/footer/package.json",
+        "entryFile": "libs/makewith/react/feature/footer/src/index.ts",
+        "external": ["react", "react-dom", "react/jsx-runtime"],
+        "rollupConfig": "@nx/react/plugins/bundle-rollup",
+        "compiler": "babel",
+        "assets": [
+          {
+            "glob": "libs/makewith/react/feature/footer/README.md",
+            "input": ".",
+            "output": "."
+          }
+        ]
+      }
+    }
+  }
+}

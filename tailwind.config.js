@@ -13,6 +13,17 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        black: {
+          100: "#cecece",
+          200: "#9d9d9d",
+          300: "#6b6b6d",
+          400: "#3a3a3c",
+          500: "#09090b",
+          600: "#070709",
+          700: "#050507",
+          800: "#040404",
+          900: "#020202"
+        },
         red: {
           100: '#ffd4e2',
           200: '#ffaac5',
@@ -69,11 +80,13 @@ module.exports = {
           'var(--font-architects-daughter)',
           'sans-serif',
         ],
+        'nycd': ['var(--font-nycd)', 'cursive'],
       },
       fontSize: {
         xs: '0.75rem',
         sm: '0.875rem',
         base: '1rem',
+        'md': '1.075rem',
         lg: '1.125rem',
         xl: '1.25rem',
         '2xl': '1.5rem',

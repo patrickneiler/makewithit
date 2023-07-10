@@ -3,13 +3,19 @@
   "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/makewith/react/ui/src",
   "projectType": "library",
-  "tags": ["ui"],
+  "tags": [
+    "ui"
+  ],
   "targets": {
     "lint": {
       "executor": "@nx/linter:eslint",
-      "outputs": ["{options.outputFile}"],
+      "outputs": [
+        "{options.outputFile}"
+      ],
       "options": {
-        "lintFilePatterns": ["libs/makewith/react/ui/**/*.{ts,tsx,js,jsx}"]
+        "lintFilePatterns": [
+          "libs/makewith/react/ui/**/*.{ts,tsx,js,jsx}"
+        ]
       }
     }
   }

@@ -3,11 +3,15 @@
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/data-access/organization/src",
   "projectType": "library",
-  "tags": ["data-access"],
+  "tags": [
+    "data-access"
+  ],
   "targets": {
     "lint": {
       "executor": "@nx/linter:eslint",
-      "outputs": ["{options.outputFile}"],
+      "outputs": [
+        "{options.outputFile}"
+      ],
       "options": {
         "lintFilePatterns": [
           "libs/data-access/organization/**/*.{ts,tsx,js,jsx}"

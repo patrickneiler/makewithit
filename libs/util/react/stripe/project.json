@@ -3,13 +3,45 @@
   "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/util/react/stripe/src",
   "projectType": "library",
-  "tags": ["util"],
+  "tags": [
+    "util"
+  ],
   "targets": {
     "lint": {
       "executor": "@nx/linter:eslint",
-      "outputs": ["{options.outputFile}"],
+      "outputs": [
+        "{options.outputFile}"
+      ],
       "options": {
-        "lintFilePatterns": ["libs/util/react/stripe/**/*.{ts,tsx,js,jsx}"]
+        "lintFilePatterns": [
+          "libs/util/react/stripe/**/*.{ts,tsx,js,jsx}"
+        ]
+      }
+    },
+    "build": {
+      "executor": "@nx/rollup:rollup",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "outputPath": "dist/libs/util/react/stripe",
+        "tsConfig": "libs/util/react/stripe/tsconfig.lib.json",
+        "project": "libs/util/react/stripe/package.json",
+        "entryFile": "libs/util/react/stripe/src/index.ts",
+        "external": [
+          "react",
+          "react-dom",
+          "react/jsx-runtime"
+        ],
+        "rollupConfig": "@nx/react/plugins/bundle-rollup",
+        "compiler": "babel",
+        "assets": [
+          {
+            "glob": "libs/util/react/stripe/README.md",
+            "input": ".",
+            "output": "."
+          }
+        ]
       }
     }
   }

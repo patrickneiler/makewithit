@@ -25,14 +25,20 @@
         "libs/feature/react/animations/src/index.ts"
       ],
       "@the/feature/react/auth": ["libs/feature/react/auth/src/index.ts"],
+      "@the/feature/react/game": ["libs/feature/react/game/src/index.ts"],
       "@the/feature/react/icons": ["libs/feature/react/icons/src/index.ts"],
-      "@the/feature/react/organization": [
-        "libs/feature/react/organization/src/index.ts"
-      ],
       "@the/feature/react/study": ["libs/feature/react/study/src/index.ts"],
-      "@the/feature/react/user": ["libs/feature/react/user/src/index.ts"],
       "@the/makewith/react/data-access": [
         "libs/makewith/react/data-access/src/index.ts"
+      ],
+      "@the/makewith/react/feature/footer": [
+        "libs/makewith/react/feature/footer/src/index.ts"
+      ],
+      "@the/makewith/react/feature/header": [
+        "libs/makewith/react/feature/header/src/index.ts"
+      ],
+      "@the/makewith/react/feature/logo": [
+        "libs/makewith/react/feature/logo/src/index.ts"
       ],
       "@the/makewith/react/ui": ["libs/makewith/react/ui/src/index.ts"],
       "@the/makewith/react/util": ["libs/makewith/react/util/src/index.ts"],
