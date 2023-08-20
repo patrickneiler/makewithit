@@ -25,7 +25,6 @@
         "libs/feature/react/animations/src/index.ts"
       ],
       "@the/feature/react/auth": ["libs/feature/react/auth/src/index.ts"],
-      "@the/feature/react/game": ["libs/feature/react/game/src/index.ts"],
       "@the/feature/react/icons": ["libs/feature/react/icons/src/index.ts"],
       "@the/feature/react/study": ["libs/feature/react/study/src/index.ts"],
       "@the/makewith/react/data-access": [

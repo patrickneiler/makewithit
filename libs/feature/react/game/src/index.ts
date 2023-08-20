@@ -1,1 +1,0 @@
-export { FallingGame } from './lib/falling'

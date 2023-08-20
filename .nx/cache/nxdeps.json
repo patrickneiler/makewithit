@@ -128,9 +128,6 @@
     "@the/feature/react/auth": [
       "libs/feature/react/auth/src/index.ts"
     ],
-    "@the/feature/react/game": [
-      "libs/feature/react/game/src/index.ts"
-    ],
     "@the/feature/react/icons": [
       "libs/feature/react/icons/src/index.ts"
     ],
@@ -2022,50 +2019,6 @@
             "hash": "14835163932008724947"
           },
           {
-            "file": "libs/feature/react/icons/src/lib/animated/categories/jarvis/index.ts",
-            "hash": "8438137829220121240"
-          },
-          {
-            "file": "libs/feature/react/icons/src/lib/animated/categories/jarvis/polygon-02-animation-01.ts",
-            "hash": "1787122047637798311"
-          },
-          {
-            "file": "libs/feature/react/icons/src/lib/animated/categories/jarvis/polygon-02-animation-02.ts",
-            "hash": "4460344628327453770"
-          },
-          {
-            "file": "libs/feature/react/icons/src/lib/animated/categories/jarvis/polygon-02-animation-03.ts",
-            "hash": "17079554410640587085"
-          },
-          {
-            "file": "libs/feature/react/icons/src/lib/animated/categories/jarvis/polygon-02-animation-04.ts",
-            "hash": "10922477617490805393"
-          },
-          {
-            "file": "libs/feature/react/icons/src/lib/animated/categories/jarvis/polygon-02-animation-05.ts",
-            "hash": "17688737532837998722"
-          },
-          {
-            "file": "libs/feature/react/icons/src/lib/animated/categories/jarvis/polygon-02-animation-06.ts",
-            "hash": "14611649028146607335"
-          },
-          {
-            "file": "libs/feature/react/icons/src/lib/animated/categories/jarvis/polygon-02-animation-07.ts",
-            "hash": "13574918593897214574"
-          },
-          {
-            "file": "libs/feature/react/icons/src/lib/animated/categories/jarvis/polygon-02-animation-08.ts",
-            "hash": "15544443715503808063"
-          },
-          {
-            "file": "libs/feature/react/icons/src/lib/animated/categories/jarvis/polygon-02-animation-09.ts",
-            "hash": "4919008040656059458"
-          },
-          {
-            "file": "libs/feature/react/icons/src/lib/animated/categories/jarvis/polygon-02-animation-10.ts",
-            "hash": "16593249868674694474"
-          },
-          {
             "file": "libs/feature/react/icons/src/lib/animated/categories/user-interface/avater.ts",
             "hash": "6675849566845126876"
           },
@@ -2479,10 +2432,6 @@
           {
             "file": "libs/feature/react/icons/src/raw/hexagon.json",
             "hash": "1360088051049164089"
-          },
-          {
-            "file": "libs/feature/react/icons/src/raw/jarvis.json",
-            "hash": "10885626383663324886"
           },
           {
             "file": "libs/feature/react/icons/src/raw/user-interface.json",
@@ -4269,7 +4218,7 @@
           },
           {
             "file": "apps/makewith/vercel/app/layout.tsx",
-            "hash": "1117519974269380797",
+            "hash": "15221944858011510588",
             "dependencies": [
               {
                 "source": "makewith-vercel",
@@ -4320,7 +4269,7 @@
           },
           {
             "file": "apps/makewith/vercel/app/sign-in/page.tsx",
-            "hash": "5051968816533401659",
+            "hash": "8971048865835630671",
             "dependencies": [
               {
                 "source": "makewith-vercel",
@@ -4343,16 +4292,11 @@
           },
           {
             "file": "apps/makewith/vercel/auth.ts",
-            "hash": "13632595656181503023",
+            "hash": "14852902290605259075",
             "dependencies": [
               {
                 "source": "makewith-vercel",
                 "target": "npm:next-auth",
-                "type": "static"
-              },
-              {
-                "source": "makewith-vercel",
-                "target": "npm:@auth/core",
                 "type": "static"
               }
             ]
@@ -4492,7 +4436,7 @@
           },
           {
             "file": "apps/makewith/vercel/components/empty-screen.tsx",
-            "hash": "13122535386231636005",
+            "hash": "7471309608551110039",
             "dependencies": [
               {
                 "source": "makewith-vercel",
@@ -4507,7 +4451,7 @@
           },
           {
             "file": "apps/makewith/vercel/components/footer.tsx",
-            "hash": "2504538922417000063",
+            "hash": "5548750833298709265",
             "dependencies": [
               {
                 "source": "makewith-vercel",
@@ -4539,7 +4483,7 @@
           },
           {
             "file": "apps/makewith/vercel/components/login-button.tsx",
-            "hash": "16156708228756707074",
+            "hash": "3673804698070247744",
             "dependencies": [
               {
                 "source": "makewith-vercel",
@@ -4801,7 +4745,7 @@
           },
           {
             "file": "apps/makewith/vercel/components/ui/icons.tsx",
-            "hash": "1879074127426402925",
+            "hash": "9013796547428606685",
             "dependencies": [
               {
                 "source": "makewith-vercel",
@@ -4935,7 +4879,7 @@
           },
           {
             "file": "apps/makewith/vercel/components/user-menu.tsx",
-            "hash": "18409267377622406972",
+            "hash": "12759743475156253567",
             "dependencies": [
               {
                 "source": "makewith-vercel",
@@ -4950,15 +4894,8 @@
             ]
           },
           {
-            "file": "apps/makewith/vercel/firebase.ts",
-            "hash": "8175640458911949223",
-            "dependencies": [
-              {
-                "source": "makewith-vercel",
-                "target": "npm:firebase",
-                "type": "static"
-              }
-            ]
+            "file": "apps/makewith/vercel/credentials/firebase.json",
+            "hash": "10032499013238837177"
           },
           {
             "file": "apps/makewith/vercel/index.d.ts",
@@ -5043,7 +4980,7 @@
           },
           {
             "file": "apps/makewith/vercel/lib/utils.ts",
-            "hash": "10904683246774194185",
+            "hash": "9424120138004852224",
             "dependencies": [
               {
                 "source": "makewith-vercel",
@@ -5169,27 +5106,7 @@
           },
           {
             "file": "apps/makewith/vercel/tsconfig.json",
-            "hash": "16145255616062519824"
-          },
-          {
-            "file": "apps/makewith/vercel/app/game/page.tsx",
-            "hash": "11651949426961846179"
-          },
-          {
-            "file": "apps/makewith/vercel/components/game.tsx",
-            "hash": "11475445391761286951",
-            "dependencies": [
-              {
-                "source": "makewith-vercel",
-                "target": "feature-react-game",
-                "type": "static"
-              },
-              {
-                "source": "makewith-vercel",
-                "target": "npm:react",
-                "type": "static"
-              }
-            ]
+            "hash": "12157036666129708884"
           }
         ]
       }
@@ -5537,6 +5454,10 @@
                 "type": "static"
               }
             ]
+          },
+          {
+            "file": "apps/makewith/next/app/loadings.tsx",
+            "hash": "7071414107198554031"
           },
           {
             "file": "apps/makewith/next/app/providers.tsx",
@@ -6964,7 +6885,7 @@
           },
           {
             "file": ".gitignore",
-            "hash": "15171185709744215394"
+            "hash": "17232895755982892802"
           },
           {
             "file": ".prettierignore",
@@ -7698,7 +7619,7 @@
           },
           {
             "file": "tsconfig.base.json",
-            "hash": "9943122568788795285"
+            "hash": "185008002397022791"
           }
         ]
       }
@@ -7944,119 +7865,6 @@
           {
             "file": "libs/makewith/react/feature/footer/tsconfig.lib.json",
             "hash": "5580110007630344394"
-          }
-        ]
-      }
-    },
-    "feature-react-game": {
-      "name": "feature-react-game",
-      "type": "lib",
-      "data": {
-        "name": "feature-react-game",
-        "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
-        "sourceRoot": "libs/feature/react/game/src",
-        "projectType": "library",
-        "tags": [
-          "feature"
-        ],
-        "targets": {
-          "lint": {
-            "inputs": [
-              "default",
-              "{workspaceRoot}/.eslintrc.json",
-              "{workspaceRoot}/.eslintignore"
-            ],
-            "executor": "@nx/linter:eslint",
-            "outputs": [
-              "{options.outputFile}"
-            ],
-            "options": {
-              "lintFilePatterns": [
-                "libs/feature/react/game/**/*.{ts,tsx,js,jsx}"
-              ]
-            },
-            "configurations": {}
-          },
-          "build": {
-            "dependsOn": [
-              "^build"
-            ],
-            "inputs": [
-              "production",
-              "^production"
-            ],
-            "executor": "@nx/rollup:rollup",
-            "outputs": [
-              "{options.outputPath}"
-            ],
-            "options": {
-              "outputPath": "dist/libs/feature/react/game",
-              "tsConfig": "libs/feature/react/game/tsconfig.lib.json",
-              "project": "libs/feature/react/game/package.json",
-              "entryFile": "libs/feature/react/game/src/index.ts",
-              "external": [
-                "react",
-                "react-dom",
-                "react/jsx-runtime"
-              ],
-              "rollupConfig": "@nx/react/plugins/bundle-rollup",
-              "compiler": "babel",
-              "assets": [
-                {
-                  "glob": "libs/feature/react/game/README.md",
-                  "input": ".",
-                  "output": "."
-                }
-              ]
-            },
-            "configurations": {}
-          }
-        },
-        "root": "libs/feature/react/game",
-        "implicitDependencies": [],
-        "files": [
-          {
-            "file": "libs/feature/react/game/.babelrc",
-            "hash": "2946678488919325452"
-          },
-          {
-            "file": "libs/feature/react/game/.eslintrc.json",
-            "hash": "12678463301772327123"
-          },
-          {
-            "file": "libs/feature/react/game/package.json",
-            "hash": "12518635718941421765"
-          },
-          {
-            "file": "libs/feature/react/game/project.json",
-            "hash": "14876466882564436738"
-          },
-          {
-            "file": "libs/feature/react/game/README.md",
-            "hash": "307142375604239992"
-          },
-          {
-            "file": "libs/feature/react/game/src/index.ts",
-            "hash": "2196709584800721469"
-          },
-          {
-            "file": "libs/feature/react/game/tsconfig.json",
-            "hash": "13090035453275662468"
-          },
-          {
-            "file": "libs/feature/react/game/tsconfig.lib.json",
-            "hash": "953912742928436052"
-          },
-          {
-            "file": "libs/feature/react/game/src/lib/falling.tsx",
-            "hash": "4142892787029684733",
-            "dependencies": [
-              {
-                "source": "feature-react-game",
-                "target": "npm:react",
-                "type": "static"
-              }
-            ]
           }
         ]
       }
@@ -24816,11 +24624,6 @@
       },
       {
         "source": "makewith-vercel",
-        "target": "npm:@auth/core",
-        "type": "static"
-      },
-      {
-        "source": "makewith-vercel",
         "target": "npm:react",
         "type": "static"
       },
@@ -24837,6 +24640,11 @@
       {
         "source": "makewith-vercel",
         "target": "npm:react-intersection-observer",
+        "type": "static"
+      },
+      {
+        "source": "makewith-vercel",
+        "target": "npm:@auth/core",
         "type": "static"
       },
       {
@@ -24916,11 +24724,6 @@
       },
       {
         "source": "makewith-vercel",
-        "target": "npm:firebase",
-        "type": "static"
-      },
-      {
-        "source": "makewith-vercel",
         "target": "npm:clsx",
         "type": "static"
       },
@@ -24957,11 +24760,6 @@
       {
         "source": "makewith-vercel",
         "target": "npm:@tailwindcss/typography",
-        "type": "static"
-      },
-      {
-        "source": "makewith-vercel",
-        "target": "feature-react-game",
         "type": "static"
       }
     ],
@@ -50468,13 +50266,6 @@
       {
         "source": "npm:yauzl",
         "target": "npm:fd-slicer",
-        "type": "static"
-      }
-    ],
-    "feature-react-game": [
-      {
-        "source": "feature-react-game",
-        "target": "npm:react",
         "type": "static"
       }
     ]

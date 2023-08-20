@@ -1,7 +1,7 @@
 import NextAuth from 'next-auth'
 import GitHub from 'next-auth/providers/github'
 import CredentialsProvider from 'next-auth/providers/credentials'
-import GoogleProvider from "@auth/core/providers/google"
+
 // We default to using GitHub for authentication for local development and production.
 // On Preview deployments, we use a dummy credentials provider. This allows folks to easily
 // test the app without having to create a custom GitHub OAuth app or change the callback URL
@@ -37,11 +37,7 @@ export const {
             } as any
           }
         })
-      : GitHub, GoogleProvider({
-        clientId: process.env.GOOGLE_CLIENT_ID,
-        clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-        allowDangerousEmailAccountLinking: true,
-      })
+      : GitHub
   ],
   callbacks: {
     // @ts-ignore

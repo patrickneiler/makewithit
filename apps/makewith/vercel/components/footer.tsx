@@ -16,6 +16,7 @@ export function FooterText({ className, ...props }: React.ComponentProps<'p'>) {
       <ExternalLink href="https://makewith.it">
         makewith.it
       </ExternalLink>
+      .
     </p>
   )
 }
