@@ -30,7 +30,6 @@ export function PromptForm({
 }: PromptProps) {
   const { formRef, onKeyDown } = useEnterSubmit()
   const inputRef = React.useRef<HTMLTextAreaElement>(null)
-
   React.useEffect(() => {
     if (inputRef.current) {
       inputRef.current.focus();
@@ -45,23 +44,23 @@ export function PromptForm({
           return
         }
         let _input = input;
-        const name = session?.user.name;
-        const prefix = `You are the most powerful sorceror in the universe, and quite a generous one as well. You have decided to share your infinite knowledge with ${name}, who is asking the following question:`
-        const suffix = `Please answer ${name}, oh wise and powerful overlord. Don't be afraid to remind us of your great power.`
-        _input = `${prefix} ${input} ${suffix}`
+        // const name = session?.user.name;
+        // const prefix = `You are the most powerful sorceror in the universe, and quite a generous one as well. You have decided to share your infinite knowledge with ${name}, who is asking the following question:`
+        // const suffix = `Please answer ${name}, oh wise and powerful overlord. Don't be afraid to remind us of your great power.`
+        // _input = `${prefix} ${input} ${suffix}`
         setInput('')
         await onSubmit(_input)
       }}
       ref={formRef}
     >
-      <div className="relative flex max-h-60 w-full grow flex-col overflow-hidden bg-background px-8 sm:rounded-md sm:border sm:px-12">
+      <div className="relative border-0 flex max-h-60 w-full grow flex-col overflow-hidden bg-background px-8 sm:rounded-md sm:x-12">
         <Tooltip>
           <TooltipTrigger asChild>
             <Link
               href="/"
               className={cn(
                 buttonVariants({ size: 'sm', variant: 'outline' }),
-                'absolute left-0 top-4 h-8 w-8 rounded-full bg-background p-0 sm:left-4'
+                'absolute left-0 top-4 h-8 w-8 rounded-full bg-background p-0 sm:left-0'
               )}
             >
               <IconPlus />

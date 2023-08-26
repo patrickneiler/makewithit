@@ -8,6 +8,7 @@ import { Button, type ButtonProps } from './ui/button'
 import { IconGitHub, IconSpinner } from './ui/icons'
 
 interface LoginButtonProps extends ButtonProps {
+  provider: 'github' | 'google',
   showGithubIcon?: boolean
   text?: string
 }

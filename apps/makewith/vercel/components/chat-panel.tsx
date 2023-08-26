@@ -3,9 +3,12 @@ import { type UseChatHelpers } from 'ai/react'
 import { Button } from './ui/button'
 import { PromptForm } from './prompt-form'
 import { ButtonScrollToBottom } from './button-scroll-to-bottom'
-import { IconRefresh, IconStop } from './ui/icons'
+import { IconExternalLink, IconRefresh, IconStop } from './ui/icons'
 import { FooterText } from './footer'
 import { Session } from 'next-auth'
+import { ExternalLink } from './external-link'
+import { Badge } from './ui/badge'
+import { Label } from './ui/label'
 
 export interface ChatPanelProps
   extends Pick<
@@ -34,11 +37,13 @@ export function ChatPanel({
   session
 }: ChatPanelProps) {
   return (
-    <div className="fixed z-30 inset-x-0 bottom-0 bg-gradient-to-b from-muted/0 from-0% to-muted/30 to-50%">
+    <div className="fixed z-30 inset-x-0 bottom-0  pt-4">
       <ButtonScrollToBottom />
-      <div className="mx-auto sm:max-w-2xl sm:px-4">
-        <div className="flex h-10 items-center justify-center">
-          {isLoading ? (
+      <div className="mx-auto sm:max-w-2xl px-4">
+
+        <div className="space-y-4 border-t border-gray-800 bg-background px-4 py-2 shadow-lg sm:rounded-t-xl  md:py-4">
+          {/* @ts-ignore */}
+          {isLoading && (
             <Button
               variant="outline"
               onClick={() => stop()}
@@ -47,22 +52,7 @@ export function ChatPanel({
               <IconStop className="mr-2" />
               Stop generating
             </Button>
-          ) : (
-            messages?.length > 0 && (
-              <Button
-                variant="outline"
-                onClick={() => reload()}
-                className="bg-background"
-              >
-                <IconRefresh className="mr-2" />
-                Regenerate response
-              </Button>
-            )
           )}
-        </div>
-        <div className="space-y-4 border-t bg-background px-4 py-2 shadow-lg sm:rounded-t-xl sm:border md:py-4">
-          {/* @ts-ignore */}
-
           <PromptForm
             onSubmit={async value => {
               await append({
@@ -76,7 +66,17 @@ export function ChatPanel({
             isLoading={isLoading}
             session={session}
           />
-          <FooterText className="hidden sm:block" />
+          {/* <FooterText className="hidden sm:block" /> */}
+          <div className="flex align-center justify-between">
+            <h1 className="text-md ml-2 flex">
+              <strong className="text-gray-100 mr-1">PATRICK</strong>
+              {/* <strong className="text-gray-300">NEILER</strong> */}
+              <Badge className="grow-0 scale-[.65] -translate-x-3 ml-1 inline-flex w-auto bg-red-500 hover:bg-teal-500 text-gray-100 hover:text-gray-900" variant={"secondary"}>CLONED</Badge>
+            </h1>
+            <span className="flex justify-end items-center">
+              <Badge className="grow-0 text-xs  inline-flex w-auto text-gray-500 border-gray-500  sm:mr-2" variant={"outline"}>BETA</Badge>
+            </span>
+          </div>
 
         </div>
       </div>

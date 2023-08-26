@@ -1,0 +1,48 @@
+{
+  "name": "data-access-job",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/data-access/job/src",
+  "projectType": "library",
+  "tags": [
+    "data-access"
+  ],
+  "targets": {
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": [
+        "{options.outputFile}"
+      ],
+      "options": {
+        "lintFilePatterns": [
+          "libs/data-access/job/**/*.{ts,tsx,js,jsx}"
+        ]
+      }
+    },
+    "build": {
+      "executor": "@nx/rollup:rollup",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "outputPath": "dist/libs/data-access/job",
+        "tsConfig": "libs/data-access/job/tsconfig.lib.json",
+        "project": "libs/data-access/job/package.json",
+        "entryFile": "libs/data-access/job/src/index.ts",
+        "external": [
+          "react",
+          "react-dom",
+          "react/jsx-runtime"
+        ],
+        "rollupConfig": "@nx/react/plugins/bundle-rollup",
+        "compiler": "babel",
+        "assets": [
+          {
+            "glob": "libs/data-access/job/README.md",
+            "input": ".",
+            "output": "."
+          }
+        ]
+      }
+    }
+  }
+}

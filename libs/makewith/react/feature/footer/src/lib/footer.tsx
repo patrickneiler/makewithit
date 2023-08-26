@@ -5,17 +5,17 @@ import { Loader } from '@the/ui/react';
 
 export function Footer(): JSX.Element {
   return (
-    <footer className='relative max-w-full overflow-hidden pt-32'>
+    <footer className='relative max-w-full  overflow-hidden pt-32'>
       {/* Illustration behind hero content */}
-      <div className="absolute fill-red-500 rotate-180 left-0 bottom-0 w-screen flex align-center justify-start pointer-events-none z-10 overflow-visible">
+      <div className="absolute fill-red-500 rotate-180 left-0 -bottom-32 w-screen flex align-center justify-start pointer-events-none z-10 overflow-visible">
         <Waves />
       </div>
-      <div className="bg-red-500 relative z-20 pb-10">
+      <div className="bg-red-500 relative z-20">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
 
           {/* Bottom area */}
           <div className="flex items-center justify-between">
-            <Link href="/" className="inline-block scale-150 origin-top-center" aria-label="Cruip">
+            {/* <Link href="/" className="inline-block scale-150 origin-top-center" aria-label="Cruip">
               <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect width="2" height="2" fill="#151719" />
                 <rect x="2" width="2" height="2" fill="#151719" />
@@ -277,7 +277,7 @@ export function Footer(): JSX.Element {
             </Link>
             <div className='relative w-12 h-12'>
               <Loader />
-            </div>
+            </div> */}
 
             {/* Copyrights note */}
             {/* <div className="text-gray-900 text-sm mr-4">&copy; Make With It.</div> */}

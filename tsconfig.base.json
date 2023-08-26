@@ -16,6 +16,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@the/data-access/job": ["libs/data-access/job/src/index.ts"],
       "@the/data-access/organization": [
         "libs/data-access/organization/src/index.ts"
       ],
