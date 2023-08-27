@@ -1,5 +1,5 @@
 'use client'
-import React, { createContext, useContext, useState, useCallback } from 'react';
+import React, { createContext, useContext, useState, useCallback, useEffect } from 'react';
 
 export interface Video {
     id: string;
@@ -14,12 +14,13 @@ export interface Config {
 }
 
 interface VideoContextValue {
-    video: Video | null;
     currentVideo: Video | null;
     nextVideo: Video | null;
-    uploadVideo: (script: string) => Promise<void>;
-    fetchVideoStatus: (id: string) => Promise<void>;
-    completedVideo: (video: Video) => Promise<void>
+    requestVideo: (script: string) => Promise<void>;
+    getVideo: (id: string) => Promise<void>;
+    setLoading: (id: boolean) => void;
+    isLoading: boolean;
+    prepareNextVideo: () => void;
 }
 
 const VideoContext = createContext<VideoContextValue | undefined>(undefined);
@@ -38,11 +39,16 @@ interface VideoProviderProps {
 }
 
 const VideoProvider: React.FC<VideoProviderProps> = ({ children, config }) => {
-    const [video, setVideo] = useState<Video | null>(null);
     const [currentVideo, setCurrentVideo] = useState<Video | null>(null);
     const [nextVideo, setNextVideo] = useState<Video | null>(null);
-
-    const uploadVideo = useCallback(async (script: string) => {
+    const [isLoading, setIsLoading] = useState<boolean>(false);
+    useEffect(() => {
+        if (!currentVideo && nextVideo?.result_url) {
+            setCurrentVideo(nextVideo);
+            setNextVideo(null);
+        }
+    }, [currentVideo, nextVideo])
+    const requestVideo = useCallback(async (script: string) => {
         try {
             const options = {
                 method: 'POST',
@@ -79,10 +85,13 @@ const VideoProvider: React.FC<VideoProviderProps> = ({ children, config }) => {
         }
     }, []);
 
-    const fetchVideoStatus = useCallback(async (id: string) => {
+    const setLoading = ((id: boolean) => {
+        setIsLoading(id);
+    })
+
+    const getVideo = useCallback(async (id: string) => {
         try {
             let status = '';
-
             do {
                 await new Promise(resolve => setTimeout(resolve, 2000));
                 const options = {
@@ -96,12 +105,17 @@ const VideoProvider: React.FC<VideoProviderProps> = ({ children, config }) => {
 
                 const response = await fetch(`${config.url}/${id}`, options)
                     .then(response => (response.json()))
-                    .then(data => (status = data.status, setNextVideo(prevVideo => ({
-                        ...prevVideo!,
-                        status: data.status,
-                        source_url: data.source_url,
-                        result_url: data.result_url,
-                    }))))
+                    .then(data => (
+                        status = data.status,
+                        (data.result_url && setLoading(false)),
+                        setNextVideo(
+                            prevVideo => ({
+                                ...prevVideo!,
+                                status: data.status,
+                                source_url: data.source_url,
+                                result_url: data.result_url,
+                            })
+                        )))
                     .catch(err => console.error(err));
 
                 return response;
@@ -111,18 +125,21 @@ const VideoProvider: React.FC<VideoProviderProps> = ({ children, config }) => {
         }
     }, []);
 
-    const completedVideo = useCallback(async (video: Video) => {
-        setCurrentVideo(video);
-        setVideo(video);
+    const prepareNextVideo = useCallback(() => {
+        setNextVideo({
+            id: "",
+            status: "prepare"
+        });
     }, []);
 
     const contextValue: VideoContextValue = {
-        video,
-        uploadVideo,
-        fetchVideoStatus,
+        requestVideo,
+        getVideo,
         currentVideo,
         nextVideo,
-        completedVideo
+        prepareNextVideo,
+        setLoading,
+        isLoading
     };
 
     return (

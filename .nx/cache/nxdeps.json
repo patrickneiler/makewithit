@@ -4497,7 +4497,7 @@
           },
           {
             "file": "apps/makewith/vercel/app/api/chat/route.ts",
-            "hash": "4323660686656066539",
+            "hash": "7281498358800891789",
             "dependencies": [
               {
                 "source": "makewith-vercel",
@@ -4517,17 +4517,6 @@
             ]
           },
           {
-            "file": "apps/makewith/vercel/app/api/video/route.ts",
-            "hash": "923829520858760809",
-            "dependencies": [
-              {
-                "source": "makewith-vercel",
-                "target": "npm:next",
-                "type": "static"
-              }
-            ]
-          },
-          {
             "file": "apps/makewith/vercel/app/chat/[id]/page.tsx",
             "hash": "7723770894548177510",
             "dependencies": [
@@ -4539,12 +4528,8 @@
             ]
           },
           {
-            "file": "apps/makewith/vercel/app/clone.api.js",
-            "hash": "15603612348504006900"
-          },
-          {
             "file": "apps/makewith/vercel/app/globals.css",
-            "hash": "3898510515158643826"
+            "hash": "10284381491581124434"
           },
           {
             "file": "apps/makewith/vercel/app/layout.tsx",
@@ -4644,7 +4629,7 @@
           },
           {
             "file": "apps/makewith/vercel/components/chat-list.tsx",
-            "hash": "6209780318863991859",
+            "hash": "6587991950829702111",
             "dependencies": [
               {
                 "source": "makewith-vercel",
@@ -4671,7 +4656,7 @@
           },
           {
             "file": "apps/makewith/vercel/components/chat-message.tsx",
-            "hash": "1195757789135782397",
+            "hash": "4903522837638506397",
             "dependencies": [
               {
                 "source": "makewith-vercel",
@@ -4692,7 +4677,7 @@
           },
           {
             "file": "apps/makewith/vercel/components/chat-panel.tsx",
-            "hash": "7970420693454573649",
+            "hash": "12999267680935109457",
             "dependencies": [
               {
                 "source": "makewith-vercel",
@@ -4702,6 +4687,11 @@
               {
                 "source": "makewith-vercel",
                 "target": "npm:next-auth",
+                "type": "static"
+              },
+              {
+                "source": "makewith-vercel",
+                "target": "npm:react",
                 "type": "static"
               }
             ]
@@ -4724,7 +4714,7 @@
           },
           {
             "file": "apps/makewith/vercel/components/chat.tsx",
-            "hash": "1729827761099050459",
+            "hash": "17471186345944783808",
             "dependencies": [
               {
                 "source": "makewith-vercel",
@@ -4771,7 +4761,7 @@
           },
           {
             "file": "apps/makewith/vercel/components/clone-header.tsx",
-            "hash": "511354822208303879",
+            "hash": "4919918815624570937",
             "dependencies": [
               {
                 "source": "makewith-vercel",
@@ -4890,7 +4880,7 @@
           },
           {
             "file": "apps/makewith/vercel/components/prompt-form.tsx",
-            "hash": "3307318848637956741",
+            "hash": "5003277518232952191",
             "dependencies": [
               {
                 "source": "makewith-vercel",
@@ -5270,7 +5260,7 @@
           },
           {
             "file": "apps/makewith/vercel/components/video-player.tsx",
-            "hash": "15828869758579751609",
+            "hash": "15856271463081963574",
             "dependencies": [
               {
                 "source": "makewith-vercel",
@@ -5281,7 +5271,7 @@
           },
           {
             "file": "apps/makewith/vercel/components/video-provider.tsx",
-            "hash": "16485541777427745338",
+            "hash": "5671502439591304827",
             "dependencies": [
               {
                 "source": "makewith-vercel",

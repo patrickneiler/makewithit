@@ -37,14 +37,13 @@ export function Chat({ id, initialMessages, className, session }: ChatProps) {
     'ai-token',
     null
   )
-  const { video, uploadVideo, currentVideo } = useVideoContext();
-  const handleUpload = async (script: string) => {
-    await uploadVideo(script);
+  const { requestVideo, nextVideo, setLoading, isLoading } = useVideoContext();
+  const handleVideoRequest = async (script: string) => {
+    await requestVideo(script);
   };
-  const [loading, setLoading] = useState();
   const [previewTokenDialog, setPreviewTokenDialog] = useState(IS_PREVIEW)
   const [previewTokenInput, setPreviewTokenInput] = useState(previewToken ?? '')
-  const { messages, append, reload, stop, isLoading, input, setInput } =
+  const { messages, append, reload, stop, input, setInput } =
     useChat({
       initialMessages,
       id,
@@ -53,12 +52,13 @@ export function Chat({ id, initialMessages, className, session }: ChatProps) {
         previewToken
       },
       onResponse(response) {
+        setLoading(true);
         if (response.status === 401) {
           toast.error(response.statusText)
         }
       },
       onFinish(message) {
-        handleUpload(message.content)
+        handleVideoRequest(message.content)
       },
     });
   const name = session?.user?.name;
@@ -69,10 +69,10 @@ export function Chat({ id, initialMessages, className, session }: ChatProps) {
   return (
     <>
       <CloneHeader isLoading={isLoading} />
-      <div className={cn('pb-[160px] pt-32', className)}>
-        {messages.length && (console.log(messages), (
+      <div className={cn('pb-[200px] pt-32', className)}>
+        {messages.length && (
           <>
-            <ChatList isLoading={messages.length > 1 && !currentVideo?.result_url ? true : false} mods={mods} messages={messages} />
+            <ChatList isLoading={isLoading} mods={mods} messages={messages} />
             {
               messages.length <= 1 && (
                 <div className="relative  ml-8 md:mx-auto max-w-2xl px-4">
@@ -82,7 +82,7 @@ export function Chat({ id, initialMessages, className, session }: ChatProps) {
             }
             <ChatScrollAnchor trackVisibility={isLoading} />
           </>
-        ))}
+        )}
       </div>
       <ChatPanel
         id={id}

@@ -14,16 +14,14 @@ interface CloneHeaderProps {
 export function CloneHeader({
   isLoading
 }: CloneHeaderProps) {
-  const { video, fetchVideoStatus, currentVideo, nextVideo, completedVideo } = useVideoContext();
+  const { nextVideo, getVideo } = useVideoContext();
   const handleFetch = async (id: string) => {
-    await fetchVideoStatus(id);
+    await getVideo(id);
   }
   React.useEffect(() => {
     if (nextVideo) {
       if (!nextVideo.result_url) {
         handleFetch(nextVideo.id);
-      } else {
-        completedVideo(nextVideo)
       }
     }
   }, [nextVideo])
@@ -50,7 +48,7 @@ export function CloneHeader({
 
       <div className='flex align-center justify-center w-full mt-4 md:-mt-8 max-w-2xl'>
         <div className="-mt-4 translate-y-4">
-          <VideoPlayer source={currentVideo?.result_url || INTRO_VIDEO} />
+          <VideoPlayer />
         </div>
 
       </div>

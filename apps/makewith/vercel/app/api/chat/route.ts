@@ -1,5 +1,5 @@
 import { kv } from '@vercel/kv'
-import { Message, OpenAIStream, StreamingTextResponse } from 'ai'
+import { Message, OpenAIStream, StreamingTextResponse, createEventStreamTransformer } from 'ai'
 import { Configuration, OpenAIApi } from 'openai-edge'
 
 import { auth } from '../../../auth'
@@ -188,7 +188,6 @@ export async function POST(req: Request) {
 
   const stream = OpenAIStream(res, {
     async onCompletion(completion) {
-      console.log(messages);
       const title = json.messages[0].content.substring(0, 100)
       const userId = session?.user?.id
       if (userId) {
