@@ -4558,7 +4558,14 @@
           },
           {
             "file": "apps/makewith/vercel/app/page.tsx",
-            "hash": "13149893668425707591"
+            "hash": "11955367636014648936",
+            "dependencies": [
+              {
+                "source": "makewith-vercel",
+                "target": "npm:next-auth",
+                "type": "static"
+              }
+            ]
           },
           {
             "file": "apps/makewith/vercel/app/sign-in/page.tsx",

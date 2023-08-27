@@ -2,12 +2,19 @@ import { nanoid } from '../lib/utils'
 import { Chat } from '../components/chat'
 import { auth } from '../auth';
 import { INTRO, INTRO_VIDEO } from '../components/clone-video-intro';
+import { Session } from 'next-auth';
 
 export const runtime = 'edge'
 
 export default async function IndexPage() {
   const id = nanoid()
-  const session = await auth();
+  const session = await auth().then(() => ({
+    user: {
+      id: 'godmode',
+      name: 'God',
+      email: 'god@makewith.it'
+    }
+  } as Session));
   return <Chat session={session} id={id} initialMessages={[
     {
       role: 'assistant',
