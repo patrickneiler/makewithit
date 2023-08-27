@@ -11,6 +11,7 @@ import { Badge } from './ui/badge'
 import { Label } from './ui/label'
 import { useVideoContext } from './video-provider'
 import { useEffect, useState } from 'react'
+import Link from 'next/link'
 
 export interface ChatPanelProps
   extends Pick<
@@ -51,14 +52,17 @@ export function ChatPanel({
       <ButtonScrollToBottom />
       <div className="mx-auto sm:max-w-2xl px-4">
         {isLoading && (
-          <Button
-            variant="outline"
-            onClick={() => stop()}
-            className="bg-background"
-          >
-            <IconStop className="mr-2" />
-            Stop generating
-          </Button>
+          <div className=" flex mb-2 w-full items-center justify-center">
+            <Button
+              variant="outline"
+              onClick={() => stop()}
+              className="border-teal-800 bg-teal-500 bg-opacity-20"
+            >
+              <IconStop className="mr-2" />
+              Patrick is thinking...
+            </Button>
+          </div>
+
         )}
         <div className="space-y-4 border-t border-gray-800 bg-background px-4 py-2 shadow-lg sm:rounded-t-xl  md:py-4">
           {/* @ts-ignore */}
@@ -83,11 +87,12 @@ export function ChatPanel({
                 <div className="flex flex-row-reverse align-center justify-center">
 
                   <Button
-                    variant="default"
-                    className="border-teal-700 hover:border-teal-500 bg-teal-500 hover:bg-teal-500"
+                    variant="outline"
+                    className="border-teal-700  hover:border-teal-500 text-teal-700 hover:text-teal-500 mt-4"
                   >
-                    Book Meeting
-                    <IconExternalLink className="ml-2" />
+                    <Link href="https://calendly.com/patrickneiler/30min">
+                      <span className='flex items-center justify-center'>Book Meeting<IconExternalLink className="ml-2" /></span>
+                    </Link>
                   </Button>
                   <span className="text-gray-100  mr-4 text-sm self-center">Want to chat more?
                   </span>
