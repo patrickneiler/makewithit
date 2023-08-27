@@ -6,7 +6,6 @@ import { Session } from "@auth/core/types"
 import { cn } from '../lib/utils'
 import { ChatList } from './chat-list'
 import { ChatPanel } from './chat-panel'
-import { EmptyScreen } from './empty-screen'
 import { ChatScrollAnchor } from './chat-scroll-anchor'
 import { useLocalStorage } from '../lib/hooks/use-local-storage'
 import {
@@ -21,8 +20,12 @@ import { useState } from 'react'
 import { Button } from './ui/button'
 import { Input } from './ui/input'
 import { toast } from 'react-hot-toast'
+import { CloneHeader } from './clone-header'
+import { useVideoContext } from './video-provider'
+import { EmptyScreen } from './empty-screen'
 
 const IS_PREVIEW = process.env.VERCEL_ENV === 'preview'
+
 export interface ChatProps extends React.ComponentProps<'div'> {
   initialMessages?: Message[]
   id?: string;
@@ -34,9 +37,13 @@ export function Chat({ id, initialMessages, className, session }: ChatProps) {
     'ai-token',
     null
   )
+  const { requestVideo, nextVideo, setLoading, isLoading } = useVideoContext();
+  const handleVideoRequest = async (script: string) => {
+    await requestVideo(script);
+  };
   const [previewTokenDialog, setPreviewTokenDialog] = useState(IS_PREVIEW)
   const [previewTokenInput, setPreviewTokenInput] = useState(previewToken ?? '')
-  const { messages, append, reload, stop, isLoading, input, setInput } =
+  const { messages, append, reload, stop, input, setInput } =
     useChat({
       initialMessages,
       id,
@@ -45,10 +52,14 @@ export function Chat({ id, initialMessages, className, session }: ChatProps) {
         previewToken
       },
       onResponse(response) {
+        setLoading(true);
         if (response.status === 401) {
           toast.error(response.statusText)
         }
-      }
+      },
+      onFinish(message) {
+        handleVideoRequest(message.content)
+      },
     });
   const name = session?.user?.name;
   const mods = {
@@ -57,14 +68,20 @@ export function Chat({ id, initialMessages, className, session }: ChatProps) {
   }
   return (
     <>
-      <div className={cn('pb-[200px] pt-4 md:pt-10', className)}>
-        {messages.length ? (
+      <CloneHeader isLoading={isLoading} />
+      <div className={cn('pb-[200px] pt-32', className)}>
+        {messages.length && (
           <>
-            <ChatList mods={mods} messages={messages} />
+            <ChatList isLoading={isLoading} mods={mods} messages={messages} />
+            {
+              messages.length <= 1 && (
+                <div className="relative  ml-8 md:mx-auto max-w-2xl px-4">
+                  <EmptyScreen setInput={setInput} id={id} />
+                </div>
+              )
+            }
             <ChatScrollAnchor trackVisibility={isLoading} />
           </>
-        ) : (
-          <EmptyScreen setInput={setInput} />
         )}
       </div>
       <ChatPanel
@@ -76,7 +93,6 @@ export function Chat({ id, initialMessages, className, session }: ChatProps) {
         messages={messages}
         input={input}
         setInput={setInput}
-        session={session}
       />
 
 

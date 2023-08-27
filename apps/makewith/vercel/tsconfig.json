@@ -35,7 +35,8 @@
     "**/*.ts",
     "**/*.tsx",
     "public/*",
-    "../../../apps/makewith/vercel/.next/types/**/*.ts"
+    "../../../apps/makewith/vercel/.next/types/**/*.ts",
+    "../../../dist/apps/makewith/vercel/.next/types/**/*.ts"
   ],
   "exclude": [
     "node_modules",

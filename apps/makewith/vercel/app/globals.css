@@ -36,6 +36,41 @@
     --radius: 0.5rem;
   }
 
+  .video-loading {
+    position: relative;
+  }
+
+  .video-loading:before, .video-loading:after {
+    
+    content: '';
+    position: absolute;
+    border-radius: 100%;
+    left: -2px;
+    top: -2px;
+    background: linear-gradient(45deg, #ff2a6d, #00b6f2, #ff2a6d, #00b6f2);
+    background-size: 400%;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    z-index: -1;
+    animation: steam 20s linear infinite;
+  }
+  
+  @keyframes steam {
+    0% {
+      background-position: 0 0;
+    }
+    50% {
+      background-position: 400% 0;
+    }
+    100% {
+      background-position: 0 0;
+    }
+  }
+  
+  .video-loading:after {
+    filter: blur(30px);
+  }
+
   .dark {
     --background: 240 10% 3.9%;
     --foreground: 0 0% 98%;
@@ -74,5 +109,83 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+
+.wave-top {
+  overflow: visible;
+  transform-origin: top;
+    transform: translateY(120px) scaleY(0.1) translateX(0%);
+    position: relative;
+}
+
+.chat-typing {
+  display: block;
+  width: 54px;
+  height: 32px;
+  border-radius: 16px;
+  margin: 0 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.chat-typing .circle {
+  display: block;
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+  background-color: #8d8d8d;
+  mix-blend-mode: multiply;
+  margin: 3px;
+}
+.chat-typing .circle.scaling {
+  animation: typing 1000ms ease-in-out infinite;
+  animation-delay: 3600ms;
+}
+.chat-typing .circle.bouncing {
+  animation: bounce 1000ms ease-in-out infinite;
+  animation-delay: 3600ms;
+}
+
+.chat-typing .circle:nth-child(1) {
+  animation-delay: 0ms;
+}
+
+.chat-typing .chat-typing .circle:nth-child(2) {
+  animation-delay: 333ms;
+}
+
+.chat-typing .circle:nth-child(3) {
+  animation-delay: 666ms;
+}
+
+@keyframes typing {
+  0% {
+    transform: scale(1);
+  }
+  33% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.4);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  33% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
   }
 }

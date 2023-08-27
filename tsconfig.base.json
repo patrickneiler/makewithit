@@ -16,6 +16,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@the/data-access/job": ["libs/data-access/job/src/index.ts"],
       "@the/data-access/organization": [
         "libs/data-access/organization/src/index.ts"
       ],
@@ -25,7 +26,6 @@
         "libs/feature/react/animations/src/index.ts"
       ],
       "@the/feature/react/auth": ["libs/feature/react/auth/src/index.ts"],
-      "@the/feature/react/game": ["libs/feature/react/game/src/index.ts"],
       "@the/feature/react/icons": ["libs/feature/react/icons/src/index.ts"],
       "@the/feature/react/study": ["libs/feature/react/study/src/index.ts"],
       "@the/makewith/react/data-access": [
