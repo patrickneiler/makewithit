@@ -11,7 +11,7 @@ export interface ChatList {
     prefix: string;
     suffix: string;
   }
-  isLoading: boolean
+  isLoading?: boolean
 }
 
 export function ChatList({ messages, mods, isLoading }: ChatList) {

@@ -10,7 +10,7 @@ import { ChatMessageActions } from './chat-message-actions'
 
 export interface ChatMessageProps {
   message: Message,
-  isLoading: boolean;
+  isLoading?: boolean;
 }
 
 export function ChatMessage({ message, isLoading, ...props }: ChatMessageProps) {

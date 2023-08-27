@@ -4644,7 +4644,7 @@
           },
           {
             "file": "apps/makewith/vercel/components/chat-list.tsx",
-            "hash": "8267534199053566868",
+            "hash": "6209780318863991859",
             "dependencies": [
               {
                 "source": "makewith-vercel",
@@ -4671,7 +4671,7 @@
           },
           {
             "file": "apps/makewith/vercel/components/chat-message.tsx",
-            "hash": "17573003415804653601",
+            "hash": "1195757789135782397",
             "dependencies": [
               {
                 "source": "makewith-vercel",
@@ -5532,7 +5532,7 @@
           },
           {
             "file": "apps/makewith/vercel/tsconfig.json",
-            "hash": "16145255616062519824"
+            "hash": "13563350310426802526"
           }
         ]
       }
