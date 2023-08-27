@@ -119,12 +119,14 @@ const VideoPlayer = () => {
                         <video
                             muted
                             autoPlay
+                            playsInline
                             src={INTRO_VIDEO}
                             className={`${videoStatus === 'playing' ? 'z-20' : 'z-10'} max-w-full absolute top-0 left-0 h-full`}
                             ref={videoRef}
                         />
                         <video
                             muted
+                            playsInline
                             src={IDLE_VIDEO}
                             className={`${idleStatus === 'playing' ? 'z-20' : 'z-10'} max-w-full absolute top-0 left-0 h-ful`}
                             ref={idleRef}

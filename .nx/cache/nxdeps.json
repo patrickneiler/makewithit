@@ -4561,28 +4561,6 @@
             "hash": "13149893668425707591"
           },
           {
-            "file": "apps/makewith/vercel/app/share/[id]/opengraph-image.tsx",
-            "hash": "16203476506835868604",
-            "dependencies": [
-              {
-                "source": "makewith-vercel",
-                "target": "npm:next",
-                "type": "static"
-              }
-            ]
-          },
-          {
-            "file": "apps/makewith/vercel/app/share/[id]/page.tsx",
-            "hash": "13853234636981817433",
-            "dependencies": [
-              {
-                "source": "makewith-vercel",
-                "target": "npm:next",
-                "type": "static"
-              }
-            ]
-          },
-          {
             "file": "apps/makewith/vercel/app/sign-in/page.tsx",
             "hash": "3364564489145950705",
             "dependencies": [
@@ -4607,7 +4585,7 @@
           },
           {
             "file": "apps/makewith/vercel/auth.ts",
-            "hash": "18250642460575924375",
+            "hash": "17608446537969740047",
             "dependencies": [
               {
                 "source": "makewith-vercel",
@@ -4677,7 +4655,7 @@
           },
           {
             "file": "apps/makewith/vercel/components/chat-panel.tsx",
-            "hash": "12999267680935109457",
+            "hash": "367205845437752399",
             "dependencies": [
               {
                 "source": "makewith-vercel",
@@ -4692,6 +4670,11 @@
               {
                 "source": "makewith-vercel",
                 "target": "npm:react",
+                "type": "static"
+              },
+              {
+                "source": "makewith-vercel",
+                "target": "npm:next",
                 "type": "static"
               }
             ]
@@ -4714,7 +4697,7 @@
           },
           {
             "file": "apps/makewith/vercel/components/chat.tsx",
-            "hash": "17471186345944783808",
+            "hash": "7149129678988852547",
             "dependencies": [
               {
                 "source": "makewith-vercel",
@@ -4761,7 +4744,7 @@
           },
           {
             "file": "apps/makewith/vercel/components/clone-header.tsx",
-            "hash": "4919918815624570937",
+            "hash": "529043286224762961",
             "dependencies": [
               {
                 "source": "makewith-vercel",
@@ -4771,6 +4754,11 @@
               {
                 "source": "makewith-vercel",
                 "target": "makewith-react-feature-footer",
+                "type": "static"
+              },
+              {
+                "source": "makewith-vercel",
+                "target": "npm:next",
                 "type": "static"
               }
             ]
@@ -5260,7 +5248,7 @@
           },
           {
             "file": "apps/makewith/vercel/components/video-player.tsx",
-            "hash": "15856271463081963574",
+            "hash": "11332940700622412527",
             "dependencies": [
               {
                 "source": "makewith-vercel",
