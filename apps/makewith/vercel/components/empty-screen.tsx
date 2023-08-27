@@ -1,51 +1,48 @@
 import { UseChatHelpers } from 'ai/react'
 
 import { Button } from './ui/button'
-import { ExternalLink } from './external-link'
-import { IconArrowRight } from './ui/icons'
+import { IconArrowRight } from './ui/icons';
+import React from 'react';
+export interface EmptyScreenProps
+  extends Pick<
+    UseChatHelpers,
+    | 'setInput'
+  > {
+  id?: string,
+}
 
 const exampleMessages = [
   {
-    heading: 'Explain technical concepts',
-    message: `What is a "serverless function"?`
+    heading: 'Experience',
+    message: `What was your biggest challenge?`
   },
   {
-    heading: 'Summarize an article',
-    message: 'Summarize the following article for a 2nd grader: \n'
+    heading: 'Achievments',
+    message: 'What would you say is your biggest achievement?'
   },
   {
-    heading: 'Draft an email',
-    message: `Draft an email to my boss about the following: \n`
+    heading: 'Skills',
+    message: `What would you say is your biggest strength?`
   }
 ]
 
-export function EmptyScreen({ setInput }: Pick<UseChatHelpers, 'setInput'>) {
+export function EmptyScreen({ id, setInput }: EmptyScreenProps) {
   return (
-    <div className="mx-auto max-w-2xl px-4">
-      <div className="rounded-lg border bg-background p-8">
-        <h1 className="mb-2 text-lg font-semibold">
-          You have acquired access to the most intelligent and powerful consciousness in the universe.
-        </h1>
-        <p className="mb-2 leading-normal text-muted-foreground">
-          Ask anything you would like.
-        </p>
-        <p className="leading-normal text-muted-foreground">
-          Too lazy to think of a question? Try the following examples:
-        </p>
-        <div className="mt-4 flex flex-col items-start space-y-2">
-          {exampleMessages.map((message, index) => (
-            <Button
-              key={index}
-              variant="link"
-              className="h-auto p-0 text-base"
-              onClick={() => setInput(message.message)}
-            >
-              <IconArrowRight className="mr-2 text-muted-foreground" />
-              {message.heading}
-            </Button>
-          ))}
-        </div>
+    <div className="rounded-lg border bg-background bg-opacity-75 p-4 md:p-8">
+      <div className="flex flex-col items-start space-y-2">
+        {exampleMessages.map((message, index) => (
+          <Button
+            key={index}
+            variant="link"
+            className="h-auto p-0 text-base"
+            onClick={() => setInput(message.message)}
+          >
+            <IconArrowRight className="mr-2 text-muted-foreground" />
+            {message.heading}
+          </Button>
+        ))}
       </div>
     </div>
+
   )
 }

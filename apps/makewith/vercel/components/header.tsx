@@ -19,7 +19,7 @@ import { Logo } from '@the/makewith/react/feature/logo'
 export async function Header() {
   const session = await auth()
   return (
-    <header className="sticky top-0 z-50 flex items-center justify-between w-full h-18 px-4 border-b shrink-0 bg-gradient-to-b from-black-900 via-black-500 to-black-500 backdrop-blur-xl">
+    <header className="sticky top-0 z-50 flex items-center justify-between w-full h-18 px-4 border-b shrink-0">
       <Logo />
       <div className="flex items-center flex-row-reverse">
         {session?.user ? (

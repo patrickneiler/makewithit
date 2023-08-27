@@ -476,21 +476,6 @@ function IconChevronUpDown({
   )
 }
 
-function IconGoogle({
-  className,
-  ...props
-}: React.ComponentProps<'svg'>) {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      className={cn('h-4 w-4 icon icon-tabler icon-tabler-brand-google', className)}
-      viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-      <path d="M17.788 5.108a9 9 0 1 0 3.212 6.892h-8" />
-    </svg>
-  )
-}
-
 export {
   IconEdit,
   IconNextChat,
@@ -518,6 +503,5 @@ export {
   IconShare,
   IconUsers,
   IconExternalLink,
-  IconChevronUpDown,
-  IconGoogle
+  IconChevronUpDown
 }

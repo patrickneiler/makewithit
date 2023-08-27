@@ -9,6 +9,8 @@ import { TailwindIndicator } from '../components/tailwind-indicator'
 import { Providers } from '../components/providers'
 import { Header } from '../components/header'
 import { Footer } from '@the/makewith/react/feature/footer'
+import { CloneHeader } from '../components/clone-header'
+import VideoProvider, { Config } from '../components/video-provider'
 
 export const metadata: Metadata = {
   title: {
@@ -27,6 +29,11 @@ export const metadata: Metadata = {
   }
 }
 
+const config: Config = {
+  url: 'https://api.d-id.com/talks',
+  key: process.env.DID_API
+}
+
 interface RootLayoutProps {
   children: React.ReactNode
 }
@@ -37,21 +44,20 @@ export default function RootLayout({ children }: RootLayoutProps) {
       <head />
       <body
         className={cn(
-          'font-sans antialiased',
+          'font-sans antialiased bg-gray-900',
           fontSans.variable,
           fontMono.variable
         )}
       >
         <Toaster />
-        <Providers attribute="class" defaultTheme="system" enableSystem>
+        <Providers videoConfig={config} attribute="class" defaultTheme="system" enableSystem>
           <div className="flex flex-col z-20 min-h-screen">
             {/* @ts-ignore */}
-            <Header />
-            <main className="flex flex-col flex-1 bg-muted/50">{children}</main>
-            <Footer />
-
+            <main className="flex flex-col flex-1 bg-gray-900">{children}</main>
+            <div className="fixed w-full bottom-0">
+              <Footer />
+            </div>
           </div>
-
         </Providers>
       </body>
     </html>
