@@ -48,9 +48,9 @@ export function ChatPanel({
     }
   }, [messages])
   return (
-    <div className="fixed z-30 inset-x-0 bottom-0  pt-4">
+    <div className="fixed z-30 inset-x-0 bottom-0 xl:left-[520px]  pt-4">
       <ButtonScrollToBottom />
-      <div className="mx-auto sm:max-w-2xl px-4">
+      <div className="mx-auto sm:max-w-2xl px-4 ">
         {isLoading && (
           <div className=" flex mb-2 w-full items-center justify-center">
             <Button

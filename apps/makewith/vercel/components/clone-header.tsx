@@ -28,11 +28,11 @@ export function CloneHeader({
     }
   }, [nextVideo, currentVideo])
   return (
-    <header className="sticky top-0 z-50 flex h-[100px] md:h-[140px] border-b border-gray-800 flex-col items-center justify-between w-full shrink-0 bg-gradient-to-b from-gray-800 via-gray-900 to-gray-900/0 backdrop-blur-xl">
+    <header className="sticky xl:relative xl:p-32 top-0 z-50 flex h-[100px] md:h-[140px] xl:h-[100%] border-b xl:border-r xl:border-b-0 border-gray-800 flex-col items-center justify-between w-full xl:w-auto shrink-0 bg-gradient-to-b from-gray-800 via-gray-900 to-gray-900/0 backdrop-blur-xl">
       {/* <div className="absolute -mt-[120px] fill-teal-500 left-0 top-0 w-screen flex align-start justify-start pointer-events-none z-10 overflow-visible">
         <Waves />
       </div> */}
-      <div className="hidden md:flex relative z-20 items-center justify-end w-full h-18 shrink-0 max-w-6xl mx-auto px-4 sm:px-6">
+      <div className="hidden md:flex relative z-20 items-center justify-end xl:justify-center w-full h-18 shrink-0 max-w-6xl mx-auto px-4 sm:px-6">
         <Button className='hidden' onClick={() =>
           signOut({
             callbackUrl: '/'

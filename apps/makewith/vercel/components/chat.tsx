@@ -69,7 +69,7 @@ export function Chat({ id, initialMessages, className, session }: ChatProps) {
   return (
     <>
       <CloneHeader isLoading={isLoading} />
-      <div className={cn('pb-[160px] md:pb-[200px] pt-24 md:pt-32', className)}>
+      <div className={cn('pb-[160px] md:pb-[200px] pt-24 md:pt-32 xl:w-full', className)}>
         {messages.length && (
           <>
             <ChatList isLoading={isLoading} mods={mods} messages={messages} />

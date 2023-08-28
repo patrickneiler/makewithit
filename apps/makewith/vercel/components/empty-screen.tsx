@@ -13,28 +13,28 @@ export interface EmptyScreenProps
 
 const exampleMessages = [
   {
-    heading: 'Experience',
+    heading: 'What was your biggest challenge?',
     message: `What was your biggest challenge?`
   },
   {
-    heading: 'Achievments',
-    message: 'What would you say is your biggest achievement?'
+    heading: 'What was your biggest achievement?',
+    message: 'What was your biggest achievement?'
   },
   {
-    heading: 'Skills',
-    message: `What would you say is your biggest strength?`
+    heading: 'What is your biggest strength?',
+    message: `What is your biggest strength?`
   }
 ]
 
 export function EmptyScreen({ id, setInput }: EmptyScreenProps) {
   return (
-    <div className="rounded-lg border bg-background bg-opacity-75 p-4 md:p-8">
+    <div className="rounded-lg  flex flex-grow-0 p-4 md:p-2">
       <div className="flex flex-col items-start space-y-2">
         {exampleMessages.map((message, index) => (
           <Button
             key={index}
             variant="link"
-            className="h-auto p-0 text-base"
+            className="h-auto p-0 text-base text-teal-400"
             onClick={() => setInput(message.message)}
           >
             <IconArrowRight className="mr-2 text-muted-foreground" />
