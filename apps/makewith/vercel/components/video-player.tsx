@@ -126,7 +126,7 @@ const VideoPlayer = () => {
 
                         <>
                             <video
-                                muted
+                                muted={true}
                                 playsInline
                                 autoPlay
                                 src={INTRO_VIDEO}
