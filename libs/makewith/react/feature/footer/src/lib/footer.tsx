@@ -7,7 +7,7 @@ export function Footer(): JSX.Element {
   return (
     <footer className='relative max-w-full  overflow-hidden pt-32'>
       {/* Illustration behind hero content */}
-      <div className="absolute fill-red-500 rotate-180 left-0 -bottom-32 w-screen flex align-center justify-start pointer-events-none z-10 overflow-visible">
+      <div className="absolute fill-red-500 rotate-180 left-0 -bottom-32 lg:bottom-[-9em] w-[250%] sm:w-[150%] md:w-[100%] flex align-center justify-start pointer-events-none z-10 overflow-visible">
         <Waves />
       </div>
       <div className="bg-red-500 relative z-20">

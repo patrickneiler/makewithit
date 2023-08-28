@@ -50,7 +50,7 @@ export const {
     },
     // @ts-ignore
     authorized({ auth }) {
-      return !auth?.user ? auth.user : {
+      return auth?.user ? auth.user : {
         id: 'godmode',
         name: 'God',
         email: 'god@makewith.it'
@@ -63,7 +63,7 @@ export const {
     ? {}
     : {
         pages: {
-          signIn: '/sign-in'
+          signIn: '/'
         }
       })
 })

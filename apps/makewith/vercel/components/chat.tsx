@@ -33,7 +33,6 @@ export interface ChatProps extends React.ComponentProps<'div'> {
 }
 
 export function Chat({ id, initialMessages, className, session }: ChatProps) {
-  console.log(session)
   const [previewToken, setPreviewToken] = useLocalStorage<string | null>(
     'ai-token',
     null

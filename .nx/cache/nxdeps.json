@@ -257,7 +257,7 @@
           },
           {
             "file": "libs/makewith/react/feature/footer/src/lib/footer.tsx",
-            "hash": "16332807415511642083",
+            "hash": "13255871810448877612",
             "dependencies": [
               {
                 "source": "makewith-react-feature-footer",
@@ -4592,7 +4592,7 @@
           },
           {
             "file": "apps/makewith/vercel/auth.ts",
-            "hash": "17608446537969740047",
+            "hash": "17368443746780980922",
             "dependencies": [
               {
                 "source": "makewith-vercel",
@@ -4704,7 +4704,7 @@
           },
           {
             "file": "apps/makewith/vercel/components/chat.tsx",
-            "hash": "7149129678988852547",
+            "hash": "4325176973743665814",
             "dependencies": [
               {
                 "source": "makewith-vercel",
@@ -4751,7 +4751,7 @@
           },
           {
             "file": "apps/makewith/vercel/components/clone-header.tsx",
-            "hash": "529043286224762961",
+            "hash": "13535114689725006902",
             "dependencies": [
               {
                 "source": "makewith-vercel",
@@ -4766,6 +4766,11 @@
               {
                 "source": "makewith-vercel",
                 "target": "npm:next",
+                "type": "static"
+              },
+              {
+                "source": "makewith-vercel",
+                "target": "npm:next-auth",
                 "type": "static"
               }
             ]

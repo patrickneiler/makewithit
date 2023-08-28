@@ -7,6 +7,7 @@ import { IconExternalLink } from './ui/icons';
 import { Badge } from './ui/badge';
 import Waves from 'libs/makewith/react/feature/footer/src/lib/waves';
 import Link from 'next/link';
+import { signOut } from 'next-auth/react';
 
 interface CloneHeaderProps {
   isLoading: boolean
@@ -32,7 +33,12 @@ export function CloneHeader({
         <Waves />
       </div> */}
       <div className="hidden md:flex relative z-20 items-center justify-end w-full h-18 shrink-0 max-w-6xl mx-auto px-4 sm:px-6">
-
+        <Button className='hidden' onClick={() =>
+          signOut({
+            callbackUrl: '/'
+          })}>
+          Sign Out
+        </Button>
         <div className="flex flex-col align-center justify-center">
 
           <Button
@@ -43,7 +49,7 @@ export function CloneHeader({
               <span className='flex items-center justify-center'>Book Meeting<IconExternalLink className="ml-2" /></span>
             </Link>
           </Button>
-          <span className="text-gray-300 translate-y-1 text-xs self-center">w/ Real Patrick
+          <span className="text-gray-300 translate-y- text-xs self-center">w/ Real Patrick
           </span>
         </div>
       </div>
