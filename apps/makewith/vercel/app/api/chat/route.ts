@@ -6,6 +6,7 @@ import { auth } from '../../../auth'
 import { nanoid } from '../../../lib/utils'
 import { INTRO_PROMPT } from 'apps/makewith/vercel/components/clone-video-intro'
 import { ChatCompletionRequestMessage, CreateChatCompletionRequest } from 'openai-edge/types/types/chat'
+import { Session } from 'next-auth'
 
 export const runtime = 'edge';
 
@@ -20,7 +21,15 @@ const openai = new OpenAIApi(configuration);
 export async function POST(req: Request) {
   const json = await req.json()
   const { messages, previewToken } = json
-  const session = await auth();
+  const authSession = await auth();
+  const session: Session = authSession?.user ? authSession : {
+    ...authSession,
+    user: {
+      id: 'godmode',
+      name: 'God',
+      email: 'god@makewith.it'
+    }
+  }
 
   if (session == null) {
     return new Response('Unauthorized', {

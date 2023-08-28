@@ -4497,7 +4497,7 @@
           },
           {
             "file": "apps/makewith/vercel/app/api/chat/route.ts",
-            "hash": "7281498358800891789",
+            "hash": "15212147868029833694",
             "dependencies": [
               {
                 "source": "makewith-vercel",
@@ -4512,6 +4512,11 @@
               {
                 "source": "makewith-vercel",
                 "target": "npm:openai-edge",
+                "type": "static"
+              },
+              {
+                "source": "makewith-vercel",
+                "target": "npm:next-auth",
                 "type": "static"
               }
             ]
@@ -9622,17 +9627,17 @@
       },
       {
         "source": "makewith-vercel",
+        "target": "npm:next-auth",
+        "type": "static"
+      },
+      {
+        "source": "makewith-vercel",
         "target": "npm:react-hot-toast",
         "type": "static"
       },
       {
         "source": "makewith-vercel",
         "target": "makewith-react-feature-footer",
-        "type": "static"
-      },
-      {
-        "source": "makewith-vercel",
-        "target": "npm:next-auth",
         "type": "static"
       },
       {
