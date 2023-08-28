@@ -51,9 +51,9 @@ export default function RootLayout({ children }: RootLayoutProps) {
       >
         <Toaster />
         <Providers videoConfig={config} attribute="class" defaultTheme="system" enableSystem>
-          <div className="flex flex-col z-20 min-h-screen">
+          <div className="flex z-20 min-h-screen">
             {/* @ts-ignore */}
-            <main className="flex flex-col flex-1 bg-gray-900">{children}</main>
+            <main className="flex flex-col xl:flex-row flex-1 bg-gray-900">{children}</main>
             <div className="fixed w-full bottom-0">
               <Footer />
             </div>
