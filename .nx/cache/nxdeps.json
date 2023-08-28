@@ -4751,7 +4751,7 @@
           },
           {
             "file": "apps/makewith/vercel/components/clone-header.tsx",
-            "hash": "13535114689725006902",
+            "hash": "8731343066642316763",
             "dependencies": [
               {
                 "source": "makewith-vercel",
@@ -5260,7 +5260,7 @@
           },
           {
             "file": "apps/makewith/vercel/components/video-player.tsx",
-            "hash": "11332940700622412527",
+            "hash": "14341531717544220302",
             "dependencies": [
               {
                 "source": "makewith-vercel",
@@ -5271,7 +5271,7 @@
           },
           {
             "file": "apps/makewith/vercel/components/video-provider.tsx",
-            "hash": "5671502439591304827",
+            "hash": "1267317110379890305",
             "dependencies": [
               {
                 "source": "makewith-vercel",

@@ -16,7 +16,7 @@ interface CloneHeaderProps {
 export function CloneHeader({
   isLoading
 }: CloneHeaderProps) {
-  const { nextVideo, getVideo } = useVideoContext();
+  const { nextVideo, getVideo, currentVideo, changeVideo } = useVideoContext();
   const handleFetch = async (id: string) => {
     await getVideo(id);
   }
@@ -26,7 +26,7 @@ export function CloneHeader({
         handleFetch(nextVideo.id);
       }
     }
-  }, [nextVideo])
+  }, [nextVideo, currentVideo])
   return (
     <header className="sticky top-0 z-50 flex h-[100px] md:h-[140px] border-b border-gray-800 flex-col items-center justify-between w-full shrink-0 bg-gradient-to-b from-gray-800 via-gray-900 to-gray-900/0 backdrop-blur-xl">
       {/* <div className="absolute -mt-[120px] fill-teal-500 left-0 top-0 w-screen flex align-start justify-start pointer-events-none z-10 overflow-visible">
@@ -56,7 +56,9 @@ export function CloneHeader({
 
       <div className='flex align-center justify-center w-full mt-4 md:-mt-8 max-w-2xl'>
         <div className="-mt-4 translate-y-4">
+
           <VideoPlayer />
+
         </div>
 
       </div>

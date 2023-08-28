@@ -16,6 +16,7 @@ export interface Config {
 interface VideoContextValue {
     currentVideo: Video | null;
     nextVideo: Video | null;
+    changeVideo: (video: Video) => Promise<void>;
     requestVideo: (script: string) => Promise<void>;
     getVideo: (id: string) => Promise<void>;
     setLoading: (id: boolean) => void;
@@ -89,6 +90,10 @@ const VideoProvider: React.FC<VideoProviderProps> = ({ children, config }) => {
         setIsLoading(id);
     })
 
+    const changeVideo = (async (video: Video) => {
+        await setCurrentVideo(video);
+    })
+
     const getVideo = useCallback(async (id: string) => {
         try {
             let status = '';
@@ -139,7 +144,8 @@ const VideoProvider: React.FC<VideoProviderProps> = ({ children, config }) => {
         nextVideo,
         prepareNextVideo,
         setLoading,
-        isLoading
+        isLoading,
+        changeVideo
     };
 
     return (
