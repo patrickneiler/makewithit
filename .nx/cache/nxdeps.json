@@ -5265,7 +5265,7 @@
           },
           {
             "file": "apps/makewith/vercel/components/video-player.tsx",
-            "hash": "12193026522705268220",
+            "hash": "626718566458700124",
             "dependencies": [
               {
                 "source": "makewith-vercel",
