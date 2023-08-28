@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Button } from './ui/button';
 import { useVideoContext } from './video-provider';
 
-export type VideoStatus = 'ready' | 'playing' | 'ended';
+export type VideoStatus = 'ready' | 'playing' | 'ended' | 'init';
 
 export const IDLE_VIDEO = `https://firebasestorage.googleapis.com/v0/b/make-with-it-firebase.appspot.com/o/1692610172142.mp4?alt=media&token=bf8a6c58-19e3-4fa2-b95b-e93f9cec1b0f`
 export const INTRO_VIDEO = `https://firebasestorage.googleapis.com/v0/b/make-with-it-firebase.appspot.com/o/intro.mp4?alt=media&token=ac5d4c3c-1b5b-4711-99cf-83e4d607369a`
@@ -10,18 +10,21 @@ export const THINKING_VIDEO = 'https://firebasestorage.googleapis.com/v0/b/make-
 
 
 export const useVideoPlayer = () => {
-    const [src, setSrc] = useState<string>(INTRO_VIDEO);
+    const [src, setSrc] = useState<string | null>(INTRO_VIDEO);
     const [muted, setMuted] = useState<boolean | null>(true);
     const videoRef = useRef<HTMLVideoElement | null>(null);
     const idleRef = useRef<HTMLVideoElement | null>(null);
     const [videoStatus, setVideoStatus] = useState<VideoStatus | null>('playing');
-    const [idleStatus, setIdleStatus] = useState<VideoStatus | null>('ended');
+    const [idleStatus, setIdleStatus] = useState<VideoStatus | null>('init');
     const { currentVideo, nextVideo, isLoading } = useVideoContext();
 
     useEffect(() => {
         const videoElement = videoRef.current;
         const idleElement = idleRef.current;
         if (videoElement) {
+            // if (currentVideo && (currentVideo?.result_url !== src) && videoStatus === 'playing') {
+            //     videoElement.load()
+            // }
             if (currentVideo && (currentVideo?.result_url !== src)) {
                 if (currentVideo.result_url) {
                     setSrc(currentVideo.result_url);
@@ -32,16 +35,12 @@ export const useVideoPlayer = () => {
 
         const handleVideoEnd = () => {
             if (videoElement && idleElement) {
-                videoElement.autoplay = false;
                 idleElement.play();
                 setVideoStatus('ended');
                 setIdleStatus('playing');
             }
         };
         const handleIdleEnd = () => {
-            if (idleElement) {
-                idleElement.autoplay = false;
-            }
             if (videoStatus === 'ready') {
                 videoElement?.play();
                 setVideoStatus('playing');
@@ -53,6 +52,14 @@ export const useVideoPlayer = () => {
         };
 
         const handleCanPlay = () => {
+            console.log(videoStatus)
+
+            if (videoStatus === 'init') {
+                videoElement?.play();
+                setVideoStatus('playing');
+                console.log(videoStatus)
+
+            }
             setVideoStatus('ready');
         };
 
@@ -63,6 +70,7 @@ export const useVideoPlayer = () => {
                     videoElement.currentTime = 0;
                 }
                 videoElement?.removeEventListener('ended', handleVideoEnd);
+                videoElement?.addEventListener('canplay', handleCanPlay);
                 videoElement?.removeEventListener('loadedmetadata', handleVideoChange);
 
                 videoElement.load();
@@ -99,7 +107,7 @@ export const useVideoPlayer = () => {
         }
     };
 
-    return { videoRef, idleRef, changeVideo, changeMute, muted, videoStatus, idleStatus, isLoading };
+    return { videoRef, idleRef, changeVideo, changeMute, muted, videoStatus, idleStatus, isLoading, currentVideo };
 };
 
 export interface VideoPlayerProps {
@@ -107,7 +115,7 @@ export interface VideoPlayerProps {
 }
 
 const VideoPlayer = () => {
-    const { videoRef, idleRef, changeMute, muted, videoStatus, idleStatus, isLoading } = useVideoPlayer();
+    const { videoRef, idleRef, changeMute, muted, videoStatus, idleStatus, isLoading, currentVideo } = useVideoPlayer();
     return (
         <div>
             <div className='flex align-center items-start -ml-16'>
@@ -116,21 +124,26 @@ const VideoPlayer = () => {
                 </Button>
                 <div className={`${isLoading && 'video-loading'} clone-video rounded-full relative p-1 drop-shadow`}>
                     <div className={`relative rounded-full overflow-hidden  h-36 w-36 md:h-48 md:w-48 shadow-inner `}>
-                        <video
-                            muted
-                            autoPlay
-                            playsInline
-                            src={INTRO_VIDEO}
-                            className={`${videoStatus === 'playing' ? 'z-20' : 'z-10'} max-w-full absolute top-0 left-0 h-full`}
-                            ref={videoRef}
-                        />
-                        <video
-                            muted
-                            playsInline
-                            src={IDLE_VIDEO}
-                            className={`${idleStatus === 'playing' ? 'z-20' : 'z-10'} max-w-full absolute top-0 left-0 h-ful`}
-                            ref={idleRef}
-                        />
+
+
+                        <>
+                            <video
+                                muted
+                                playsInline
+                                autoPlay
+                                src={INTRO_VIDEO}
+                                className={`${videoStatus === 'playing' ? 'z-20' : 'z-10'} max-w-full absolute top-0 left-0 h-full`}
+                                ref={videoRef}
+                            />
+                            <video
+                                muted
+                                playsInline
+                                src={IDLE_VIDEO}
+                                className={`${idleStatus === 'playing' ? 'z-20' : 'z-10'} max-w-full absolute top-0 left-0 h-ful`}
+                                ref={idleRef}
+                            />
+                        </>
+
                     </div>
                 </div>
 

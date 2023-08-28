@@ -257,7 +257,7 @@
           },
           {
             "file": "libs/makewith/react/feature/footer/src/lib/footer.tsx",
-            "hash": "16332807415511642083",
+            "hash": "13255871810448877612",
             "dependencies": [
               {
                 "source": "makewith-react-feature-footer",
@@ -4558,7 +4558,14 @@
           },
           {
             "file": "apps/makewith/vercel/app/page.tsx",
-            "hash": "13149893668425707591"
+            "hash": "11955367636014648936",
+            "dependencies": [
+              {
+                "source": "makewith-vercel",
+                "target": "npm:next-auth",
+                "type": "static"
+              }
+            ]
           },
           {
             "file": "apps/makewith/vercel/app/sign-in/page.tsx",
@@ -4585,7 +4592,7 @@
           },
           {
             "file": "apps/makewith/vercel/auth.ts",
-            "hash": "17608446537969740047",
+            "hash": "17368443746780980922",
             "dependencies": [
               {
                 "source": "makewith-vercel",
@@ -4697,7 +4704,7 @@
           },
           {
             "file": "apps/makewith/vercel/components/chat.tsx",
-            "hash": "7149129678988852547",
+            "hash": "4325176973743665814",
             "dependencies": [
               {
                 "source": "makewith-vercel",
@@ -4744,7 +4751,7 @@
           },
           {
             "file": "apps/makewith/vercel/components/clone-header.tsx",
-            "hash": "529043286224762961",
+            "hash": "8731343066642316763",
             "dependencies": [
               {
                 "source": "makewith-vercel",
@@ -4759,6 +4766,11 @@
               {
                 "source": "makewith-vercel",
                 "target": "npm:next",
+                "type": "static"
+              },
+              {
+                "source": "makewith-vercel",
+                "target": "npm:next-auth",
                 "type": "static"
               }
             ]
@@ -5248,7 +5260,7 @@
           },
           {
             "file": "apps/makewith/vercel/components/video-player.tsx",
-            "hash": "11332940700622412527",
+            "hash": "14341531717544220302",
             "dependencies": [
               {
                 "source": "makewith-vercel",
@@ -5259,7 +5271,7 @@
           },
           {
             "file": "apps/makewith/vercel/components/video-provider.tsx",
-            "hash": "5671502439591304827",
+            "hash": "1267317110379890305",
             "dependencies": [
               {
                 "source": "makewith-vercel",
