@@ -29,16 +29,16 @@ const exampleMessages = [
 export function EmptyScreen({ id, setInput }: EmptyScreenProps) {
   return (
     <div className="rounded-lg  flex flex-grow-0 p-4 md:p-2">
-      <div className="flex flex-col items-start space-y-2">
+      <div className="flex flex-col items-start justify-start space-y-2">
         {exampleMessages.map((message, index) => (
           <Button
             key={index}
             variant="link"
-            className="h-auto p-0 text-base text-teal-400"
+            className="h-auto p-0 text-base w-auto flex-grow-0 text-teal-400 justify-start"
             onClick={() => setInput(message.message)}
           >
             <IconArrowRight className="mr-2 text-muted-foreground" />
-            {message.heading}
+            <span className="inline-flex justify-start align-start text-start">{message.heading}</span>
           </Button>
         ))}
       </div>
