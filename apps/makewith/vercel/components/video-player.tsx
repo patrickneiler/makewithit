@@ -14,7 +14,7 @@ export const useVideoPlayer = () => {
     const [muted, setMuted] = useState<boolean | null>(true);
     const videoRef = useRef<HTMLVideoElement | null>(null);
     const idleRef = useRef<HTMLVideoElement | null>(null);
-    const [videoStatus, setVideoStatus] = useState<VideoStatus | null>('playing');
+    const [videoStatus, setVideoStatus] = useState<VideoStatus | null>('init');
     const [idleStatus, setIdleStatus] = useState<VideoStatus | null>('init');
     const { currentVideo, nextVideo, isLoading } = useVideoContext();
 
@@ -52,8 +52,6 @@ export const useVideoPlayer = () => {
         };
 
         const handleCanPlay = () => {
-            console.log(videoStatus)
-
             if (videoStatus === 'init') {
                 videoElement?.play();
                 setVideoStatus('playing');
@@ -132,7 +130,7 @@ const VideoPlayer = () => {
                                 playsInline
                                 autoPlay
                                 src={INTRO_VIDEO}
-                                className={`${videoStatus === 'playing' ? 'z-20' : 'z-10'} max-w-full absolute top-0 left-0 h-full`}
+                                className={`${videoStatus === 'playing' || 'init' ? 'z-20' : 'z-10'} max-w-full absolute top-0 left-0 h-full`}
                                 ref={videoRef}
                             />
                             <video
