@@ -43,8 +43,9 @@ export const useVideoPlayer = () => {
         const handleIdleEnd = () => {
             if (videoStatus === 'ready') {
                 videoElement?.play();
-                setVideoStatus('playing');
                 setIdleStatus('ended');
+                setVideoStatus('playing');
+
             } else {
                 idleElement?.play();
                 setIdleStatus('playing');
@@ -55,7 +56,6 @@ export const useVideoPlayer = () => {
             if (videoStatus === 'init') {
                 videoElement?.play();
                 setVideoStatus('playing');
-                console.log(videoStatus)
 
             }
             setVideoStatus('ready');
