@@ -4756,7 +4756,7 @@
           },
           {
             "file": "apps/makewith/vercel/components/clone-header.tsx",
-            "hash": "11814720407415280574",
+            "hash": "9685906932370164686",
             "dependencies": [
               {
                 "source": "makewith-vercel",

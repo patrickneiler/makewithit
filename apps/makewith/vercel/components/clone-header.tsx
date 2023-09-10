@@ -49,7 +49,7 @@ export function CloneHeader({
             variant="outline"
             className="border-teal-700 translate-x-4 md:translate-x-0 scale-75 md:scale-100  hover:border-teal-500 text-teal-700 hover:text-teal-500 mt-4"
           >
-            <Link href="https://calendly.com/patrickneiler/30min">
+            <Link href="mailto:patrick@makewith.it">
               <span className='flex items-center justify-center'>Book Meeting<IconExternalLink className="ml-2 hidden md:inline-flex" /></span>
             </Link>
           </Button>
