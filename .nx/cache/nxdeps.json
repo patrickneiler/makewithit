@@ -4538,7 +4538,7 @@
           },
           {
             "file": "apps/makewith/vercel/app/layout.tsx",
-            "hash": "6038421399969612984",
+            "hash": "14471153330092506704",
             "dependencies": [
               {
                 "source": "makewith-vercel",
@@ -4667,7 +4667,7 @@
           },
           {
             "file": "apps/makewith/vercel/components/chat-panel.tsx",
-            "hash": "313597380015769329",
+            "hash": "18312638682414607484",
             "dependencies": [
               {
                 "source": "makewith-vercel",
@@ -4709,7 +4709,7 @@
           },
           {
             "file": "apps/makewith/vercel/components/chat.tsx",
-            "hash": "18176705382516286103",
+            "hash": "15074152662126972214",
             "dependencies": [
               {
                 "source": "makewith-vercel",
@@ -4756,7 +4756,7 @@
           },
           {
             "file": "apps/makewith/vercel/components/clone-header.tsx",
-            "hash": "181476328119949880",
+            "hash": "9685906932370164686",
             "dependencies": [
               {
                 "source": "makewith-vercel",
@@ -4801,7 +4801,7 @@
           },
           {
             "file": "apps/makewith/vercel/components/empty-screen.tsx",
-            "hash": "16297813062370430989",
+            "hash": "11006331291391363415",
             "dependencies": [
               {
                 "source": "makewith-vercel",
@@ -5265,7 +5265,7 @@
           },
           {
             "file": "apps/makewith/vercel/components/video-player.tsx",
-            "hash": "7331581540181103368",
+            "hash": "1066110470270214381",
             "dependencies": [
               {
                 "source": "makewith-vercel",

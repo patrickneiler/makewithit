@@ -34,10 +34,10 @@ export function EmptyScreen({ id, setInput }: EmptyScreenProps) {
           <Button
             key={index}
             variant="link"
-            className="h-auto p-0 text-base w-auto flex-grow-0 text-teal-400 justify-start"
+            className="h-auto p-0 text-base w-auto flex-grow-0 text-teal-400 justify-start items-start"
             onClick={() => setInput(message.message)}
           >
-            <IconArrowRight className="mr-2 text-muted-foreground" />
+            <IconArrowRight className="mr-2  translate-y-1 text-muted-foreground" />
             <span className="inline-flex justify-start align-start text-start">{message.heading}</span>
           </Button>
         ))}

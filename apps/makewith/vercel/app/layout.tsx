@@ -14,12 +14,12 @@ import VideoProvider, { Config } from '../components/video-provider'
 
 export const metadata: Metadata = {
   title: {
-    default: 'Make With: AI Chatbot',
-    template: `%s -Make With: AI Chatbot`
+    default: 'Patrick: Cloned',
+    template: `%s - Patrick: Cloned`
   },
-  description: 'An AI-powered chatbot',
+  description: 'An AI-Powered clone of Patrick Neiler',
   themeColor: [
-    { media: '(prefers-color-scheme: light)', color: 'white' },
+    { media: '(prefers-color-scheme: light)', color: 'black' },
     { media: '(prefers-color-scheme: dark)', color: 'black' }
   ],
   icons: {

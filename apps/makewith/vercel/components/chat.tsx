@@ -37,9 +37,16 @@ export function Chat({ id, initialMessages, className, session }: ChatProps) {
     'ai-token',
     null
   )
-  const { requestVideo, nextVideo, setLoading, isLoading } = useVideoContext();
+  const { requestVideo, setLoading, isLoading } = useVideoContext();
+  const [isLocked, setIsLocked] = useState<boolean>(false);
   const handleVideoRequest = async (script: string) => {
-    await requestVideo(script);
+    const assistantMessageCount = messages?.filter(message => message.role === 'assistant').length;
+    if (assistantMessageCount >= 4) {
+      setIsLocked(true);
+      setLoading(false);
+    } else {
+      await requestVideo(script)
+    }
   };
   const [previewTokenDialog, setPreviewTokenDialog] = useState(IS_PREVIEW)
   const [previewTokenInput, setPreviewTokenInput] = useState(previewToken ?? '')
@@ -68,8 +75,8 @@ export function Chat({ id, initialMessages, className, session }: ChatProps) {
   }
   return (
     <>
-      <CloneHeader isLoading={isLoading} />
-      <div className={cn('pb-[160px] md:pb-[200px] pt-24 md:pt-32 xl:w-full', className)}>
+      <CloneHeader isLoading={isLoading} isLocked={isLocked} />
+      <div className={cn('pb-[160px] md:pb-[200px pt-24 md:pt-32 xl:w-full', className)}>
         {messages.length && (
           <>
             <ChatList isLoading={isLoading} mods={mods} messages={messages} />

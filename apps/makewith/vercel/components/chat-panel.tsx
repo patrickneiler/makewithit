@@ -59,47 +59,28 @@ export function ChatPanel({
               className="border-teal-800 bg-teal-500 bg-opacity-20"
             >
               <IconStop className="mr-2" />
-              Patrick is thinking...
+              Thinking. Might take a little while.
             </Button>
           </div>
 
         )}
         <div className="space-y-4 border-t border-gray-800 bg-background px-4 py-2 shadow-lg sm:rounded-t-xl  md:py-4">
           {/* @ts-ignore */}
-          {
-            !isLocked ? (<PromptForm
-              onSubmit={async value => {
-                prepareNextVideo();
-                await append({
-                  id,
-                  content: value,
-                  role: 'user'
-                })
-              }}
-              input={input}
-              setInput={setInput}
-              isLoading={isLoading}
-              session={session}
-              messages={messages}
-            />) : (
-              <div className="flex relative z-20 items-center justify-center  w-full min-h-[60px] shrink-0 max-w-6xl mx-auto px-4 sm:px-6">
-
-                <div className="flex flex-row-reverse align-center justify-center">
-
-                  <Button
-                    variant="outline"
-                    className="border-teal-700  hover:border-teal-500 text-teal-700 hover:text-teal-500 mt-4"
-                  >
-                    <Link href="https://calendly.com/patrickneiler/30min">
-                      <span className='flex items-center justify-center'>Book Meeting<IconExternalLink className="ml-2" /></span>
-                    </Link>
-                  </Button>
-                  <span className="text-gray-100  mr-4 text-sm self-center">Want to chat more?
-                  </span>
-                </div>
-              </div>
-            )
-          }
+          <PromptForm
+            onSubmit={async value => {
+              isLocked && prepareNextVideo();
+              await append({
+                id,
+                content: value,
+                role: 'user'
+              })
+            }}
+            input={input}
+            setInput={setInput}
+            isLoading={isLoading}
+            session={session}
+            messages={messages}
+          />
 
           {/* <FooterText className="hidden sm:block" /> */}
           <div className="flex align-center justify-between">
