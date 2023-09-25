@@ -4538,7 +4538,7 @@
           },
           {
             "file": "apps/makewith/vercel/app/layout.tsx",
-            "hash": "14471153330092506704",
+            "hash": "15530913340826669370",
             "dependencies": [
               {
                 "source": "makewith-vercel",
