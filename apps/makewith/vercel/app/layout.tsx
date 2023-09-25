@@ -18,10 +18,6 @@ export const metadata: Metadata = {
     template: `%s - Patrick: Cloned`
   },
   description: 'An AI-Powered clone of Patrick Neiler',
-  themeColor: [
-    { media: '(prefers-color-scheme: light)', color: 'black' },
-    { media: '(prefers-color-scheme: dark)', color: 'black' }
-  ],
   icons: {
     icon: '/favicon.ico',
     shortcut: '/favicon-16x16.png',
@@ -50,7 +46,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
         )}
       >
         <Toaster />
-        <Providers videoConfig={config} attribute="class" defaultTheme="system" enableSystem>
+        <Providers videoConfig={config} attribute="class" defaultTheme="dark">
           <div className="flex z-20 min-h-screen">
             {/* @ts-ignore */}
             <main className="flex flex-col xl:flex-row flex-1 bg-gray-900">{children}</main>
