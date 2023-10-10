@@ -1,5 +1,3 @@
-import Logo from '../../components/ui/logo'
-
 export default function AuthHeader() {
   return (
     <div className="flex-1">
