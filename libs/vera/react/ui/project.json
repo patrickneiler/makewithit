@@ -1,0 +1,16 @@
+{
+  "name": "vera-react-ui",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/vera/react/ui/src",
+  "projectType": "library",
+  "tags": ["ui"],
+  "targets": {
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/vera/react/ui/**/*.{ts,tsx,js,jsx}"]
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "name": "vera-react-feature-about-us",
+  "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/vera/react/feature/about-us/src",
+  "projectType": "library",
+  "tags": ["ui"],
+  "targets": {
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/vera/react/feature/about-us/**/*.{ts,tsx,js,jsx}"
+        ]
+      }
+    }
+  }
+}

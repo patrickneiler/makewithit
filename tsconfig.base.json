@@ -54,7 +54,22 @@
       "@the/util/react/redux": ["libs/util/react/redux/src/index.ts"],
       "@the/util/react/stripe": ["libs/util/react/stripe/src/index.ts"],
       "@the/util/react/visibility": ["libs/util/react/visibility/src/index.ts"],
-      "contentlayer/generated": ["./.contentlayer/generated"]
+      "@the/vera/react/feature/about-us": [
+        "libs/vera/react/feature/about-us/src/index.ts"
+      ],
+      "@the/vera/react/feature/blog": [
+        "libs/vera/react/feature/blog/src/index.ts"
+      ],
+      "@the/vera/react/feature/careers": [
+        "libs/vera/react/feature/careers/src/index.ts"
+      ],
+      "@the/vera/react/feature/contact-us": [
+        "libs/vera/react/feature/contact-us/src/index.ts"
+      ],
+      "@the/vera/react/ui": ["libs/vera/react/ui/src/index.ts"],
+      "@vera/components/*": ["libs/vera/react/ui/src/lib/components/*"],
+      "@vera/public/*": ["apps/vera/next/public/*"],
+      "contentlayer/generated": ["apps/vera/next/.contentlayer/generated"]
     }
   },
   "exclude": ["node_modules", "tmp"]
