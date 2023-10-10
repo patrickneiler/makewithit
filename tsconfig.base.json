@@ -67,8 +67,8 @@
         "libs/vera/react/feature/contact-us/src/index.ts"
       ],
       "@the/vera/react/ui": ["libs/vera/react/ui/src/index.ts"],
-      "@vera/components/*": ["libs/vera/react/ui/src/lib/components/*"],
-      "@vera/public/*": ["apps/vera/next/public/*"],
+      "@carben/components/*": ["libs/vera/react/ui/src/lib/components/*"],
+      "@carben/public/*": ["apps/carben/next/public/*"],
       "contentlayer/generated": ["apps/vera/next/.contentlayer/generated"]
     }
   },

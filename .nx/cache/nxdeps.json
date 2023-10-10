@@ -31,6 +31,7 @@
     "date-fns": "^2.30.0",
     "encoding": "^0.1.13",
     "firebase": "^9.5.0",
+    "flatpickr": "^4.6.13",
     "focus-trap-react": "^10.1.1",
     "fontawesome-free": "^1.0.4",
     "json-schema-to-ts": "^2.9.1",
@@ -196,11 +197,11 @@
     "@the/vera/react/ui": [
       "libs/vera/react/ui/src/index.ts"
     ],
-    "@vera/components/*": [
+    "@carben/components/*": [
       "libs/vera/react/ui/src/lib/components/*"
     ],
-    "@vera/public/*": [
-      "apps/vera/next/public/*"
+    "@carben/public/*": [
+      "apps/carben/next/public/*"
     ],
     "contentlayer/generated": [
       "apps/vera/next/.contentlayer/generated"
@@ -1005,12 +1006,12 @@
         ]
       }
     },
-    "types": {
-      "name": "types",
+    "dot-contentlayer": {
+      "name": "dot-contentlayer",
       "type": "lib",
       "data": {
-        "root": "apps/makewith/next/.next/types",
-        "sourceRoot": "apps/makewith/next/.next/types",
+        "root": "apps/carben/next/.contentlayer",
+        "sourceRoot": "apps/carben/next/.contentlayer",
         "projectType": "library",
         "targets": {},
         "implicitDependencies": [],
@@ -1202,7 +1203,7 @@
           },
           {
             "file": "libs/feature/react/animations/src/index.ts",
-            "hash": "12460637184073752576"
+            "hash": "7420975813780630191"
           },
           {
             "file": "libs/feature/react/animations/src/lib/getAnimationData.tsx",
@@ -1265,6 +1266,19 @@
             "hash": "953912742928436052"
           }
         ]
+      }
+    },
+    "types": {
+      "name": "types",
+      "type": "lib",
+      "data": {
+        "root": "apps/carben/next/.next/types",
+        "sourceRoot": "apps/carben/next/.next/types",
+        "projectType": "library",
+        "targets": {},
+        "implicitDependencies": [],
+        "tags": [],
+        "files": []
       }
     },
     "vera-react-feature-blog": {
@@ -1563,19 +1577,6 @@
             "hash": "953912742928436052"
           }
         ]
-      }
-    },
-    ".next": {
-      "name": ".next",
-      "type": "lib",
-      "data": {
-        "root": "apps/makewith/next/.next",
-        "sourceRoot": "apps/makewith/next/.next",
-        "projectType": "library",
-        "targets": {},
-        "implicitDependencies": [],
-        "tags": [],
-        "files": []
       }
     },
     "feature-react-icons": {
@@ -3907,6 +3908,19 @@
         ]
       }
     },
+    ".next": {
+      "name": ".next",
+      "type": "lib",
+      "data": {
+        "root": "apps/carben/next/.next",
+        "sourceRoot": "apps/carben/next/.next",
+        "projectType": "library",
+        "targets": {},
+        "implicitDependencies": [],
+        "tags": [],
+        "files": []
+      }
+    },
     "makewith-react-ui": {
       "name": "makewith-react-ui",
       "type": "lib",
@@ -5968,107 +5982,6 @@
           {
             "file": "libs/data-access/job/tsconfig.lib.json",
             "hash": "1261950536210511632"
-          }
-        ]
-      }
-    },
-    "vera-next-e2e": {
-      "name": "vera-next-e2e",
-      "type": "e2e",
-      "data": {
-        "name": "vera-next-e2e",
-        "$schema": "../../node_modules/nx/schemas/project-schema.json",
-        "sourceRoot": "apps/vera-next-e2e/src",
-        "projectType": "application",
-        "targets": {
-          "e2e": {
-            "inputs": [
-              "default",
-              "^production"
-            ],
-            "executor": "@nx/cypress:cypress",
-            "options": {
-              "cypressConfig": "apps/vera-next-e2e/cypress.config.ts",
-              "devServerTarget": "vera-next:serve:development",
-              "testingType": "e2e"
-            },
-            "configurations": {
-              "production": {
-                "devServerTarget": "vera-next:serve:production"
-              }
-            }
-          },
-          "lint": {
-            "inputs": [
-              "default",
-              "{workspaceRoot}/.eslintrc.json",
-              "{workspaceRoot}/.eslintignore"
-            ],
-            "executor": "@nx/linter:eslint",
-            "outputs": [
-              "{options.outputFile}"
-            ],
-            "options": {
-              "lintFilePatterns": [
-                "apps/vera-next-e2e/**/*.{js,ts}"
-              ]
-            },
-            "configurations": {}
-          }
-        },
-        "tags": [],
-        "implicitDependencies": [
-          "vera-next"
-        ],
-        "root": "apps/vera-next-e2e",
-        "files": [
-          {
-            "file": "apps/vera-next-e2e/.eslintrc.json",
-            "hash": "14060216369337943343"
-          },
-          {
-            "file": "apps/vera-next-e2e/cypress.config.ts",
-            "hash": "15414076024138857470",
-            "dependencies": [
-              {
-                "source": "vera-next-e2e",
-                "target": "npm:cypress",
-                "type": "static"
-              },
-              {
-                "source": "vera-next-e2e",
-                "target": "npm:@nx/cypress",
-                "type": "static"
-              }
-            ]
-          },
-          {
-            "file": "apps/vera-next-e2e/project.json",
-            "hash": "1075291791527945654"
-          },
-          {
-            "file": "apps/vera-next-e2e/src/e2e/app.cy.ts",
-            "hash": "2267197958138014844"
-          },
-          {
-            "file": "apps/vera-next-e2e/src/fixtures/example.json",
-            "hash": "11614668686582597233"
-          },
-          {
-            "file": "apps/vera-next-e2e/src/support/app.po.ts",
-            "hash": "11157016311132186162"
-          },
-          {
-            "file": "apps/vera-next-e2e/src/support/commands.ts",
-            "hash": "7314691991044890572"
-          },
-          {
-            "file": "apps/vera-next-e2e/src/support/e2e.ts",
-            "hash": "3666078656922506009"
-          },
-          {
-            "file": "apps/vera-next-e2e/tsconfig.json",
-            "hash": "1788248097864730386"
           }
         ]
       }
@@ -8242,13 +8155,13 @@
         ]
       }
     },
-    "vera-next": {
-      "name": "vera-next",
+    "carben-next": {
+      "name": "carben-next",
       "type": "app",
       "data": {
-        "name": "vera-next",
+        "name": "carben-next",
         "$schema": "../../../node_modules/nx/schemas/project-schema.json",
-        "sourceRoot": "apps/vera/next",
+        "sourceRoot": "apps/carben/next",
         "projectType": "application",
         "targets": {
           "dev": {
@@ -8271,11 +8184,11 @@
             ],
             "defaultConfiguration": "production",
             "options": {
-              "outputPath": "dist/apps/vera/next"
+              "outputPath": "dist/apps/carben/next"
             },
             "configurations": {
               "development": {
-                "outputPath": "apps/vera/next"
+                "outputPath": "apps/carben/next"
               },
               "production": {}
             }
@@ -8298,7 +8211,7 @@
             ],
             "options": {
               "lintFilePatterns": [
-                "apps/vera/next/**/*.{ts,tsx,js,jsx}"
+                "apps/carben/next/**/*.{ts,tsx,js,jsx}"
               ]
             },
             "configurations": {}
@@ -8307,16 +8220,16 @@
             "executor": "@nx/next:server",
             "defaultConfiguration": "development",
             "options": {
-              "buildTarget": "vera-next:build",
+              "buildTarget": "carben-next:build",
               "dev": true
             },
             "configurations": {
               "development": {
-                "buildTarget": "vera-next:build:development",
+                "buildTarget": "carben-next:build:development",
                 "dev": true
               },
               "production": {
-                "buildTarget": "vera-next:build:production",
+                "buildTarget": "carben-next:build:production",
                 "dev": false
               }
             }
@@ -8324,7 +8237,7 @@
           "export": {
             "executor": "@nx/next:export",
             "options": {
-              "buildTarget": "vera-next:build:production"
+              "buildTarget": "carben-next:build:production"
             }
           },
           "test": {
@@ -8338,7 +8251,7 @@
               "{workspaceRoot}/coverage/{projectRoot}"
             ],
             "options": {
-              "jestConfig": "apps/vera/next/jest.config.ts",
+              "jestConfig": "apps/carben/next/jest.config.ts",
               "passWithNoTests": true
             },
             "configurations": {
@@ -8352,1840 +8265,3651 @@
         "tags": [
           "app"
         ],
-        "root": "apps/vera/next",
+        "root": "apps/carben/next",
         "implicitDependencies": [],
         "files": [
           {
-            "file": "apps/vera/next/.gitignore",
+            "file": "apps/carben/next/.gitignore",
             "hash": "1195984908714004785"
           },
           {
-            "file": "apps/vera/next/.vscode/settings.json",
-            "hash": "7688951475258679805"
+            "file": "apps/carben/next/.vscode/settings.json",
+            "hash": "809983097613332416"
           },
           {
-            "file": "apps/vera/next/app/about/page.tsx",
-            "hash": "3569543653063955931",
+            "file": "apps/carben/next/app/(auth)/auth-header.tsx",
+            "hash": "831438997113835069"
+          },
+          {
+            "file": "apps/carben/next/app/(auth)/auth-image.tsx",
+            "hash": "10586985728940849839",
             "dependencies": [
               {
-                "source": "vera-next",
-                "target": "npm:@/components/hero-about",
-                "type": "static"
-              },
-              {
-                "source": "vera-next",
-                "target": "npm:@/components/features-gallery",
-                "type": "static"
-              },
-              {
-                "source": "vera-next",
-                "target": "npm:@/components/timeline",
-                "type": "static"
-              },
-              {
-                "source": "vera-next",
-                "target": "npm:@/components/career",
-                "type": "static"
-              },
-              {
-                "source": "vera-next",
-                "target": "npm:@/components/features-animation",
-                "type": "static"
-              },
-              {
-                "source": "vera-next",
-                "target": "npm:@/components/team",
-                "type": "static"
-              },
-              {
-                "source": "vera-next",
-                "target": "npm:@/components/cta-contact",
-                "type": "static"
-              }
-            ]
-          },
-          {
-            "file": "apps/vera/next/app/api/hello/route.ts",
-            "hash": "16040566609546270062"
-          },
-          {
-            "file": "apps/vera/next/app/blog/[slug]/page.tsx",
-            "hash": "3503486838260664057",
-            "dependencies": [
-              {
-                "source": "vera-next",
+                "source": "carben-next",
                 "target": "npm:next",
                 "type": "static"
-              },
-              {
-                "source": "vera-next",
-                "target": "npm:@/components/post-date",
-                "type": "static"
-              },
-              {
-                "source": "vera-next",
-                "target": "npm:@/components/mdx/mdx",
-                "type": "static"
-              },
-              {
-                "source": "vera-next",
-                "target": "npm:@/components/newsletter",
-                "type": "static"
-              },
-              {
-                "source": "vera-next",
-                "target": "npm:@/components/related-posts-02",
-                "type": "static"
               }
             ]
           },
           {
-            "file": "apps/vera/next/app/blog/page.tsx",
-            "hash": "12831490215869301755",
+            "file": "apps/carben/next/app/(auth)/reset-password/page.tsx",
+            "hash": "8950148589492522864",
             "dependencies": [
               {
-                "source": "vera-next",
+                "source": "carben-next",
                 "target": "npm:next",
                 "type": "static"
-              },
+              }
+            ]
+          },
+          {
+            "file": "apps/carben/next/app/(auth)/signin/page.tsx",
+            "hash": "4966460356511553598",
+            "dependencies": [
               {
-                "source": "vera-next",
-                "target": "npm:@/components/post-date",
-                "type": "static"
-              },
-              {
-                "source": "vera-next",
-                "target": "npm:@/components/related-posts-01",
-                "type": "static"
-              },
-              {
-                "source": "vera-next",
-                "target": "npm:@/components/post-item",
+                "source": "carben-next",
+                "target": "npm:next",
                 "type": "static"
               }
             ]
           },
           {
-            "file": "apps/vera/next/app/blog/sidebar.tsx",
-            "hash": "15605189304456079520"
-          },
-          {
-            "file": "apps/vera/next/app/contact/page.tsx",
-            "hash": "14332275416431246441",
+            "file": "apps/carben/next/app/(auth)/signup/page.tsx",
+            "hash": "10811226624382206332",
             "dependencies": [
               {
-                "source": "vera-next",
+                "source": "carben-next",
+                "target": "npm:next",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "apps/carben/next/app/api/hello/route.ts",
+            "hash": "10654663568324480899"
+          },
+          {
+            "file": "apps/carben/next/app/app-provider.tsx",
+            "hash": "2537030080231242793",
+            "dependencies": [
+              {
+                "source": "carben-next",
+                "target": "npm:react",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "apps/carben/next/app/contact/page.tsx",
+            "hash": "7753416559986226523",
+            "dependencies": [
+              {
+                "source": "carben-next",
                 "target": "npm:@/components/contact-form",
                 "type": "static"
               },
               {
-                "source": "vera-next",
+                "source": "carben-next",
                 "target": "npm:@/components/page-illustration",
                 "type": "static"
               }
             ]
           },
           {
-            "file": "apps/vera/next/app/css/additional-styles/range-slider.css",
-            "hash": "9803084125099651097"
+            "file": "apps/carben/next/app/css/additional-styles/flatpickr.css",
+            "hash": "4019232310606610458"
           },
           {
-            "file": "apps/vera/next/app/css/additional-styles/theme.css",
-            "hash": "9328576707066458820"
+            "file": "apps/carben/next/app/css/additional-styles/utility-patterns.css",
+            "hash": "11812210066442270245"
           },
           {
-            "file": "apps/vera/next/app/css/additional-styles/toggle-switch.css",
-            "hash": "6610220136478172048"
+            "file": "apps/carben/next/app/css/style.css",
+            "hash": "13682052851431038059"
           },
           {
-            "file": "apps/vera/next/app/css/additional-styles/utility-patterns.css",
-            "hash": "5430773161057283569"
-          },
-          {
-            "file": "apps/vera/next/app/css/style.css",
-            "hash": "11958120458161262092"
-          },
-          {
-            "file": "apps/vera/next/app/help/content.tsx",
-            "hash": "5175086950973867884",
+            "file": "apps/carben/next/app/flyout-context.tsx",
+            "hash": "10952894768193500981",
             "dependencies": [
               {
-                "source": "vera-next",
+                "source": "carben-next",
+                "target": "npm:react",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "apps/carben/next/app/help/content.tsx",
+            "hash": "18270819458461209514",
+            "dependencies": [
+              {
+                "source": "carben-next",
                 "target": "npm:react",
                 "type": "static"
               },
               {
-                "source": "vera-next",
+                "source": "carben-next",
                 "target": "npm:next",
                 "type": "static"
               },
               {
-                "source": "vera-next",
+                "source": "carben-next",
                 "target": "npm:@/public/images/news-author-01.jpg",
                 "type": "static"
               },
               {
-                "source": "vera-next",
+                "source": "carben-next",
                 "target": "npm:@/public/images/news-author-02.jpg",
                 "type": "static"
               },
               {
-                "source": "vera-next",
+                "source": "carben-next",
                 "target": "npm:@/public/images/news-author-03.jpg",
                 "type": "static"
               },
               {
-                "source": "vera-next",
+                "source": "carben-next",
                 "target": "npm:@/public/images/news-author-04.jpg",
                 "type": "static"
               },
               {
-                "source": "vera-next",
+                "source": "carben-next",
                 "target": "npm:@/public/images/news-author-05.jpg",
                 "type": "static"
               }
             ]
           },
           {
-            "file": "apps/vera/next/app/help/page.tsx",
-            "hash": "2027046165303262532",
+            "file": "apps/carben/next/app/help/page.tsx",
+            "hash": "5336337283788129210",
             "dependencies": [
               {
-                "source": "vera-next",
+                "source": "carben-next",
                 "target": "npm:@/components/page-illustration",
                 "type": "static"
               },
               {
-                "source": "vera-next",
+                "source": "carben-next",
                 "target": "npm:@/components/hero-help",
                 "type": "static"
               },
               {
-                "source": "vera-next",
+                "source": "carben-next",
                 "target": "npm:@/components/related-links",
                 "type": "static"
               }
             ]
           },
           {
-            "file": "apps/vera/next/app/layout.tsx",
-            "hash": "12610614816984283208",
+            "file": "apps/carben/next/app/layout.tsx",
+            "hash": "1332816815276164984",
             "dependencies": [
               {
-                "source": "vera-next",
+                "source": "carben-next",
+                "target": "npm:next",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "apps/carben/next/app/not-found.tsx",
+            "hash": "5305308477768710965",
+            "dependencies": [
+              {
+                "source": "carben-next",
+                "target": "npm:next",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:@/public/images/404-illustration.svg",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:@/public/images/404-illustration-dark.svg",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "apps/carben/next/app/page.tsx",
+            "hash": "5294879762278696484",
+            "dependencies": [
+              {
+                "source": "carben-next",
+                "target": "npm:next",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "apps/carben/next/app/selected-items-context.tsx",
+            "hash": "2429643848132333468",
+            "dependencies": [
+              {
+                "source": "carben-next",
                 "target": "npm:react",
                 "type": "static"
-              },
-              {
-                "source": "vera-next",
-                "target": "npm:next",
-                "type": "static"
-              },
-              {
-                "source": "vera-next",
-                "target": "npm:aos",
-                "type": "static"
-              },
-              {
-                "source": "vera-next",
-                "target": "npm:@/components/ui/header",
-                "type": "static"
-              },
-              {
-                "source": "vera-next",
-                "target": "npm:@/components/ui/footer",
-                "type": "static"
               }
             ]
           },
           {
-            "file": "apps/vera/next/app/not-found.tsx",
-            "hash": "3528637079654174691",
+            "file": "apps/carben/next/app/theme-provider.tsx",
+            "hash": "12856798312568149884",
             "dependencies": [
               {
-                "source": "vera-next",
-                "target": "npm:next",
-                "type": "static"
-              },
-              {
-                "source": "vera-next",
-                "target": "npm:@/public/images/404.jpg",
-                "type": "static"
-              },
-              {
-                "source": "vera-next",
-                "target": "npm:@/components/page-illustration",
-                "type": "static"
-              }
-            ]
-          },
-          {
-            "file": "apps/vera/next/app/page.tsx",
-            "hash": "902834798212572425",
-            "dependencies": [
-              {
-                "source": "vera-next",
-                "target": "npm:@/components/hero",
-                "type": "static"
-              },
-              {
-                "source": "vera-next",
-                "target": "npm:@/components/stats",
-                "type": "static"
-              },
-              {
-                "source": "vera-next",
-                "target": "npm:@/components/zigzag",
-                "type": "static"
-              },
-              {
-                "source": "vera-next",
-                "target": "npm:@/components/contact-form",
-                "type": "static"
-              }
-            ]
-          },
-          {
-            "file": "apps/vera/next/app/testimonials/page.tsx",
-            "hash": "12162638401502352849",
-            "dependencies": [
-              {
-                "source": "vera-next",
-                "target": "npm:@/components/hero-testimonials",
-                "type": "static"
-              },
-              {
-                "source": "vera-next",
-                "target": "npm:@/components/clients",
-                "type": "static"
-              },
-              {
-                "source": "vera-next",
-                "target": "npm:@/components/testimonials-video",
-                "type": "static"
-              },
-              {
-                "source": "vera-next",
-                "target": "npm:@/components/testimonials-carousel",
-                "type": "static"
-              },
-              {
-                "source": "vera-next",
-                "target": "npm:@/components/testimonials-circles",
-                "type": "static"
-              },
-              {
-                "source": "vera-next",
-                "target": "npm:@/components/cta",
-                "type": "static"
-              }
-            ]
-          },
-          {
-            "file": "apps/vera/next/app/theme-provider.tsx",
-            "hash": "8413397416513128869",
-            "dependencies": [
-              {
-                "source": "vera-next",
+                "source": "carben-next",
                 "target": "npm:next-themes",
                 "type": "static"
               }
             ]
           },
           {
-            "file": "apps/vera/next/CHANGELOG.md",
-            "hash": "10751925940749929179"
+            "file": "apps/carben/next/CHANGELOG.md",
+            "hash": "16375299088741091502"
           },
           {
-            "file": "apps/vera/next/components/career.tsx",
-            "hash": "10248260015619348340",
+            "file": "apps/carben/next/components/accordion-basic.tsx",
+            "hash": "644597206758327799",
             "dependencies": [
               {
-                "source": "vera-next",
+                "source": "carben-next",
+                "target": "npm:react",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "apps/carben/next/components/accordion-table-item.tsx",
+            "hash": "11414223273594122609",
+            "dependencies": [
+              {
+                "source": "carben-next",
+                "target": "npm:react",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:next",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "apps/carben/next/components/accordion-table-rich-item.tsx",
+            "hash": "7870352742403255661",
+            "dependencies": [
+              {
+                "source": "carben-next",
+                "target": "npm:react",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:next",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "apps/carben/next/components/banner-02.tsx",
+            "hash": "3119621081150689508",
+            "dependencies": [
+              {
+                "source": "carben-next",
+                "target": "npm:react",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "apps/carben/next/components/banner.tsx",
+            "hash": "16009725775542294891",
+            "dependencies": [
+              {
+                "source": "carben-next",
+                "target": "npm:react",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "apps/carben/next/components/career.tsx",
+            "hash": "2497609542353681575",
+            "dependencies": [
+              {
+                "source": "carben-next",
                 "target": "npm:next",
                 "type": "static"
               },
               {
-                "source": "vera-next",
+                "source": "carben-next",
                 "target": "npm:@/public/images/career-01.jpg",
                 "type": "static"
               },
               {
-                "source": "vera-next",
+                "source": "carben-next",
                 "target": "npm:@/public/images/career-02.jpg",
                 "type": "static"
               },
               {
-                "source": "vera-next",
+                "source": "carben-next",
                 "target": "npm:@/public/images/career-03.jpg",
                 "type": "static"
               },
               {
-                "source": "vera-next",
+                "source": "carben-next",
                 "target": "npm:@/public/images/career-04.jpg",
                 "type": "static"
               },
               {
-                "source": "vera-next",
+                "source": "carben-next",
                 "target": "npm:@/public/images/career-05.jpg",
                 "type": "static"
               },
               {
-                "source": "vera-next",
+                "source": "carben-next",
                 "target": "npm:@/public/images/career-06.jpg",
                 "type": "static"
               }
             ]
           },
           {
-            "file": "apps/vera/next/components/carousel.tsx",
-            "hash": "2729267967382572039",
+            "file": "apps/carben/next/components/carousel.tsx",
+            "hash": "9697496711803229955",
             "dependencies": [
               {
-                "source": "vera-next",
+                "source": "carben-next",
                 "target": "npm:react",
                 "type": "static"
               },
               {
-                "source": "vera-next",
+                "source": "carben-next",
                 "target": "npm:next",
                 "type": "static"
               },
               {
-                "source": "vera-next",
+                "source": "carben-next",
                 "target": "npm:@/public/images/carousel-item-01.jpg",
                 "type": "static"
               },
               {
-                "source": "vera-next",
+                "source": "carben-next",
                 "target": "npm:@/public/images/carousel-item-02.jpg",
                 "type": "static"
               },
               {
-                "source": "vera-next",
+                "source": "carben-next",
                 "target": "npm:@/public/images/carousel-item-03.jpg",
                 "type": "static"
               },
               {
-                "source": "vera-next",
+                "source": "carben-next",
                 "target": "npm:@/public/images/carousel-item-04.jpg",
                 "type": "static"
               },
               {
-                "source": "vera-next",
+                "source": "carben-next",
                 "target": "npm:@/public/images/carousel-item-05.jpg",
                 "type": "static"
               },
               {
-                "source": "vera-next",
+                "source": "carben-next",
                 "target": "npm:swiper",
                 "type": "static"
               }
             ]
           },
           {
-            "file": "apps/vera/next/components/clients.tsx",
-            "hash": "4642083997203334453"
-          },
-          {
-            "file": "apps/vera/next/components/contact-form.tsx",
-            "hash": "12479190859574390111",
+            "file": "apps/carben/next/components/channel-menu.tsx",
+            "hash": "8847126445277219910",
             "dependencies": [
               {
-                "source": "vera-next",
+                "source": "carben-next",
+                "target": "npm:react",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:@headlessui/react",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:next",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:@/public/images/channel-01.png",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:@/public/images/channel-02.png",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:@/public/images/channel-03.png",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "apps/carben/next/components/charts/bar-chart-01.tsx",
+            "hash": "12872344883531011904",
+            "dependencies": [
+              {
+                "source": "carben-next",
+                "target": "npm:react",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:next-themes",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:@/components/charts/chartjs-config",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:chart.js",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:chartjs-adapter-moment",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:@/components/utils/utils",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "apps/carben/next/components/charts/bar-chart-02.tsx",
+            "hash": "13930220714299700666",
+            "dependencies": [
+              {
+                "source": "carben-next",
+                "target": "npm:react",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:next-themes",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:@/components/charts/chartjs-config",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:chart.js",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:chartjs-adapter-moment",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:@/components/utils/utils",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "apps/carben/next/components/charts/bar-chart-03.tsx",
+            "hash": "9641625283460193408",
+            "dependencies": [
+              {
+                "source": "carben-next",
+                "target": "npm:react",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:next-themes",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:@/components/charts/chartjs-config",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:chart.js",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:chartjs-adapter-moment",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:@/components/utils/utils",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "apps/carben/next/components/charts/bar-chart-04.tsx",
+            "hash": "5458778776095287596",
+            "dependencies": [
+              {
+                "source": "carben-next",
+                "target": "npm:react",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:next-themes",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:@/components/charts/chartjs-config",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:chart.js",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:chartjs-adapter-moment",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:@/components/utils/utils",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "apps/carben/next/components/charts/bar-chart-05.tsx",
+            "hash": "2436162527464981344",
+            "dependencies": [
+              {
+                "source": "carben-next",
+                "target": "npm:react",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:next-themes",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:@/components/charts/chartjs-config",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:chart.js",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:chartjs-adapter-moment",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:@/components/utils/utils",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "apps/carben/next/components/charts/bar-chart-06.tsx",
+            "hash": "17625511288355282470",
+            "dependencies": [
+              {
+                "source": "carben-next",
+                "target": "npm:react",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:next-themes",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:@/public/images/company-icon-01.svg",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:@/public/images/company-icon-02.svg",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:@/public/images/company-icon-03.svg",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:@/public/images/company-icon-04.svg",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:@/components/charts/chartjs-config",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:chart.js",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:chartjs-adapter-moment",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:@/components/utils/utils",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:next",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "apps/carben/next/components/charts/chartjs-config.tsx",
+            "hash": "17751180301632487397",
+            "dependencies": [
+              {
+                "source": "carben-next",
+                "target": "npm:chart.js",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:@/components/utils/utils",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "apps/carben/next/components/charts/doughnut-chart.tsx",
+            "hash": "18299159541655644813",
+            "dependencies": [
+              {
+                "source": "carben-next",
+                "target": "npm:react",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:next-themes",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:@/components/charts/chartjs-config",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:chart.js",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:chartjs-adapter-moment",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:@/components/utils/utils",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "apps/carben/next/components/charts/line-chart-01.tsx",
+            "hash": "4835259711103090968",
+            "dependencies": [
+              {
+                "source": "carben-next",
+                "target": "npm:react",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:next-themes",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:@/components/charts/chartjs-config",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:chart.js",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:chartjs-adapter-moment",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:@/components/utils/utils",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "apps/carben/next/components/charts/line-chart-02.tsx",
+            "hash": "3884685716218936887",
+            "dependencies": [
+              {
+                "source": "carben-next",
+                "target": "npm:react",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:next-themes",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:@/components/charts/chartjs-config",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:chart.js",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:chartjs-adapter-moment",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:@/components/utils/utils",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "apps/carben/next/components/charts/line-chart-03.tsx",
+            "hash": "14151747616752686612",
+            "dependencies": [
+              {
+                "source": "carben-next",
+                "target": "npm:react",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:next-themes",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:@/components/charts/chartjs-config",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:chart.js",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:chartjs-adapter-moment",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:@/components/utils/utils",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "apps/carben/next/components/charts/line-chart-04.tsx",
+            "hash": "13448248903253836044",
+            "dependencies": [
+              {
+                "source": "carben-next",
+                "target": "npm:react",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:next-themes",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:@/components/charts/chartjs-config",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:chart.js",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:chartjs-adapter-moment",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:@/components/utils/utils",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "apps/carben/next/components/charts/line-chart-05.tsx",
+            "hash": "14901086434356965366",
+            "dependencies": [
+              {
+                "source": "carben-next",
+                "target": "npm:react",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:next-themes",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:@/components/charts/chartjs-config",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:chart.js",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:chartjs-adapter-moment",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:@/components/utils/utils",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "apps/carben/next/components/charts/line-chart-06.tsx",
+            "hash": "3359817147492711440",
+            "dependencies": [
+              {
+                "source": "carben-next",
+                "target": "npm:react",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:next-themes",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:@/components/charts/chartjs-config",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:chart.js",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:chartjs-adapter-moment",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:@/components/utils/utils",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "apps/carben/next/components/charts/line-chart-07.tsx",
+            "hash": "6733772047361393824",
+            "dependencies": [
+              {
+                "source": "carben-next",
+                "target": "npm:react",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:next-themes",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:@/components/charts/chartjs-config",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:chart.js",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:chartjs-adapter-moment",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:@/components/utils/utils",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "apps/carben/next/components/charts/line-chart-08.tsx",
+            "hash": "12178412088773375951",
+            "dependencies": [
+              {
+                "source": "carben-next",
+                "target": "npm:react",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:next-themes",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:@/components/charts/chartjs-config",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:chart.js",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:chartjs-adapter-moment",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:@/components/utils/utils",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "apps/carben/next/components/charts/line-chart-09.tsx",
+            "hash": "9118327541878854808",
+            "dependencies": [
+              {
+                "source": "carben-next",
+                "target": "npm:react",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:next-themes",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:@/components/charts/chartjs-config",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:chart.js",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:chartjs-adapter-moment",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:@/components/utils/utils",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "apps/carben/next/components/charts/pie-chart.tsx",
+            "hash": "14012289169049937080",
+            "dependencies": [
+              {
+                "source": "carben-next",
+                "target": "npm:react",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:next-themes",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:@/components/charts/chartjs-config",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:chart.js",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:chartjs-adapter-moment",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:@/components/utils/utils",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "apps/carben/next/components/charts/polar-chart.tsx",
+            "hash": "12768308537605407686",
+            "dependencies": [
+              {
+                "source": "carben-next",
+                "target": "npm:react",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:next-themes",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:@/components/charts/chartjs-config",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:chart.js",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:chartjs-adapter-moment",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:@/components/utils/utils",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "apps/carben/next/components/charts/realtime-chart.tsx",
+            "hash": "16399662483649034366",
+            "dependencies": [
+              {
+                "source": "carben-next",
+                "target": "npm:react",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:next-themes",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:@/components/charts/chartjs-config",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:chart.js",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:chartjs-adapter-moment",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:@/components/utils/utils",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "apps/carben/next/components/clients.tsx",
+            "hash": "13909075475551464128"
+          },
+          {
+            "file": "apps/carben/next/components/contact-form.tsx",
+            "hash": "10835618899905704652",
+            "dependencies": [
+              {
+                "source": "carben-next",
                 "target": "npm:react",
                 "type": "static"
               }
             ]
           },
           {
-            "file": "apps/vera/next/components/cta-contact.tsx",
-            "hash": "1159163693144979112"
+            "file": "apps/carben/next/components/cta-contact.tsx",
+            "hash": "10599303793043555249"
           },
           {
-            "file": "apps/vera/next/components/cta.tsx",
-            "hash": "14230325223084160917"
+            "file": "apps/carben/next/components/cta.tsx",
+            "hash": "7688231846540977024"
           },
           {
-            "file": "apps/vera/next/components/features-animation.tsx",
-            "hash": "8044294826830562933"
-          },
-          {
-            "file": "apps/vera/next/components/features-blocks.tsx",
-            "hash": "14751968244564087154"
-          },
-          {
-            "file": "apps/vera/next/components/features-gallery.tsx",
-            "hash": "14574129146821117987",
+            "file": "apps/carben/next/components/date-select.tsx",
+            "hash": "6510817744844229094",
             "dependencies": [
               {
-                "source": "vera-next",
+                "source": "carben-next",
+                "target": "npm:react",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:@headlessui/react",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "apps/carben/next/components/datepicker.tsx",
+            "hash": "2613631202563242364",
+            "dependencies": [
+              {
+                "source": "carben-next",
+                "target": "npm:react-flatpickr",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:flatpickr",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "apps/carben/next/components/delete-button.tsx",
+            "hash": "983717835871400284",
+            "dependencies": [
+              {
+                "source": "carben-next",
+                "target": "npm:@/app/selected-items-context",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "apps/carben/next/components/dropdown-filter.tsx",
+            "hash": "7051898834511427515",
+            "dependencies": [
+              {
+                "source": "carben-next",
+                "target": "npm:@headlessui/react",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "apps/carben/next/components/dropdown-full.tsx",
+            "hash": "9278971109244717987",
+            "dependencies": [
+              {
+                "source": "carben-next",
+                "target": "npm:react",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:@headlessui/react",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "apps/carben/next/components/dropdown-help.tsx",
+            "hash": "12364386529474448821",
+            "dependencies": [
+              {
+                "source": "carben-next",
                 "target": "npm:next",
                 "type": "static"
               },
               {
-                "source": "vera-next",
+                "source": "carben-next",
+                "target": "npm:@headlessui/react",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "apps/carben/next/components/dropdown-notifications.tsx",
+            "hash": "13614089173466294106",
+            "dependencies": [
+              {
+                "source": "carben-next",
+                "target": "npm:next",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:@headlessui/react",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "apps/carben/next/components/dropdown-profile.tsx",
+            "hash": "6900676729137023838",
+            "dependencies": [
+              {
+                "source": "carben-next",
+                "target": "npm:next",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:@headlessui/react",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:@/public/images/user-avatar-32.png",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "apps/carben/next/components/dropdown-switch.tsx",
+            "hash": "6194504326875367841",
+            "dependencies": [
+              {
+                "source": "carben-next",
+                "target": "npm:react",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:@headlessui/react",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:next",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:@/public/images/channel-01.png",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:@/public/images/channel-02.png",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:@/public/images/channel-03.png",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "apps/carben/next/components/edit-menu-card.tsx",
+            "hash": "12843326818545811421",
+            "dependencies": [
+              {
+                "source": "carben-next",
+                "target": "npm:@headlessui/react",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:next",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "apps/carben/next/components/edit-menu.tsx",
+            "hash": "17193602017927501116",
+            "dependencies": [
+              {
+                "source": "carben-next",
+                "target": "npm:@headlessui/react",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:next",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "apps/carben/next/components/features-animation.tsx",
+            "hash": "1879347762933088536"
+          },
+          {
+            "file": "apps/carben/next/components/features-blocks.tsx",
+            "hash": "12746432643953493509"
+          },
+          {
+            "file": "apps/carben/next/components/features-gallery.tsx",
+            "hash": "2472247538597622362",
+            "dependencies": [
+              {
+                "source": "carben-next",
+                "target": "npm:next",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
                 "target": "npm:@/public/images/about-grid-01.jpg",
                 "type": "static"
               },
               {
-                "source": "vera-next",
+                "source": "carben-next",
                 "target": "npm:@/public/images/about-grid-02.jpg",
                 "type": "static"
               },
               {
-                "source": "vera-next",
+                "source": "carben-next",
                 "target": "npm:@/public/images/about-grid-03.jpg",
                 "type": "static"
               },
               {
-                "source": "vera-next",
+                "source": "carben-next",
                 "target": "npm:@/public/images/about-grid-04.jpg",
                 "type": "static"
               },
               {
-                "source": "vera-next",
+                "source": "carben-next",
                 "target": "npm:@/public/images/about-grid-05.jpg",
                 "type": "static"
               },
               {
-                "source": "vera-next",
+                "source": "carben-next",
                 "target": "npm:@/public/images/about-grid-06.jpg",
                 "type": "static"
               }
             ]
           },
           {
-            "file": "apps/vera/next/components/hero-about.tsx",
-            "hash": "4151826948498356368",
+            "file": "apps/carben/next/components/hero-about.tsx",
+            "hash": "13016338784638330760",
             "dependencies": [
               {
-                "source": "vera-next",
+                "source": "carben-next",
                 "target": "npm:next",
                 "type": "static"
               },
               {
-                "source": "vera-next",
+                "source": "carben-next",
                 "target": "npm:@/public/images/hero-bg-03.jpg",
                 "type": "static"
               },
               {
-                "source": "vera-next",
+                "source": "carben-next",
                 "target": "npm:@/public/images/about-hero.jpg",
                 "type": "static"
               }
             ]
           },
           {
-            "file": "apps/vera/next/components/hero-alt.tsx",
-            "hash": "2062816839997982180",
+            "file": "apps/carben/next/components/hero-alt.tsx",
+            "hash": "1128113511707459137",
             "dependencies": [
               {
-                "source": "vera-next",
+                "source": "carben-next",
                 "target": "npm:next",
                 "type": "static"
               },
               {
-                "source": "vera-next",
+                "source": "carben-next",
                 "target": "npm:@/public/images/hero-bg-03.jpg",
                 "type": "static"
               }
             ]
           },
           {
-            "file": "apps/vera/next/components/hero-help.tsx",
-            "hash": "12606800483905063245"
+            "file": "apps/carben/next/components/hero-help.tsx",
+            "hash": "11128888232303863923"
           },
           {
-            "file": "apps/vera/next/components/hero-home.tsx",
-            "hash": "16768162285619768373",
+            "file": "apps/carben/next/components/hero-home.tsx",
+            "hash": "16162262446435359026",
             "dependencies": [
               {
-                "source": "vera-next",
+                "source": "carben-next",
                 "target": "npm:@/public/images/mockup-image-01.jpg",
                 "type": "static"
               },
               {
-                "source": "vera-next",
+                "source": "carben-next",
                 "target": "npm:@/components/modal-video-iphone",
                 "type": "static"
               }
             ]
           },
           {
-            "file": "apps/vera/next/components/hero-testimonials.tsx",
-            "hash": "12363440808594667533",
+            "file": "apps/carben/next/components/hero-testimonials.tsx",
+            "hash": "13981629496301858955",
             "dependencies": [
               {
-                "source": "vera-next",
+                "source": "carben-next",
                 "target": "npm:next",
                 "type": "static"
               },
               {
-                "source": "vera-next",
+                "source": "carben-next",
                 "target": "npm:@/public/images/hero-bg-02.jpg",
                 "type": "static"
               }
             ]
           },
           {
-            "file": "apps/vera/next/components/hero.tsx",
-            "hash": "3101920259037466549",
+            "file": "apps/carben/next/components/hero.tsx",
+            "hash": "6481282609560870954",
             "dependencies": [
               {
-                "source": "vera-next",
+                "source": "carben-next",
                 "target": "npm:next",
                 "type": "static"
               },
               {
-                "source": "vera-next",
+                "source": "carben-next",
                 "target": "npm:@/public/images/hero-illustration.svg",
                 "type": "static"
               },
               {
-                "source": "vera-next",
+                "source": "carben-next",
                 "target": "npm:@/types",
                 "type": "static"
               }
             ]
           },
           {
-            "file": "apps/vera/next/components/logo.module.scss",
-            "hash": "11418833681474616141"
+            "file": "apps/carben/next/components/logo.module.scss",
+            "hash": "12694391686534801717"
           },
           {
-            "file": "apps/vera/next/components/logo.tsx",
-            "hash": "3226701212348927554",
+            "file": "apps/carben/next/components/logo.tsx",
+            "hash": "11398572044913749571",
             "dependencies": [
               {
-                "source": "vera-next",
+                "source": "carben-next",
                 "target": "npm:react",
                 "type": "static"
               },
               {
-                "source": "vera-next",
+                "source": "carben-next",
                 "target": "npm:animejs",
                 "type": "static"
               }
             ]
           },
           {
-            "file": "apps/vera/next/components/mdx/image.tsx",
-            "hash": "18405191881972464492",
+            "file": "apps/carben/next/components/mdx/image.tsx",
+            "hash": "12039521025628975765",
             "dependencies": [
               {
-                "source": "vera-next",
+                "source": "carben-next",
                 "target": "npm:next",
                 "type": "static"
               }
             ]
           },
           {
-            "file": "apps/vera/next/components/mdx/link.tsx",
-            "hash": "15028757208205156744",
+            "file": "apps/carben/next/components/mdx/link.tsx",
+            "hash": "11656808490674531126",
             "dependencies": [
               {
-                "source": "vera-next",
+                "source": "carben-next",
                 "target": "npm:next",
                 "type": "static"
               }
             ]
           },
           {
-            "file": "apps/vera/next/components/mdx/mdx.tsx",
-            "hash": "12469576214537607600",
+            "file": "apps/carben/next/components/mdx/mdx.tsx",
+            "hash": "9238791257763244333",
             "dependencies": [
               {
-                "source": "vera-next",
+                "source": "carben-next",
                 "target": "npm:next-contentlayer",
                 "type": "static"
               }
             ]
           },
           {
-            "file": "apps/vera/next/components/modal-video-iphone.tsx",
-            "hash": "10916320602376969211",
+            "file": "apps/carben/next/components/modal-action.tsx",
+            "hash": "9586573114617094929",
             "dependencies": [
               {
-                "source": "vera-next",
+                "source": "carben-next",
+                "target": "npm:@headlessui/react",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "apps/carben/next/components/modal-basic.tsx",
+            "hash": "6364816366515376948",
+            "dependencies": [
+              {
+                "source": "carben-next",
+                "target": "npm:@headlessui/react",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "apps/carben/next/components/modal-blank.tsx",
+            "hash": "6302290848759417878",
+            "dependencies": [
+              {
+                "source": "carben-next",
+                "target": "npm:@headlessui/react",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "apps/carben/next/components/modal-cookies.tsx",
+            "hash": "1539901594542722800",
+            "dependencies": [
+              {
+                "source": "carben-next",
+                "target": "npm:@headlessui/react",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "apps/carben/next/components/modal-video-iphone.tsx",
+            "hash": "11202790182468323957",
+            "dependencies": [
+              {
+                "source": "carben-next",
                 "target": "npm:react",
                 "type": "static"
               },
               {
-                "source": "vera-next",
+                "source": "carben-next",
                 "target": "npm:next",
                 "type": "static"
               },
               {
-                "source": "vera-next",
+                "source": "carben-next",
                 "target": "npm:@headlessui/react",
                 "type": "static"
               },
               {
-                "source": "vera-next",
+                "source": "carben-next",
                 "target": "npm:@/public/images/iphone-mockup.png",
                 "type": "static"
               },
               {
-                "source": "vera-next",
+                "source": "carben-next",
                 "target": "npm:@/public/images/play-button.svg",
                 "type": "static"
               }
             ]
           },
           {
-            "file": "apps/vera/next/components/modal-video.tsx",
-            "hash": "3726794273580124083",
+            "file": "apps/carben/next/components/modal-video.tsx",
+            "hash": "3842076329107700642",
             "dependencies": [
               {
-                "source": "vera-next",
+                "source": "carben-next",
                 "target": "npm:react",
                 "type": "static"
               },
               {
-                "source": "vera-next",
+                "source": "carben-next",
                 "target": "npm:next",
                 "type": "static"
               },
               {
-                "source": "vera-next",
+                "source": "carben-next",
                 "target": "npm:@headlessui/react",
                 "type": "static"
               }
             ]
           },
           {
-            "file": "apps/vera/next/components/newsletter.tsx",
-            "hash": "10572522477847864280"
+            "file": "apps/carben/next/components/newsletter.tsx",
+            "hash": "4544074945679569931"
           },
           {
-            "file": "apps/vera/next/components/page-illustration.tsx",
-            "hash": "2693105002430831353"
-          },
-          {
-            "file": "apps/vera/next/components/post-date.tsx",
-            "hash": "15791457902614547322",
+            "file": "apps/carben/next/components/notification.tsx",
+            "hash": "14354185926792728508",
             "dependencies": [
               {
-                "source": "vera-next",
+                "source": "carben-next",
+                "target": "npm:react",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "apps/carben/next/components/page-illustration.tsx",
+            "hash": "5179333542951280958"
+          },
+          {
+            "file": "apps/carben/next/components/pagination-classic.tsx",
+            "hash": "18201225089158703157"
+          },
+          {
+            "file": "apps/carben/next/components/pagination-numeric-2.tsx",
+            "hash": "10601255382301908516"
+          },
+          {
+            "file": "apps/carben/next/components/pagination-numeric.tsx",
+            "hash": "13765120184537159821"
+          },
+          {
+            "file": "apps/carben/next/components/post-date.tsx",
+            "hash": "5700844968589795365",
+            "dependencies": [
+              {
+                "source": "carben-next",
                 "target": "npm:date-fns",
                 "type": "static"
               }
             ]
           },
           {
-            "file": "apps/vera/next/components/post-item.tsx",
-            "hash": "10761546576699912423",
+            "file": "apps/carben/next/components/post-item.tsx",
+            "hash": "6249253301423279614",
             "dependencies": [
               {
-                "source": "vera-next",
+                "source": "carben-next",
                 "target": "npm:next",
                 "type": "static"
               },
               {
-                "source": "vera-next",
+                "source": "carben-next",
                 "target": "npm:@/components/post-date",
                 "type": "static"
               }
             ]
           },
           {
-            "file": "apps/vera/next/components/pricing-tables.tsx",
-            "hash": "2479326382499245621"
+            "file": "apps/carben/next/components/pricing-tables.tsx",
+            "hash": "1720497831887490777"
           },
           {
-            "file": "apps/vera/next/components/process.tsx",
-            "hash": "3996489632331426318",
+            "file": "apps/carben/next/components/process.tsx",
+            "hash": "5295786872660670359",
             "dependencies": [
               {
-                "source": "vera-next",
+                "source": "carben-next",
                 "target": "npm:next",
                 "type": "static"
               },
               {
-                "source": "vera-next",
+                "source": "carben-next",
                 "target": "npm:@/public/images/mockup-image-02.jpg",
                 "type": "static"
               },
               {
-                "source": "vera-next",
+                "source": "carben-next",
                 "target": "npm:@/public/images/mockup-image-03.jpg",
                 "type": "static"
               },
               {
-                "source": "vera-next",
+                "source": "carben-next",
                 "target": "npm:@/public/images/mockup-image-04.jpg",
                 "type": "static"
               },
               {
-                "source": "vera-next",
+                "source": "carben-next",
                 "target": "npm:@/public/images/iphone-mockup.png",
                 "type": "static"
               }
             ]
           },
           {
-            "file": "apps/vera/next/components/related-links.tsx",
-            "hash": "1194954081194495109"
+            "file": "apps/carben/next/components/related-links.tsx",
+            "hash": "2407523842716868627"
           },
           {
-            "file": "apps/vera/next/components/related-posts-01.tsx",
-            "hash": "5367919978212465822",
+            "file": "apps/carben/next/components/related-posts-01.tsx",
+            "hash": "7590481555541298862",
             "dependencies": [
               {
-                "source": "vera-next",
+                "source": "carben-next",
                 "target": "npm:next",
                 "type": "static"
               },
               {
-                "source": "vera-next",
+                "source": "carben-next",
                 "target": "npm:@/public/images/related-post-03.jpg",
                 "type": "static"
               },
               {
-                "source": "vera-next",
+                "source": "carben-next",
                 "target": "npm:@/public/images/related-post-04.jpg",
                 "type": "static"
               },
               {
-                "source": "vera-next",
+                "source": "carben-next",
                 "target": "npm:@/public/images/related-post-05.jpg",
                 "type": "static"
               },
               {
-                "source": "vera-next",
+                "source": "carben-next",
                 "target": "npm:@/public/images/related-post-06.jpg",
                 "type": "static"
               }
             ]
           },
           {
-            "file": "apps/vera/next/components/related-posts-02.tsx",
-            "hash": "5812505023604575997",
+            "file": "apps/carben/next/components/related-posts-02.tsx",
+            "hash": "15210526179871067468",
             "dependencies": [
               {
-                "source": "vera-next",
+                "source": "carben-next",
                 "target": "npm:next",
                 "type": "static"
               },
               {
-                "source": "vera-next",
+                "source": "carben-next",
                 "target": "npm:@/public/images/related-post-01.jpg",
                 "type": "static"
               },
               {
-                "source": "vera-next",
+                "source": "carben-next",
                 "target": "npm:@/public/images/related-post-02.jpg",
                 "type": "static"
               },
               {
-                "source": "vera-next",
+                "source": "carben-next",
                 "target": "npm:@/public/images/news-author-04.jpg",
                 "type": "static"
               },
               {
-                "source": "vera-next",
+                "source": "carben-next",
                 "target": "npm:@/public/images/news-author-03.jpg",
                 "type": "static"
               }
             ]
           },
           {
-            "file": "apps/vera/next/components/stats.tsx",
-            "hash": "6344808391004842059",
+            "file": "apps/carben/next/components/search-form.tsx",
+            "hash": "15259942828461590572"
+          },
+          {
+            "file": "apps/carben/next/components/search-modal.tsx",
+            "hash": "18049529190622030376",
             "dependencies": [
               {
-                "source": "vera-next",
+                "source": "carben-next",
                 "target": "npm:next",
                 "type": "static"
               },
               {
-                "source": "vera-next",
+                "source": "carben-next",
+                "target": "npm:@headlessui/react",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "apps/carben/next/components/stats.tsx",
+            "hash": "7085051820725264394",
+            "dependencies": [
+              {
+                "source": "carben-next",
+                "target": "npm:next",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
                 "target": "npm:@/public/images/icologo.png",
                 "type": "static"
               },
               {
-                "source": "vera-next",
+                "source": "carben-next",
                 "target": "npm:@/public/images/Beamery_Logo_RGB_Full+Color.png",
                 "type": "static"
               },
               {
-                "source": "vera-next",
+                "source": "carben-next",
                 "target": "npm:@/public/images/pandologic.png",
                 "type": "static"
               },
               {
-                "source": "vera-next",
+                "source": "carben-next",
                 "target": "npm:@/public/images/mobius.png",
                 "type": "static"
               }
             ]
           },
           {
-            "file": "apps/vera/next/components/tabs.tsx",
-            "hash": "8193808043583798173",
+            "file": "apps/carben/next/components/tabs.tsx",
+            "hash": "12308381900689904874",
             "dependencies": [
               {
-                "source": "vera-next",
+                "source": "carben-next",
                 "target": "npm:react",
                 "type": "static"
               },
               {
-                "source": "vera-next",
+                "source": "carben-next",
                 "target": "npm:next",
                 "type": "static"
               },
               {
-                "source": "vera-next",
+                "source": "carben-next",
                 "target": "npm:@/public/images/video-thumb.jpg",
                 "type": "static"
               },
               {
-                "source": "vera-next",
+                "source": "carben-next",
                 "target": "npm:@/public/images/play-button.svg",
                 "type": "static"
               }
             ]
           },
           {
-            "file": "apps/vera/next/components/team.tsx",
-            "hash": "474709798108881441",
+            "file": "apps/carben/next/components/team.tsx",
+            "hash": "937574503382980206",
             "dependencies": [
               {
-                "source": "vera-next",
+                "source": "carben-next",
                 "target": "npm:next",
                 "type": "static"
               },
               {
-                "source": "vera-next",
+                "source": "carben-next",
                 "target": "npm:@/public/images/team-member-01.jpg",
                 "type": "static"
               },
               {
-                "source": "vera-next",
+                "source": "carben-next",
                 "target": "npm:@/public/images/team-member-02.jpg",
                 "type": "static"
               },
               {
-                "source": "vera-next",
+                "source": "carben-next",
                 "target": "npm:@/public/images/team-member-03.jpg",
                 "type": "static"
               },
               {
-                "source": "vera-next",
+                "source": "carben-next",
                 "target": "npm:@/public/images/team-member-04.jpg",
                 "type": "static"
               },
               {
-                "source": "vera-next",
+                "source": "carben-next",
                 "target": "npm:@/public/images/team-member-05.jpg",
                 "type": "static"
               },
               {
-                "source": "vera-next",
+                "source": "carben-next",
                 "target": "npm:@/public/images/team-member-06.jpg",
                 "type": "static"
               },
               {
-                "source": "vera-next",
+                "source": "carben-next",
                 "target": "npm:@/public/images/team-member-07.jpg",
                 "type": "static"
               },
               {
-                "source": "vera-next",
+                "source": "carben-next",
                 "target": "npm:@/public/images/team-member-08.jpg",
                 "type": "static"
               },
               {
-                "source": "vera-next",
+                "source": "carben-next",
                 "target": "npm:@/public/images/team-member-09.jpg",
                 "type": "static"
               },
               {
-                "source": "vera-next",
+                "source": "carben-next",
                 "target": "npm:@/public/images/team-member-10.jpg",
                 "type": "static"
               }
             ]
           },
           {
-            "file": "apps/vera/next/components/testimonials-blocks.tsx",
-            "hash": "9015042510754666687",
+            "file": "apps/carben/next/components/testimonials-blocks.tsx",
+            "hash": "3417936926803123930",
             "dependencies": [
               {
-                "source": "vera-next",
+                "source": "carben-next",
                 "target": "npm:next",
                 "type": "static"
               },
               {
-                "source": "vera-next",
+                "source": "carben-next",
                 "target": "npm:@/public/images/testimonial-01.jpg",
                 "type": "static"
               },
               {
-                "source": "vera-next",
+                "source": "carben-next",
                 "target": "npm:@/public/images/testimonial-02.jpg",
                 "type": "static"
               },
               {
-                "source": "vera-next",
+                "source": "carben-next",
                 "target": "npm:@/public/images/testimonial-03.jpg",
                 "type": "static"
               },
               {
-                "source": "vera-next",
+                "source": "carben-next",
                 "target": "npm:@/public/images/testimonial-04.jpg",
                 "type": "static"
               }
             ]
           },
           {
-            "file": "apps/vera/next/components/testimonials-carousel.tsx",
-            "hash": "14191015052771823276",
+            "file": "apps/carben/next/components/testimonials-carousel.tsx",
+            "hash": "10893101110074445645",
             "dependencies": [
               {
-                "source": "vera-next",
+                "source": "carben-next",
                 "target": "npm:react",
                 "type": "static"
               },
               {
-                "source": "vera-next",
+                "source": "carben-next",
                 "target": "npm:@headlessui/react",
                 "type": "static"
               }
             ]
           },
           {
-            "file": "apps/vera/next/components/testimonials-circles.tsx",
-            "hash": "12929884285097254164",
+            "file": "apps/carben/next/components/testimonials-circles.tsx",
+            "hash": "10865808621825646662",
             "dependencies": [
               {
-                "source": "vera-next",
+                "source": "carben-next",
                 "target": "npm:react",
                 "type": "static"
               },
               {
-                "source": "vera-next",
+                "source": "carben-next",
                 "target": "npm:next",
                 "type": "static"
               },
               {
-                "source": "vera-next",
+                "source": "carben-next",
                 "target": "npm:@/public/images//user-1.jpg",
                 "type": "static"
               },
               {
-                "source": "vera-next",
+                "source": "carben-next",
                 "target": "npm:@/public/images//user-2.jpg",
                 "type": "static"
               },
               {
-                "source": "vera-next",
+                "source": "carben-next",
                 "target": "npm:@/public/images//user-3.jpg",
                 "type": "static"
               },
               {
-                "source": "vera-next",
+                "source": "carben-next",
                 "target": "npm:@/public/images//user-4.jpg",
                 "type": "static"
               },
               {
-                "source": "vera-next",
+                "source": "carben-next",
                 "target": "npm:@/public/images//user-5.jpg",
                 "type": "static"
               },
               {
-                "source": "vera-next",
+                "source": "carben-next",
                 "target": "npm:@/public/images//user-6.jpg",
                 "type": "static"
               },
               {
-                "source": "vera-next",
+                "source": "carben-next",
                 "target": "npm:@/public/images//user-7.jpg",
                 "type": "static"
               },
               {
-                "source": "vera-next",
+                "source": "carben-next",
                 "target": "npm:@/public/images//user-8.jpg",
                 "type": "static"
               },
               {
-                "source": "vera-next",
+                "source": "carben-next",
                 "target": "npm:@/public/images//user-9.jpg",
                 "type": "static"
               },
               {
-                "source": "vera-next",
+                "source": "carben-next",
                 "target": "npm:@/public/images//user-10.jpg",
                 "type": "static"
               },
               {
-                "source": "vera-next",
+                "source": "carben-next",
                 "target": "npm:@/public/images//user-11.jpg",
                 "type": "static"
               },
               {
-                "source": "vera-next",
+                "source": "carben-next",
                 "target": "npm:@/public/images//user-12.jpg",
                 "type": "static"
               },
               {
-                "source": "vera-next",
+                "source": "carben-next",
                 "target": "npm:@/public/images//user-13.jpg",
                 "type": "static"
               },
               {
-                "source": "vera-next",
+                "source": "carben-next",
                 "target": "npm:@/public/images//user-14.jpg",
                 "type": "static"
               },
               {
-                "source": "vera-next",
+                "source": "carben-next",
                 "target": "npm:@/public/images//user-15.jpg",
                 "type": "static"
               },
               {
-                "source": "vera-next",
+                "source": "carben-next",
                 "target": "npm:@/public/images//user-16.jpg",
                 "type": "static"
               },
               {
-                "source": "vera-next",
+                "source": "carben-next",
                 "target": "npm:@/public/images//user-17.jpg",
                 "type": "static"
               },
               {
-                "source": "vera-next",
+                "source": "carben-next",
                 "target": "npm:@/public/images//user-18.jpg",
                 "type": "static"
               },
               {
-                "source": "vera-next",
+                "source": "carben-next",
                 "target": "npm:@/public/images//user-19.jpg",
                 "type": "static"
               },
               {
-                "source": "vera-next",
+                "source": "carben-next",
                 "target": "npm:@/public/images//user-20.jpg",
                 "type": "static"
               }
             ]
           },
           {
-            "file": "apps/vera/next/components/testimonials-video.tsx",
-            "hash": "10216391567701814664",
+            "file": "apps/carben/next/components/testimonials-video.tsx",
+            "hash": "11663301722046978043",
             "dependencies": [
               {
-                "source": "vera-next",
+                "source": "carben-next",
                 "target": "npm:@/public/images/video-testimonial.jpg",
                 "type": "static"
               },
               {
-                "source": "vera-next",
+                "source": "carben-next",
                 "target": "npm:@/components/modal-video",
                 "type": "static"
               }
             ]
           },
           {
-            "file": "apps/vera/next/components/timeline.tsx",
-            "hash": "16339514869226901729",
+            "file": "apps/carben/next/components/theme-toggle.tsx",
+            "hash": "16783793485331346314",
             "dependencies": [
               {
-                "source": "vera-next",
+                "source": "carben-next",
+                "target": "npm:next-themes",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "apps/carben/next/components/timeline.tsx",
+            "hash": "11695657257071925511",
+            "dependencies": [
+              {
+                "source": "carben-next",
                 "target": "npm:react",
                 "type": "static"
               }
             ]
           },
           {
-            "file": "apps/vera/next/components/ui/footer.tsx",
-            "hash": "15709961384916598985",
+            "file": "apps/carben/next/components/toast-02.tsx",
+            "hash": "12645631957092465747",
             "dependencies": [
               {
-                "source": "vera-next",
+                "source": "carben-next",
+                "target": "npm:react",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "apps/carben/next/components/toast-03.tsx",
+            "hash": "9402035746251209603",
+            "dependencies": [
+              {
+                "source": "carben-next",
+                "target": "npm:react",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "apps/carben/next/components/toast.tsx",
+            "hash": "10614511405057562172",
+            "dependencies": [
+              {
+                "source": "carben-next",
+                "target": "npm:react",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "apps/carben/next/components/tooltip.tsx",
+            "hash": "16081844218039866029",
+            "dependencies": [
+              {
+                "source": "carben-next",
+                "target": "npm:react",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:@headlessui/react",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "apps/carben/next/components/ui-arc/footer.tsx",
+            "hash": "17550531947352287209",
+            "dependencies": [
+              {
+                "source": "carben-next",
                 "target": "npm:next",
                 "type": "static"
               }
             ]
           },
           {
-            "file": "apps/vera/next/components/ui/header.tsx",
-            "hash": "11139958502519562763",
+            "file": "apps/carben/next/components/ui-arc/header.tsx",
+            "hash": "3126599586660944868",
             "dependencies": [
               {
-                "source": "vera-next",
+                "source": "carben-next",
                 "target": "npm:next",
                 "type": "static"
               },
               {
-                "source": "vera-next",
+                "source": "carben-next",
                 "target": "npm:@/components/utils/dropdown",
                 "type": "static"
               }
             ]
           },
           {
-            "file": "apps/vera/next/components/ui/logo.tsx",
-            "hash": "15394437462080599308"
+            "file": "apps/carben/next/components/ui-arc/logo.tsx",
+            "hash": "17040277302421468209"
           },
           {
-            "file": "apps/vera/next/components/ui/mobile-menu.tsx",
-            "hash": "11945846012165241336",
+            "file": "apps/carben/next/components/ui-arc/mobile-menu.tsx",
+            "hash": "15382283775199614124",
             "dependencies": [
               {
-                "source": "vera-next",
+                "source": "carben-next",
                 "target": "npm:react",
                 "type": "static"
               },
               {
-                "source": "vera-next",
+                "source": "carben-next",
                 "target": "npm:@headlessui/react",
                 "type": "static"
               },
               {
-                "source": "vera-next",
+                "source": "carben-next",
                 "target": "npm:next",
                 "type": "static"
               }
             ]
           },
           {
-            "file": "apps/vera/next/components/ui/theme-toggle.tsx",
-            "hash": "5325613150793788536",
+            "file": "apps/carben/next/components/ui-arc/theme-toggle.tsx",
+            "hash": "9065506782500360065",
             "dependencies": [
               {
-                "source": "vera-next",
+                "source": "carben-next",
                 "target": "npm:next-themes",
                 "type": "static"
               }
             ]
           },
           {
-            "file": "apps/vera/next/components/utils/dropdown.tsx",
-            "hash": "13961477360426091342",
+            "file": "apps/carben/next/components/ui/header.tsx",
+            "hash": "12383053705643548183",
             "dependencies": [
               {
-                "source": "vera-next",
+                "source": "carben-next",
                 "target": "npm:react",
                 "type": "static"
               },
               {
-                "source": "vera-next",
+                "source": "carben-next",
+                "target": "npm:@/app/app-provider",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:@/components/search-modal",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:@/components/dropdown-notifications",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:@/components/dropdown-help",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:@/components/theme-toggle",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:@/components/dropdown-profile",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "apps/carben/next/components/ui/logo.tsx",
+            "hash": "14957483886950866066",
+            "dependencies": [
+              {
+                "source": "carben-next",
+                "target": "npm:next",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "apps/carben/next/components/ui/sidebar-link-group.tsx",
+            "hash": "16986216553455125742",
+            "dependencies": [
+              {
+                "source": "carben-next",
+                "target": "npm:react",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "apps/carben/next/components/ui/sidebar-link.tsx",
+            "hash": "6068933861030989278",
+            "dependencies": [
+              {
+                "source": "carben-next",
+                "target": "npm:next",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:@/app/app-provider",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "apps/carben/next/components/ui/sidebar.tsx",
+            "hash": "3285701444775318230",
+            "dependencies": [
+              {
+                "source": "carben-next",
+                "target": "npm:react",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:next",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
                 "target": "npm:@headlessui/react",
                 "type": "static"
               }
             ]
           },
           {
-            "file": "apps/vera/next/components/zigzag.tsx",
-            "hash": "6032446105297832307",
+            "file": "apps/carben/next/components/utils/dropdown.tsx",
+            "hash": "14721550131889278041",
             "dependencies": [
               {
-                "source": "vera-next",
-                "target": "npm:next",
-                "type": "static"
-              },
-              {
-                "source": "vera-next",
-                "target": "npm:@/public/images/features-03-image-01.jpeg",
-                "type": "static"
-              },
-              {
-                "source": "vera-next",
-                "target": "npm:@/public/images/features-03-image-02.jpeg",
-                "type": "static"
-              },
-              {
-                "source": "vera-next",
-                "target": "npm:@/public/images/features-03-image-03.jpeg",
-                "type": "static"
-              }
-            ]
-          },
-          {
-            "file": "apps/vera/next/content/20-elements-of-a-modern-website-design.mdx",
-            "hash": "14843471668580479055"
-          },
-          {
-            "file": "apps/vera/next/content/20-unique-places-to-find-web-design-inspiration.mdx",
-            "hash": "4898381649669907756"
-          },
-          {
-            "file": "apps/vera/next/content/appy-launches-new-thematic-solutions.mdx",
-            "hash": "2502671127308966812"
-          },
-          {
-            "file": "apps/vera/next/content/how-to-create-a-profile-page-using-appy.mdx",
-            "hash": "30165904578932237"
-          },
-          {
-            "file": "apps/vera/next/content/launch-lessons-the-creators-of-intrusive-inc.mdx",
-            "hash": "5482025853206610828"
-          },
-          {
-            "file": "apps/vera/next/content/what-to-look-for-in-a-digital-portfolio.mdx",
-            "hash": "8358775427567189252"
-          },
-          {
-            "file": "apps/vera/next/content/why-your-customers-needs-a-responsive-website.mdx",
-            "hash": "9312048931581708431"
-          },
-          {
-            "file": "apps/vera/next/contentlayer.config.js",
-            "hash": "9433693188048782855",
-            "dependencies": [
-              {
-                "source": "vera-next",
-                "target": "npm:contentlayer",
-                "type": "static"
-              }
-            ]
-          },
-          {
-            "file": "apps/vera/next/index.d.ts",
-            "hash": "5498222895072842432"
-          },
-          {
-            "file": "apps/vera/next/jest.config.ts",
-            "hash": "10620024099691008270"
-          },
-          {
-            "file": "apps/vera/next/next.config.js",
-            "hash": "7099124938149907315",
-            "dependencies": [
-              {
-                "source": "vera-next",
-                "target": "npm:next-contentlayer",
-                "type": "static"
-              }
-            ]
-          },
-          {
-            "file": "apps/vera/next/package-lock.json",
-            "hash": "4160978866454695519"
-          },
-          {
-            "file": "apps/vera/next/package.json",
-            "hash": "8605334587664321302",
-            "dependencies": [
-              {
-                "source": "vera-next",
-                "target": "npm:@headlessui/react",
-                "type": "static"
-              },
-              {
-                "source": "vera-next",
-                "target": "npm:@types/node",
-                "type": "static"
-              },
-              {
-                "source": "vera-next",
-                "target": "npm:@types/react",
-                "type": "static"
-              },
-              {
-                "source": "vera-next",
-                "target": "npm:@types/react-dom",
-                "type": "static"
-              },
-              {
-                "source": "vera-next",
-                "target": "npm:aos",
-                "type": "static"
-              },
-              {
-                "source": "vera-next",
-                "target": "npm:contentlayer",
-                "type": "static"
-              },
-              {
-                "source": "vera-next",
-                "target": "npm:date-fns",
-                "type": "static"
-              },
-              {
-                "source": "vera-next",
-                "target": "npm:next",
-                "type": "static"
-              },
-              {
-                "source": "vera-next",
-                "target": "npm:next-contentlayer",
-                "type": "static"
-              },
-              {
-                "source": "vera-next",
-                "target": "npm:next-themes",
-                "type": "static"
-              },
-              {
-                "source": "vera-next",
+                "source": "carben-next",
                 "target": "npm:react",
                 "type": "static"
               },
               {
-                "source": "vera-next",
-                "target": "npm:react-dom",
+                "source": "carben-next",
+                "target": "npm:@headlessui/react",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "apps/carben/next/components/utils/use-item-selection.tsx",
+            "hash": "4663509068212805665",
+            "dependencies": [
+              {
+                "source": "carben-next",
+                "target": "npm:react",
                 "type": "static"
               },
               {
-                "source": "vera-next",
-                "target": "npm:swiper",
+                "source": "carben-next",
+                "target": "npm:@/app/selected-items-context",
                 "type": "static"
-              },
+              }
+            ]
+          },
+          {
+            "file": "apps/carben/next/components/utils/utils.ts",
+            "hash": "16721340795175806724",
+            "dependencies": [
               {
-                "source": "vera-next",
-                "target": "npm:typescript",
-                "type": "static"
-              },
-              {
-                "source": "vera-next",
-                "target": "npm:@tailwindcss/forms",
-                "type": "static"
-              },
-              {
-                "source": "vera-next",
-                "target": "npm:@tailwindcss/typography",
-                "type": "static"
-              },
-              {
-                "source": "vera-next",
-                "target": "npm:@types/aos",
-                "type": "static"
-              },
-              {
-                "source": "vera-next",
-                "target": "npm:autoprefixer",
-                "type": "static"
-              },
-              {
-                "source": "vera-next",
-                "target": "npm:postcss",
-                "type": "static"
-              },
-              {
-                "source": "vera-next",
+                "source": "carben-next",
                 "target": "npm:tailwindcss",
                 "type": "static"
               }
             ]
           },
           {
-            "file": "apps/vera/next/postcss.config.js",
-            "hash": "13264578421394119433"
-          },
-          {
-            "file": "apps/vera/next/project.json",
-            "hash": "5826139920017804039"
-          },
-          {
-            "file": "apps/vera/next/public/favicon.ico",
-            "hash": "9157999678830540297"
-          },
-          {
-            "file": "apps/vera/next/public/images/404.jpg",
-            "hash": "15098972603888287930"
-          },
-          {
-            "file": "apps/vera/next/public/images/about-grid-01.jpg",
-            "hash": "16094565882911757738"
-          },
-          {
-            "file": "apps/vera/next/public/images/about-grid-02.jpg",
-            "hash": "18320746535956032425"
-          },
-          {
-            "file": "apps/vera/next/public/images/about-grid-03.jpg",
-            "hash": "13848003752594379131"
-          },
-          {
-            "file": "apps/vera/next/public/images/about-grid-04.jpg",
-            "hash": "7396182269701615624"
-          },
-          {
-            "file": "apps/vera/next/public/images/about-grid-05.jpg",
-            "hash": "12330425827226835717"
-          },
-          {
-            "file": "apps/vera/next/public/images/about-grid-06.jpg",
-            "hash": "2041950440615847408"
-          },
-          {
-            "file": "apps/vera/next/public/images/about-hero.jpg",
-            "hash": "3795452990925727169"
-          },
-          {
-            "file": "apps/vera/next/public/images/Beamery_Logo_RGB_Full+Color.png",
-            "hash": "232914859890240529"
-          },
-          {
-            "file": "apps/vera/next/public/images/career-01.jpg",
-            "hash": "6437086417502582111"
-          },
-          {
-            "file": "apps/vera/next/public/images/career-02.jpg",
-            "hash": "6143868033931964073"
-          },
-          {
-            "file": "apps/vera/next/public/images/career-03.jpg",
-            "hash": "6185010857852009214"
-          },
-          {
-            "file": "apps/vera/next/public/images/career-04.jpg",
-            "hash": "2726189542958829971"
-          },
-          {
-            "file": "apps/vera/next/public/images/career-05.jpg",
-            "hash": "8947577784922262431"
-          },
-          {
-            "file": "apps/vera/next/public/images/career-06.jpg",
-            "hash": "11167560815252022409"
-          },
-          {
-            "file": "apps/vera/next/public/images/carousel-item-01.jpg",
-            "hash": "900971190315150236"
-          },
-          {
-            "file": "apps/vera/next/public/images/carousel-item-02.jpg",
-            "hash": "4664058403488123812"
-          },
-          {
-            "file": "apps/vera/next/public/images/carousel-item-03.jpg",
-            "hash": "12335760674434757312"
-          },
-          {
-            "file": "apps/vera/next/public/images/carousel-item-04.jpg",
-            "hash": "14947677474822647984"
-          },
-          {
-            "file": "apps/vera/next/public/images/carousel-item-05.jpg",
-            "hash": "206358808117778853"
-          },
-          {
-            "file": "apps/vera/next/public/images/favicon.png",
-            "hash": "14635732131927154970"
-          },
-          {
-            "file": "apps/vera/next/public/images/features-03-image-01.jpeg",
-            "hash": "16630271157432506383"
-          },
-          {
-            "file": "apps/vera/next/public/images/features-03-image-02.jpeg",
-            "hash": "11280250034078574921"
-          },
-          {
-            "file": "apps/vera/next/public/images/features-03-image-03.jpeg",
-            "hash": "6681576685135760335"
-          },
-          {
-            "file": "apps/vera/next/public/images/hero-bg-02.jpg",
-            "hash": "12050008264577114126"
-          },
-          {
-            "file": "apps/vera/next/public/images/hero-bg-03.jpg",
-            "hash": "3749048015357457630"
-          },
-          {
-            "file": "apps/vera/next/public/images/hero-bg.jpg",
-            "hash": "2781486218613169671"
-          },
-          {
-            "file": "apps/vera/next/public/images/hero-illustration.svg",
-            "hash": "14638407527116981023"
-          },
-          {
-            "file": "apps/vera/next/public/images/icologo.png",
-            "hash": "13117022320504774"
-          },
-          {
-            "file": "apps/vera/next/public/images/iphone-mockup.png",
-            "hash": "2802631349695661493"
-          },
-          {
-            "file": "apps/vera/next/public/images/mobius.png",
-            "hash": "13686085411891333814"
-          },
-          {
-            "file": "apps/vera/next/public/images/mockup-image-01.jpg",
-            "hash": "8857849632603415091"
-          },
-          {
-            "file": "apps/vera/next/public/images/mockup-image-02.jpg",
-            "hash": "14962683439117661247"
-          },
-          {
-            "file": "apps/vera/next/public/images/mockup-image-03.jpg",
-            "hash": "6277550537878151262"
-          },
-          {
-            "file": "apps/vera/next/public/images/mockup-image-04.jpg",
-            "hash": "17896920583560267393"
-          },
-          {
-            "file": "apps/vera/next/public/images/news-01.jpg",
-            "hash": "16459273888167519126"
-          },
-          {
-            "file": "apps/vera/next/public/images/news-02.jpg",
-            "hash": "12755127964575727502"
-          },
-          {
-            "file": "apps/vera/next/public/images/news-03.jpg",
-            "hash": "937958262790159858"
-          },
-          {
-            "file": "apps/vera/next/public/images/news-04.jpg",
-            "hash": "6782192691294657537"
-          },
-          {
-            "file": "apps/vera/next/public/images/news-05.jpg",
-            "hash": "13634264942206606290"
-          },
-          {
-            "file": "apps/vera/next/public/images/news-06.jpg",
-            "hash": "15463380660815383556"
-          },
-          {
-            "file": "apps/vera/next/public/images/news-author-01.jpg",
-            "hash": "1462892900878041677"
-          },
-          {
-            "file": "apps/vera/next/public/images/news-author-02.jpg",
-            "hash": "16678483765491501381"
-          },
-          {
-            "file": "apps/vera/next/public/images/news-author-03.jpg",
-            "hash": "16951019487703193097"
-          },
-          {
-            "file": "apps/vera/next/public/images/news-author-04.jpg",
-            "hash": "10139873691884090490"
-          },
-          {
-            "file": "apps/vera/next/public/images/news-author-05.jpg",
-            "hash": "18096805711950248573"
-          },
-          {
-            "file": "apps/vera/next/public/images/news-author-06.jpg",
-            "hash": "9955603595354419126"
-          },
-          {
-            "file": "apps/vera/next/public/images/news-inner-image-left.jpg",
-            "hash": "5194656446677738236"
-          },
-          {
-            "file": "apps/vera/next/public/images/news-inner-image.jpg",
-            "hash": "846263435285915013"
-          },
-          {
-            "file": "apps/vera/next/public/images/pandologic.png",
-            "hash": "16220224430474231000"
-          },
-          {
-            "file": "apps/vera/next/public/images/play-button.svg",
-            "hash": "5999461709542761903"
-          },
-          {
-            "file": "apps/vera/next/public/images/related-post-01.jpg",
-            "hash": "16815184704745192469"
-          },
-          {
-            "file": "apps/vera/next/public/images/related-post-02.jpg",
-            "hash": "12568920286709697207"
-          },
-          {
-            "file": "apps/vera/next/public/images/related-post-03.jpg",
-            "hash": "17342077110739252706"
-          },
-          {
-            "file": "apps/vera/next/public/images/related-post-04.jpg",
-            "hash": "1278422925427767177"
-          },
-          {
-            "file": "apps/vera/next/public/images/related-post-05.jpg",
-            "hash": "9435696621672946951"
-          },
-          {
-            "file": "apps/vera/next/public/images/related-post-06.jpg",
-            "hash": "14453688706276167803"
-          },
-          {
-            "file": "apps/vera/next/public/images/team-member-01.jpg",
-            "hash": "12866468014630041660"
-          },
-          {
-            "file": "apps/vera/next/public/images/team-member-02.jpg",
-            "hash": "8206265625106191196"
-          },
-          {
-            "file": "apps/vera/next/public/images/team-member-03.jpg",
-            "hash": "4632958878321100489"
-          },
-          {
-            "file": "apps/vera/next/public/images/team-member-04.jpg",
-            "hash": "9686461593068294230"
-          },
-          {
-            "file": "apps/vera/next/public/images/team-member-05.jpg",
-            "hash": "16341514988724968061"
-          },
-          {
-            "file": "apps/vera/next/public/images/team-member-06.jpg",
-            "hash": "15626685107666581902"
-          },
-          {
-            "file": "apps/vera/next/public/images/team-member-07.jpg",
-            "hash": "16675059895025270240"
-          },
-          {
-            "file": "apps/vera/next/public/images/team-member-08.jpg",
-            "hash": "1061849944165509350"
-          },
-          {
-            "file": "apps/vera/next/public/images/team-member-09.jpg",
-            "hash": "9738515564127343485"
-          },
-          {
-            "file": "apps/vera/next/public/images/team-member-10.jpg",
-            "hash": "14975770590026545417"
-          },
-          {
-            "file": "apps/vera/next/public/images/testimonial-01.jpg",
-            "hash": "11163913559707421298"
-          },
-          {
-            "file": "apps/vera/next/public/images/testimonial-02.jpg",
-            "hash": "16842884075519247435"
-          },
-          {
-            "file": "apps/vera/next/public/images/testimonial-03.jpg",
-            "hash": "17214145778734569097"
-          },
-          {
-            "file": "apps/vera/next/public/images/testimonial-04.jpg",
-            "hash": "3593835512717541286"
-          },
-          {
-            "file": "apps/vera/next/public/images/user-1.jpg",
-            "hash": "12990696845373155147"
-          },
-          {
-            "file": "apps/vera/next/public/images/user-10.jpg",
-            "hash": "883042648569341394"
-          },
-          {
-            "file": "apps/vera/next/public/images/user-11.jpg",
-            "hash": "9072649938989999819"
-          },
-          {
-            "file": "apps/vera/next/public/images/user-12.jpg",
-            "hash": "3533112044124546998"
-          },
-          {
-            "file": "apps/vera/next/public/images/user-13.jpg",
-            "hash": "3243330261586940876"
-          },
-          {
-            "file": "apps/vera/next/public/images/user-14.jpg",
-            "hash": "6530559025466171951"
-          },
-          {
-            "file": "apps/vera/next/public/images/user-15.jpg",
-            "hash": "16855346264590860658"
-          },
-          {
-            "file": "apps/vera/next/public/images/user-16.jpg",
-            "hash": "3848396040905697839"
-          },
-          {
-            "file": "apps/vera/next/public/images/user-17.jpg",
-            "hash": "8872852133163190972"
-          },
-          {
-            "file": "apps/vera/next/public/images/user-18.jpg",
-            "hash": "11790803165017997817"
-          },
-          {
-            "file": "apps/vera/next/public/images/user-19.jpg",
-            "hash": "3208463370299096076"
-          },
-          {
-            "file": "apps/vera/next/public/images/user-2.jpg",
-            "hash": "7954759676897012146"
-          },
-          {
-            "file": "apps/vera/next/public/images/user-20.jpg",
-            "hash": "859324417584982106"
-          },
-          {
-            "file": "apps/vera/next/public/images/user-3.jpg",
-            "hash": "1255521384373855804"
-          },
-          {
-            "file": "apps/vera/next/public/images/user-4.jpg",
-            "hash": "16309141764352798080"
-          },
-          {
-            "file": "apps/vera/next/public/images/user-5.jpg",
-            "hash": "2338928966447826641"
-          },
-          {
-            "file": "apps/vera/next/public/images/user-6.jpg",
-            "hash": "15906890410415053703"
-          },
-          {
-            "file": "apps/vera/next/public/images/user-7.jpg",
-            "hash": "14734336187493123270"
-          },
-          {
-            "file": "apps/vera/next/public/images/user-8.jpg",
-            "hash": "5964672938878207584"
-          },
-          {
-            "file": "apps/vera/next/public/images/user-9.jpg",
-            "hash": "10656487016161264936"
-          },
-          {
-            "file": "apps/vera/next/public/images/video-testimonial.jpg",
-            "hash": "15516967303763683983"
-          },
-          {
-            "file": "apps/vera/next/public/images/video-thumb.jpg",
-            "hash": "8578715668154994574"
-          },
-          {
-            "file": "apps/vera/next/public/videos/video.mp4",
-            "hash": "11167586994851547669"
-          },
-          {
-            "file": "apps/vera/next/README.md",
-            "hash": "12923569059774286005"
-          },
-          {
-            "file": "apps/vera/next/tailwind.config.js",
-            "hash": "18202744872174386621",
+            "file": "apps/carben/next/components/zigzag.tsx",
+            "hash": "8221895408776985965",
             "dependencies": [
               {
-                "source": "vera-next",
+                "source": "carben-next",
+                "target": "npm:next",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:@/public/images/features-03-image-01.jpeg",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:@/public/images/features-03-image-02.jpeg",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:@/public/images/features-03-image-03.jpeg",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "apps/carben/next/content/20-elements-of-a-modern-website-design.mdx",
+            "hash": "15932823987733899716"
+          },
+          {
+            "file": "apps/carben/next/content/20-unique-places-to-find-web-design-inspiration.mdx",
+            "hash": "9373104812523216559"
+          },
+          {
+            "file": "apps/carben/next/content/appy-launches-new-thematic-solutions.mdx",
+            "hash": "63485066806843051"
+          },
+          {
+            "file": "apps/carben/next/content/how-to-create-a-profile-page-using-appy.mdx",
+            "hash": "3215507953877895004"
+          },
+          {
+            "file": "apps/carben/next/content/launch-lessons-the-creators-of-intrusive-inc.mdx",
+            "hash": "3051007102349314784"
+          },
+          {
+            "file": "apps/carben/next/content/what-to-look-for-in-a-digital-portfolio.mdx",
+            "hash": "2012777490826305307"
+          },
+          {
+            "file": "apps/carben/next/content/why-your-customers-needs-a-responsive-website.mdx",
+            "hash": "9517806824278901407"
+          },
+          {
+            "file": "apps/carben/next/contentlayer.config.js",
+            "hash": "17636288376693666005",
+            "dependencies": [
+              {
+                "source": "carben-next",
+                "target": "npm:contentlayer",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "apps/carben/next/index.d.ts",
+            "hash": "5498222895072842432"
+          },
+          {
+            "file": "apps/carben/next/jest.config.ts",
+            "hash": "8194800752681683920"
+          },
+          {
+            "file": "apps/carben/next/next.config.js",
+            "hash": "4530303710059834444",
+            "dependencies": [
+              {
+                "source": "carben-next",
+                "target": "npm:next-contentlayer",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "apps/carben/next/package-lock.json",
+            "hash": "4160978866454695519"
+          },
+          {
+            "file": "apps/carben/next/package.json",
+            "hash": "5975675631388294213",
+            "dependencies": [
+              {
+                "source": "carben-next",
+                "target": "npm:@headlessui/react",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:@types/node",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:@types/react",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:@types/react-dom",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:aos",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:contentlayer",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:date-fns",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:next",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:next-contentlayer",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:next-themes",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:react",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:react-dom",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:swiper",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:typescript",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
                 "target": "npm:@tailwindcss/forms",
                 "type": "static"
               },
               {
-                "source": "vera-next",
+                "source": "carben-next",
+                "target": "npm:@tailwindcss/typography",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:@types/aos",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:autoprefixer",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:postcss",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:tailwindcss",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "apps/carben/next/postcss.config.js",
+            "hash": "5415290747598470456"
+          },
+          {
+            "file": "apps/carben/next/project.json",
+            "hash": "4719792507769819790"
+          },
+          {
+            "file": "apps/carben/next/public/favicon.ico",
+            "hash": "9157999678830540297"
+          },
+          {
+            "file": "apps/carben/next/public/images/404-illustration-dark.svg",
+            "hash": "10440810728280280559"
+          },
+          {
+            "file": "apps/carben/next/public/images/404-illustration.svg",
+            "hash": "11796879647576164405"
+          },
+          {
+            "file": "apps/carben/next/public/images/404.jpg",
+            "hash": "15098972603888287930"
+          },
+          {
+            "file": "apps/carben/next/public/images/about-grid-01.jpg",
+            "hash": "16094565882911757738"
+          },
+          {
+            "file": "apps/carben/next/public/images/about-grid-02.jpg",
+            "hash": "18320746535956032425"
+          },
+          {
+            "file": "apps/carben/next/public/images/about-grid-03.jpg",
+            "hash": "13848003752594379131"
+          },
+          {
+            "file": "apps/carben/next/public/images/about-grid-04.jpg",
+            "hash": "7396182269701615624"
+          },
+          {
+            "file": "apps/carben/next/public/images/about-grid-05.jpg",
+            "hash": "12330425827226835717"
+          },
+          {
+            "file": "apps/carben/next/public/images/about-grid-06.jpg",
+            "hash": "2041950440615847408"
+          },
+          {
+            "file": "apps/carben/next/public/images/about-hero.jpg",
+            "hash": "3795452990925727169"
+          },
+          {
+            "file": "apps/carben/next/public/images/announcement-icon.svg",
+            "hash": "7648125499954225142"
+          },
+          {
+            "file": "apps/carben/next/public/images/applications-image-01.jpg",
+            "hash": "14870835764801443208"
+          },
+          {
+            "file": "apps/carben/next/public/images/applications-image-02.jpg",
+            "hash": "1356559612120872548"
+          },
+          {
+            "file": "apps/carben/next/public/images/applications-image-03.jpg",
+            "hash": "8631054226213924107"
+          },
+          {
+            "file": "apps/carben/next/public/images/applications-image-04.jpg",
+            "hash": "17223031756443435178"
+          },
+          {
+            "file": "apps/carben/next/public/images/applications-image-05.jpg",
+            "hash": "15068635231250005431"
+          },
+          {
+            "file": "apps/carben/next/public/images/applications-image-06.jpg",
+            "hash": "18063273776067686012"
+          },
+          {
+            "file": "apps/carben/next/public/images/applications-image-07.jpg",
+            "hash": "12984596754555581038"
+          },
+          {
+            "file": "apps/carben/next/public/images/applications-image-08.jpg",
+            "hash": "3856203476130305821"
+          },
+          {
+            "file": "apps/carben/next/public/images/applications-image-09.jpg",
+            "hash": "12267169332022146618"
+          },
+          {
+            "file": "apps/carben/next/public/images/applications-image-10.jpg",
+            "hash": "7367613608134943537"
+          },
+          {
+            "file": "apps/carben/next/public/images/applications-image-11.jpg",
+            "hash": "15078678553407619767"
+          },
+          {
+            "file": "apps/carben/next/public/images/applications-image-12.jpg",
+            "hash": "6491364694548168901"
+          },
+          {
+            "file": "apps/carben/next/public/images/applications-image-13.jpg",
+            "hash": "11186612315452561398"
+          },
+          {
+            "file": "apps/carben/next/public/images/applications-image-14.jpg",
+            "hash": "17012758494440187012"
+          },
+          {
+            "file": "apps/carben/next/public/images/applications-image-15.jpg",
+            "hash": "10265977545834643688"
+          },
+          {
+            "file": "apps/carben/next/public/images/applications-image-16.jpg",
+            "hash": "841986007752206282"
+          },
+          {
+            "file": "apps/carben/next/public/images/applications-image-17.jpg",
+            "hash": "5121364530398405576"
+          },
+          {
+            "file": "apps/carben/next/public/images/applications-image-18.jpg",
+            "hash": "7667305969256378845"
+          },
+          {
+            "file": "apps/carben/next/public/images/applications-image-19.jpg",
+            "hash": "3648229817877799986"
+          },
+          {
+            "file": "apps/carben/next/public/images/applications-image-20.jpg",
+            "hash": "13634726204300173149"
+          },
+          {
+            "file": "apps/carben/next/public/images/applications-image-21.jpg",
+            "hash": "16810776550740253392"
+          },
+          {
+            "file": "apps/carben/next/public/images/applications-image-22.jpg",
+            "hash": "6328980692610909717"
+          },
+          {
+            "file": "apps/carben/next/public/images/applications-image-23.jpg",
+            "hash": "4785279696863006764"
+          },
+          {
+            "file": "apps/carben/next/public/images/applications-image-24.jpg",
+            "hash": "11261132702100446846"
+          },
+          {
+            "file": "apps/carben/next/public/images/applications-image-25.jpg",
+            "hash": "16986162736528671066"
+          },
+          {
+            "file": "apps/carben/next/public/images/applications-image-26.jpg",
+            "hash": "11118728537170731238"
+          },
+          {
+            "file": "apps/carben/next/public/images/applications-image-27.jpg",
+            "hash": "2486384266119921670"
+          },
+          {
+            "file": "apps/carben/next/public/images/applications-image-28.jpg",
+            "hash": "5084035326018782482"
+          },
+          {
+            "file": "apps/carben/next/public/images/applications-image-29.jpg",
+            "hash": "3012125395188340880"
+          },
+          {
+            "file": "apps/carben/next/public/images/applications-image-30.jpg",
+            "hash": "328097296558542446"
+          },
+          {
+            "file": "apps/carben/next/public/images/applications-image-31.jpg",
+            "hash": "17346682389923802492"
+          },
+          {
+            "file": "apps/carben/next/public/images/applications-image-32.jpg",
+            "hash": "15042377965015553342"
+          },
+          {
+            "file": "apps/carben/next/public/images/auth-decoration.png",
+            "hash": "7798584065143134434"
+          },
+          {
+            "file": "apps/carben/next/public/images/auth-image.jpg",
+            "hash": "2953369799763441051"
+          },
+          {
+            "file": "apps/carben/next/public/images/avatar-01.jpg",
+            "hash": "5453213944121722992"
+          },
+          {
+            "file": "apps/carben/next/public/images/avatar-02.jpg",
+            "hash": "10412303692900280281"
+          },
+          {
+            "file": "apps/carben/next/public/images/avatar-03.jpg",
+            "hash": "12761182438906368881"
+          },
+          {
+            "file": "apps/carben/next/public/images/avatar-04.jpg",
+            "hash": "1944480660972785545"
+          },
+          {
+            "file": "apps/carben/next/public/images/avatar-05.jpg",
+            "hash": "7783545111090571415"
+          },
+          {
+            "file": "apps/carben/next/public/images/avatar-06.jpg",
+            "hash": "4054365166165490502"
+          },
+          {
+            "file": "apps/carben/next/public/images/Beamery_Logo_RGB_Full+Color.png",
+            "hash": "232914859890240529"
+          },
+          {
+            "file": "apps/carben/next/public/images/career-01.jpg",
+            "hash": "6437086417502582111"
+          },
+          {
+            "file": "apps/carben/next/public/images/career-02.jpg",
+            "hash": "6143868033931964073"
+          },
+          {
+            "file": "apps/carben/next/public/images/career-03.jpg",
+            "hash": "6185010857852009214"
+          },
+          {
+            "file": "apps/carben/next/public/images/career-04.jpg",
+            "hash": "2726189542958829971"
+          },
+          {
+            "file": "apps/carben/next/public/images/career-05.jpg",
+            "hash": "8947577784922262431"
+          },
+          {
+            "file": "apps/carben/next/public/images/career-06.jpg",
+            "hash": "11167560815252022409"
+          },
+          {
+            "file": "apps/carben/next/public/images/carousel-item-01.jpg",
+            "hash": "900971190315150236"
+          },
+          {
+            "file": "apps/carben/next/public/images/carousel-item-02.jpg",
+            "hash": "4664058403488123812"
+          },
+          {
+            "file": "apps/carben/next/public/images/carousel-item-03.jpg",
+            "hash": "12335760674434757312"
+          },
+          {
+            "file": "apps/carben/next/public/images/carousel-item-04.jpg",
+            "hash": "14947677474822647984"
+          },
+          {
+            "file": "apps/carben/next/public/images/carousel-item-05.jpg",
+            "hash": "206358808117778853"
+          },
+          {
+            "file": "apps/carben/next/public/images/channel-01.png",
+            "hash": "3819597659461183213"
+          },
+          {
+            "file": "apps/carben/next/public/images/channel-02.png",
+            "hash": "7857512759511130324"
+          },
+          {
+            "file": "apps/carben/next/public/images/channel-03.png",
+            "hash": "10764620695240632606"
+          },
+          {
+            "file": "apps/carben/next/public/images/chat-image.jpg",
+            "hash": "322290766524902701"
+          },
+          {
+            "file": "apps/carben/next/public/images/company-bg.jpg",
+            "hash": "10793611583214163257"
+          },
+          {
+            "file": "apps/carben/next/public/images/company-icon-01.svg",
+            "hash": "8526769167847476567"
+          },
+          {
+            "file": "apps/carben/next/public/images/company-icon-02.svg",
+            "hash": "871791629295133736"
+          },
+          {
+            "file": "apps/carben/next/public/images/company-icon-03.svg",
+            "hash": "17537650410902207369"
+          },
+          {
+            "file": "apps/carben/next/public/images/company-icon-04.svg",
+            "hash": "15439481337151367096"
+          },
+          {
+            "file": "apps/carben/next/public/images/company-icon-05.svg",
+            "hash": "8655940292607801359"
+          },
+          {
+            "file": "apps/carben/next/public/images/company-icon-06.svg",
+            "hash": "11498969117105458503"
+          },
+          {
+            "file": "apps/carben/next/public/images/company-icon-07.svg",
+            "hash": "10674088421428523938"
+          },
+          {
+            "file": "apps/carben/next/public/images/company-icon-08.svg",
+            "hash": "2959073942190614213"
+          },
+          {
+            "file": "apps/carben/next/public/images/favicon copy.png",
+            "hash": "14635732131927154970"
+          },
+          {
+            "file": "apps/carben/next/public/images/favicon.png",
+            "hash": "14635732131927154970"
+          },
+          {
+            "file": "apps/carben/next/public/images/features-03-image-01.jpeg",
+            "hash": "16630271157432506383"
+          },
+          {
+            "file": "apps/carben/next/public/images/features-03-image-02.jpeg",
+            "hash": "11280250034078574921"
+          },
+          {
+            "file": "apps/carben/next/public/images/features-03-image-03.jpeg",
+            "hash": "6681576685135760335"
+          },
+          {
+            "file": "apps/carben/next/public/images/feed-image-01.jpg",
+            "hash": "15022861737268473000"
+          },
+          {
+            "file": "apps/carben/next/public/images/feed-image-02.jpg",
+            "hash": "5347391254350488646"
+          },
+          {
+            "file": "apps/carben/next/public/images/group-avatar-01.png",
+            "hash": "9948306086573304897"
+          },
+          {
+            "file": "apps/carben/next/public/images/group-avatar-02.png",
+            "hash": "7543631228321530439"
+          },
+          {
+            "file": "apps/carben/next/public/images/group-avatar-03.png",
+            "hash": "310967841929547372"
+          },
+          {
+            "file": "apps/carben/next/public/images/group-avatar-04.png",
+            "hash": "2599403666347422759"
+          },
+          {
+            "file": "apps/carben/next/public/images/hero-bg-02.jpg",
+            "hash": "12050008264577114126"
+          },
+          {
+            "file": "apps/carben/next/public/images/hero-bg-03.jpg",
+            "hash": "3749048015357457630"
+          },
+          {
+            "file": "apps/carben/next/public/images/hero-bg.jpg",
+            "hash": "2781486218613169671"
+          },
+          {
+            "file": "apps/carben/next/public/images/hero-illustration.svg",
+            "hash": "14638407527116981023"
+          },
+          {
+            "file": "apps/carben/next/public/images/icologo.png",
+            "hash": "13117022320504774"
+          },
+          {
+            "file": "apps/carben/next/public/images/icon-01.svg",
+            "hash": "12218993374261268059"
+          },
+          {
+            "file": "apps/carben/next/public/images/icon-02.svg",
+            "hash": "2071683486712426849"
+          },
+          {
+            "file": "apps/carben/next/public/images/icon-03.svg",
+            "hash": "1892054641649079142"
+          },
+          {
+            "file": "apps/carben/next/public/images/inbox-image.jpg",
+            "hash": "14466602298827741079"
+          },
+          {
+            "file": "apps/carben/next/public/images/iphone-mockup.png",
+            "hash": "2802631349695661493"
+          },
+          {
+            "file": "apps/carben/next/public/images/meetup-image.jpg",
+            "hash": "8526815651225709135"
+          },
+          {
+            "file": "apps/carben/next/public/images/meetup-photo-01.jpg",
+            "hash": "7809287666393528061"
+          },
+          {
+            "file": "apps/carben/next/public/images/meetup-photo-02.jpg",
+            "hash": "11315726990423812257"
+          },
+          {
+            "file": "apps/carben/next/public/images/meetup-photo-03.jpg",
+            "hash": "2841208918113238237"
+          },
+          {
+            "file": "apps/carben/next/public/images/meetups-thumb-01.jpg",
+            "hash": "1003454329978979092"
+          },
+          {
+            "file": "apps/carben/next/public/images/meetups-thumb-02.jpg",
+            "hash": "8369197585007583141"
+          },
+          {
+            "file": "apps/carben/next/public/images/meetups-thumb-03.jpg",
+            "hash": "15390415338940672533"
+          },
+          {
+            "file": "apps/carben/next/public/images/meetups-thumb-04.jpg",
+            "hash": "12865688838562141937"
+          },
+          {
+            "file": "apps/carben/next/public/images/meetups-thumb-05.jpg",
+            "hash": "18138448170040453994"
+          },
+          {
+            "file": "apps/carben/next/public/images/meetups-thumb-06.jpg",
+            "hash": "9886004346112237138"
+          },
+          {
+            "file": "apps/carben/next/public/images/meetups-thumb-07.jpg",
+            "hash": "1391738251219552478"
+          },
+          {
+            "file": "apps/carben/next/public/images/meetups-thumb-08.jpg",
+            "hash": "4404564820672871044"
+          },
+          {
+            "file": "apps/carben/next/public/images/mobius.png",
+            "hash": "13686085411891333814"
+          },
+          {
+            "file": "apps/carben/next/public/images/mockup-image-01.jpg",
+            "hash": "8857849632603415091"
+          },
+          {
+            "file": "apps/carben/next/public/images/mockup-image-02.jpg",
+            "hash": "14962683439117661247"
+          },
+          {
+            "file": "apps/carben/next/public/images/mockup-image-03.jpg",
+            "hash": "6277550537878151262"
+          },
+          {
+            "file": "apps/carben/next/public/images/mockup-image-04.jpg",
+            "hash": "17896920583560267393"
+          },
+          {
+            "file": "apps/carben/next/public/images/modal-image.jpg",
+            "hash": "16803479977725472160"
+          },
+          {
+            "file": "apps/carben/next/public/images/news-01.jpg",
+            "hash": "16459273888167519126"
+          },
+          {
+            "file": "apps/carben/next/public/images/news-02.jpg",
+            "hash": "12755127964575727502"
+          },
+          {
+            "file": "apps/carben/next/public/images/news-03.jpg",
+            "hash": "937958262790159858"
+          },
+          {
+            "file": "apps/carben/next/public/images/news-04.jpg",
+            "hash": "6782192691294657537"
+          },
+          {
+            "file": "apps/carben/next/public/images/news-05.jpg",
+            "hash": "13634264942206606290"
+          },
+          {
+            "file": "apps/carben/next/public/images/news-06.jpg",
+            "hash": "15463380660815383556"
+          },
+          {
+            "file": "apps/carben/next/public/images/news-author-01.jpg",
+            "hash": "1462892900878041677"
+          },
+          {
+            "file": "apps/carben/next/public/images/news-author-02.jpg",
+            "hash": "16678483765491501381"
+          },
+          {
+            "file": "apps/carben/next/public/images/news-author-03.jpg",
+            "hash": "16951019487703193097"
+          },
+          {
+            "file": "apps/carben/next/public/images/news-author-04.jpg",
+            "hash": "10139873691884090490"
+          },
+          {
+            "file": "apps/carben/next/public/images/news-author-05.jpg",
+            "hash": "18096805711950248573"
+          },
+          {
+            "file": "apps/carben/next/public/images/news-author-06.jpg",
+            "hash": "9955603595354419126"
+          },
+          {
+            "file": "apps/carben/next/public/images/news-inner-image-left.jpg",
+            "hash": "5194656446677738236"
+          },
+          {
+            "file": "apps/carben/next/public/images/news-inner-image.jpg",
+            "hash": "846263435285915013"
+          },
+          {
+            "file": "apps/carben/next/public/images/onboarding-image.jpg",
+            "hash": "2930567803031190143"
+          },
+          {
+            "file": "apps/carben/next/public/images/pandologic.png",
+            "hash": "16220224430474231000"
+          },
+          {
+            "file": "apps/carben/next/public/images/pay-bg.jpg",
+            "hash": "6245958008494672264"
+          },
+          {
+            "file": "apps/carben/next/public/images/play-button.svg",
+            "hash": "5999461709542761903"
+          },
+          {
+            "file": "apps/carben/next/public/images/product-image.jpg",
+            "hash": "14327744372366695180"
+          },
+          {
+            "file": "apps/carben/next/public/images/profile-bg.jpg",
+            "hash": "3418147945551310552"
+          },
+          {
+            "file": "apps/carben/next/public/images/related-post-01.jpg",
+            "hash": "16815184704745192469"
+          },
+          {
+            "file": "apps/carben/next/public/images/related-post-02.jpg",
+            "hash": "12568920286709697207"
+          },
+          {
+            "file": "apps/carben/next/public/images/related-post-03.jpg",
+            "hash": "17342077110739252706"
+          },
+          {
+            "file": "apps/carben/next/public/images/related-post-04.jpg",
+            "hash": "1278422925427767177"
+          },
+          {
+            "file": "apps/carben/next/public/images/related-post-05.jpg",
+            "hash": "9435696621672946951"
+          },
+          {
+            "file": "apps/carben/next/public/images/related-post-06.jpg",
+            "hash": "14453688706276167803"
+          },
+          {
+            "file": "apps/carben/next/public/images/related-product-01.jpg",
+            "hash": "16523267913740714308"
+          },
+          {
+            "file": "apps/carben/next/public/images/related-product-02.jpg",
+            "hash": "3245331794074699745"
+          },
+          {
+            "file": "apps/carben/next/public/images/related-product-03.jpg",
+            "hash": "11247959627978621167"
+          },
+          {
+            "file": "apps/carben/next/public/images/task-image-01.jpg",
+            "hash": "4143388495680508466"
+          },
+          {
+            "file": "apps/carben/next/public/images/task-image-02.jpg",
+            "hash": "15359390774669900647"
+          },
+          {
+            "file": "apps/carben/next/public/images/team-member-01.jpg",
+            "hash": "12866468014630041660"
+          },
+          {
+            "file": "apps/carben/next/public/images/team-member-02.jpg",
+            "hash": "8206265625106191196"
+          },
+          {
+            "file": "apps/carben/next/public/images/team-member-03.jpg",
+            "hash": "4632958878321100489"
+          },
+          {
+            "file": "apps/carben/next/public/images/team-member-04.jpg",
+            "hash": "9686461593068294230"
+          },
+          {
+            "file": "apps/carben/next/public/images/team-member-05.jpg",
+            "hash": "16341514988724968061"
+          },
+          {
+            "file": "apps/carben/next/public/images/team-member-06.jpg",
+            "hash": "15626685107666581902"
+          },
+          {
+            "file": "apps/carben/next/public/images/team-member-07.jpg",
+            "hash": "16675059895025270240"
+          },
+          {
+            "file": "apps/carben/next/public/images/team-member-08.jpg",
+            "hash": "1061849944165509350"
+          },
+          {
+            "file": "apps/carben/next/public/images/team-member-09.jpg",
+            "hash": "9738515564127343485"
+          },
+          {
+            "file": "apps/carben/next/public/images/team-member-10.jpg",
+            "hash": "14975770590026545417"
+          },
+          {
+            "file": "apps/carben/next/public/images/testimonial-01.jpg",
+            "hash": "11163913559707421298"
+          },
+          {
+            "file": "apps/carben/next/public/images/testimonial-02.jpg",
+            "hash": "16842884075519247435"
+          },
+          {
+            "file": "apps/carben/next/public/images/testimonial-03.jpg",
+            "hash": "17214145778734569097"
+          },
+          {
+            "file": "apps/carben/next/public/images/testimonial-04.jpg",
+            "hash": "3593835512717541286"
+          },
+          {
+            "file": "apps/carben/next/public/images/transactions-image-01.svg",
+            "hash": "2641381254613146047"
+          },
+          {
+            "file": "apps/carben/next/public/images/transactions-image-02.svg",
+            "hash": "3858977401455934052"
+          },
+          {
+            "file": "apps/carben/next/public/images/transactions-image-03.svg",
+            "hash": "2370301685097916144"
+          },
+          {
+            "file": "apps/carben/next/public/images/transactions-image-04.svg",
+            "hash": "11676078239996021540"
+          },
+          {
+            "file": "apps/carben/next/public/images/transactions-image-05.svg",
+            "hash": "11331870612782490013"
+          },
+          {
+            "file": "apps/carben/next/public/images/transactions-image-06.svg",
+            "hash": "5555704321231810871"
+          },
+          {
+            "file": "apps/carben/next/public/images/transactions-image-07.svg",
+            "hash": "17423575865483213700"
+          },
+          {
+            "file": "apps/carben/next/public/images/transactions-image-08.svg",
+            "hash": "13774617722454602265"
+          },
+          {
+            "file": "apps/carben/next/public/images/user-1.jpg",
+            "hash": "12990696845373155147"
+          },
+          {
+            "file": "apps/carben/next/public/images/user-10.jpg",
+            "hash": "883042648569341394"
+          },
+          {
+            "file": "apps/carben/next/public/images/user-11.jpg",
+            "hash": "9072649938989999819"
+          },
+          {
+            "file": "apps/carben/next/public/images/user-12.jpg",
+            "hash": "3533112044124546998"
+          },
+          {
+            "file": "apps/carben/next/public/images/user-128-01.jpg",
+            "hash": "13390170457509714488"
+          },
+          {
+            "file": "apps/carben/next/public/images/user-13.jpg",
+            "hash": "3243330261586940876"
+          },
+          {
+            "file": "apps/carben/next/public/images/user-14.jpg",
+            "hash": "6530559025466171951"
+          },
+          {
+            "file": "apps/carben/next/public/images/user-15.jpg",
+            "hash": "16855346264590860658"
+          },
+          {
+            "file": "apps/carben/next/public/images/user-16.jpg",
+            "hash": "3848396040905697839"
+          },
+          {
+            "file": "apps/carben/next/public/images/user-17.jpg",
+            "hash": "8872852133163190972"
+          },
+          {
+            "file": "apps/carben/next/public/images/user-18.jpg",
+            "hash": "11790803165017997817"
+          },
+          {
+            "file": "apps/carben/next/public/images/user-19.jpg",
+            "hash": "3208463370299096076"
+          },
+          {
+            "file": "apps/carben/next/public/images/user-2.jpg",
+            "hash": "7954759676897012146"
+          },
+          {
+            "file": "apps/carben/next/public/images/user-20.jpg",
+            "hash": "859324417584982106"
+          },
+          {
+            "file": "apps/carben/next/public/images/user-28-01.jpg",
+            "hash": "1018205320253798981"
+          },
+          {
+            "file": "apps/carben/next/public/images/user-28-02.jpg",
+            "hash": "12471765048571652837"
+          },
+          {
+            "file": "apps/carben/next/public/images/user-28-03.jpg",
+            "hash": "15037637946913553902"
+          },
+          {
+            "file": "apps/carben/next/public/images/user-28-04.jpg",
+            "hash": "16114535335230001958"
+          },
+          {
+            "file": "apps/carben/next/public/images/user-28-05.jpg",
+            "hash": "8360436737925756873"
+          },
+          {
+            "file": "apps/carben/next/public/images/user-28-06.jpg",
+            "hash": "6306088692447925980"
+          },
+          {
+            "file": "apps/carben/next/public/images/user-28-07.jpg",
+            "hash": "12213503196615284399"
+          },
+          {
+            "file": "apps/carben/next/public/images/user-28-08.jpg",
+            "hash": "12033508669637568043"
+          },
+          {
+            "file": "apps/carben/next/public/images/user-28-09.jpg",
+            "hash": "8703778285593852925"
+          },
+          {
+            "file": "apps/carben/next/public/images/user-28-10.jpg",
+            "hash": "9624176985917635126"
+          },
+          {
+            "file": "apps/carben/next/public/images/user-28-11.jpg",
+            "hash": "2694207666979296512"
+          },
+          {
+            "file": "apps/carben/next/public/images/user-28-12.jpg",
+            "hash": "8326154900021066094"
+          },
+          {
+            "file": "apps/carben/next/public/images/user-3.jpg",
+            "hash": "1255521384373855804"
+          },
+          {
+            "file": "apps/carben/next/public/images/user-32-01.jpg",
+            "hash": "1651925999542013649"
+          },
+          {
+            "file": "apps/carben/next/public/images/user-32-02.jpg",
+            "hash": "5265791073924870755"
+          },
+          {
+            "file": "apps/carben/next/public/images/user-32-03.jpg",
+            "hash": "17180882578968350678"
+          },
+          {
+            "file": "apps/carben/next/public/images/user-32-04.jpg",
+            "hash": "13138362543208166450"
+          },
+          {
+            "file": "apps/carben/next/public/images/user-32-05.jpg",
+            "hash": "14958938994268425593"
+          },
+          {
+            "file": "apps/carben/next/public/images/user-32-06.jpg",
+            "hash": "5422619129042829059"
+          },
+          {
+            "file": "apps/carben/next/public/images/user-32-07.jpg",
+            "hash": "10212326222177696042"
+          },
+          {
+            "file": "apps/carben/next/public/images/user-32-08.jpg",
+            "hash": "9242139908285508302"
+          },
+          {
+            "file": "apps/carben/next/public/images/user-36-01.jpg",
+            "hash": "12559546392197022279"
+          },
+          {
+            "file": "apps/carben/next/public/images/user-36-02.jpg",
+            "hash": "1843198455559353398"
+          },
+          {
+            "file": "apps/carben/next/public/images/user-36-03.jpg",
+            "hash": "2231100598592077871"
+          },
+          {
+            "file": "apps/carben/next/public/images/user-36-04.jpg",
+            "hash": "18016398160313751297"
+          },
+          {
+            "file": "apps/carben/next/public/images/user-36-05.jpg",
+            "hash": "7654202138322476311"
+          },
+          {
+            "file": "apps/carben/next/public/images/user-4.jpg",
+            "hash": "16309141764352798080"
+          },
+          {
+            "file": "apps/carben/next/public/images/user-40-01.jpg",
+            "hash": "16920274288283019950"
+          },
+          {
+            "file": "apps/carben/next/public/images/user-40-02.jpg",
+            "hash": "15597758223679736696"
+          },
+          {
+            "file": "apps/carben/next/public/images/user-40-03.jpg",
+            "hash": "15169953271103428503"
+          },
+          {
+            "file": "apps/carben/next/public/images/user-40-04.jpg",
+            "hash": "1942064809443489387"
+          },
+          {
+            "file": "apps/carben/next/public/images/user-40-05.jpg",
+            "hash": "1721037805551658547"
+          },
+          {
+            "file": "apps/carben/next/public/images/user-40-06.jpg",
+            "hash": "10575038813441985118"
+          },
+          {
+            "file": "apps/carben/next/public/images/user-40-07.jpg",
+            "hash": "14333977713400031875"
+          },
+          {
+            "file": "apps/carben/next/public/images/user-40-08.jpg",
+            "hash": "11233766582997453531"
+          },
+          {
+            "file": "apps/carben/next/public/images/user-40-09.jpg",
+            "hash": "9431389451787204257"
+          },
+          {
+            "file": "apps/carben/next/public/images/user-40-10.jpg",
+            "hash": "5228971543327597477"
+          },
+          {
+            "file": "apps/carben/next/public/images/user-40-11.jpg",
+            "hash": "9163089735130260632"
+          },
+          {
+            "file": "apps/carben/next/public/images/user-40-12.jpg",
+            "hash": "319206250159441145"
+          },
+          {
+            "file": "apps/carben/next/public/images/user-5.jpg",
+            "hash": "2338928966447826641"
+          },
+          {
+            "file": "apps/carben/next/public/images/user-6.jpg",
+            "hash": "15906890410415053703"
+          },
+          {
+            "file": "apps/carben/next/public/images/user-64-01.jpg",
+            "hash": "12635347497033455491"
+          },
+          {
+            "file": "apps/carben/next/public/images/user-64-02.jpg",
+            "hash": "9951031636292430471"
+          },
+          {
+            "file": "apps/carben/next/public/images/user-64-03.jpg",
+            "hash": "2185877205262560017"
+          },
+          {
+            "file": "apps/carben/next/public/images/user-64-04.jpg",
+            "hash": "15177676018225962665"
+          },
+          {
+            "file": "apps/carben/next/public/images/user-64-05.jpg",
+            "hash": "11008188936982209233"
+          },
+          {
+            "file": "apps/carben/next/public/images/user-64-06.jpg",
+            "hash": "18136308741169084857"
+          },
+          {
+            "file": "apps/carben/next/public/images/user-64-07.jpg",
+            "hash": "17326451247823493961"
+          },
+          {
+            "file": "apps/carben/next/public/images/user-64-08.jpg",
+            "hash": "6419794822072567820"
+          },
+          {
+            "file": "apps/carben/next/public/images/user-64-09.jpg",
+            "hash": "9243883434898693977"
+          },
+          {
+            "file": "apps/carben/next/public/images/user-64-10.jpg",
+            "hash": "13427140677688806104"
+          },
+          {
+            "file": "apps/carben/next/public/images/user-64-11.jpg",
+            "hash": "5781195493368663172"
+          },
+          {
+            "file": "apps/carben/next/public/images/user-64-12.jpg",
+            "hash": "7714122978496426508"
+          },
+          {
+            "file": "apps/carben/next/public/images/user-64-13.jpg",
+            "hash": "15991076870563711964"
+          },
+          {
+            "file": "apps/carben/next/public/images/user-64-14.jpg",
+            "hash": "9873383781535533675"
+          },
+          {
+            "file": "apps/carben/next/public/images/user-7.jpg",
+            "hash": "14734336187493123270"
+          },
+          {
+            "file": "apps/carben/next/public/images/user-8.jpg",
+            "hash": "5964672938878207584"
+          },
+          {
+            "file": "apps/carben/next/public/images/user-9.jpg",
+            "hash": "10656487016161264936"
+          },
+          {
+            "file": "apps/carben/next/public/images/user-avatar-32.png",
+            "hash": "16376958558990208787"
+          },
+          {
+            "file": "apps/carben/next/public/images/user-avatar-80.png",
+            "hash": "793351667830391996"
+          },
+          {
+            "file": "apps/carben/next/public/images/video-testimonial.jpg",
+            "hash": "15516967303763683983"
+          },
+          {
+            "file": "apps/carben/next/public/images/video-thumb.jpg",
+            "hash": "8578715668154994574"
+          },
+          {
+            "file": "apps/carben/next/public/videos/video.mp4",
+            "hash": "11167586994851547669"
+          },
+          {
+            "file": "apps/carben/next/README.md",
+            "hash": "12923569059774286005"
+          },
+          {
+            "file": "apps/carben/next/tsconfig.json",
+            "hash": "445499387719189946"
+          },
+          {
+            "file": "apps/carben/next/types.d.ts",
+            "hash": "18397682193333912235"
+          },
+          {
+            "file": "apps/carben/next/tailwind.config-arc.js",
+            "hash": "12993727599357717273",
+            "dependencies": [
+              {
+                "source": "carben-next",
+                "target": "npm:@tailwindcss/forms",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
                 "target": "npm:@tailwindcss/typography",
                 "type": "static"
               }
             ]
           },
           {
-            "file": "apps/vera/next/tsconfig.json",
-            "hash": "5370930562995407184"
-          },
-          {
-            "file": "apps/vera/next/types.d.ts",
-            "hash": "9794254279448317552"
+            "file": "apps/carben/next/tailwind.config.js",
+            "hash": "6145773708537958827",
+            "dependencies": [
+              {
+                "source": "carben-next",
+                "target": "npm:tailwindcss",
+                "type": "static"
+              },
+              {
+                "source": "carben-next",
+                "target": "npm:@tailwindcss/forms",
+                "type": "static"
+              }
+            ]
           }
         ]
       }
@@ -10794,11 +12518,11 @@
           },
           {
             "file": "package-lock.json",
-            "hash": "2933390611750410330"
+            "hash": "3158704345460930482"
           },
           {
             "file": "package.json",
-            "hash": "17317837585267992316",
+            "hash": "13057456390866642157",
             "dependencies": [
               {
                 "source": "the",
@@ -10943,6 +12667,11 @@
               {
                 "source": "the",
                 "target": "npm:firebase",
+                "type": "static"
+              },
+              {
+                "source": "the",
+                "target": "npm:flatpickr",
                 "type": "static"
               },
               {
@@ -11392,7 +13121,7 @@
             ]
           },
           {
-            "file": "tailwind.config.js",
+            "file": "tailwind.config_vera.js",
             "hash": "10795183595430904736",
             "dependencies": [
               {
@@ -11408,27 +13137,30 @@
             ]
           },
           {
+            "file": "tailwind.config.js",
+            "hash": "6014748152538268847",
+            "dependencies": [
+              {
+                "source": "the",
+                "target": "npm:tailwindcss",
+                "type": "static"
+              },
+              {
+                "source": "the",
+                "target": "npm:@tailwindcss/forms",
+                "type": "static"
+              }
+            ]
+          },
+          {
             "file": "tools/tsconfig.tools.json",
             "hash": "16088922570277978783"
           },
           {
             "file": "tsconfig.base.json",
-            "hash": "10707569886345542864"
+            "hash": "16935894780404066495"
           }
         ]
-      }
-    },
-    "dot-contentlayer": {
-      "name": "dot-contentlayer",
-      "type": "lib",
-      "data": {
-        "root": "apps/vera/next/.contentlayer",
-        "sourceRoot": "apps/vera/next/.contentlayer",
-        "projectType": "library",
-        "targets": {},
-        "implicitDependencies": [],
-        "tags": [],
-        "files": []
       }
     }
   },
@@ -11692,6 +13424,15 @@
         "version": "^9.5.0",
         "packageName": "firebase",
         "hash": "172b33ff30c541376ac4990c2026131155b897e6546719cd12af4068b5e174f5"
+      }
+    },
+    "npm:flatpickr": {
+      "type": "npm",
+      "name": "npm:flatpickr",
+      "data": {
+        "version": "^4.6.13",
+        "packageName": "flatpickr",
+        "hash": "97d023b4c386b8e71f9dde98c34d4ad4fee8a1d94f1f1c730839513939360834"
       }
     },
     "npm:focus-trap-react": {
@@ -12557,7 +14298,7 @@
       }
     ],
     "vera-react-feature-careers": [],
-    "types": [],
+    "dot-contentlayer": [],
     "data-access-organization": [
       {
         "source": "data-access-organization",
@@ -12582,6 +14323,7 @@
         "type": "static"
       }
     ],
+    "types": [],
     "vera-react-feature-blog": [],
     "util-react-file-loader": [
       {
@@ -12597,7 +14339,6 @@
         "type": "static"
       }
     ],
-    ".next": [],
     "feature-react-icons": [
       {
         "source": "feature-react-icons",
@@ -12755,6 +14496,7 @@
         "type": "static"
       }
     ],
+    ".next": [],
     "makewith-react-ui": [
       {
         "source": "makewith-react-ui",
@@ -13067,23 +14809,6 @@
         "type": "static"
       }
     ],
-    "vera-next-e2e": [
-      {
-        "source": "vera-next-e2e",
-        "target": "vera-next",
-        "type": "implicit"
-      },
-      {
-        "source": "vera-next-e2e",
-        "target": "npm:cypress",
-        "type": "static"
-      },
-      {
-        "source": "vera-next-e2e",
-        "target": "npm:@nx/cypress",
-        "type": "static"
-      }
-    ],
     "makewith-next": [
       {
         "source": "makewith-next",
@@ -13205,110 +14930,115 @@
         "type": "static"
       }
     ],
-    "vera-next": [
+    "carben-next": [
       {
-        "source": "vera-next",
+        "source": "carben-next",
         "target": "npm:next",
         "type": "static"
       },
       {
-        "source": "vera-next",
+        "source": "carben-next",
         "target": "npm:react",
         "type": "static"
       },
       {
-        "source": "vera-next",
-        "target": "npm:aos",
-        "type": "static"
-      },
-      {
-        "source": "vera-next",
+        "source": "carben-next",
         "target": "npm:next-themes",
         "type": "static"
       },
       {
-        "source": "vera-next",
+        "source": "carben-next",
         "target": "npm:swiper",
         "type": "static"
       },
       {
-        "source": "vera-next",
-        "target": "npm:animejs",
-        "type": "static"
-      },
-      {
-        "source": "vera-next",
-        "target": "npm:next-contentlayer",
-        "type": "static"
-      },
-      {
-        "source": "vera-next",
+        "source": "carben-next",
         "target": "npm:@headlessui/react",
         "type": "static"
       },
       {
-        "source": "vera-next",
+        "source": "carben-next",
+        "target": "npm:flatpickr",
+        "type": "static"
+      },
+      {
+        "source": "carben-next",
+        "target": "npm:animejs",
+        "type": "static"
+      },
+      {
+        "source": "carben-next",
+        "target": "npm:next-contentlayer",
+        "type": "static"
+      },
+      {
+        "source": "carben-next",
         "target": "npm:date-fns",
         "type": "static"
       },
       {
-        "source": "vera-next",
+        "source": "carben-next",
+        "target": "npm:tailwindcss",
+        "type": "static"
+      },
+      {
+        "source": "carben-next",
         "target": "npm:contentlayer",
         "type": "static"
       },
       {
-        "source": "vera-next",
+        "source": "carben-next",
         "target": "npm:@types/node",
         "type": "static"
       },
       {
-        "source": "vera-next",
+        "source": "carben-next",
         "target": "npm:@types/react",
         "type": "static"
       },
       {
-        "source": "vera-next",
+        "source": "carben-next",
         "target": "npm:@types/react-dom",
         "type": "static"
       },
       {
-        "source": "vera-next",
+        "source": "carben-next",
+        "target": "npm:aos",
+        "type": "static"
+      },
+      {
+        "source": "carben-next",
         "target": "npm:react-dom",
         "type": "static"
       },
       {
-        "source": "vera-next",
+        "source": "carben-next",
         "target": "npm:typescript",
         "type": "static"
       },
       {
-        "source": "vera-next",
+        "source": "carben-next",
         "target": "npm:@tailwindcss/forms",
         "type": "static"
       },
       {
-        "source": "vera-next",
+        "source": "carben-next",
         "target": "npm:@tailwindcss/typography",
         "type": "static"
       },
       {
-        "source": "vera-next",
+        "source": "carben-next",
         "target": "npm:@types/aos",
         "type": "static"
       },
       {
-        "source": "vera-next",
+        "source": "carben-next",
         "target": "npm:autoprefixer",
         "type": "static"
       },
       {
-        "source": "vera-next",
+        "source": "carben-next",
         "target": "npm:postcss",
-        "type": "static"
-      },
-      {
-        "source": "vera-next",
-        "target": "npm:tailwindcss",
         "type": "static"
       }
     ],
@@ -13488,6 +15218,11 @@
       {
         "source": "the",
         "target": "npm:firebase",
+        "type": "static"
+      },
+      {
+        "source": "the",
+        "target": "npm:flatpickr",
         "type": "static"
       },
       {
@@ -13895,7 +15630,6 @@
         "target": "npm:typescript",
         "type": "static"
       }
-    ],
-    "dot-contentlayer": []
+    ]
   }
 }
