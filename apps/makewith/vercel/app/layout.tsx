@@ -42,7 +42,8 @@ export default function RootLayout({ children }: RootLayoutProps) {
         className={cn(
           'font-sans antialiased bg-gray-900',
           fontSans.variable,
-          fontMono.variable
+          fontMono.variable,
+          `text-white`
         )}
       >
         <Toaster />

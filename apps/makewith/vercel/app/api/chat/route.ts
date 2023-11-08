@@ -1,11 +1,11 @@
 import { kv } from '@vercel/kv'
-import { Message, OpenAIStream, StreamingTextResponse, createEventStreamTransformer } from 'ai'
+import { OpenAIStream, StreamingTextResponse } from 'ai'
 import { Configuration, OpenAIApi } from 'openai-edge'
 
 import { auth } from '../../../auth'
 import { nanoid } from '../../../lib/utils'
 import { INTRO_PROMPT } from 'apps/makewith/vercel/components/clone-video-intro'
-import { ChatCompletionRequestMessage, CreateChatCompletionRequest } from 'openai-edge/types/types/chat'
+import { CreateChatCompletionRequest } from 'openai-edge/types/types/chat'
 import { Session } from 'next-auth'
 
 export const runtime = 'edge';
@@ -13,7 +13,7 @@ export const runtime = 'edge';
 
 const configuration = new Configuration({
   apiKey: process.env.OPENAI_API_KEY,
-  organization: 'org-TynlmkfE3wNCRWZutQBZSSVh'
+  organization: process.env.OPENAI_ORG_ID
 })
 
 const openai = new OpenAIApi(configuration);
