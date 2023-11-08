@@ -41,7 +41,7 @@ export function Chat({ id, initialMessages, className, session }: ChatProps) {
   const [isLocked, setIsLocked] = useState<boolean>(false);
   const handleVideoRequest = async (script: string) => {
     const assistantMessageCount = messages?.filter(message => message.role === 'assistant').length;
-    if (assistantMessageCount >= 3) {
+    if (assistantMessageCount >= 4) {
       setIsLocked(true);
       setLoading(false);
     } else {
