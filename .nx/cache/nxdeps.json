@@ -770,8 +770,8 @@
       "name": "types",
       "type": "lib",
       "data": {
-        "root": "apps/makewith/next/.next/types",
-        "sourceRoot": "apps/makewith/next/.next/types",
+        "root": "apps/carben/next/.next/types",
+        "sourceRoot": "apps/carben/next/.next/types",
         "projectType": "library",
         "targets": {},
         "implicitDependencies": [],
@@ -1258,8 +1258,8 @@
       "name": ".next",
       "type": "lib",
       "data": {
-        "root": "apps/makewith/next/.next",
-        "sourceRoot": "apps/makewith/next/.next",
+        "root": "apps/carben/next/.next",
+        "sourceRoot": "apps/carben/next/.next",
         "projectType": "library",
         "targets": {},
         "implicitDependencies": [],
@@ -4497,7 +4497,7 @@
           },
           {
             "file": "apps/makewith/vercel/app/api/chat/route.ts",
-            "hash": "15212147868029833694",
+            "hash": "12048611504738245771",
             "dependencies": [
               {
                 "source": "makewith-vercel",
@@ -4538,7 +4538,7 @@
           },
           {
             "file": "apps/makewith/vercel/app/layout.tsx",
-            "hash": "15530913340826669370",
+            "hash": "16768668925200566437",
             "dependencies": [
               {
                 "source": "makewith-vercel",
@@ -4646,7 +4646,7 @@
           },
           {
             "file": "apps/makewith/vercel/components/chat-message.tsx",
-            "hash": "6888500728553328182",
+            "hash": "10152216533973120558",
             "dependencies": [
               {
                 "source": "makewith-vercel",
@@ -4667,7 +4667,7 @@
           },
           {
             "file": "apps/makewith/vercel/components/chat-panel.tsx",
-            "hash": "18312638682414607484",
+            "hash": "14529369344267621900",
             "dependencies": [
               {
                 "source": "makewith-vercel",
@@ -4885,7 +4885,7 @@
           },
           {
             "file": "apps/makewith/vercel/components/prompt-form.tsx",
-            "hash": "5003277518232952191",
+            "hash": "13887432080766161771",
             "dependencies": [
               {
                 "source": "makewith-vercel",
@@ -5265,7 +5265,7 @@
           },
           {
             "file": "apps/makewith/vercel/components/video-player.tsx",
-            "hash": "1066110470270214381",
+            "hash": "11417054602882930687",
             "dependencies": [
               {
                 "source": "makewith-vercel",

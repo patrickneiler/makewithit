@@ -64,11 +64,10 @@ export function ChatPanel({
           </div>
 
         )}
-        <div className="space-y-4 border-t border-gray-800 bg-background px-4 py-2 shadow-lg sm:rounded-t-xl  md:py-4">
+        <div className="space-y-4 border-t border-gray-800 bg-gray-900 px-4 py-2 shadow-lg sm:rounded-t-xl  md:py-4">
           {/* @ts-ignore */}
           <PromptForm
             onSubmit={async value => {
-              isLocked && prepareNextVideo();
               await append({
                 id,
                 content: value,
