@@ -70,7 +70,7 @@ const VideoProvider: React.FC<VideoProviderProps> = ({ children, config }) => {
                         fluent: 'true',
                         pad_audio: '2.0',
                     },
-                    source_url: 'https://firebasestorage.googleapis.com/v0/b/make-with-it-firebase.appspot.com/o/IMG_3685.JPG?alt=media&token=0fb89e69-d1dd-4913-9006-7f928071cab2'
+                    source_url: 'https://firebasestorage.googleapis.com/v0/b/make-with-it-firebase.appspot.com/o/clone_model.JPG?alt=media&token=6224dbf7-f907-4afc-83a8-03275daf194e'
                 })
             };
             const response = await fetch(`${config.url}`, options)
