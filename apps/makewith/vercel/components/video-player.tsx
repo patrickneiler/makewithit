@@ -4,8 +4,8 @@ import { useVideoContext } from './video-provider';
 
 export type VideoStatus = 'ready' | 'playing' | 'ended' | 'init';
 
-export const IDLE_VIDEO = `https://firebasestorage.googleapis.com/v0/b/make-with-it-firebase.appspot.com/o/1692610172142.mp4?alt=media&token=bf8a6c58-19e3-4fa2-b95b-e93f9cec1b0f`
-export const INTRO_VIDEO = `https://firebasestorage.googleapis.com/v0/b/make-with-it-firebase.appspot.com/o/intro.mp4?alt=media&token=ac5d4c3c-1b5b-4711-99cf-83e4d607369a`
+export const IDLE_VIDEO = `https://firebasestorage.googleapis.com/v0/b/make-with-it-firebase.appspot.com/o/Clone_Idle.mp4?alt=media&token=3623ed12-a726-497d-8840-012dcacdbc52`
+export const INTRO_VIDEO = `https://firebasestorage.googleapis.com/v0/b/make-with-it-firebase.appspot.com/o/Clone_Intro.mp4?alt=media&token=0687a2c8-af18-428b-82e1-354a4e0fb519`
 export const THINKING_VIDEO = 'https://firebasestorage.googleapis.com/v0/b/make-with-it-firebase.appspot.com/o/1692508963424.mp4?alt=media&token=a09b87fd-8480-48d6-87cd-c5ac64e8c6ca'
 
 
